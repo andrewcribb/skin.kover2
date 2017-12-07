@@ -6,7 +6,7 @@
 	
 	<controls>
 
-		<include condition="!IsEmpty(Skin.String(WEA.View1.Name))" name="VDOViewtype">
+		<include content="VDOViewtype" condition="!IsEmpty(Skin.String(WEA.View1.Name))">
 			<param name="Id" value="50" />
 			<param name="IclPrefix" value="WEAView1" />
 			<param name="CompPrefix" value="WEA.View1" />

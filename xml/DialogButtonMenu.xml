@@ -259,7 +259,7 @@
 		</control>
 
 		<!-- Dialogs Background -->
-		<include name="DialogBgDef">
+		<include content="DialogBgDef">
 			<param name="CompPrefix" value="DIA.View1" />
 		</include>		
 

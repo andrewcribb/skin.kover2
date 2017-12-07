@@ -2102,56 +2102,56 @@
 			<animation effect="fade" start="100" end="0" time="100" delay="100" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + IsEmpty(Window(Home).Property(DialogVisibility2)) + IsEmpty(Window(Home).Property(DialogVisibility3)) + IsEmpty(Window(Home).Property(DialogVisibility4)) + IsEmpty(Window(Home).Property(DialogVisibility5)) + !Window.IsVisible(script-skinshortcuts.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)">Conditional</animation>	
 				
 			
-			<include name="DialogBg" condition="Skin.String($PARAM[CompPrefix].DIAPanel,LEFT) + Skin.String($PARAM[CompPrefix].BBSidebar,LEFT)">
+			<include content="DialogBg" condition="Skin.String($PARAM[CompPrefix].DIAPanel,LEFT) + Skin.String($PARAM[CompPrefix].BBSidebar,LEFT)">
 				<param name="PosX" value="-540" />
 				<param name="PosY" value="0" />
 				<param name="Height" value="1080" />
 				<param name="Width" value="660" />
 			</include>
 
-			<include name="DialogBg" condition="Skin.String($PARAM[CompPrefix].DIAPanel,RIGHT) + Skin.String($PARAM[CompPrefix].BBSidebar,RIGHT)">
+			<include content="DialogBg" condition="Skin.String($PARAM[CompPrefix].DIAPanel,RIGHT) + Skin.String($PARAM[CompPrefix].BBSidebar,RIGHT)">
 				<param name="PosX" value="1800" />
 				<param name="PosY" value="0" />
 				<param name="Height" value="1080" />
 				<param name="Width" value="660" />
 			</include>
 
-			<include name="DialogBg" condition="Skin.String($PARAM[CompPrefix].DIAPanel,TOP) + Skin.String($PARAM[CompPrefix].BBSidebar,TOP)">
+			<include content="DialogBg" condition="Skin.String($PARAM[CompPrefix].DIAPanel,TOP) + Skin.String($PARAM[CompPrefix].BBSidebar,TOP)">
 				<param name="PosX" value="0" />
 				<param name="PosY" value="-260" />
 				<param name="Height" value="380" />
 				<param name="Width" value="1920" />
 			</include>
 
-			<include name="DialogBg" condition="Skin.String($PARAM[CompPrefix].DIAPanel,BOTTOM) + Skin.String($PARAM[CompPrefix].BBSidebar,BOTTOM)">
+			<include content="DialogBg" condition="Skin.String($PARAM[CompPrefix].DIAPanel,BOTTOM) + Skin.String($PARAM[CompPrefix].BBSidebar,BOTTOM)">
 				<param name="PosX" value="0" />
 				<param name="PosY" value="960" />
 				<param name="Height" value="380" />
 				<param name="Width" value="1920" />
 			</include>
 
-			<include name="DialogBg" condition="Skin.String($PARAM[CompPrefix].DIAPanel,LEFT) + !Skin.String($PARAM[CompPrefix].BBSidebar,LEFT)">
+			<include content="DialogBg" condition="Skin.String($PARAM[CompPrefix].DIAPanel,LEFT) + !Skin.String($PARAM[CompPrefix].BBSidebar,LEFT)">
 				<param name="PosX" value="-660" />
 				<param name="PosY" value="0" />
 				<param name="Height" value="1080" />
 				<param name="Width" value="660" />
 			</include>
 
-			<include name="DialogBg" condition="Skin.String($PARAM[CompPrefix].DIAPanel,RIGHT) + !Skin.String($PARAM[CompPrefix].BBSidebar,RIGHT)">
+			<include content="DialogBg" condition="Skin.String($PARAM[CompPrefix].DIAPanel,RIGHT) + !Skin.String($PARAM[CompPrefix].BBSidebar,RIGHT)">
 				<param name="PosX" value="1920" />
 				<param name="PosY" value="0" />
 				<param name="Height" value="1080" />
 				<param name="Width" value="660" />
 			</include>
 
-			<include name="DialogBg" condition="Skin.String($PARAM[CompPrefix].DIAPanel,TOP) + !Skin.String($PARAM[CompPrefix].BBSidebar,TOP)">
+			<include content="DialogBg" condition="Skin.String($PARAM[CompPrefix].DIAPanel,TOP) + !Skin.String($PARAM[CompPrefix].BBSidebar,TOP)">
 				<param name="PosX" value="0" />
 				<param name="PosY" value="-380" />
 				<param name="Height" value="380" />
 				<param name="Width" value="1920" />
 			</include>
 
-			<include name="DialogBg" condition="Skin.String($PARAM[CompPrefix].DIAPanel,BOTTOM) + !Skin.String($PARAM[CompPrefix].BBSidebar,BOTTOM)">
+			<include content="DialogBg" condition="Skin.String($PARAM[CompPrefix].DIAPanel,BOTTOM) + !Skin.String($PARAM[CompPrefix].BBSidebar,BOTTOM)">
 				<param name="PosX" value="0" />
 				<param name="PosY" value="1080" />
 				<param name="Height" value="380" />

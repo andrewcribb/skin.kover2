@@ -23,7 +23,7 @@
 					[SubString(Window(Home).Property(DialogVisibility5),VideoInfo)  + SubString(Window(Home).Property(DialogVisibility5),$NUMBER[5])]</visible>
 
 			
-			<include name="DialogPOS">
+			<include content="DialogPOS">
 				<param name="DialogName" value="DiaInfos" />
 			</include>				
 

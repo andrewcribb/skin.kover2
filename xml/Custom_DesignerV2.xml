@@ -19,7 +19,7 @@
 		<!-- Decorative Elements -->
 		<control type="group">
 			<!-- Background -->
-			<include name="Wallpaper">
+			<include content="Wallpaper">
 				<param name="CompPrefix" value="HOM.View1" />
 			</include>
 
@@ -3093,7 +3093,7 @@
 		</control>
 
 		<!-- Dialogs Background -->
-		<include name="DialogBgDef">
+		<include content="DialogBgDef">
 			<param name="CompPrefix" value="DIA.View1" />
 		</include>
 

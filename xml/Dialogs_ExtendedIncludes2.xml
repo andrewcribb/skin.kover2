@@ -360,13 +360,13 @@
 					<visible>StringCompare(Container(300).ListItem.Property(MenuID),Sets) + !Container(250).IsUpdating"</visible>
 					<animation effect="fade" start="0" end="100" time="100" reversible="true">VisibleChange</animation>
 
-					<include name="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),LEFT) | StringCompare(Window(Home).Property(DialogPos),RIGHT)">
+					<include content="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),LEFT) | StringCompare(Window(Home).Property(DialogPos),RIGHT)">
 						<param name="width" value="612" />
 						<param name="height" value="664" />
 						<param name="orientation" value="vertical" />
 					</include>	
 
-					<include name="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),TOP) | StringCompare(Window(Home).Property(DialogPos),BOTTOM)">
+					<include content="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),TOP) | StringCompare(Window(Home).Property(DialogPos),BOTTOM)">
 						<param name="width" value="1224" />
 						<param name="height" value="332" />
 						<param name="orientation" value="horizontal" />
@@ -460,13 +460,13 @@
 					<visible>StringCompare(Container(300).ListItem.Property(MenuID),Episodes) + !Container(2000).IsUpdating"</visible>
 					<animation effect="fade" start="0" end="100" time="100" reversible="true">VisibleChange</animation>	
 
-					<include name="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),LEFT) | StringCompare(Window(Home).Property(DialogPos),RIGHT)">
+					<include content="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),LEFT) | StringCompare(Window(Home).Property(DialogPos),RIGHT)">
 						<param name="width" value="612" />
 						<param name="height" value="664" />
 						<param name="orientation" value="vertical" />
 					</include>	
 
-					<include name="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),TOP) | StringCompare(Window(Home).Property(DialogPos),BOTTOM)">
+					<include content="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),TOP) | StringCompare(Window(Home).Property(DialogPos),BOTTOM)">
 						<param name="width" value="1224" />
 						<param name="height" value="332" />
 						<param name="orientation" value="horizontal" />
@@ -560,13 +560,13 @@
 					<visible>StringCompare(Container(300).ListItem.Property(MenuID),Actors) + !Container(1000).IsUpdating"</visible>
 					<animation effect="fade" start="0" end="100" time="100" reversible="true">VisibleChange</animation>	
 
-					<include name="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),LEFT) | StringCompare(Window(Home).Property(DialogPos),RIGHT)">
+					<include content="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),LEFT) | StringCompare(Window(Home).Property(DialogPos),RIGHT)">
 						<param name="width" value="612" />
 						<param name="height" value="664" />
 						<param name="orientation" value="vertical" />
 					</include>	
 
-					<include name="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),TOP) | StringCompare(Window(Home).Property(DialogPos),BOTTOM)">
+					<include content="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),TOP) | StringCompare(Window(Home).Property(DialogPos),BOTTOM)">
 						<param name="width" value="1224" />
 						<param name="height" value="332" />
 						<param name="orientation" value="horizontal" />
@@ -660,13 +660,13 @@
 					<visible>StringCompare(Container(300).ListItem.Property(MenuID),Youtube) + !Container(350).IsUpdating"</visible>
 					<animation effect="fade" start="0" end="100" time="100" reversible="true">VisibleChange</animation>
 
-					<include name="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),LEFT) | StringCompare(Window(Home).Property(DialogPos),RIGHT)">
+					<include content="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),LEFT) | StringCompare(Window(Home).Property(DialogPos),RIGHT)">
 						<param name="width" value="612" />
 						<param name="height" value="664" />
 						<param name="orientation" value="vertical" />
 					</include>	
 
-					<include name="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),TOP) | StringCompare(Window(Home).Property(DialogPos),BOTTOM)">
+					<include content="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),TOP) | StringCompare(Window(Home).Property(DialogPos),BOTTOM)">
 						<param name="width" value="1224" />
 						<param name="height" value="332" />
 						<param name="orientation" value="horizontal" />
@@ -740,13 +740,13 @@
 					<visible>StringCompare(Container(300).ListItem.Property(MenuID),Images) + !Container(1250).IsUpdating"</visible>
 					<animation effect="fade" start="0" end="100" time="100" reversible="true">VisibleChange</animation>
 
-					<include name="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),LEFT) | StringCompare(Window(Home).Property(DialogPos),RIGHT)">
+					<include content="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),LEFT) | StringCompare(Window(Home).Property(DialogPos),RIGHT)">
 						<param name="width" value="612" />
 						<param name="height" value="664" />
 						<param name="orientation" value="vertical" />
 					</include>	
 
-					<include name="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),TOP) | StringCompare(Window(Home).Property(DialogPos),BOTTOM)">
+					<include content="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),TOP) | StringCompare(Window(Home).Property(DialogPos),BOTTOM)">
 						<param name="width" value="1224" />
 						<param name="height" value="332" />
 						<param name="orientation" value="horizontal" />
@@ -840,13 +840,13 @@
 					<visible>StringCompare(Container(300).ListItem.Property(MenuID),Backdrops) + !Container(1350).IsUpdating"</visible>
 					<animation effect="fade" start="0" end="100" time="100" reversible="true">VisibleChange</animation>
 
-					<include name="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),LEFT) | StringCompare(Window(Home).Property(DialogPos),RIGHT)">
+					<include content="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),LEFT) | StringCompare(Window(Home).Property(DialogPos),RIGHT)">
 						<param name="width" value="612" />
 						<param name="height" value="664" />
 						<param name="orientation" value="vertical" />
 					</include>	
 
-					<include name="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),TOP) | StringCompare(Window(Home).Property(DialogPos),BOTTOM)">
+					<include content="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),TOP) | StringCompare(Window(Home).Property(DialogPos),BOTTOM)">
 						<param name="width" value="1224" />
 						<param name="height" value="332" />
 						<param name="orientation" value="horizontal" />
@@ -940,13 +940,13 @@
 					<visible>StringCompare(Container(300).ListItem.Property(MenuID),Crew) + !Container(750).IsUpdating"</visible>
 					<animation effect="fade" start="0" end="100" time="100" reversible="true">VisibleChange</animation>	
 
-					<include name="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),LEFT) | StringCompare(Window(Home).Property(DialogPos),RIGHT)">
+					<include content="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),LEFT) | StringCompare(Window(Home).Property(DialogPos),RIGHT)">
 						<param name="width" value="612" />
 						<param name="height" value="664" />
 						<param name="orientation" value="vertical" />
 					</include>	
 
-					<include name="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),TOP) | StringCompare(Window(Home).Property(DialogPos),BOTTOM)">
+					<include content="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),TOP) | StringCompare(Window(Home).Property(DialogPos),BOTTOM)">
 						<param name="width" value="1224" />
 						<param name="height" value="332" />
 						<param name="orientation" value="horizontal" />
@@ -1040,13 +1040,13 @@
 					<visible>StringCompare(Container(300).ListItem.Property(MenuID),Similar) + !Container(150).IsUpdating"</visible>
 					<animation effect="fade" start="0" end="100" time="100" reversible="true">VisibleChange</animation>	
 
-					<include name="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),LEFT) | StringCompare(Window(Home).Property(DialogPos),RIGHT)">
+					<include content="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),LEFT) | StringCompare(Window(Home).Property(DialogPos),RIGHT)">
 						<param name="width" value="612" />
 						<param name="height" value="664" />
 						<param name="orientation" value="vertical" />
 					</include>	
 
-					<include name="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),TOP) | StringCompare(Window(Home).Property(DialogPos),BOTTOM)">
+					<include content="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),TOP) | StringCompare(Window(Home).Property(DialogPos),BOTTOM)">
 						<param name="width" value="1224" />
 						<param name="height" value="332" />
 						<param name="orientation" value="horizontal" />
@@ -1140,13 +1140,13 @@
 					<visible>StringCompare(Container(300).ListItem.Property(MenuID),Genres) + !Container(850).IsUpdating"</visible>
 					<animation effect="fade" start="0" end="100" time="100" reversible="true">VisibleChange</animation>	
 
-					<include name="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),LEFT) | StringCompare(Window(Home).Property(DialogPos),RIGHT)">
+					<include content="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),LEFT) | StringCompare(Window(Home).Property(DialogPos),RIGHT)">
 						<param name="width" value="612" />
 						<param name="height" value="664" />
 						<param name="orientation" value="vertical" />
 					</include>	
 
-					<include name="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),TOP) | StringCompare(Window(Home).Property(DialogPos),BOTTOM)">
+					<include content="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),TOP) | StringCompare(Window(Home).Property(DialogPos),BOTTOM)">
 						<param name="width" value="1224" />
 						<param name="height" value="332" />
 						<param name="orientation" value="horizontal" />
@@ -1240,13 +1240,13 @@
 					<visible>StringCompare(Container(300).ListItem.Property(MenuID),Studios) + !Container(550).IsUpdating"</visible>
 					<animation effect="fade" start="0" end="100" time="100" reversible="true">VisibleChange</animation>
 
-					<include name="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),LEFT) | StringCompare(Window(Home).Property(DialogPos),RIGHT)">
+					<include content="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),LEFT) | StringCompare(Window(Home).Property(DialogPos),RIGHT)">
 						<param name="width" value="612" />
 						<param name="height" value="664" />
 						<param name="orientation" value="vertical" />
 					</include>	
 
-					<include name="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),TOP) | StringCompare(Window(Home).Property(DialogPos),BOTTOM)">
+					<include content="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),TOP) | StringCompare(Window(Home).Property(DialogPos),BOTTOM)">
 						<param name="width" value="1224" />
 						<param name="height" value="332" />
 						<param name="orientation" value="horizontal" />
@@ -1307,13 +1307,13 @@
 					<visible>StringCompare(Container(300).ListItem.Property(MenuID),Networks) + !Container(1450).IsUpdating"</visible>
 					<animation effect="fade" start="0" end="100" time="100" reversible="true">VisibleChange</animation>	
 
-					<include name="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),LEFT) | StringCompare(Window(Home).Property(DialogPos),RIGHT)">
+					<include content="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),LEFT) | StringCompare(Window(Home).Property(DialogPos),RIGHT)">
 						<param name="width" value="612" />
 						<param name="height" value="664" />
 						<param name="orientation" value="vertical" />
 					</include>	
 
-					<include name="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),TOP) | StringCompare(Window(Home).Property(DialogPos),BOTTOM)">
+					<include content="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),TOP) | StringCompare(Window(Home).Property(DialogPos),BOTTOM)">
 						<param name="width" value="1224" />
 						<param name="height" value="332" />
 						<param name="orientation" value="horizontal" />
@@ -1407,13 +1407,13 @@
 					<visible>StringCompare(Container(300).ListItem.Property(MenuID),Videos) + !Container(1150).IsUpdating"</visible>
 					<animation effect="fade" start="0" end="100" time="100" reversible="true">VisibleChange</animation>
 
-					<include name="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),LEFT) | StringCompare(Window(Home).Property(DialogPos),RIGHT)">
+					<include content="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),LEFT) | StringCompare(Window(Home).Property(DialogPos),RIGHT)">
 						<param name="width" value="612" />
 						<param name="height" value="664" />
 						<param name="orientation" value="vertical" />
 					</include>	
 
-					<include name="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),TOP) | StringCompare(Window(Home).Property(DialogPos),BOTTOM)">
+					<include content="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),TOP) | StringCompare(Window(Home).Property(DialogPos),BOTTOM)">
 						<param name="width" value="1224" />
 						<param name="height" value="332" />
 						<param name="orientation" value="horizontal" />
@@ -1487,13 +1487,13 @@
 					<visible>StringCompare(Container(300).ListItem.Property(MenuID),Releases) + !Container(650).IsUpdating"</visible>
 					<animation effect="fade" start="0" end="100" time="100" reversible="true">VisibleChange</animation>
 
-					<include name="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),LEFT) | StringCompare(Window(Home).Property(DialogPos),RIGHT)">
+					<include content="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),LEFT) | StringCompare(Window(Home).Property(DialogPos),RIGHT)">
 						<param name="width" value="612" />
 						<param name="height" value="664" />
 						<param name="orientation" value="vertical" />
 					</include>	
 
-					<include name="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),TOP) | StringCompare(Window(Home).Property(DialogPos),BOTTOM)">
+					<include content="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),TOP) | StringCompare(Window(Home).Property(DialogPos),BOTTOM)">
 						<param name="width" value="1224" />
 						<param name="height" value="332" />
 						<param name="orientation" value="horizontal" />
@@ -1596,13 +1596,13 @@
 					<visible>StringCompare(Container(300).ListItem.Property(MenuID),Lists) + !Container(450).IsUpdating"</visible>
 					<animation effect="fade" start="0" end="100" time="100" reversible="true">VisibleChange</animation>
 
-					<include name="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),LEFT) | StringCompare(Window(Home).Property(DialogPos),RIGHT)">
+					<include content="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),LEFT) | StringCompare(Window(Home).Property(DialogPos),RIGHT)">
 						<param name="width" value="612" />
 						<param name="height" value="664" />
 						<param name="orientation" value="vertical" />
 					</include>	
 
-					<include name="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),TOP) | StringCompare(Window(Home).Property(DialogPos),BOTTOM)">
+					<include content="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),TOP) | StringCompare(Window(Home).Property(DialogPos),BOTTOM)">
 						<param name="width" value="1224" />
 						<param name="height" value="332" />
 						<param name="orientation" value="horizontal" />
@@ -1696,13 +1696,13 @@
 					<visible>StringCompare(Container(300).ListItem.Property(MenuID),Keywords) + !Container(950).IsUpdating"</visible>
 					<animation effect="fade" start="0" end="100" time="100" reversible="true">VisibleChange</animation>	
 
-					<include name="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),LEFT) | StringCompare(Window(Home).Property(DialogPos),RIGHT)">
+					<include content="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),LEFT) | StringCompare(Window(Home).Property(DialogPos),RIGHT)">
 						<param name="width" value="612" />
 						<param name="height" value="664" />
 						<param name="orientation" value="vertical" />
 					</include>	
 
-					<include name="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),TOP) | StringCompare(Window(Home).Property(DialogPos),BOTTOM)">
+					<include content="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),TOP) | StringCompare(Window(Home).Property(DialogPos),BOTTOM)">
 						<param name="width" value="1224" />
 						<param name="height" value="332" />
 						<param name="orientation" value="horizontal" />
@@ -1751,13 +1751,13 @@
 					<visible>StringCompare(Container(300).ListItem.Property(MenuID),Reviews) + !Container(1050).IsUpdating"</visible>
 					<animation effect="fade" start="0" end="100" time="100" reversible="true">VisibleChange</animation>	
 
-					<include name="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),LEFT) | StringCompare(Window(Home).Property(DialogPos),RIGHT)">
+					<include content="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),LEFT) | StringCompare(Window(Home).Property(DialogPos),RIGHT)">
 						<param name="width" value="612" />
 						<param name="height" value="664" />
 						<param name="orientation" value="vertical" />
 					</include>	
 
-					<include name="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),TOP) | StringCompare(Window(Home).Property(DialogPos),BOTTOM)">
+					<include content="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),TOP) | StringCompare(Window(Home).Property(DialogPos),BOTTOM)">
 						<param name="width" value="1224" />
 						<param name="height" value="332" />
 						<param name="orientation" value="horizontal" />

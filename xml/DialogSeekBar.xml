@@ -86,10 +86,10 @@
 			</control>
 
 			<!-- Dialogs Background -->
-			<include name="DialogBgDef" condition="!Skin.HasSetting(ForceOSDBottom)">
+			<include content="DialogBgDef" condition="!Skin.HasSetting(ForceOSDBottom)">
 				<param name="CompPrefix" value="HOM.View1" />
 			</include>
-			<include name="DialogBgDef" condition="Skin.HasSetting(ForceOSDBottom)">
+			<include content="DialogBgDef" condition="Skin.HasSetting(ForceOSDBottom)">
 				<param name="CompPrefix" value="DIA.View1" />
 			</include>			
 			

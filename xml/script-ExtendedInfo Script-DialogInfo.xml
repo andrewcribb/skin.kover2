@@ -14,7 +14,7 @@
             <visible>IsEmpty(Window(Home).Property(DialogVisibility)) + IsEmpty(Window(Home).Property(DialogVisibility2)) + IsEmpty(Window(Home).Property(DialogVisibility3)) + IsEmpty(Window(Home).Property(DialogVisibility4)) + IsEmpty(Window(Home).Property(DialogVisibility5))</visible>
 
             
-            <include name="DialogPOS">
+            <include content="DialogPOS">
                 <param name="DialogName" value="DiaExtended1" />
             </include>              
 

@@ -26,110 +26,110 @@
 	
 	<controls>
 
-		<include condition="window.IsVisible(videoplaylist) + !IsEmpty(Skin.String(VDO.View1.Name))" name="VDOViewtype">
+		<include content="VDOViewtype" condition="window.IsVisible(videoplaylist) + !IsEmpty(Skin.String(VDO.View1.Name))">
 			<param name="Id" value="50" />
 			<param name="IclPrefix" value="VDOView1" />
 			<param name="CompPrefix" value="VDO.View1" />
 			<param name="Section" value="VDO" />
 		</include>
-		<include condition="window.IsVisible(videoplaylist) + !IsEmpty(Skin.String(VDO.View2.Name))" name="VDOViewtype">
+		<include content="VDOViewtype" condition="window.IsVisible(videoplaylist) + !IsEmpty(Skin.String(VDO.View2.Name))">
 			<param name="Id" value="51" />
 			<param name="IclPrefix" value="VDOView2" />
 			<param name="CompPrefix" value="VDO.View2" />
 			<param name="Section" value="VDO" />
 		</include>
-		<include condition="window.IsVisible(videoplaylist) + !IsEmpty(Skin.String(VDO.View3.Name))" name="VDOViewtype">
+		<include content="VDOViewtype" condition="window.IsVisible(videoplaylist) + !IsEmpty(Skin.String(VDO.View3.Name))">
 			<param name="Id" value="52" />
 			<param name="IclPrefix" value="VDOView3" />
 			<param name="CompPrefix" value="VDO.View3" />
 			<param name="Section" value="VDO" />
 		</include>
-		<include condition="window.IsVisible(videoplaylist) + !IsEmpty(Skin.String(VDO.View4.Name))" name="VDOViewtype">
+		<include content="VDOViewtype" condition="window.IsVisible(videoplaylist) + !IsEmpty(Skin.String(VDO.View4.Name))">
 			<param name="Id" value="53" />
 			<param name="IclPrefix" value="VDOView4" />
 			<param name="CompPrefix" value="VDO.View4" />
 			<param name="Section" value="VDO" />
 		</include>
-		<include condition="window.IsVisible(videoplaylist) + !IsEmpty(Skin.String(VDO.View5.Name))" name="VDOViewtype">
+		<include content="VDOViewtype" condition="window.IsVisible(videoplaylist) + !IsEmpty(Skin.String(VDO.View5.Name))">
 			<param name="Id" value="54" />
 			<param name="IclPrefix" value="VDOView5" />
 			<param name="CompPrefix" value="VDO.View5" />
 			<param name="Section" value="VDO" />
 		</include>
-		<include condition="window.IsVisible(videoplaylist) + !IsEmpty(Skin.String(VDO.View6.Name))" name="VDOViewtype">
+		<include content="VDOViewtype" condition="window.IsVisible(videoplaylist) + !IsEmpty(Skin.String(VDO.View6.Name))">
 			<param name="Id" value="55" />
 			<param name="IclPrefix" value="VDOView6" />
 			<param name="CompPrefix" value="VDO.View6" />
 			<param name="Section" value="VDO" />
 		</include>
-		<include condition="window.IsVisible(videoplaylist) + !IsEmpty(Skin.String(VDO.View7.Name))" name="VDOViewtype">
+		<include content="VDOViewtype" condition="window.IsVisible(videoplaylist) + !IsEmpty(Skin.String(VDO.View7.Name))">
 			<param name="Id" value="56" />
 			<param name="IclPrefix" value="VDOView7" />
 			<param name="CompPrefix" value="VDO.View7" />
 			<param name="Section" value="VDO" />
 		</include>
-		<include condition="window.IsVisible(videoplaylist) + !IsEmpty(Skin.String(VDO.View8.Name))" name="VDOViewtype">
+		<include content="VDOViewtype" condition="window.IsVisible(videoplaylist) + !IsEmpty(Skin.String(VDO.View8.Name))">
 			<param name="Id" value="57" />
 			<param name="IclPrefix" value="VDOView8" />
 			<param name="CompPrefix" value="VDO.View8" />
 			<param name="Section" value="VDO" />
 		</include>
-		<include condition="window.IsVisible(videoplaylist) + !IsEmpty(Skin.String(VDO.View9.Name))" name="VDOViewtype">
+		<include content="VDOViewtype" condition="window.IsVisible(videoplaylist) + !IsEmpty(Skin.String(VDO.View9.Name))">
 			<param name="Id" value="58" />
 			<param name="IclPrefix" value="VDOView9" />
 			<param name="CompPrefix" value="VDO.View9" />
 			<param name="Section" value="VDO" />
 		</include>
 
-		<include condition="window.IsVisible(musicplaylist) + !IsEmpty(Skin.String(MUS.View1.Name))" name="VDOViewtype">
+		<include content="VDOViewtype" condition="window.IsVisible(musicplaylist) + !IsEmpty(Skin.String(MUS.View1.Name))">
 			<param name="Id" value="50" />
 			<param name="IclPrefix" value="MUSView1" />
 			<param name="CompPrefix" value="MUS.View1" />
 			<param name="Section" value="MUS" />
 		</include>
-		<include condition="window.IsVisible(musicplaylist) + !IsEmpty(Skin.String(MUS.View2.Name))" name="VDOViewtype">
+		<include content="VDOViewtype" condition="window.IsVisible(musicplaylist) + !IsEmpty(Skin.String(MUS.View2.Name))">
 			<param name="Id" value="51" />
 			<param name="IclPrefix" value="MUSView2" />
 			<param name="CompPrefix" value="MUS.View2" />
 			<param name="Section" value="MUS" />
 		</include>
-		<include condition="window.IsVisible(musicplaylist) + !IsEmpty(Skin.String(MUS.View3.Name))" name="VDOViewtype">
+		<include content="VDOViewtype" condition="window.IsVisible(musicplaylist) + !IsEmpty(Skin.String(MUS.View3.Name))">
 			<param name="Id" value="52" />
 			<param name="IclPrefix" value="MUSView3" />
 			<param name="CompPrefix" value="MUS.View3" />
 			<param name="Section" value="MUS" />
 		</include>
-		<include condition="window.IsVisible(musicplaylist) + !IsEmpty(Skin.String(MUS.View4.Name))" name="VDOViewtype">
+		<include content="VDOViewtype" condition="window.IsVisible(musicplaylist) + !IsEmpty(Skin.String(MUS.View4.Name))">
 			<param name="Id" value="53" />
 			<param name="IclPrefix" value="MUSView4" />
 			<param name="CompPrefix" value="MUS.View4" />
 			<param name="Section" value="MUS" />
 		</include>
-		<include condition="window.IsVisible(musicplaylist) + !IsEmpty(Skin.String(MUS.View5.Name))" name="VDOViewtype">
+		<include content="VDOViewtype" condition="window.IsVisible(musicplaylist) + !IsEmpty(Skin.String(MUS.View5.Name))">
 			<param name="Id" value="54" />
 			<param name="IclPrefix" value="MUSView5" />
 			<param name="CompPrefix" value="MUS.View5" />
 			<param name="Section" value="MUS" />
 		</include>
-		<include condition="window.IsVisible(musicplaylist) + !IsEmpty(Skin.String(MUS.View6.Name))" name="VDOViewtype">
+		<include content="VDOViewtype" condition="window.IsVisible(musicplaylist) + !IsEmpty(Skin.String(MUS.View6.Name))">
 			<param name="Id" value="55" />
 			<param name="IclPrefix" value="MUSView6" />
 			<param name="CompPrefix" value="MUS.View6" />
 			<param name="Section" value="MUS" />
 		</include>
-		<include condition="window.IsVisible(musicplaylist) + !IsEmpty(Skin.String(MUS.View7.Name))" name="VDOViewtype">
+		<include content="VDOViewtype" condition="window.IsVisible(musicplaylist) + !IsEmpty(Skin.String(MUS.View7.Name))">
 			<param name="Id" value="56" />
 			<param name="IclPrefix" value="MUSView7" />
 			<param name="CompPrefix" value="MUS.View7" />
 			<param name="Section" value="MUS" />
 		</include>
-		<include condition="window.IsVisible(musicplaylist) + !IsEmpty(Skin.String(MUS.View8.Name))" name="VDOViewtype">
+		<include content="VDOViewtype" condition="window.IsVisible(musicplaylist) + !IsEmpty(Skin.String(MUS.View8.Name))">
 			<param name="Id" value="57" />
 			<param name="IclPrefix" value="MUSView8" />
 			<param name="CompPrefix" value="MUS.View8" />
 			<param name="Section" value="MUS" />
 		</include>
-		<include condition="window.IsVisible(musicplaylist) + !IsEmpty(Skin.String(MUS.View9.Name))" name="VDOViewtype">
+		<include content="VDOViewtype" condition="window.IsVisible(musicplaylist) + !IsEmpty(Skin.String(MUS.View9.Name))">
 			<param name="Id" value="58" />
 			<param name="IclPrefix" value="MUSView9" />
 			<param name="CompPrefix" value="MUS.View9" />

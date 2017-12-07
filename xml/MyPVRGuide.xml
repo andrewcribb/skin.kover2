@@ -19,18 +19,18 @@
 	<controls>
 
 		<!-- Background -->
-		<include name="Wallpaper">
+		<include content="Wallpaper">
 			<param name="CompPrefix" value="TV.View1" />
 		</include>	
 		
 		<control type="group">
 		 
-			<include name="DialogPush">
+			<include content="DialogPush">
 				<param name="CompPrefix" value="TV.View1" />
 			</include>
 		
 			<control type="image">
-				<include name="BgPosition">
+				<include content="BgPosition">
 					<param name="Prefix" value="TV.View1" />
 				</include>
 				<texture colordiffuse="$INFO[Skin.String(Color.BBBg)]">common/white.png</texture>
@@ -52,7 +52,7 @@
 				<animation effect="fade" start="100" end="0" time="400" reversible="false" condition="System.IdleTime(25) + Skin.String(IdleFade,25) + Skin.String(TV.View1.B4Show,IDLEFADE)">Conditonal</animation>
 				<animation effect="fade" start="100" end="0" time="400" reversible="false" condition="System.IdleTime(30) + Skin.String(IdleFade,30) + Skin.String(TV.View1.B4Show,IDLEFADE)">Conditonal</animation>
 				<animation effect="fade" start="100" end="0" time="200" condition="[Window.IsVisible(contextmenu) | ControlGroup(99).HasFocus() | Control.HasFocus(97)] + Skin.String(TV.View1.B5B4ShowOF,HIDE)">Conditional</animation>
-				<include name="BlocPosition">
+				<include content="BlocPosition">
 					<param name="Prefix" value="TV.View1" />
 					<param name="BlocID" value="B4" />
 				</include>	
@@ -74,7 +74,7 @@
 				<animation effect="fade" start="100" end="0" time="400" reversible="false" condition="System.IdleTime(30) + Skin.String(IdleFade,30) + Skin.String(TV.View1.B3Show,IDLEFADE)">Conditonal</animation>
 				<animation effect="fade" start="100" end="0" time="200" condition="[Window.IsVisible(contextmenu) | ControlGroup(99).HasFocus() | Control.HasFocus(97)] + Skin.String(TV.View1.B5B3ShowOF,HIDE)">Conditional</animation>		
 
-				<include name="BlocPosition">
+				<include content="BlocPosition">
 					<param name="Prefix" value="TV.View1" />
 					<param name="BlocID" value="B3" />
 				</include>
@@ -109,7 +109,7 @@
 				<animation effect="fade" start="100" end="0" time="400" reversible="false" condition="System.IdleTime(25) + Skin.String(IdleFade,25) + Skin.String(TV.View1.B4Show,IDLEFADE)">Conditonal</animation>
 				<animation effect="fade" start="100" end="0" time="400" reversible="false" condition="System.IdleTime(30) + Skin.String(IdleFade,30) + Skin.String(TV.View1.B4Show,IDLEFADE)">Conditonal</animation>
 				<animation effect="fade" start="100" end="0" time="200" condition="[Window.IsVisible(contextmenu) | ControlGroup(99).HasFocus() | Control.HasFocus(97)] + Skin.String(TV.View1.B5B4ShowOF,HIDE)">Conditional</animation>
-				<include name="BlocPosition">
+				<include content="BlocPosition">
 					<param name="Prefix" value="TV.View1" />
 					<param name="BlocID" value="B4" />
 				</include>	
@@ -144,7 +144,7 @@
 					<animation effect="fade" start="100" end="0" time="400" reversible="false" condition="System.IdleTime(30) + Skin.String(IdleFade,30) + Skin.String(TV.View1.B1Show,IDLEFADE)">Conditonal</animation>
 					<animation effect="fade" start="100" end="0" time="200" condition="[Window.IsVisible(contextmenu) | ControlGroup(99).HasFocus() | Control.HasFocus(97)] + Skin.String(TV.View1.B5B1ShowOF,HIDE)">Conditional</animation>
 					
-					<include name="BlocPosition">
+					<include content="BlocPosition">
 						<param name="Prefix" value="TV.View1" />
 						<param name="BlocID" value="B1" />
 					</include>
@@ -196,7 +196,7 @@
 
 			<!-- Bloc 2 -->
 			<control type="group">
-				<include name="BlocPosition">
+				<include content="BlocPosition">
 					<param name="Prefix" value="TV.View1" />
 					<param name="BlocID" value="B2" />
 				</include>
@@ -277,7 +277,7 @@
 						</control>
 					</control>
 					<control type="group">
-						<include name="B2SRate">
+						<include content="B2SRate">
 							<param name="Prefix" value="TV.View1" />
 						</include>
 						<control type="progress">
@@ -319,7 +319,7 @@
 				<animation effect="fade" start="100" end="0" time="400" reversible="false" condition="System.IdleTime(25) + Skin.String(IdleFade,25) + Skin.String(TV.View1.B5Show,IDLEFADE)">Conditonal</animation>
 				<animation effect="fade" start="100" end="0" time="400" reversible="false" condition="System.IdleTime(30) + Skin.String(IdleFade,30) + Skin.String(TV.View1.B5Show,IDLEFADE)">Conditonal</animation>
 				<animation effect="fade" start="100" end="0" time="200" condition="!ControlGroup(99).HasFocus() + !Control.HasFocus(97) + !Window.IsVisible(contextmenu) + Skin.String(TV.View1.B5Show,ONFOCUS)">Conditonal</animation>
-				<include name="BlocPosition">
+				<include content="BlocPosition">
 					<param name="Prefix" value="TV.View1" />
 					<param name="BlocID" value="B5" />
 				</include>
@@ -331,7 +331,7 @@
 					<texture colordiffuse="$INFO[Skin.String(Color.B2Bg)]">common/white.png</texture>
 				</control>
 
-				<include name="ViewOptions" condition="Skin.String(TV.View1.B5SizeX,1COLUMN) + Skin.String(TV.View1.B5SizeY,1ROW)"> 
+				<include content="ViewOptions" condition="Skin.String(TV.View1.B5SizeX,1COLUMN) + Skin.String(TV.View1.B5SizeY,1ROW)"> 
 					<param name="width" value="588" /> 
 					<param name="height" value="305" /> 
 					<param name="ViewName" value="$INFO[Skin.String(TV.View1.Name)]" /> 
@@ -339,7 +339,7 @@
 					<param name="Id" value="10" /> 
 					<param name="CompPrefix" value="TV.View1" />
 				</include> 
-				<include name="ViewOptions" condition="Skin.String(TV.View1.B5SizeX,1COLUMN) + !Skin.String(TV.View1.B5SizeY,1ROW)"> 
+				<include content="ViewOptions" condition="Skin.String(TV.View1.B5SizeX,1COLUMN) + !Skin.String(TV.View1.B5SizeY,1ROW)"> 
 					<param name="width" value="588" /> 
 					<param name="height" value="610" /> 
 					<param name="ViewName" value="$INFO[Skin.String(TV.View1.Name)]" /> 
@@ -347,7 +347,7 @@
 					<param name="Id" value="10" /> 
 					<param name="CompPrefix" value="TV.View1" />
 				</include> 
-					<include name="ViewOptions" condition="Skin.String(TV.View1.B5SizeX,2COLUMN) + Skin.String(TV.View1.B5SizeY,1ROW)"> 
+					<include content="ViewOptions" condition="Skin.String(TV.View1.B5SizeX,2COLUMN) + Skin.String(TV.View1.B5SizeY,1ROW)"> 
 					<param name="width" value="1224" /> 
 					<param name="height" value="305" /> 
 					<param name="ViewName" value="$INFO[Skin.String(TV.View1.Name)]" /> 
@@ -355,7 +355,7 @@
 					<param name="Id" value="10" /> 
 					<param name="CompPrefix" value="TV.View1" />
 				</include> 
-				<include name="ViewOptions" condition="Skin.String(TV.View1.B5SizeX,2COLUMN) + !Skin.String(TV.View1.B5SizeY,1ROW)"> 
+				<include content="ViewOptions" condition="Skin.String(TV.View1.B5SizeX,2COLUMN) + !Skin.String(TV.View1.B5SizeY,1ROW)"> 
 					<param name="width" value="1224" /> 
 					<param name="height" value="610" /> 
 					<param name="ViewName" value="$INFO[Skin.String(TV.View1.Name)]" /> 
@@ -363,7 +363,7 @@
 					<param name="Id" value="10" /> 
 					<param name="CompPrefix" value="TV.View1" />
 				</include> 
-				<include name="ViewOptions" condition="Skin.String(TV.View1.B5SizeX,3COLUMN) + Skin.String(TV.View1.B5SizeY,1ROW)"> 
+				<include content="ViewOptions" condition="Skin.String(TV.View1.B5SizeX,3COLUMN) + Skin.String(TV.View1.B5SizeY,1ROW)"> 
 					<param name="width" value="1860" /> 
 					<param name="height" value="305" /> 
 					<param name="ViewName" value="$INFO[Skin.String(TV.View1.Name)]" /> 
@@ -371,7 +371,7 @@
 					<param name="Id" value="10" /> 
 					<param name="CompPrefix" value="TV.View1" />
 				</include> 
-				<include name="ViewOptions" condition="Skin.String(TV.View1.B5SizeX,3COLUMN) + !Skin.String(TV.View1.B5SizeY,1ROW)"> 
+				<include content="ViewOptions" condition="Skin.String(TV.View1.B5SizeX,3COLUMN) + !Skin.String(TV.View1.B5SizeY,1ROW)"> 
 					<param name="width" value="1860" /> 
 					<param name="height" value="610" /> 
 					<param name="ViewName" value="$INFO[Skin.String(TV.View1.Name)]" /> 
@@ -385,7 +385,7 @@
 		</control>
 			
 		<!-- Dialogs Background -->
-		<include name="DialogBgDef">
+		<include content="DialogBgDef">
 			<param name="CompPrefix" value="TV.View1" />
 		</include>
 		

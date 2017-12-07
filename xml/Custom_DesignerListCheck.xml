@@ -36,7 +36,7 @@
 					[SubString(Window(Home).Property(DialogVisibility4)ListCheck) + SubString(Window(Home).Property(DialogVisibility4),$NUMBER[4]) + IsEmpty(Window(Home).Property(DialogVisibility5))] |
 					[SubString(Window(Home).Property(DialogVisibility5),ListCheck)  + SubString(Window(Home).Property(DialogVisibility5),$NUMBER[5])]</visible>
 			
-			<include name="DialogPOS">
+			<include content="DialogPOS">
 				<param name="DialogName" value="DiaListCheck" />
 			</include>
 

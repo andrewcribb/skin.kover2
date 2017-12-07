@@ -25,28 +25,28 @@
 					[SubString(Window(Home).Property(DialogVisibility4)PeripheralSettings) + SubString(Window(Home).Property(DialogVisibility4),$NUMBER[4]) + IsEmpty(Window(Home).Property(DialogVisibility5))] |
 					[SubString(Window(Home).Property(DialogVisibility5),PeripheralSettings)  + SubString(Window(Home).Property(DialogVisibility5),$NUMBER[5])]</visible>
 			
-			<include name="DialogPOS">
+			<include content="DialogPOS">
 				<param name="DialogName" value="DiaPeripheralSettings" />
 			</include>
 
 		</control>
 
 		<!-- Default button -->
-		<include name="DiaGroupListButton">
+		<include content="DiaGroupListButton">
 			<param name="Id" value="7" />
 			<param name="OnLeft" value="noop" />
 			<param name="OnRight" value="28" />
 		</include>
 
 		<!-- Default radiobutton -->
-		<include name="DiaRadio">
+		<include content="DiaRadio">
 			<param name="Id" value="8" />
 			<param name="OnLeft" value="noop" />
 			<param name="OnRight" value="28" />
 		</include>
 
 		<!-- Default spincontrolex -->
-		<include name="DiaSpin">
+		<include content="DiaSpin">
 			<param name="Id" value="9" />
 			<param name="OnLeft" value="noop" />
 			<param name="OnRight" value="28" />

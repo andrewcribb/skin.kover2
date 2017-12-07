@@ -23,7 +23,7 @@
 					[SubString(Window(Home).Property(DialogVisibility4)PVRChannelsOSD) + SubString(Window(Home).Property(DialogVisibility4),$NUMBER[4]) + IsEmpty(Window(Home).Property(DialogVisibility5))] |
 					[SubString(Window(Home).Property(DialogVisibility5),PVRChannelsOSD)  + SubString(Window(Home).Property(DialogVisibility5),$NUMBER[5])]</visible>
 			
-			<include name="DialogPOS">
+			<include content="DialogPOS">
 				<param name="DialogName" value="DIAPVRChannelOSD" />
 			</include>
 

@@ -22,19 +22,19 @@
 					[SubString(Window(Home).Property(DialogVisibility4)ContentSettings) + SubString(Window(Home).Property(DialogVisibility4),$NUMBER[4]) + IsEmpty(Window(Home).Property(DialogVisibility5))] |
 					[SubString(Window(Home).Property(DialogVisibility5),ContentSettings)  + SubString(Window(Home).Property(DialogVisibility5),$NUMBER[5])]</visible>
 			
-			<include name="DialogPOS">
+			<include content="DialogPOS">
 				<param name="DialogName" value="DiaContentSettings" />
 			</include>
 
 		</control>
 
-		<include name="DiaGroupListButton">
+		<include content="DiaGroupListButton">
 			<param name="Id" value="7" />
 			<param name="OnLeft" value="noop" />
 			<param name="OnRight" value="9000" />
 		</include>
 		
-		<include name="DiaRadio">
+		<include content="DiaRadio">
 			<param name="Id" value="8" />
 			<param name="Label" value="1924" />
 			<param name="OnLeft" value="noop" />

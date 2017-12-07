@@ -18,7 +18,7 @@
 		<!-- Decorative Elements -->
 		<control type="group">
 			<!-- Background -->
-			<include name="Wallpaper">
+			<include content="Wallpaper">
 				<param name="CompPrefix" value="HOM.View1" />
 			</include>
 
@@ -234,7 +234,7 @@
 					</control>					
 					
 					<!-- Sort Method -->
-					<include name="DiaGroupListButton">
+					<include content="DiaGroupListButton">
 						<param name="Id" value="3" />
 						<param name="Label" value="103" />
 						<param name="OnLeft" value="Control.SetFocus(50)" />
@@ -264,7 +264,7 @@
 					</control>
 
 					<!-- Auto Update -->
-					<include name="DiaRadio">
+					<include content="DiaRadio">
 						<param name="Id" value="5" />
 						<param name="Label" value="24063" />
 						<param name="OnLeft" value="Control.SetFocus(50)" />
@@ -272,7 +272,7 @@
 					</include>		
 
 					<!-- Notifications -->
-					<include name="DiaRadio">
+					<include content="DiaRadio">
 						<param name="Id" value="6" />
 						<param name="Label" value="25000" />
 						<param name="OnLeft" value="Control.SetFocus(50)" />
@@ -280,7 +280,7 @@
 					</include>		
 
 					<!-- Language Filter -->
-					<include name="DiaRadio">
+					<include content="DiaRadio">
 						<param name="Id" value="7" />
 						<param name="Label" value="25001" />
 						<param name="OnLeft" value="Control.SetFocus(50)" />
@@ -288,7 +288,7 @@
 					</include>			
 
 					<!-- Hide Broken -->
-					<include name="DiaRadio">
+					<include content="DiaRadio">
 						<param name="Id" value="8" />
 						<param name="Label" value="24999" />
 						<param name="OnLeft" value="Control.SetFocus(50)" />
@@ -296,7 +296,7 @@
 					</include>	
 
 					<!-- Update Scan -->
-					<include name="DiaGroupListButton">
+					<include content="DiaGroupListButton">
 						<param name="Id" value="9" />
 						<param name="Label" value="24034" />
 						<param name="OnLeft" value="Control.SetFocus(50)" />

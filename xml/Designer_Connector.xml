@@ -2,47 +2,47 @@
 <includes>
 
 	<include name="CustomLists">
-		<include name="$PARAM[CustomId]" condition="Skin.String($PARAM[CompPrefix].B1SizeX,1COLUMN) + Skin.String($PARAM[CompPrefix].B1Sizey,1ROW)">
+		<include content="$PARAM[CustomId]" condition="Skin.String($PARAM[CompPrefix].B1SizeX,1COLUMN) + Skin.String($PARAM[CompPrefix].B1Sizey,1ROW)">
 			<param name="width" value="636" />
 			<param name="height" value="356" />
 			<param name="CompPrefix" value="$PARAM[CompPrefix]" />
 		</include>
-		<include name="$PARAM[CustomId]" condition="Skin.String($PARAM[CompPrefix].B1SizeX,2COLUMN) + Skin.String($PARAM[CompPrefix].B1Sizey,1ROW)">
+		<include content="$PARAM[CustomId]" condition="Skin.String($PARAM[CompPrefix].B1SizeX,2COLUMN) + Skin.String($PARAM[CompPrefix].B1Sizey,1ROW)">
 			<param name="width" value="1272" />
 			<param name="height" value="356" />
 			<param name="CompPrefix" value="$PARAM[CompPrefix]" />
 		</include>
-		<include name="$PARAM[CustomId]" condition="Skin.String($PARAM[CompPrefix].B1SizeX,3COLUMN) + Skin.String($PARAM[CompPrefix].B1Sizey,1ROW)">
+		<include content="$PARAM[CustomId]" condition="Skin.String($PARAM[CompPrefix].B1SizeX,3COLUMN) + Skin.String($PARAM[CompPrefix].B1Sizey,1ROW)">
 			<param name="width" value="1908" />
 			<param name="height" value="356" />
 			<param name="CompPrefix" value="$PARAM[CompPrefix]" />
 		</include>
-		<include name="$PARAM[CustomId]" condition="Skin.String($PARAM[CompPrefix].B1SizeX,1COLUMN) + Skin.String($PARAM[CompPrefix].B1Sizey,2ROW)">
+		<include content="$PARAM[CustomId]" condition="Skin.String($PARAM[CompPrefix].B1SizeX,1COLUMN) + Skin.String($PARAM[CompPrefix].B1Sizey,2ROW)">
 			<param name="width" value="636" />
 			<param name="height" value="712" />
 			<param name="CompPrefix" value="$PARAM[CompPrefix]" />
 		</include>
-		<include name="$PARAM[CustomId]" condition="Skin.String($PARAM[CompPrefix].B1SizeX,2COLUMN) + Skin.String($PARAM[CompPrefix].B1Sizey,2ROW)">
+		<include content="$PARAM[CustomId]" condition="Skin.String($PARAM[CompPrefix].B1SizeX,2COLUMN) + Skin.String($PARAM[CompPrefix].B1Sizey,2ROW)">
 			<param name="width" value="1272" />
 			<param name="height" value="712" />
 			<param name="CompPrefix" value="$PARAM[CompPrefix]" />
 		</include>
-		<include name="$PARAM[CustomId]" condition="Skin.String($PARAM[CompPrefix].B1SizeX,3COLUMN) + Skin.String($PARAM[CompPrefix].B1Sizey,2ROW)">
+		<include content="$PARAM[CustomId]" condition="Skin.String($PARAM[CompPrefix].B1SizeX,3COLUMN) + Skin.String($PARAM[CompPrefix].B1Sizey,2ROW)">
 			<param name="width" value="1908" />
 			<param name="height" value="712" />
 			<param name="CompPrefix" value="$PARAM[CompPrefix]" />
 		</include>
-		<include name="$PARAM[CustomId]" condition="Skin.String($PARAM[CompPrefix].B1SizeX,1COLUMN) + Skin.String($PARAM[CompPrefix].B1Sizey,3ROW)">
+		<include content="$PARAM[CustomId]" condition="Skin.String($PARAM[CompPrefix].B1SizeX,1COLUMN) + Skin.String($PARAM[CompPrefix].B1Sizey,3ROW)">
 			<param name="width" value="636" />
 			<param name="height" value="1068" />
 			<param name="CompPrefix" value="$PARAM[CompPrefix]" />
 		</include>
-		<include name="$PARAM[CustomId]" condition="Skin.String($PARAM[CompPrefix].B1SizeX,2COLUMN) + Skin.String($PARAM[CompPrefix].B1Sizey,3ROW)">
+		<include content="$PARAM[CustomId]" condition="Skin.String($PARAM[CompPrefix].B1SizeX,2COLUMN) + Skin.String($PARAM[CompPrefix].B1Sizey,3ROW)">
 			<param name="width" value="1272" />
 			<param name="height" value="1068" />
 			<param name="CompPrefix" value="$PARAM[CompPrefix]" />
 		</include>
-		<include name="$PARAM[CustomId]" condition="Skin.String($PARAM[CompPrefix].B1SizeX,3COLUMN) + Skin.String($PARAM[CompPrefix].B1Sizey,3ROW)">
+		<include content="$PARAM[CustomId]" condition="Skin.String($PARAM[CompPrefix].B1SizeX,3COLUMN) + Skin.String($PARAM[CompPrefix].B1Sizey,3ROW)">
 			<param name="width" value="1908" />
 			<param name="height" value="1068" />
 			<param name="CompPrefix" value="$PARAM[CompPrefix]" />
@@ -652,7 +652,7 @@
 
 	<!-- Dialog Positioner -->
 	<include name="DialogPOS">
-		<include name="$PARAM[DialogName]" condition="StringCompare(Window(Home).Property(DialogPos),TOP) + StringCompare(Window(Home).Property(SidebarPos),TOP)">
+		<include content="$PARAM[DialogName]" condition="StringCompare(Window(Home).Property(DialogPos),TOP) + StringCompare(Window(Home).Property(SidebarPos),TOP)">
 			<param name="DIABgPosX" value="0" />
 			<param name="DIABgPosY" value="120" />
 			<param name="DIABgSizeX" value="1920" />
@@ -668,7 +668,7 @@
 			<param name="DIAB3PosY" value="132" />	
 		</include>
 		
-		<include name="$PARAM[DialogName]" condition="StringCompare(Window(Home).Property(DialogPos),BOTTOM) + StringCompare(Window(Home).Property(SidebarPos),BOTTOM)">
+		<include content="$PARAM[DialogName]" condition="StringCompare(Window(Home).Property(DialogPos),BOTTOM) + StringCompare(Window(Home).Property(SidebarPos),BOTTOM)">
 			<param name="DIABgPosX" value="0" />
 			<param name="DIABgPosY" value="580" />
 			<param name="DIABgSizeX" value="1920" />
@@ -684,7 +684,7 @@
 			<param name="DIAB3PosY" value="592" />	
 		</include>	
 
-		<include name="$PARAM[DialogName]" condition="StringCompare(Window(Home).Property(DialogPos),LEFT) + StringCompare(Window(Home).Property(SidebarPos),LEFT)">
+		<include content="$PARAM[DialogName]" condition="StringCompare(Window(Home).Property(DialogPos),LEFT) + StringCompare(Window(Home).Property(SidebarPos),LEFT)">
 			<param name="DIABgPosX" value="120" />
 			<param name="DIABgPosY" value="0" />
 			<param name="DIABgSizeX" value="660" />
@@ -700,7 +700,7 @@
 			<param name="DIAB3PosY" value="724" />	
 		</include>	
 		
-		<include name="$PARAM[DialogName]" condition="StringCompare(Window(Home).Property(DialogPos),RIGHT) + StringCompare(Window(Home).Property(SidebarPos),RIGHT)">
+		<include content="$PARAM[DialogName]" condition="StringCompare(Window(Home).Property(DialogPos),RIGHT) + StringCompare(Window(Home).Property(SidebarPos),RIGHT)">
 			<param name="DIABgPosX" value="1140" />
 			<param name="DIABgPosY" value="0" />
 			<param name="DIABgSizeX" value="660" />
@@ -716,7 +716,7 @@
 			<param name="DIAB3PosY" value="724" />	
 		</include>
 		
-		<include name="$PARAM[DialogName]" condition="StringCompare(Window(Home).Property(DialogPos),TOP) + !StringCompare(Window(Home).Property(SidebarPos),TOP)">
+		<include content="$PARAM[DialogName]" condition="StringCompare(Window(Home).Property(DialogPos),TOP) + !StringCompare(Window(Home).Property(SidebarPos),TOP)">
 			<param name="DIABgPosX" value="0" />
 			<param name="DIABgPosY" value="0" />
 			<param name="DIABgSizeX" value="1920" />
@@ -732,7 +732,7 @@
 			<param name="DIAB3PosY" value="12" />	
 		</include>
 		
-		<include name="$PARAM[DialogName]" condition="[StringCompare(Window(Home).Property(DialogPos),BOTTOM) + !StringCompare(Window(Home).Property(SidebarPos),BOTTOM)] | IsEmpty(Skin.String(KOverInit))">
+		<include content="$PARAM[DialogName]" condition="[StringCompare(Window(Home).Property(DialogPos),BOTTOM) + !StringCompare(Window(Home).Property(SidebarPos),BOTTOM)] | IsEmpty(Skin.String(KOverInit))">
 			<param name="DIABgPosX" value="0" />
 			<param name="DIABgPosY" value="700" />
 			<param name="DIABgSizeX" value="1920" />
@@ -748,7 +748,7 @@
 			<param name="DIAB3PosY" value="712" />	
 		</include>	
 
-		<include name="$PARAM[DialogName]" condition="StringCompare(Window(Home).Property(DialogPos),LEFT) + !StringCompare(Window(Home).Property(SidebarPos),LEFT)">
+		<include content="$PARAM[DialogName]" condition="StringCompare(Window(Home).Property(DialogPos),LEFT) + !StringCompare(Window(Home).Property(SidebarPos),LEFT)">
 			<param name="DIABgPosX" value="0" />
 			<param name="DIABgPosY" value="0" />
 			<param name="DIABgSizeX" value="660" />
@@ -764,7 +764,7 @@
 			<param name="DIAB3PosY" value="724" />	
 		</include>	
 		
-		<include name="$PARAM[DialogName]" condition="StringCompare(Window(Home).Property(DialogPos),RIGHT) + !StringCompare(Window(Home).Property(SidebarPos),RIGHT)">
+		<include content="$PARAM[DialogName]" condition="StringCompare(Window(Home).Property(DialogPos),RIGHT) + !StringCompare(Window(Home).Property(SidebarPos),RIGHT)">
 			<param name="DIABgPosX" value="1260" />
 			<param name="DIABgPosY" value="0" />
 			<param name="DIABgSizeX" value="660" />
@@ -786,7 +786,7 @@
 		<!-- Configuring Horizontal Positioning -->
 		<control type="group">
 			
-			<include name="BlocPosition">
+			<include content="BlocPosition">
 				<param name="Prefix" value="$PARAM[Prefix]" />
 				<param name="BlocID" value="B5" />
 			</include>

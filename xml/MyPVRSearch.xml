@@ -16,55 +16,55 @@
 
 	<controls>
 
-		<include condition="!IsEmpty(Skin.String(TV.View1.Name))" name="VDOViewtype">
+		<include content="VDOViewtype" condition="!IsEmpty(Skin.String(TV.View1.Name))">
 			<param name="Id" value="50" />
 			<param name="IclPrefix" value="TVView1" />
 			<param name="CompPrefix" value="TV.View1" />
 			<param name="Section" value="TV" />
 		</include>
-		<include condition="!IsEmpty(Skin.String(TV.View2.Name))" name="VDOViewtype">
+		<include content="VDOViewtype" condition="!IsEmpty(Skin.String(TV.View2.Name))">
 			<param name="Id" value="51" />
 			<param name="IclPrefix" value="TVView2" />
 			<param name="CompPrefix" value="TV.View2" />
 			<param name="Section" value="TV" />
 		</include>
-		<include condition="!IsEmpty(Skin.String(TV.View3.Name))" name="VDOViewtype">
+		<include content="VDOViewtype" condition="!IsEmpty(Skin.String(TV.View3.Name))">
 			<param name="Id" value="52" />
 			<param name="IclPrefix" value="TVView3" />
 			<param name="CompPrefix" value="TV.View3" />
 			<param name="Section" value="TV" />
 		</include>
-		<include condition="!IsEmpty(Skin.String(TV.View4.Name))" name="VDOViewtype">
+		<include content="VDOViewtype" condition="!IsEmpty(Skin.String(TV.View4.Name))">
 			<param name="Id" value="53" />
 			<param name="IclPrefix" value="TVView4" />
 			<param name="CompPrefix" value="TV.View4" />
 			<param name="Section" value="TV" />
 		</include>
-		<include condition="!IsEmpty(Skin.String(TV.View5.Name))" name="VDOViewtype">
+		<include content="VDOViewtype" condition="!IsEmpty(Skin.String(TV.View5.Name))">
 			<param name="Id" value="54" />
 			<param name="IclPrefix" value="TVView5" />
 			<param name="CompPrefix" value="TV.View5" />
 			<param name="Section" value="TV" />
 		</include>
-		<include condition="!IsEmpty(Skin.String(TV.View6.Name))" name="VDOViewtype">
+		<include content="VDOViewtype" condition="!IsEmpty(Skin.String(TV.View6.Name))">
 			<param name="Id" value="55" />
 			<param name="IclPrefix" value="TVView6" />
 			<param name="CompPrefix" value="TV.View6" />
 			<param name="Section" value="TV" />
 		</include>
-		<include condition="!IsEmpty(Skin.String(TV.View7.Name))" name="VDOViewtype">
+		<include content="VDOViewtype" condition="!IsEmpty(Skin.String(TV.View7.Name))">
 			<param name="Id" value="56" />
 			<param name="IclPrefix" value="TVView7" />
 			<param name="CompPrefix" value="TV.View7" />
 			<param name="Section" value="TV" />
 		</include>
-		<include condition="!IsEmpty(Skin.String(TV.View8.Name))" name="VDOViewtype">
+		<include content="VDOViewtype" condition="!IsEmpty(Skin.String(TV.View8.Name))">
 			<param name="Id" value="57" />
 			<param name="IclPrefix" value="TVView8" />
 			<param name="CompPrefix" value="TV.View8" />
 			<param name="Section" value="TV" />
 		</include>
-		<include condition="!IsEmpty(Skin.String(TV.View9.Name))" name="VDOViewtype">
+		<include content="VDOViewtype" condition="!IsEmpty(Skin.String(TV.View9.Name))">
 			<param name="Id" value="58" />
 			<param name="IclPrefix" value="TVView9" />
 			<param name="CompPrefix" value="TV.View9" />

@@ -11,7 +11,7 @@
 			<height>356</height>
 			
 			<!-- Default grouplist Tile -->
-			<include name="DiaGroupList">
+			<include content="DiaGroupList">
 				<param name="Id" value="996" />
 				<param name="OnLeft" value="Close" />
 				<param name="OnRight" value="noop" />
@@ -20,7 +20,7 @@
 			</include>
 				
 			<!-- Default button Tile -->
-			<include name="DiaGroupListButton">
+			<include content="DiaGroupListButton">
 				<param name="Id" value="1000" />
 			</include>
 		</control>
@@ -1954,7 +1954,7 @@
 					<usecontrolcoords>true</usecontrolcoords>
 					
 					<!-- Min Duration -->
-					<include name="DiaSpin">
+					<include content="DiaSpin">
 						<param name="Id" value="12" />
 						<param name="Label" value="19130" />
 						<param name="OnLeft" value="9" />
@@ -1962,7 +1962,7 @@
 					</include>
 
 					<!-- Max Duration -->
-					<include name="DiaSpin">
+					<include content="DiaSpin">
 						<param name="Id" value="13" />
 						<param name="Label" value="19131" />
 						<param name="OnLeft" value="9" />
@@ -1970,7 +1970,7 @@
 					</include>
 
 					<!-- Start Time -->
-					<include name="DiaEdit">
+					<include content="DiaEdit">
 						<param name="Id" value="16" />
 						<param name="Label" value="19126" />
 						<param name="OnLeft" value="9" />
@@ -1978,7 +1978,7 @@
 					</include>	
 
 					<!-- Stop Time -->
-					<include name="DiaEdit">
+					<include content="DiaEdit">
 						<param name="Id" value="17" />
 						<param name="Label" value="19127" />
 						<param name="OnLeft" value="9" />
@@ -1986,7 +1986,7 @@
 					</include>		
 
 					<!-- Avoid Repeats -->
-					<include name="DiaRadio">
+					<include content="DiaRadio">
 						<param name="Id" value="19" />
 						<param name="Label" value="19121" />
 						<param name="OnLeft" value="9" />
@@ -1994,7 +1994,7 @@
 					</include>
 					
 					<!-- Groups -->
-					<include name="DiaSpin">
+					<include content="DiaSpin">
 						<param name="Id" value="21" />
 						<param name="Label" value="19141" />
 						<param name="OnLeft" value="9" />
@@ -2002,7 +2002,7 @@
 					</include>
 					
 					<!-- Channels -->
-					<include name="DiaSpin">
+					<include content="DiaSpin">
 						<param name="Id" value="23" />
 						<param name="Label" value="19148" />
 						<param name="OnLeft" value="9" />
@@ -2010,7 +2010,7 @@
 					</include>
 
 					<!-- Ignore Recordings -->
-					<include name="DiaRadio">
+					<include content="DiaRadio">
 						<param name="Id" value="27" />
 						<param name="Label" value="19125" />
 						<param name="OnLeft" value="9" />
@@ -2018,7 +2018,7 @@
 					</include>				
 
 					<!-- Include Description -->
-					<include name="DiaRadio">
+					<include content="DiaRadio">
 						<param name="Id" value="10" />
 						<param name="Label" value="19134" />
 						<param name="OnLeft" value="9" />
@@ -2026,7 +2026,7 @@
 					</include>
 
 					<!-- Case Sensitive -->					
-					<include name="DiaRadio">
+					<include content="DiaRadio">
 						<param name="Id" value="11" />
 						<param name="Label" value="19135" />
 						<param name="OnLeft" value="9" />
@@ -2034,7 +2034,7 @@
 					</include>
 					
 					<!-- Start Date -->
-					<include name="DiaEdit">
+					<include content="DiaEdit">
 						<param name="Id" value="14" />
 						<param name="Label" value="19128" />
 						<param name="OnLeft" value="9" />
@@ -2042,7 +2042,7 @@
 					</include>
 
 					<!-- Stop Date -->
-					<include name="DiaEdit">
+					<include content="DiaEdit">
 						<param name="Id" value="15" />
 						<param name="Label" value="19129" />
 						<param name="OnLeft" value="9" />
@@ -2050,7 +2050,7 @@
 					</include>
 
 					<!-- Genre -->
-					<include name="DiaSpin">
+					<include content="DiaSpin">
 						<param name="Id" value="18" />
 						<param name="Label" value="515" />
 						<param name="OnLeft" value="9" />
@@ -2058,7 +2058,7 @@
 					</include>
 					
 					<!-- Include Unknown Genre -->
-					<include name="DiaRadio">
+					<include content="DiaRadio">
 						<param name="Id" value="20" />
 						<param name="Label" value="19132" />
 						<param name="OnLeft" value="9" />
@@ -2066,7 +2066,7 @@
 					</include>
 					
 					<!-- FTA Only -->
-					<include name="DiaRadio">
+					<include content="DiaRadio">
 						<param name="Id" value="22" />
 						<param name="Label" value="19123" />
 						<param name="OnLeft" value="9" />
@@ -2074,7 +2074,7 @@
 					</include>
 					
 					<!-- Ignore Timers -->
-					<include name="DiaRadio">
+					<include content="DiaRadio">
 						<param name="Id" value="24" />
 						<param name="Label" value="19124" />
 						<param name="OnLeft" value="9" />
@@ -2718,12 +2718,12 @@
 				<height>$PARAM[DIAB2SizeY]</height>
 
 				<!-- Cast -->
-				<include name="BookmarksView" condition="StringCompare(Window(Home).Property(DialogPos),LEFT) | StringCompare(Window(Home).Property(DialogPos),RIGHT)">
+				<include content="BookmarksView" condition="StringCompare(Window(Home).Property(DialogPos),LEFT) | StringCompare(Window(Home).Property(DialogPos),RIGHT)">
 					<param name="width" value="612" />
 					<param name="height" value="664" />
 				</include>	
 
-				<include name="BookmarksView" condition="StringCompare(Window(Home).Property(DialogPos),TOP) | StringCompare(Window(Home).Property(DialogPos),BOTTOM)">
+				<include content="BookmarksView" condition="StringCompare(Window(Home).Property(DialogPos),TOP) | StringCompare(Window(Home).Property(DialogPos),BOTTOM)">
 					<param name="width" value="1224" />
 					<param name="height" value="332" />
 				</include>						
@@ -3443,7 +3443,7 @@
 					<usecontrolcoords>true</usecontrolcoords>
 					
 					<!-- Channel activated -->
-					<include name="DiaRadio">
+					<include content="DiaRadio">
 						<param name="Id" value="7" />
 						<param name="Label" value="19074" />
 						<param name="OnLeft" value="20" />
@@ -3451,7 +3451,7 @@
 					</include>		
 
 					<!-- Channel name -->
-					<include name="DiaEdit">
+					<include content="DiaEdit">
 						<param name="Id" value="8" />
 						<param name="Label" value="19201" />
 						<param name="OnLeft" value="20" />
@@ -3459,7 +3459,7 @@
 					</include>	
 
 					<!-- Channel logo -->
-					<include name="DiaGroupListButton">
+					<include content="DiaGroupListButton">
 						<param name="Id" value="9" />
 						<param name="Label" value="19202" />
 						<param name="OnLeft" value="20" />
@@ -3478,7 +3478,7 @@
 					</control>		
 
 					<!-- Epg activated -->
-					<include name="DiaRadio">
+					<include content="DiaRadio">
 						<param name="Id" value="12" />
 						<param name="Label" value="4" />
 						<param name="OnLeft" value="20" />
@@ -3486,7 +3486,7 @@
 					</include>		
 
 					<!-- Epg source -->
-					<include name="DiaSpin">
+					<include content="DiaSpin">
 						<param name="Id" value="13" />
 						<param name="Label" value="19200" />
 						<param name="OnLeft" value="20" />
@@ -3494,7 +3494,7 @@
 					</include>		
 
 					<!-- Parental lock -->
-					<include name="DiaRadio">
+					<include content="DiaRadio">
 						<param name="Id" value="14" />
 						<param name="Label" value="19267" />
 						<param name="OnLeft" value="20" />
@@ -3502,7 +3502,7 @@
 					</include>		
 
 					<!-- Edit channel -->
-					<include name="DiaGroupListButton">
+					<include content="DiaGroupListButton">
 						<param name="Id" value="31" />
 						<param name="Label" value="19203" />
 						<param name="OnLeft" value="20" />
@@ -3510,7 +3510,7 @@
 					</include>			
 
 					<!-- Delete channel -->
-					<include name="DiaGroupListButton">
+					<include content="DiaGroupListButton">
 						<param name="Id" value="32" />
 						<param name="Label" value="19211" />
 						<param name="OnLeft" value="20" />
@@ -3518,7 +3518,7 @@
 					</include>		
 
 					<!-- New Channel -->
-					<include name="DiaGroupListButton">
+					<include content="DiaGroupListButton">
 						<param name="Id" value="33" />
 						<param name="Label" value="19204" />
 						<param name="OnLeft" value="20" />
@@ -4049,7 +4049,7 @@
 					<usecontrolcoords>true</usecontrolcoords>
 					
 					<!-- Protocol -->
-					<include name="DiaSpin">
+					<include content="DiaSpin">
 						<param name="Id" value="10" />
 						<param name="Label" value="1008" />
 						<param name="OnLeft" value="noop" />
@@ -4057,7 +4057,7 @@
 					</include>		
 
 					<!-- Server Address -->
-					<include name="DiaEdit">
+					<include content="DiaEdit">
 						<param name="Id" value="11" />
 						<param name="Label" value="-" />						
 						<param name="OnLeft" value="noop" />
@@ -4065,7 +4065,7 @@
 					</include>		
 
 					<!-- Server Browse -->
-					<include name="DiaGroupListButton">
+					<include content="DiaGroupListButton">
 						<param name="Id" value="12" />
 						<param name="Label" value="1024" />						
 						<param name="OnLeft" value="noop" />
@@ -4073,14 +4073,14 @@
 					</include>			
 
 					<!-- Remote -->
-					<include name="DiaEdit">
+					<include content="DiaEdit">
 						<param name="Id" value="16" />
 						<param name="OnLeft" value="noop" />
 						<param name="OnRight" value="9000" />
 					</include>		
 
 					<!-- Port -->
-					<include name="DiaEdit">
+					<include content="DiaEdit">
 						<param name="Id" value="13" />
 						<param name="Label" value="1013" />						
 						<param name="OnLeft" value="noop" />
@@ -4088,7 +4088,7 @@
 					</include>		
 
 					<!-- Username -->
-					<include name="DiaEdit">
+					<include content="DiaEdit">
 						<param name="Id" value="14" />
 						<param name="Label" value="1014" />						
 						<param name="OnLeft" value="noop" />
@@ -4096,7 +4096,7 @@
 					</include>										
 
 					<!-- Password -->
-					<include name="DiaEdit">
+					<include content="DiaEdit">
 						<param name="Id" value="15" />
 						<param name="Label" value="15052" />						
 						<param name="OnLeft" value="noop" />
@@ -4355,7 +4355,7 @@
 					<visible>StringCompare(Container(450).ListItem.Label,$LOCALIZE[21423])</visible>
 					
 					<!-- Set Playlist type -->
-					<include name="DiaSpin">
+					<include content="DiaSpin">
 						<param name="Id" value="22" />
 						<param name="Label" value="467" />
 						<param name="OnLeft" value="noop" />
@@ -4363,7 +4363,7 @@
 					</include>		
 
 					<!-- Name Button -->
-					<include name="DiaEdit">
+					<include content="DiaEdit">
 						<param name="Id" value="12" />
 						<param name="Label" value="35502" />						
 						<param name="OnLeft" value="noop" />
@@ -4371,7 +4371,7 @@
 					</include>		
 
 					<!-- Add Rule Button -->
-					<include name="DiaGroupListButton">
+					<include content="DiaGroupListButton">
 						<param name="Id" value="13" />
 						<param name="Label" value="15019" />						
 						<param name="OnLeft" value="noop" />
@@ -4379,7 +4379,7 @@
 					</include>			
 
 					<!-- Remove Rule Button -->
-					<include name="DiaGroupListButton">
+					<include content="DiaGroupListButton">
 						<param name="Id" value="14" />
 						<param name="Label" value="1210" />						
 						<param name="OnLeft" value="noop" />
@@ -4387,7 +4387,7 @@
 					</include>			
 
 					<!-- Edit Rule Button -->
-					<include name="DiaGroupListButton">
+					<include content="DiaGroupListButton">
 						<param name="Id" value="15" />
 						<param name="Label" value="21435" />						
 						<param name="OnLeft" value="noop" />
@@ -4412,7 +4412,7 @@
 					<visible>StringCompare(Container(450).ListItem.Label,$LOCALIZE[33063])</visible>
 					
 					<!-- Item Match -->
-					<include name="DiaSpin">
+					<include content="DiaSpin">
 						<param name="Id" value="16" />
 						<param name="Label" value="21424" />
 						<param name="OnLeft" value="noop" />
@@ -4420,7 +4420,7 @@
 					</include>		
 
 					<!-- Limit -->
-					<include name="DiaSpin">
+					<include content="DiaSpin">
 						<param name="Id" value="17" />
 						<param name="Label" value="21427" />
 						<param name="OnLeft" value="noop" />
@@ -4428,7 +4428,7 @@
 					</include>		
 
 					<!-- Order -->
-					<include name="DiaSpin">
+					<include content="DiaSpin">
 						<param name="Id" value="18" />
 						<param name="Label" value="21429" />
 						<param name="OnLeft" value="noop" />
@@ -4459,7 +4459,7 @@
 					</control>
 
 					<!-- Grouzp by -->
-					<include name="DiaSpin">
+					<include content="DiaSpin">
 						<param name="Id" value="23" />
 						<param name="Label" value="21458" />
 						<param name="OnLeft" value="noop" />
@@ -4467,7 +4467,7 @@
 					</include>							
 
 					<!-- Mixed -->
-					<include name="DiaRadio">
+					<include content="DiaRadio">
 						<param name="Id" value="24" />
 						<param name="Label" value="21459" />						
 						<param name="OnLeft" value="noop" />
@@ -4734,7 +4734,7 @@
 					<usecontrolcoords>true</usecontrolcoords>
 					
 					<!-- Rule Field -->
-					<include name="DiaSpin">
+					<include content="DiaSpin">
 						<param name="Id" value="15" />
 						<param name="Label" value="21434" />
 						<param name="OnLeft" value="noop" />
@@ -4742,7 +4742,7 @@
 					</include>		
 
 					<!-- Rule operator -->
-					<include name="DiaSpin">
+					<include content="DiaSpin">
 						<param name="Id" value="16" />
 						<param name="Label" value="21427" />
 						<param name="OnLeft" value="noop" />
@@ -4750,7 +4750,7 @@
 					</include>		
 
 					<!-- Value edit -->
-					<include name="DiaEdit">
+					<include content="DiaEdit">
 						<param name="Id" value="17" />
 						<param name="Label" value="21420" />
 						<param name="OnLeft" value="noop" />
@@ -4758,7 +4758,7 @@
 					</include>		
 
 					<!-- Browse Button -->
-					<include name="DiaGroupListButton">
+					<include content="DiaGroupListButton">
 						<param name="Id" value="20" />
 						<param name="Label" value="21459" />						
 						<param name="OnLeft" value="noop" />

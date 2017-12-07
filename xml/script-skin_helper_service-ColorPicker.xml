@@ -23,7 +23,7 @@
 					[StringCompare(Window(Home).Property(DialogVisibility4),Window.Property(xmlfile)) + IsEmpty(Window(Home).Property(DialogVisibility5))] |
 					StringCompare(Window(Home).Property(DialogVisibility5),Window.Property(xmlfile))</visible>
 			
-			<include name="DialogPOS">
+			<include content="DialogPOS">
 				<param name="DialogName" value="DiaColorPicker" />
 			</include>		
 

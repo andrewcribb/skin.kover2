@@ -54,56 +54,56 @@
 			<animation effect="slide" start="0,0" end="0,-380" time="100" reversible="true" condition="!IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(DialogPos),BOTTOM)">Conditional</animation>
 				
 			
-			<include name="DialogBg" condition="StringCompare(Window(Home).Property(DialogPos),LEFT) + StringCompare(Window(Home).Property(SidebarPos),LEFT)">
+			<include content="DialogBg" condition="StringCompare(Window(Home).Property(DialogPos),LEFT) + StringCompare(Window(Home).Property(SidebarPos),LEFT)">
 				<param name="PosX" value="-540" />
 				<param name="PosY" value="0" />
 				<param name="Height" value="1080" />
 				<param name="Width" value="660" />
 			</include>
 
-			<include name="DialogBg" condition="StringCompare(Window(Home).Property(DialogPos),RIGHT) + StringCompare(Window(Home).Property(SidebarPos),RIGHT)">
+			<include content="DialogBg" condition="StringCompare(Window(Home).Property(DialogPos),RIGHT) + StringCompare(Window(Home).Property(SidebarPos),RIGHT)">
 				<param name="PosX" value="1800" />
 				<param name="PosY" value="0" />
 				<param name="Height" value="1080" />
 				<param name="Width" value="660" />
 			</include>
 
-			<include name="DialogBg" condition="StringCompare(Window(Home).Property(DialogPos),TOP) + StringCompare(Window(Home).Property(SidebarPos),TOP)">
+			<include content="DialogBg" condition="StringCompare(Window(Home).Property(DialogPos),TOP) + StringCompare(Window(Home).Property(SidebarPos),TOP)">
 				<param name="PosX" value="0" />
 				<param name="PosY" value="-260" />
 				<param name="Height" value="380" />
 				<param name="Width" value="1920" />
 			</include>
 
-			<include name="DialogBg" condition="StringCompare(Window(Home).Property(DialogPos),BOTTOM) + StringCompare(Window(Home).Property(SidebarPos),BOTTOM)">
+			<include content="DialogBg" condition="StringCompare(Window(Home).Property(DialogPos),BOTTOM) + StringCompare(Window(Home).Property(SidebarPos),BOTTOM)">
 				<param name="PosX" value="0" />
 				<param name="PosY" value="960" />
 				<param name="Height" value="380" />
 				<param name="Width" value="1920" />
 			</include>
 
-			<include name="DialogBg" condition="StringCompare(Window(Home).Property(DialogPos),LEFT) + !StringCompare(Window(Home).Property(SidebarPos),LEFT)">
+			<include content="DialogBg" condition="StringCompare(Window(Home).Property(DialogPos),LEFT) + !StringCompare(Window(Home).Property(SidebarPos),LEFT)">
 				<param name="PosX" value="-660" />
 				<param name="PosY" value="0" />
 				<param name="Height" value="1080" />
 				<param name="Width" value="660" />
 			</include>
 
-			<include name="DialogBg" condition="StringCompare(Window(Home).Property(DialogPos),RIGHT) + !StringCompare(Window(Home).Property(SidebarPos),RIGHT)">
+			<include content="DialogBg" condition="StringCompare(Window(Home).Property(DialogPos),RIGHT) + !StringCompare(Window(Home).Property(SidebarPos),RIGHT)">
 				<param name="PosX" value="1920" />
 				<param name="PosY" value="0" />
 				<param name="Height" value="1080" />
 				<param name="Width" value="660" />
 			</include>
 
-			<include name="DialogBg" condition="StringCompare(Window(Home).Property(DialogPos),TOP) + !StringCompare(Window(Home).Property(SidebarPos),TOP)">
+			<include content="DialogBg" condition="StringCompare(Window(Home).Property(DialogPos),TOP) + !StringCompare(Window(Home).Property(SidebarPos),TOP)">
 				<param name="PosX" value="0" />
 				<param name="PosY" value="-380" />
 				<param name="Height" value="380" />
 				<param name="Width" value="1920" />
 			</include>
 
-			<include name="DialogBg" condition="StringCompare(Window(Home).Property(DialogPos),BOTTOM) + !StringCompare(Window(Home).Property(SidebarPos),BOTTOM)">
+			<include content="DialogBg" condition="StringCompare(Window(Home).Property(DialogPos),BOTTOM) + !StringCompare(Window(Home).Property(SidebarPos),BOTTOM)">
 				<param name="PosX" value="0" />
 				<param name="PosY" value="1080" />
 				<param name="Height" value="380" />
@@ -118,35 +118,35 @@
 					[SubString(Window(Home).Property(DialogVisibility4)LockSettings) + SubString(Window(Home).Property(DialogVisibility4),$NUMBER[4]) + IsEmpty(Window(Home).Property(DialogVisibility5))] |
 					[SubString(Window(Home).Property(DialogVisibility5),LockSettings)  + SubString(Window(Home).Property(DialogVisibility5),$NUMBER[5])]</visible>
 			
-			<include name="DialogPOS">
+			<include content="DialogPOS">
 				<param name="DialogName" value="DIALockSettings" />
 			</include>		
 
 		</control>
 
 		<!-- Default button -->
-		<include name="DiaGroupListButton">
+		<include content="DiaGroupListButton">
 			<param name="Id" value="7" />
 			<param name="OnLeft" value="noop" />
 			<param name="OnRight" value="9000" />
 		</include>
 
 		<!-- Default radiobutton -->
-		<include name="DiaRadio">
+		<include content="DiaRadio">
 			<param name="Id" value="8" />
 			<param name="OnLeft" value="noop" />
 			<param name="OnRight" value="9000" />
 		</include>
 
 		<!-- Default spincontrolex -->
-		<include name="DiaSpin">
+		<include content="DiaSpin">
 			<param name="Id" value="9" />
 			<param name="OnLeft" value="noop" />
 			<param name="OnRight" value="9000" />
 		</include>
 
 		<!-- Default Label -->
-		<include name="DiaLabel">
+		<include content="DiaLabel">
 			<param name="Id" value="14" />
 		</include>
 

@@ -19,12 +19,12 @@
 				<animation effect="slide" start="0,0" end="-120,0" time="200" condition="StringCompare(Skin.String(HOM.View1.BBSidebar),LEFT) + Skin.String($PARAM[CompPrefix].BBCoordX,A) + !Skin.String($PARAM[CompPrefix].BBSizeX,3COLUMN) + Skin.String($PARAM[CompPrefix].BBCoordX,A) + Control.HasFocus(9000) + IsEmpty(Window(Home).Property(DialogVisibility)) + !Skin.String($PARAM[CompPrefix].BBSizeX,3COLUMN)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="120,0" time="200" condition="StringCompare(Skin.String(HOM.View1.BBSidebar),RIGHT) + [Skin.String($PARAM[CompPrefix].BBCoordX,C) | [Skin.String($PARAM[CompPrefix].BBCoordX,B) + !Skin.String($PARAM[CompPrefix].BBSizeX,1COLUMN)]] + Skin.String($PARAM[CompPrefix].BBCoordX,C) + Control.HasFocus(9000) + IsEmpty(Window(Home).Property(DialogVisibility)) + !Skin.String($PARAM[CompPrefix].BBSizeX,3COLUMN)">Conditional</animation>
 			 
-				<include name="DialogPush">
+				<include content="DialogPush">
 					<param name="CompPrefix" value="$PARAM[CompPrefix]" />
 				</include>
 			
 				<control type="image">
-					<include name="BgPosition">
+					<include content="BgPosition">
 						<param name="Prefix" value="$PARAM[CompPrefix]" />
 					</include>
 					<texture colordiffuse="$INFO[Skin.String(Color.BBBg)]">common/white.png</texture>
@@ -33,7 +33,7 @@
 					<visible>IsEmpty(Skin.String($PARAM[CompPrefix].BBPic)) | !Skin.String($PARAM[CompPrefix].BBBgs,IMAGE)</visible>
 				</control>
 				<control type="multiimage">
-					<include name="BgPosition">
+					<include content="BgPosition">
 						<param name="Prefix" value="$PARAM[CompPrefix]" />
 					</include>
 					<aspectratio>scale</aspectratio>
@@ -51,7 +51,7 @@
 				<control type="group">
 					<include condition="!Window.IsActive(10138) + Skin.String($PARAM[CompPrefix].B4Show,IDLEFADE)">IdleFadeTimer</include>
 					<animation effect="fade" start="100" end="0" time="200" condition="[Window.IsVisible(contextmenu) | Control.HasFocus(9001)] + Skin.String($PARAM[CompPrefix].B5B4ShowOF,HIDE)">Conditional</animation>
-					<include name="BlocPosition">
+					<include content="BlocPosition">
 						<param name="Prefix" value="$PARAM[CompPrefix]" />
 						<param name="BlocID" value="B4" />
 					</include>	
@@ -75,7 +75,7 @@
 				<control type="group">
 					<include condition="!Window.IsActive(10138) + Skin.String($PARAM[CompPrefix].B3Show,IDLEFADE)">IdleFadeTimer</include>
 					<animation effect="fade" start="100" end="0" time="200" condition="[Window.IsVisible(contextmenu) | Control.HasFocus(9001)] + Skin.String($PARAM[CompPrefix].B5B3ShowOF,HIDE)">Conditional</animation>
-					<include name="BlocPosition">
+					<include content="BlocPosition">
 						<param name="Prefix" value="$PARAM[CompPrefix]" />
 						<param name="BlocID" value="B3" />
 					</include>
@@ -235,7 +235,7 @@
 						</control>				
 						<control type="group">
 							<visible>!IsEmpty(Container($PARAM[Id]).ListItem.Tagline) | !IsEmpty(Container($PARAM[Id]).ListItem.TVShowTitle) | !IsEmpty(Container($PARAM[Id]).ListItem.Artist)</visible>
-							<include name="B3STag">
+							<include content="B3STag">
 								<param name="Prefix" value="$PARAM[CompPrefix]" />
 							</include>
 							<control type="image">
@@ -369,7 +369,7 @@
 					<visible>Skin.String($PARAM[CompPrefix].B4Show,VISIBLE) | Skin.String($PARAM[CompPrefix].B4Show,IDLEFADE) | [Skin.String($PARAM[CompPrefix].B4Show,ISPLAYING) + [Player.HasVideo | [Player.HasAudio + IsEmpty(Window(10025).Property(PlayingBackgroundMedia))]]]</visible>
 					<include condition="!Window.IsActive(10138) + Skin.String($PARAM[CompPrefix].B4Show,IDLEFADE)">IdleFadeTimer</include>
 					<animation effect="fade" start="100" end="0" time="200" condition="[Window.IsVisible(contextmenu) | Control.HasFocus(9001)] + Skin.String($PARAM[CompPrefix].B5B4ShowOF,HIDE)">Conditional</animation>
-					<include name="BlocPosition">
+					<include content="BlocPosition">
 						<param name="Prefix" value="$PARAM[CompPrefix]" />
 						<param name="BlocID" value="B4" />
 					</include>	
@@ -469,7 +469,7 @@
 					<animation effect="fade" start="100" end="0" time="0" condition="Skin.String($PARAM[CompPrefix].B1Show,HIDDEN)">Conditional</animation>
 					<include condition="!Window.IsActive(10138) + Skin.String($PARAM[CompPrefix].B1Show,IDLEFADE)">IdleFadeTimer</include>
 					<animation effect="fade" start="100" end="0" time="200" condition="[Window.IsVisible(contextmenu) | Control.HasFocus(9001)] + Skin.String($PARAM[CompPrefix].B5B1ShowOF,HIDE)">Conditional</animation>
-					<include name="BlocPosition">
+					<include content="BlocPosition">
 						<param name="Prefix" value="$PARAM[CompPrefix]" />
 						<param name="BlocID" value="B1" />
 					</include>
@@ -520,58 +520,58 @@
 						<preloaditems>2</preloaditems>
 						<visible allowhiddenfocus="true">!StringCompare(Container(9000).ListItem.Property(widgetType),weather)</visible>
 
-						<include name="ListWide" condition="Skin.String($PARAM[CompPrefix].B1SizeX,1COLUMN) + Skin.String($PARAM[CompPrefix].B1Typ,WIDELIST)">
+						<include content="ListWide" condition="Skin.String($PARAM[CompPrefix].B1SizeX,1COLUMN) + Skin.String($PARAM[CompPrefix].B1Typ,WIDELIST)">
 							<param name="width" value="636" />
 							<param name="CompPrefix" value="$PARAM[CompPrefix]" />
 						</include>
-						<include name="ListWide" condition="Skin.String($PARAM[CompPrefix].B1SizeX,2COLUMN) + Skin.String($PARAM[CompPrefix].B1Typ,WIDELIST)">
+						<include content="ListWide" condition="Skin.String($PARAM[CompPrefix].B1SizeX,2COLUMN) + Skin.String($PARAM[CompPrefix].B1Typ,WIDELIST)">
 							<param name="width" value="1272" />
 							<param name="CompPrefix" value="$PARAM[CompPrefix]" />
 						</include>
-						<include name="ListWide" condition="Skin.String($PARAM[CompPrefix].B1SizeX,3COLUMN) + Skin.String($PARAM[CompPrefix].B1Typ,WIDELIST)">
+						<include content="ListWide" condition="Skin.String($PARAM[CompPrefix].B1SizeX,3COLUMN) + Skin.String($PARAM[CompPrefix].B1Typ,WIDELIST)">
 							<param name="width" value="1908" />
 							<param name="CompPrefix" value="$PARAM[CompPrefix]" />
 						</include>
-						<include condition="Skin.String($PARAM[CompPrefix].B1Typ,TILES)" name="ListTiles">
+						<include content="ListTiles" condition="Skin.String($PARAM[CompPrefix].B1Typ,TILES)">
 							<param name="CompPrefix" value="$PARAM[CompPrefix]" />
 						</include>
-						<include condition="Skin.String($PARAM[CompPrefix].B1Typ,SQUARE)" name="ListSquare">
+						<include content="ListSquare" condition="Skin.String($PARAM[CompPrefix].B1Typ,SQUARE)">
 							<param name="CompPrefix" value="$PARAM[CompPrefix]" />
 						</include>
-						<include condition="Skin.String($PARAM[CompPrefix].B1Typ,FANART)" name="ListFanart">
+						<include content="ListFanart" condition="Skin.String($PARAM[CompPrefix].B1Typ,FANART)">
 							<param name="CompPrefix" value="$PARAM[CompPrefix]" />
 						</include>
-						<include condition="Skin.String($PARAM[CompPrefix].B1Typ,CARD)" name="ListCard">
+						<include content="ListCard" condition="Skin.String($PARAM[CompPrefix].B1Typ,CARD)">
 							<param name="CompPrefix" value="$PARAM[CompPrefix]" />
 						</include>
-						<include condition="Skin.String($PARAM[CompPrefix].B1Typ,POSTER)" name="ListPoster">
+						<include content="ListPoster" condition="Skin.String($PARAM[CompPrefix].B1Typ,POSTER)">
 							<param name="CompPrefix" value="$PARAM[CompPrefix]" />
 						</include>
-						<include condition="Skin.String($PARAM[CompPrefix].B1Typ,FIXEDLIST) | Skin.String($PARAM[CompPrefix].B1Typ,BANNER)" name="ListFixed">
+						<include content="ListFixed" condition="Skin.String($PARAM[CompPrefix].B1Typ,FIXEDLIST) | Skin.String($PARAM[CompPrefix].B1Typ,BANNER)">
 							<param name="CompPrefix" value="$PARAM[CompPrefix]" />
 						</include>
 
-						<include name="CustomLists" condition="Skin.String($PARAM[CompPrefix].B1Typ,CUSTOM1)">
+						<include content="CustomLists" condition="Skin.String($PARAM[CompPrefix].B1Typ,CUSTOM1)">
 							<param name="CustomId" value="Custom1" />
 							<param name="CompPrefix" value="$PARAM[CompPrefix]" />
 						</include>
-						<include name="CustomLists" condition="Skin.String($PARAM[CompPrefix].B1Typ,CUSTOM2)">
+						<include content="CustomLists" condition="Skin.String($PARAM[CompPrefix].B1Typ,CUSTOM2)">
 							<param name="CustomId" value="Custom2" />
 							<param name="CompPrefix" value="$PARAM[CompPrefix]" />
 						</include>
-						<include name="CustomLists" condition="Skin.String($PARAM[CompPrefix].B1Typ,CUSTOM3)">
+						<include content="CustomLists" condition="Skin.String($PARAM[CompPrefix].B1Typ,CUSTOM3)">
 							<param name="CustomId" value="Custom3" />
 							<param name="CompPrefix" value="$PARAM[CompPrefix]" />
 						</include>
-						<include name="CustomLists" condition="Skin.String($PARAM[CompPrefix].B1Typ,CUSTOM4)">
+						<include content="CustomLists" condition="Skin.String($PARAM[CompPrefix].B1Typ,CUSTOM4)">
 							<param name="CustomId" value="Custom4" />
 							<param name="CompPrefix" value="$PARAM[CompPrefix]" />
 						</include>
-						<include name="CustomLists" condition="Skin.String($PARAM[CompPrefix].B1Typ,CUSTOM5)">
+						<include content="CustomLists" condition="Skin.String($PARAM[CompPrefix].B1Typ,CUSTOM5)">
 							<param name="CustomId" value="Custom5" />
 							<param name="CompPrefix" value="$PARAM[CompPrefix]" />
 						</include>
-						<include name="CustomLists" condition="Skin.String($PARAM[CompPrefix].B1Typ,CUSTOM6)">
+						<include content="CustomLists" condition="Skin.String($PARAM[CompPrefix].B1Typ,CUSTOM6)">
 							<param name="CustomId" value="Custom6" />
 							<param name="CompPrefix" value="$PARAM[CompPrefix]" />
 						</include>
@@ -610,34 +610,34 @@
 						<preloaditems>2</preloaditems>
 						<visible allowhiddenfocus="true">StringCompare(Container(9000).ListItem.Property(widgetType),weather)</visible>
 
-						<include name="ListWide" condition="Skin.String($PARAM[CompPrefix].B1SizeX,1COLUMN) + Skin.String($PARAM[CompPrefix].B1Typ,WIDELIST)">
+						<include content="ListWide" condition="Skin.String($PARAM[CompPrefix].B1SizeX,1COLUMN) + Skin.String($PARAM[CompPrefix].B1Typ,WIDELIST)">
 							<param name="width" value="636" />
 							<param name="CompPrefix" value="$PARAM[CompPrefix]" />
 						</include>
-						<include name="ListWide" condition="Skin.String($PARAM[CompPrefix].B1SizeX,2COLUMN) + Skin.String($PARAM[CompPrefix].B1Typ,WIDELIST)">
+						<include content="ListWide" condition="Skin.String($PARAM[CompPrefix].B1SizeX,2COLUMN) + Skin.String($PARAM[CompPrefix].B1Typ,WIDELIST)">
 							<param name="width" value="1272" />
 							<param name="CompPrefix" value="$PARAM[CompPrefix]" />
 						</include>
-						<include name="ListWide" condition="Skin.String($PARAM[CompPrefix].B1SizeX,3COLUMN) + Skin.String($PARAM[CompPrefix].B1Typ,WIDELIST)">
+						<include content="ListWide" condition="Skin.String($PARAM[CompPrefix].B1SizeX,3COLUMN) + Skin.String($PARAM[CompPrefix].B1Typ,WIDELIST)">
 							<param name="width" value="1908" />
 							<param name="CompPrefix" value="$PARAM[CompPrefix]" />
 						</include>
-						<include condition="Skin.String($PARAM[CompPrefix].B1Typ,TILES)" name="ListTiles">
+						<include content="ListTiles" condition="Skin.String($PARAM[CompPrefix].B1Typ,TILES)">
 							<param name="CompPrefix" value="$PARAM[CompPrefix]" />
 						</include>
-						<include condition="Skin.String($PARAM[CompPrefix].B1Typ,SQUARE)" name="ListSquare">
+						<include content="ListSquare" condition="Skin.String($PARAM[CompPrefix].B1Typ,SQUARE)">
 							<param name="CompPrefix" value="$PARAM[CompPrefix]" />
 						</include>
-						<include condition="Skin.String($PARAM[CompPrefix].B1Typ,FANART)" name="ListFanart">
+						<include content="ListFanart" condition="Skin.String($PARAM[CompPrefix].B1Typ,FANART)">
 							<param name="CompPrefix" value="$PARAM[CompPrefix]" />
 						</include>
-						<include condition="Skin.String($PARAM[CompPrefix].B1Typ,CARD)" name="ListCard">
+						<include content="ListCard" condition="Skin.String($PARAM[CompPrefix].B1Typ,CARD)">
 							<param name="CompPrefix" value="$PARAM[CompPrefix]" />
 						</include>
-						<include condition="Skin.String($PARAM[CompPrefix].B1Typ,POSTER)" name="ListPoster">
+						<include content="ListPoster" condition="Skin.String($PARAM[CompPrefix].B1Typ,POSTER)">
 							<param name="CompPrefix" value="$PARAM[CompPrefix]" />
 						</include>
-						<include condition="Skin.String($PARAM[CompPrefix].B1Typ,FIXEDLIST) | Skin.String($PARAM[CompPrefix].B1Typ,BANNER)" name="ListFixed">
+						<include content="ListFixed" condition="Skin.String($PARAM[CompPrefix].B1Typ,FIXEDLIST) | Skin.String($PARAM[CompPrefix].B1Typ,BANNER)">
 							<param name="CompPrefix" value="$PARAM[CompPrefix]" />
 						</include>
 						<include>WeatherContent</include>
@@ -729,7 +729,7 @@
 				
 				<!-- Bloc 2 -->
 				<control type="group">
-					<include name="BlocPosition">
+					<include content="BlocPosition">
 						<param name="Prefix" value="$PARAM[CompPrefix]" />
 						<param name="BlocID" value="B2" />
 					</include>
@@ -930,7 +930,7 @@
 							</control>
 						</control>
 						<control type="group">
-							<include name="B2SRate">
+							<include content="B2SRate">
 								<param name="Prefix" value="$PARAM[CompPrefix]" />
 							</include>
 							<control type="image">
@@ -1067,7 +1067,7 @@
 							</control>
 						</control>
 						<control type="group">
-							<include name="B2SRate">
+							<include content="B2SRate">
 								<param name="Prefix" value="TV.View1" />
 							</include>
 							<control type="label">
@@ -1091,7 +1091,7 @@
 					<animation effect="fade" start="100" end="0" time="0" condition="Skin.String($PARAM[CompPrefix].B5Show,HIDDEN)">Conditional</animation>
 					<include condition="!Window.IsActive(10138) + Skin.String($PARAM[CompPrefix].B5Show,IDLEFADE)">IdleFadeTimer</include>
 					<animation effect="fade" start="100" end="0" time="200" condition="!Control.HasFocus(9001) + !Window.IsVisible(contextmenu) + Skin.String($PARAM[CompPrefix].B5Show,ONFOCUS)">Conditonal</animation>
-					<include name="BlocPosition">
+					<include content="BlocPosition">
 						<param name="Prefix" value="$PARAM[CompPrefix]" />
 						<param name="BlocID" value="B5" />
 					</include>
@@ -1144,34 +1144,34 @@
 						<visible allowhiddenfocus="true">true</visible>
 						<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(contextmenu)">Conditional</animation>
 
-						<include name="ListWide" condition="Skin.String($PARAM[CompPrefix].B5SizeX,1COLUMN) + Skin.String($PARAM[CompPrefix].B5Typ,WIDELIST)">
+						<include content="ListWide" condition="Skin.String($PARAM[CompPrefix].B5SizeX,1COLUMN) + Skin.String($PARAM[CompPrefix].B5Typ,WIDELIST)">
 							<param name="width" value="636" />
 							<param name="CompPrefix" value="$PARAM[CompPrefix]" />
 						</include>
-						<include name="ListWide" condition="Skin.String($PARAM[CompPrefix].B5SizeX,2COLUMN) + Skin.String($PARAM[CompPrefix].B5Typ,WIDELIST)">
+						<include content="ListWide" condition="Skin.String($PARAM[CompPrefix].B5SizeX,2COLUMN) + Skin.String($PARAM[CompPrefix].B5Typ,WIDELIST)">
 							<param name="width" value="1272" />
 							<param name="CompPrefix" value="$PARAM[CompPrefix]" />
 						</include>
-						<include name="ListWide" condition="Skin.String($PARAM[CompPrefix].B5SizeX,3COLUMN) + Skin.String($PARAM[CompPrefix].B5Typ,WIDELIST)">
+						<include content="ListWide" condition="Skin.String($PARAM[CompPrefix].B5SizeX,3COLUMN) + Skin.String($PARAM[CompPrefix].B5Typ,WIDELIST)">
 							<param name="width" value="1908" />
 							<param name="CompPrefix" value="$PARAM[CompPrefix]" />
 						</include>
-						<include condition="Skin.String($PARAM[CompPrefix].B5Typ,TILES)" name="ListTiles">
+						<include content="ListTiles" condition="Skin.String($PARAM[CompPrefix].B5Typ,TILES)">
 							<param name="CompPrefix" value="$PARAM[CompPrefix]" />
 						</include>
-						<include condition="Skin.String($PARAM[CompPrefix].B5Typ,SQUARE)" name="ListSquare">
+						<include content="ListSquare" condition="Skin.String($PARAM[CompPrefix].B5Typ,SQUARE)">
 							<param name="CompPrefix" value="$PARAM[CompPrefix]" />
 						</include>
-						<include condition="Skin.String($PARAM[CompPrefix].B5Typ,FANART)" name="ListFanart">
+						<include content="ListFanart" condition="Skin.String($PARAM[CompPrefix].B5Typ,FANART)">
 							<param name="CompPrefix" value="$PARAM[CompPrefix]" />
 						</include>
-						<include condition="Skin.String($PARAM[CompPrefix].B5Typ,CARD)" name="ListCard">
+						<include content="ListCard" condition="Skin.String($PARAM[CompPrefix].B5Typ,CARD)">
 							<param name="CompPrefix" value="$PARAM[CompPrefix]" />
 						</include>
-						<include condition="Skin.String($PARAM[CompPrefix].B5Typ,POSTER)" name="ListPoster">
+						<include content="ListPoster" condition="Skin.String($PARAM[CompPrefix].B5Typ,POSTER)">
 							<param name="CompPrefix" value="$PARAM[CompPrefix]" />
 						</include>
-						<include condition="Skin.String($PARAM[CompPrefix].B5Typ,FIXEDLIST) | Skin.String($PARAM[CompPrefix].B5Typ,BANNER)" name="ListFixed">
+						<include content="ListFixed" condition="Skin.String($PARAM[CompPrefix].B5Typ,FIXEDLIST) | Skin.String($PARAM[CompPrefix].B5Typ,BANNER)">
 							<param name="CompPrefix" value="$PARAM[CompPrefix]" />
 						</include>
 						
