@@ -6,7 +6,7 @@
 
 	<controls>
 
-		<include content="VDOViewtype" condition="!IsEmpty(Skin.String(PRO.View1.Name))">
+		<include content="VDOViewtype" condition="!String.IsEmpty(Skin.String(PRO.View1.Name))">
 			<param name="Id" value="500" />
 			<param name="IclPrefix" value="PROView1" />
 			<param name="CompPrefix" value="PRO.View1" />

@@ -46,14 +46,14 @@
 					<top>80</top>
 					<onup>noop</onup>
 					<ondown>noop</ondown>
-					<onright condition="StringCompare(Container(300).ListItem.Property(MenuID),Details)">99</onright>
-					<onright condition="StringCompare(Container(300).ListItem.Property(MenuID),MovieRole)">150</onright>
-					<onright condition="StringCompare(Container(300).ListItem.Property(MenuID),TvShowRole)">250</onright>
-					<onright condition="StringCompare(Container(300).ListItem.Property(MenuID),Youtube)">350</onright>
-					<onright condition="StringCompare(Container(300).ListItem.Property(MenuID),Images)">450</onright>
-					<onright condition="StringCompare(Container(300).ListItem.Property(MenuID),MovieCrew)">550</onright>
-					<onright condition="StringCompare(Container(300).ListItem.Property(MenuID),TvShowCrew)">650</onright>
-					<onright condition="StringCompare(Container(300).ListItem.Property(MenuID),Tagged)">750</onright>
+					<onright condition="String.IsEqual(Container(300).ListItem.Property(MenuID),Details)">99</onright>
+					<onright condition="String.IsEqual(Container(300).ListItem.Property(MenuID),MovieRole)">150</onright>
+					<onright condition="String.IsEqual(Container(300).ListItem.Property(MenuID),TvShowRole)">250</onright>
+					<onright condition="String.IsEqual(Container(300).ListItem.Property(MenuID),Youtube)">350</onright>
+					<onright condition="String.IsEqual(Container(300).ListItem.Property(MenuID),Images)">450</onright>
+					<onright condition="String.IsEqual(Container(300).ListItem.Property(MenuID),MovieCrew)">550</onright>
+					<onright condition="String.IsEqual(Container(300).ListItem.Property(MenuID),TvShowCrew)">650</onright>
+					<onright condition="String.IsEqual(Container(300).ListItem.Property(MenuID),Tagged)">750</onright>
 					<height>36</height>
 					<scrolltime>200</scrolltime>
 					<orientation>vertical</orientation>
@@ -113,43 +113,43 @@
 						<item id="3">
 							<label>$ADDON[script.extendedinfo 32120]</label> <!-- Movie Role -->
 							<onclick>noop</onclick>
-							<visible>IntegerGreaterThan(Container(150).NumItems,0)</visible>
+							<visible>Integer.IsGreater(Container(150).NumItems,0)</visible>
 							<property name="MenuID">MovieRole</property>
 						</item>
 						<item id="4">
 							<label>$ADDON[script.extendedinfo 32121]</label> <!-- TV Show Role -->
 							<onclick>noop</onclick>
-							<visible>IntegerGreaterThan(Container(250).NumItems,0)</visible>
+							<visible>Integer.IsGreater(Container(250).NumItems,0)</visible>
 							<property name="MenuID">TVShowRole</property>
 						</item>
 						<item id="5">
 							<label>$ADDON[script.extendedinfo 32118]</label> <!-- Youtube -->
 							<onclick>noop</onclick>
-							<visible>IntegerGreaterThan(Container(350).NumItems,0)</visible>
+							<visible>Integer.IsGreater(Container(350).NumItems,0)</visible>
 							<property name="MenuID">Youtube</property>
 						</item>		
 						<item id="6">
 							<label>1</label> <!-- Photos -->
 							<onclick>noop</onclick>
-							<visible>IntegerGreaterThan(Container(450).NumItems,0)</visible>
+							<visible>Integer.IsGreater(Container(450).NumItems,0)</visible>
 							<property name="MenuID">Images</property>
 						</item>			
 						<item id="7">
 							<label>$ADDON[script.extendedinfo 32122]</label> <!-- Movie Crew -->
 							<onclick>noop</onclick>
-							<visible>IntegerGreaterThan(Container(550).NumItems,0)</visible>
+							<visible>Integer.IsGreater(Container(550).NumItems,0)</visible>
 							<property name="MenuID">MovieCrew</property>
 						</item>			
 						<item id="8">
 							<label>$ADDON[script.extendedinfo 32123]</label> <!-- Tv Crew -->
 							<onclick>noop</onclick>
-							<visible>IntegerGreaterThan(Container(650).NumItems,0)</visible>
+							<visible>Integer.IsGreater(Container(650).NumItems,0)</visible>
 							<property name="MenuID">TvShowCrew</property>
 						</item>			
 						<item id="9">
 							<label>$ADDON[script.extendedinfo 32119]</label> <!-- Artworks -->
 							<onclick>noop</onclick>
-							<visible>IntegerGreaterThan(Container(750).NumItems,0)</visible>
+							<visible>Integer.IsGreater(Container(750).NumItems,0)</visible>
 							<property name="MenuID">Tagged</property>
 						</item>				
 					</content>
@@ -173,7 +173,7 @@
 					<scrolltime tween="sine" easing="out">200</scrolltime>
 					<orientation>vertical</orientation>
 					<usecontrolcoords>false</usecontrolcoords>			
-					<visible>StringCompare(Container(300).ListItem.Property(MenuID),Biography)</visible>
+					<visible>String.IsEqual(Container(300).ListItem.Property(MenuID),Biography)</visible>
 					<animation effect="fade" start="0" end="100" time="100" reversible="true">VisibleChange</animation>		
 					<control type="textbox">
 						<top>0</top>
@@ -205,7 +205,7 @@
 					<onleft>300</onleft>
 					<scrolltime>200</scrolltime>
 					<orientation>horizontal</orientation>
-					<visible>StringCompare(Container(300).ListItem.Property(MenuID),Details)</visible>
+					<visible>String.IsEqual(Container(300).ListItem.Property(MenuID),Details)</visible>
 					<animation effect="fade" start="0" end="100" time="100" reversible="true">VisibleChange</animation>				
 
 					<itemlayout width="612" height="51">
@@ -219,7 +219,7 @@
 							<scroll>True</scroll>
 							<textcolor>$INFO[Skin.String(Color.DIATxtNF)]</textcolor>
 							<label>[B]$INFO[ListItem.Label2][/B] $INFO[ListItem.Label]</label>
-							<visible>!IsEmpty(ListItem.Label)</visible>
+							<visible>!String.IsEmpty(ListItem.Label)</visible>
 						</control>
 					</itemlayout>
 
@@ -234,7 +234,7 @@
 							<scroll>True</scroll>
 							<textcolor>$VAR[CategoryColor3]</textcolor>
 							<label>[B]$INFO[ListItem.Label2][/B] $INFO[ListItem.Label]</label>
-							<visible>!IsEmpty(ListItem.Label)</visible>
+							<visible>!String.IsEmpty(ListItem.Label)</visible>
 						</control>
 					</focusedlayout>
 
@@ -243,49 +243,49 @@
 							<label>$INFO[Window.Property(AlsoKnownAs)]</label>
 							<label2>$ADDON[script.extendedinfo 32016]</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(Window.Property(AlsoKnownAs))</visible>
+							<visible>!String.IsEmpty(Window.Property(AlsoKnownAs))</visible>
 						</item>	
 						<item>
 							<label>$INFO[Window.Property(Birthday)]</label>
 							<label2>$ADDON[script.extendedinfo 32012]</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(Window.Property(Birthday))</visible>
+							<visible>!String.IsEmpty(Window.Property(Birthday))</visible>
 						</item>	
 						<item>
 							<label>$INFO[Window.Property(Age)]</label>
 							<label2>$ADDON[script.extendedinfo 32020]</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(Window.Property(Age))</visible>
+							<visible>!String.IsEmpty(Window.Property(Age))</visible>
 						</item>	
 						<item>
 							<label>$INFO[Window.Property(movie.duration)]</label>
 							<label2>$ADDON[script.extendedinfo 32014]</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(Window.Property(movie.duration))</visible>
+							<visible>!String.IsEmpty(Window.Property(movie.duration))</visible>
 						</item>	
 						<item>
 							<label>$INFO[Window.Property(TotalMovies)]</label>
 							<label2>$ADDON[script.extendedinfo 32011]</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(Window.Property(TotalMovies))</visible>
+							<visible>!String.IsEmpty(Window.Property(TotalMovies))</visible>
 						</item>	
 						<item>
 							<label>$INFO[Window.Property(DBMovies)]</label>
 							<label2>$ADDON[script.extendedinfo 32021]</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(Window.Property(DBMovies))</visible>
+							<visible>!String.IsEmpty(Window.Property(DBMovies))</visible>
 						</item>	
 						<item>
 							<label>$INFO[Window.Property(Deathday)]</label>
 							<label2>$ADDON[script.extendedinfo 32013]</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(Window.Property(Deathday))</visible>
+							<visible>!String.IsEmpty(Window.Property(Deathday))</visible>
 						</item>	
 						<item>
 							<label>$INFO[Window.Property(Homepage)]</label>
 							<label2>$ADDON[script.extendedinfo 32017]</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(Window.Property(Homepage))</visible>
+							<visible>!String.IsEmpty(Window.Property(Homepage))</visible>
 						</item>	
 					</content>	
 
@@ -300,16 +300,16 @@
 					<onright>noop</onright>
 					<onleft>300</onleft>
 					<scrolltime>100</scrolltime>		
-					<visible>StringCompare(Container(300).ListItem.Property(MenuID),MovieRole) + !Container(150).IsUpdating"</visible>
+					<visible>String.IsEqual(Container(300).ListItem.Property(MenuID),MovieRole) + !Container(150).IsUpdating"</visible>
 					<animation effect="fade" start="0" end="100" time="100" reversible="true">VisibleChange</animation>	
 
-					<include content="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),LEFT) | StringCompare(Window(Home).Property(DialogPos),RIGHT)">
+					<include content="PanelSize" condition="String.IsEqual(Window(Home).Property(DialogPos),LEFT) | String.IsEqual(Window(Home).Property(DialogPos),RIGHT)">
 						<param name="width" value="612" />
 						<param name="height" value="664" />
 						<param name="orientation" value="vertical" />
 					</include>	
 
-					<include content="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),TOP) | StringCompare(Window(Home).Property(DialogPos),BOTTOM)">
+					<include content="PanelSize" condition="String.IsEqual(Window(Home).Property(DialogPos),TOP) | String.IsEqual(Window(Home).Property(DialogPos),BOTTOM)">
 						<param name="width" value="1224" />
 						<param name="height" value="332" />
 						<param name="orientation" value="horizontal" />
@@ -400,16 +400,16 @@
 					<onright>noop</onright>
 					<onleft>300</onleft>
 					<scrolltime>100</scrolltime>
-					<visible>StringCompare(Container(300).ListItem.Property(MenuID),TvShowRole) + !Container(250).IsUpdating"</visible>
+					<visible>String.IsEqual(Container(300).ListItem.Property(MenuID),TvShowRole) + !Container(250).IsUpdating"</visible>
 					<animation effect="fade" start="0" end="100" time="100" reversible="true">VisibleChange</animation>
 
-					<include content="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),LEFT) | StringCompare(Window(Home).Property(DialogPos),RIGHT)">
+					<include content="PanelSize" condition="String.IsEqual(Window(Home).Property(DialogPos),LEFT) | String.IsEqual(Window(Home).Property(DialogPos),RIGHT)">
 						<param name="width" value="612" />
 						<param name="height" value="664" />
 						<param name="orientation" value="vertical" />
 					</include>	
 
-					<include content="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),TOP) | StringCompare(Window(Home).Property(DialogPos),BOTTOM)">
+					<include content="PanelSize" condition="String.IsEqual(Window(Home).Property(DialogPos),TOP) | String.IsEqual(Window(Home).Property(DialogPos),BOTTOM)">
 						<param name="width" value="1224" />
 						<param name="height" value="332" />
 						<param name="orientation" value="horizontal" />
@@ -500,16 +500,16 @@
 					<onright>noop</onright>
 					<onleft>300</onleft>
 					<scrolltime>100</scrolltime>
-					<visible>StringCompare(Container(300).ListItem.Property(MenuID),Youtube) + !Container(350).IsUpdating"</visible>
+					<visible>String.IsEqual(Container(300).ListItem.Property(MenuID),Youtube) + !Container(350).IsUpdating"</visible>
 					<animation effect="fade" start="0" end="100" time="100" reversible="true">VisibleChange</animation>
 
-					<include content="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),LEFT) | StringCompare(Window(Home).Property(DialogPos),RIGHT)">
+					<include content="PanelSize" condition="String.IsEqual(Window(Home).Property(DialogPos),LEFT) | String.IsEqual(Window(Home).Property(DialogPos),RIGHT)">
 						<param name="width" value="612" />
 						<param name="height" value="664" />
 						<param name="orientation" value="vertical" />
 					</include>	
 
-					<include content="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),TOP) | StringCompare(Window(Home).Property(DialogPos),BOTTOM)">
+					<include content="PanelSize" condition="String.IsEqual(Window(Home).Property(DialogPos),TOP) | String.IsEqual(Window(Home).Property(DialogPos),BOTTOM)">
 						<param name="width" value="1224" />
 						<param name="height" value="332" />
 						<param name="orientation" value="horizontal" />
@@ -580,16 +580,16 @@
 					<onright>noop</onright>
 					<onleft>300</onleft>
 					<scrolltime>100</scrolltime>
-					<visible>StringCompare(Container(300).ListItem.Property(MenuID),Images) + !Container(450).IsUpdating"</visible>
+					<visible>String.IsEqual(Container(300).ListItem.Property(MenuID),Images) + !Container(450).IsUpdating"</visible>
 					<animation effect="fade" start="0" end="100" time="100" reversible="true">VisibleChange</animation>
 
-					<include content="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),LEFT) | StringCompare(Window(Home).Property(DialogPos),RIGHT)">
+					<include content="PanelSize" condition="String.IsEqual(Window(Home).Property(DialogPos),LEFT) | String.IsEqual(Window(Home).Property(DialogPos),RIGHT)">
 						<param name="width" value="612" />
 						<param name="height" value="664" />
 						<param name="orientation" value="vertical" />
 					</include>	
 
-					<include content="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),TOP) | StringCompare(Window(Home).Property(DialogPos),BOTTOM)">
+					<include content="PanelSize" condition="String.IsEqual(Window(Home).Property(DialogPos),TOP) | String.IsEqual(Window(Home).Property(DialogPos),BOTTOM)">
 						<param name="width" value="1224" />
 						<param name="height" value="332" />
 						<param name="orientation" value="horizontal" />
@@ -680,16 +680,16 @@
 					<onright>noop</onright>
 					<onleft>300</onleft>
 					<scrolltime>100</scrolltime>
-					<visible>StringCompare(Container(300).ListItem.Property(MenuID),MovieCrew) + !Container(550).IsUpdating"</visible>
+					<visible>String.IsEqual(Container(300).ListItem.Property(MenuID),MovieCrew) + !Container(550).IsUpdating"</visible>
 					<animation effect="fade" start="0" end="100" time="100" reversible="true">VisibleChange</animation>
 
-					<include content="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),LEFT) | StringCompare(Window(Home).Property(DialogPos),RIGHT)">
+					<include content="PanelSize" condition="String.IsEqual(Window(Home).Property(DialogPos),LEFT) | String.IsEqual(Window(Home).Property(DialogPos),RIGHT)">
 						<param name="width" value="612" />
 						<param name="height" value="664" />
 						<param name="orientation" value="vertical" />
 					</include>	
 
-					<include content="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),TOP) | StringCompare(Window(Home).Property(DialogPos),BOTTOM)">
+					<include content="PanelSize" condition="String.IsEqual(Window(Home).Property(DialogPos),TOP) | String.IsEqual(Window(Home).Property(DialogPos),BOTTOM)">
 						<param name="width" value="1224" />
 						<param name="height" value="332" />
 						<param name="orientation" value="horizontal" />
@@ -780,16 +780,16 @@
 					<onright>noop</onright>
 					<onleft>300</onleft>
 					<scrolltime>100</scrolltime>
-					<visible>StringCompare(Container(300).ListItem.Property(MenuID),TvShowCrew) + !Container(650).IsUpdating"</visible>
+					<visible>String.IsEqual(Container(300).ListItem.Property(MenuID),TvShowCrew) + !Container(650).IsUpdating"</visible>
 					<animation effect="fade" start="0" end="100" time="100" reversible="true">VisibleChange</animation>
 
-					<include content="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),LEFT) | StringCompare(Window(Home).Property(DialogPos),RIGHT)">
+					<include content="PanelSize" condition="String.IsEqual(Window(Home).Property(DialogPos),LEFT) | String.IsEqual(Window(Home).Property(DialogPos),RIGHT)">
 						<param name="width" value="612" />
 						<param name="height" value="664" />
 						<param name="orientation" value="vertical" />
 					</include>	
 
-					<include content="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),TOP) | StringCompare(Window(Home).Property(DialogPos),BOTTOM)">
+					<include content="PanelSize" condition="String.IsEqual(Window(Home).Property(DialogPos),TOP) | String.IsEqual(Window(Home).Property(DialogPos),BOTTOM)">
 						<param name="width" value="1224" />
 						<param name="height" value="332" />
 						<param name="orientation" value="horizontal" />
@@ -880,16 +880,16 @@
 					<onright>noop</onright>
 					<onleft>300</onleft>
 					<scrolltime>100</scrolltime>
-					<visible>StringCompare(Container(300).ListItem.Property(MenuID),Tagged) + !Container(750).IsUpdating"</visible>
+					<visible>String.IsEqual(Container(300).ListItem.Property(MenuID),Tagged) + !Container(750).IsUpdating"</visible>
 					<animation effect="fade" start="0" end="100" time="100" reversible="true">VisibleChange</animation>
 
-					<include content="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),LEFT) | StringCompare(Window(Home).Property(DialogPos),RIGHT)">
+					<include content="PanelSize" condition="String.IsEqual(Window(Home).Property(DialogPos),LEFT) | String.IsEqual(Window(Home).Property(DialogPos),RIGHT)">
 						<param name="width" value="612" />
 						<param name="height" value="664" />
 						<param name="orientation" value="vertical" />
 					</include>	
 
-					<include content="PanelSize" condition="StringCompare(Window(Home).Property(DialogPos),TOP) | StringCompare(Window(Home).Property(DialogPos),BOTTOM)">
+					<include content="PanelSize" condition="String.IsEqual(Window(Home).Property(DialogPos),TOP) | String.IsEqual(Window(Home).Property(DialogPos),BOTTOM)">
 						<param name="width" value="1224" />
 						<param name="height" value="332" />
 						<param name="orientation" value="horizontal" />
@@ -987,7 +987,7 @@
 					<width>588</width>							
 					<texture colordiffuse="$INFO[Skin.String(Color.DIATxtNF)]">$INFO[ListItem.Icon]</texture>
 					<aspectratio aligny="center">keep</aspectratio>
-					<visible>StringCompare(Container(300).ListItem.Label,$LOCALIZE[33061]) + SubString(ListItem.Icon,Default)</visible>
+					<visible>String.IsEqual(Container(300).ListItem.Label,$LOCALIZE[33061]) + String.Contains(ListItem.Icon,Default)</visible>
 				</control>			
 				<control type="image">
 					<top>24</top>
@@ -996,7 +996,7 @@
 					<width>588</width>							
 					<texture colordiffuse="FFFFFFFF">$INFO[ListItem.Icon]</texture>
 					<aspectratio aligny="center">keep</aspectratio>
-					<visible>StringCompare(Container(300).ListItem.Label,$LOCALIZE[33061]) + !Window.IsVisible(10142) + !SubString(ListItem.Icon,Default)</visible>
+					<visible>String.IsEqual(Container(300).ListItem.Label,$LOCALIZE[33061]) + !Window.IsVisible(10142) + !String.Contains(ListItem.Icon,Default)</visible>
 				</control>				
 				<control type="image">
 					<top>24</top>
@@ -1005,7 +1005,7 @@
 					<width>588</width>							
 					<texture colordiffuse="FFFFFFFF">$INFO[Player.Art(thumb)]</texture>
 					<aspectratio aligny="center">keep</aspectratio>
-					<visible>StringCompare(Container(300).ListItem.Label,$LOCALIZE[33061]) + Window.IsVisible(10142)</visible>
+					<visible>String.IsEqual(Container(300).ListItem.Label,$LOCALIZE[33061]) + Window.IsVisible(10142)</visible>
 				</control>			
 
 			</control>

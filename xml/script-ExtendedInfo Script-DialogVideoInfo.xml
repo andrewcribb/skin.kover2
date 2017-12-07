@@ -11,7 +11,7 @@
     <controls>
         
         <control type="group">
-            <visible>IsEmpty(Window(Home).Property(DialogVisibility)) + IsEmpty(Window(Home).Property(DialogVisibility2)) + IsEmpty(Window(Home).Property(DialogVisibility3)) + IsEmpty(Window(Home).Property(DialogVisibility4)) + IsEmpty(Window(Home).Property(DialogVisibility5))</visible>
+            <visible>String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEmpty(Window(Home).Property(DialogVisibility2)) + String.IsEmpty(Window(Home).Property(DialogVisibility3)) + String.IsEmpty(Window(Home).Property(DialogVisibility4)) + String.IsEmpty(Window(Home).Property(DialogVisibility5))</visible>
             
             <include content="DialogPOS">
                 <param name="DialogName" value="DiaExtended2" />

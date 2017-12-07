@@ -40,7 +40,7 @@
 		</control>
 
 		<control type="group">
-			<animation effect="fade" start="100" end="0" time="100" delay="100" condition="!IsEmpty(Window(Home).Property(DialogVisibility))">Conditional</animation>		
+			<animation effect="fade" start="100" end="0" time="100" delay="100" condition="!String.IsEmpty(Window(Home).Property(DialogVisibility))">Conditional</animation>		
 
 			<!-- Bloc 1 -->
 			<control type="group">
@@ -173,7 +173,7 @@
 		</control>
 	
 		<control type="group">
-			<visible>!StringCompare(Container(9100).ListItem.Property(ViewName),HomeMenu)</visible>
+			<visible>!String.IsEqual(Container(9100).ListItem.Property(ViewName),HomeMenu)</visible>
 			
 			<!-- Sub List -->
 			<control type="list" id="9200">
@@ -313,14 +313,14 @@
 		<!-- Dummy button for Container 9300 -->
 		<control type="button" id="301">
 			<onclick>noop</onclick>
-			<onfocus condition="StringCompare(Container(9200).ListItem.Property(SubName),WP)">Control.SetFocus(9300,0)</onfocus>
-			<onfocus condition="StringCompare(Container(9200).ListItem.Property(SubName),BB)">Control.SetFocus(9301,0)</onfocus>
-			<onfocus condition="StringCompare(Container(9200).ListItem.Property(SubName),B1)">Control.SetFocus(9302,0)</onfocus>
-			<onfocus condition="StringCompare(Container(9200).ListItem.Property(SubName),B2)">Control.SetFocus(9303,0)</onfocus>
-			<onfocus condition="StringCompare(Container(9200).ListItem.Property(SubName),B3)">Control.SetFocus(9304,0)</onfocus>
-			<onfocus condition="StringCompare(Container(9200).ListItem.Property(SubName),B4)">Control.SetFocus(9305,0)</onfocus>
-			<onfocus condition="StringCompare(Container(9200).ListItem.Property(SubName),DIA)">Control.SetFocus(9306,0)</onfocus>
-			<onfocus condition="StringCompare(Container(9200).ListItem.Property(SubName),SET)">Control.SetFocus(9307,0)</onfocus>
+			<onfocus condition="String.IsEqual(Container(9200).ListItem.Property(SubName),WP)">Control.SetFocus(9300,0)</onfocus>
+			<onfocus condition="String.IsEqual(Container(9200).ListItem.Property(SubName),BB)">Control.SetFocus(9301,0)</onfocus>
+			<onfocus condition="String.IsEqual(Container(9200).ListItem.Property(SubName),B1)">Control.SetFocus(9302,0)</onfocus>
+			<onfocus condition="String.IsEqual(Container(9200).ListItem.Property(SubName),B2)">Control.SetFocus(9303,0)</onfocus>
+			<onfocus condition="String.IsEqual(Container(9200).ListItem.Property(SubName),B3)">Control.SetFocus(9304,0)</onfocus>
+			<onfocus condition="String.IsEqual(Container(9200).ListItem.Property(SubName),B4)">Control.SetFocus(9305,0)</onfocus>
+			<onfocus condition="String.IsEqual(Container(9200).ListItem.Property(SubName),DIA)">Control.SetFocus(9306,0)</onfocus>
+			<onfocus condition="String.IsEqual(Container(9200).ListItem.Property(SubName),SET)">Control.SetFocus(9307,0)</onfocus>
 		</control>
 
 		<control type="label">
@@ -330,7 +330,7 @@
 			<height>60</height>
 			<align>right</align>
 			<label>[COLOR $INFO[Skin.String(Color.SETTxt1NF)]]$INFO[Container(9300).CurrentItem][/COLOR][COLOR $INFO[Skin.String(Color.SETTxt2NF)]]$INFO[Container(9300).NumItems, | ,][/COLOR]</label>
-			<visible>StringCompare(Container(9200).ListItem.Property(SubName),WP)</visible>
+			<visible>String.IsEqual(Container(9200).ListItem.Property(SubName),WP)</visible>
 		</control>
 
 		<control type="label">
@@ -340,7 +340,7 @@
 			<height>60</height>
 			<align>right</align>
 			<label>[COLOR $INFO[Skin.String(Color.SETTxt1NF)]]$INFO[Container(9301).CurrentItem][/COLOR][COLOR $INFO[Skin.String(Color.SETTxt2NF)]]$INFO[Container(9301).NumItems, | ,][/COLOR]</label>
-			<visible>StringCompare(Container(9200).ListItem.Property(SubName),BB)</visible>
+			<visible>String.IsEqual(Container(9200).ListItem.Property(SubName),BB)</visible>
 		</control>
 
 		<control type="label">
@@ -350,7 +350,7 @@
 			<height>60</height>
 			<align>right</align>
 			<label>[COLOR $INFO[Skin.String(Color.SETTxt1NF)]]$INFO[Container(9302).CurrentItem][/COLOR][COLOR $INFO[Skin.String(Color.SETTxt2NF)]]$INFO[Container(9302).NumItems, | ,][/COLOR]</label>
-			<visible>StringCompare(Container(9200).ListItem.Property(SubName),B1)</visible>
+			<visible>String.IsEqual(Container(9200).ListItem.Property(SubName),B1)</visible>
 		</control>
 
 		<control type="label">
@@ -360,7 +360,7 @@
 			<height>60</height>
 			<align>right</align>
 			<label>[COLOR $INFO[Skin.String(Color.SETTxt1NF)]]$INFO[Container(9303).CurrentItem][/COLOR][COLOR $INFO[Skin.String(Color.SETTxt2NF)]]$INFO[Container(9303).NumItems, | ,][/COLOR]</label>
-			<visible>StringCompare(Container(9200).ListItem.Property(SubName),B2)</visible>
+			<visible>String.IsEqual(Container(9200).ListItem.Property(SubName),B2)</visible>
 		</control>
 
 		<control type="label">
@@ -370,7 +370,7 @@
 			<height>60</height>
 			<align>right</align>
 			<label>[COLOR $INFO[Skin.String(Color.SETTxt1NF)]]$INFO[Container(9304).CurrentItem][/COLOR][COLOR $INFO[Skin.String(Color.SETTxt2NF)]]$INFO[Container(9304).NumItems, | ,][/COLOR]</label>
-			<visible>StringCompare(Container(9200).ListItem.Property(SubName),B3)</visible>
+			<visible>String.IsEqual(Container(9200).ListItem.Property(SubName),B3)</visible>
 		</control>
 
 		<control type="label">
@@ -380,7 +380,7 @@
 			<height>60</height>
 			<align>right</align>
 			<label>[COLOR $INFO[Skin.String(Color.SETTxt1NF)]]$INFO[Container(9305).CurrentItem][/COLOR][COLOR $INFO[Skin.String(Color.SETTxt2NF)]]$INFO[Container(9305).NumItems, | ,][/COLOR]</label>
-			<visible>StringCompare(Container(9200).ListItem.Property(SubName),B4)</visible>
+			<visible>String.IsEqual(Container(9200).ListItem.Property(SubName),B4)</visible>
 		</control>					
 
 		<control type="label">
@@ -390,7 +390,7 @@
 			<height>60</height>
 			<align>right</align>
 			<label>[COLOR $INFO[Skin.String(Color.SETTxt1NF)]]$INFO[Container(9306).CurrentItem][/COLOR][COLOR $INFO[Skin.String(Color.SETTxt2NF)]]$INFO[Container(9306).NumItems, | ,][/COLOR]</label>
-			<visible>StringCompare(Container(9200).ListItem.Property(SubName),DIA)</visible>
+			<visible>String.IsEqual(Container(9200).ListItem.Property(SubName),DIA)</visible>
 		</control>
 
 		<control type="label">
@@ -400,7 +400,7 @@
 			<height>60</height>
 			<align>right</align>
 			<label>[COLOR $INFO[Skin.String(Color.SETTxt1NF)]]$INFO[Container(9307).CurrentItem][/COLOR][COLOR $INFO[Skin.String(Color.SETTxt2NF)]]$INFO[Container(9307).NumItems, | ,][/COLOR]</label>
-			<visible>StringCompare(Container(9200).ListItem.Property(SubName),SET)</visible>
+			<visible>String.IsEqual(Container(9200).ListItem.Property(SubName),SET)</visible>
 		</control>	
 	
 		<!-- Options List (Detailed values for cross tests in Include_Designer.xml) -->
@@ -419,13 +419,13 @@
 			<orientation>horizontal</orientation>
 			<itemgap>0</itemgap>
 			<scrolltime>200</scrolltime>
-			<visible allowhiddenfocus="true">StringCompare(Container(9200).ListItem.Property(SubName),WP)</visible>
+			<visible allowhiddenfocus="true">String.IsEqual(Container(9200).ListItem.Property(SubName),WP)</visible>
 			
 			<control type="group">
 				<animation effect="zoom" start="100" end="125" time="200" center="166,100" condition="Control.HasFocus(1)">Conditional</animation>
 				<width>176</width>
 				<height>338</height>
-				<visible>StringCompare(Container(9200).ListItem.Property(SubName),WP)</visible>
+				<visible>String.IsEqual(Container(9200).ListItem.Property(SubName),WP)</visible>
 				<control type="button" id="1">
 					<top>15</top>
 					<left>3</left>
@@ -490,7 +490,7 @@
 				<animation effect="zoom" start="100" end="125" time="200" center="166,100" condition="Control.HasFocus(51)">Conditional</animation>
 				<width>176</width>
 				<height>338</height>
-				<visible>StringCompare(Container(9200).ListItem.Property(SubName),WP)</visible>
+				<visible>String.IsEqual(Container(9200).ListItem.Property(SubName),WP)</visible>
 				<control type="button" id="51">
 					<top>15</top>
 					<left>3</left>
@@ -555,7 +555,7 @@
 				<animation effect="zoom" start="100" end="125" time="200" center="166,100" condition="Control.HasFocus(52)">Conditional</animation>
 				<width>176</width>
 				<height>338</height>
-				<visible>StringCompare(Container(9200).ListItem.Property(SubName),WP)</visible>
+				<visible>String.IsEqual(Container(9200).ListItem.Property(SubName),WP)</visible>
 				<control type="button" id="52">
 					<top>15</top>
 					<left>3</left>
@@ -633,13 +633,13 @@
 			<orientation>horizontal</orientation>
 			<itemgap>0</itemgap>
 			<scrolltime>200</scrolltime>
-			<visible allowhiddenfocus="true">StringCompare(Container(9200).ListItem.Property(SubName),BB)</visible>			
+			<visible allowhiddenfocus="true">String.IsEqual(Container(9200).ListItem.Property(SubName),BB)</visible>			
 
 			<control type="group">
 				<animation effect="zoom" start="100" end="125" time="200" center="166,100" condition="Control.HasFocus(2)">Conditional</animation>
 				<width>176</width>
 				<height>338</height>
-				<visible>StringCompare(Container(9200).ListItem.Property(SubName),BB)</visible>
+				<visible>String.IsEqual(Container(9200).ListItem.Property(SubName),BB)</visible>
 				<control type="button" id="2">
 					<top>15</top>
 					<left>3</left>
@@ -705,7 +705,7 @@
 				<animation effect="zoom" start="100" end="125" time="200" center="166,100" condition="Control.HasFocus(3)">Conditional</animation>
 				<width>176</width>
 				<height>338</height>
-				<visible>StringCompare(Container(9200).ListItem.Property(SubName),BB)</visible>
+				<visible>String.IsEqual(Container(9200).ListItem.Property(SubName),BB)</visible>
 				<control type="button" id="3">
 					<top>15</top>
 					<left>3</left>
@@ -771,7 +771,7 @@
 				<animation effect="zoom" start="100" end="125" time="200" center="166,100" condition="Control.HasFocus(4)">Conditional</animation>
 				<width>176</width>
 				<height>338</height>
-				<visible>StringCompare(Container(9200).ListItem.Property(SubName),BB)</visible>
+				<visible>String.IsEqual(Container(9200).ListItem.Property(SubName),BB)</visible>
 				<control type="button" id="4">
 					<top>15</top>
 					<left>3</left>
@@ -837,7 +837,7 @@
 				<animation effect="zoom" start="100" end="125" time="200" center="166,100" condition="Control.HasFocus(5)">Conditional</animation>
 				<width>176</width>
 				<height>338</height>
-				<visible>StringCompare(Container(9200).ListItem.Property(SubName),BB)</visible>
+				<visible>String.IsEqual(Container(9200).ListItem.Property(SubName),BB)</visible>
 				<control type="button" id="5">
 					<top>15</top>
 					<left>3</left>
@@ -903,7 +903,7 @@
 				<animation effect="zoom" start="100" end="125" time="200" center="166,100" condition="Control.HasFocus(6)">Conditional</animation>
 				<width>176</width>
 				<height>338</height>
-				<visible>StringCompare(Container(9200).ListItem.Property(SubName),BB)</visible>
+				<visible>String.IsEqual(Container(9200).ListItem.Property(SubName),BB)</visible>
 				<control type="button" id="6">
 					<top>15</top>
 					<left>3</left>
@@ -981,13 +981,13 @@
 			<orientation>horizontal</orientation>
 			<itemgap>0</itemgap>
 			<scrolltime>200</scrolltime>
-			<visible allowhiddenfocus="true">StringCompare(Container(9200).ListItem.Property(SubName),B1)</visible>			
+			<visible allowhiddenfocus="true">String.IsEqual(Container(9200).ListItem.Property(SubName),B1)</visible>			
 
 			<control type="group">
 				<animation effect="zoom" start="100" end="125" time="200" center="166,100" condition="Control.HasFocus(7)">Conditional</animation>
 				<width>176</width>
 				<height>338</height>
-				<visible>StringCompare(Container(9200).ListItem.Property(SubName),B1)</visible>
+				<visible>String.IsEqual(Container(9200).ListItem.Property(SubName),B1)</visible>
 				<control type="button" id="7">
 					<top>15</top>
 					<left>3</left>
@@ -1053,7 +1053,7 @@
 				<animation effect="zoom" start="100" end="125" time="200" center="166,100" condition="Control.HasFocus(8)">Conditional</animation>
 				<width>176</width>
 				<height>338</height>
-				<visible>StringCompare(Container(9200).ListItem.Property(SubName),B1)</visible>
+				<visible>String.IsEqual(Container(9200).ListItem.Property(SubName),B1)</visible>
 				<control type="button" id="8">
 					<top>15</top>
 					<left>3</left>
@@ -1119,7 +1119,7 @@
 				<animation effect="zoom" start="100" end="125" time="200" center="166,100" condition="Control.HasFocus(9)">Conditional</animation>
 				<width>176</width>
 				<height>338</height>
-				<visible>StringCompare(Container(9200).ListItem.Property(SubName),B1)</visible>
+				<visible>String.IsEqual(Container(9200).ListItem.Property(SubName),B1)</visible>
 				<control type="button" id="9">
 					<top>15</top>
 					<left>3</left>
@@ -1185,7 +1185,7 @@
 				<animation effect="zoom" start="100" end="125" time="200" center="166,100" condition="Control.HasFocus(10)">Conditional</animation>
 				<width>176</width>
 				<height>338</height>
-				<visible>StringCompare(Container(9200).ListItem.Property(SubName),B1)</visible>
+				<visible>String.IsEqual(Container(9200).ListItem.Property(SubName),B1)</visible>
 				<control type="button" id="10">
 					<top>15</top>
 					<left>3</left>
@@ -1251,7 +1251,7 @@
 				<animation effect="zoom" start="100" end="125" time="200" center="166,100" condition="Control.HasFocus(11)">Conditional</animation>
 				<width>176</width>
 				<height>338</height>
-				<visible>StringCompare(Container(9200).ListItem.Property(SubName),B1)</visible>
+				<visible>String.IsEqual(Container(9200).ListItem.Property(SubName),B1)</visible>
 				<control type="button" id="11">
 					<top>15</top>
 					<left>3</left>
@@ -1317,7 +1317,7 @@
 				<animation effect="zoom" start="100" end="125" time="200" center="166,100" condition="Control.HasFocus(12)">Conditional</animation>
 				<width>176</width>
 				<height>338</height>
-				<visible>StringCompare(Container(9200).ListItem.Property(SubName),B1)</visible>
+				<visible>String.IsEqual(Container(9200).ListItem.Property(SubName),B1)</visible>
 				<control type="button" id="12">
 					<top>15</top>
 					<left>3</left>
@@ -1383,7 +1383,7 @@
 				<animation effect="zoom" start="100" end="125" time="200" center="166,100" condition="Control.HasFocus(13)">Conditional</animation>
 				<width>176</width>
 				<height>338</height>
-				<visible>StringCompare(Container(9200).ListItem.Property(SubName),B1)</visible>
+				<visible>String.IsEqual(Container(9200).ListItem.Property(SubName),B1)</visible>
 				<control type="button" id="13">
 					<top>15</top>
 					<left>3</left>
@@ -1449,7 +1449,7 @@
 				<animation effect="zoom" start="100" end="125" time="200" center="166,100" condition="Control.HasFocus(14)">Conditional</animation>
 				<width>176</width>
 				<height>338</height>
-				<visible>StringCompare(Container(9200).ListItem.Property(SubName),B1)</visible>
+				<visible>String.IsEqual(Container(9200).ListItem.Property(SubName),B1)</visible>
 				<control type="button" id="14">
 					<top>15</top>
 					<left>3</left>
@@ -1515,7 +1515,7 @@
 				<animation effect="zoom" start="100" end="125" time="200" center="166,100" condition="Control.HasFocus(15)">Conditional</animation>
 				<width>176</width>
 				<height>338</height>
-				<visible>StringCompare(Container(9200).ListItem.Property(SubName),B1)</visible>
+				<visible>String.IsEqual(Container(9200).ListItem.Property(SubName),B1)</visible>
 				<control type="button" id="15">
 					<top>15</top>
 					<left>3</left>
@@ -1581,7 +1581,7 @@
 				<animation effect="zoom" start="100" end="125" time="200" center="166,100" condition="Control.HasFocus(16)">Conditional</animation>
 				<width>176</width>
 				<height>338</height>
-				<visible>StringCompare(Container(9200).ListItem.Property(SubName),B1)</visible>
+				<visible>String.IsEqual(Container(9200).ListItem.Property(SubName),B1)</visible>
 				<control type="button" id="16">
 					<top>15</top>
 					<left>3</left>
@@ -1647,7 +1647,7 @@
 				<animation effect="zoom" start="100" end="125" time="200" center="166,100" condition="Control.HasFocus(17)">Conditional</animation>
 				<width>176</width>
 				<height>338</height>
-				<visible>StringCompare(Container(9200).ListItem.Property(SubName),B1)</visible>
+				<visible>String.IsEqual(Container(9200).ListItem.Property(SubName),B1)</visible>
 				<control type="button" id="17">
 					<top>15</top>
 					<left>3</left>
@@ -1713,7 +1713,7 @@
 				<animation effect="zoom" start="100" end="125" time="200" center="166,100" condition="Control.HasFocus(18)">Conditional</animation>
 				<width>176</width>
 				<height>338</height>
-				<visible>StringCompare(Container(9200).ListItem.Property(SubName),B1)</visible>
+				<visible>String.IsEqual(Container(9200).ListItem.Property(SubName),B1)</visible>
 				<control type="button" id="18">
 					<top>15</top>
 					<left>3</left>
@@ -1779,7 +1779,7 @@
 				<animation effect="zoom" start="100" end="125" time="200" center="166,100" condition="Control.HasFocus(19)">Conditional</animation>
 				<width>176</width>
 				<height>338</height>
-				<visible>StringCompare(Container(9200).ListItem.Property(SubName),B1)</visible>
+				<visible>String.IsEqual(Container(9200).ListItem.Property(SubName),B1)</visible>
 				<control type="button" id="19">
 					<top>15</top>
 					<left>3</left>
@@ -1845,7 +1845,7 @@
 				<animation effect="zoom" start="100" end="125" time="200" center="166,100" condition="Control.HasFocus(20)">Conditional</animation>
 				<width>176</width>
 				<height>338</height>
-				<visible>StringCompare(Container(9200).ListItem.Property(SubName),B1)</visible>
+				<visible>String.IsEqual(Container(9200).ListItem.Property(SubName),B1)</visible>
 				<control type="button" id="20">
 					<top>15</top>
 					<left>3</left>
@@ -1923,13 +1923,13 @@
 			<orientation>horizontal</orientation>
 			<itemgap>0</itemgap>
 			<scrolltime>200</scrolltime>
-			<visible allowhiddenfocus="true">StringCompare(Container(9200).ListItem.Property(SubName),B2)</visible>
+			<visible allowhiddenfocus="true">String.IsEqual(Container(9200).ListItem.Property(SubName),B2)</visible>
 
 			<control type="group">
 				<animation effect="zoom" start="100" end="125" time="200" center="166,100" condition="Control.HasFocus(21)">Conditional</animation>
 				<width>176</width>
 				<height>338</height>
-				<visible>StringCompare(Container(9200).ListItem.Property(SubName),B2)</visible>
+				<visible>String.IsEqual(Container(9200).ListItem.Property(SubName),B2)</visible>
 				<control type="button" id="21">
 					<top>15</top>
 					<left>3</left>
@@ -1995,7 +1995,7 @@
 				<animation effect="zoom" start="100" end="125" time="200" center="166,100" condition="Control.HasFocus(22)">Conditional</animation>
 				<width>176</width>
 				<height>338</height>
-				<visible>StringCompare(Container(9200).ListItem.Property(SubName),B2)</visible>
+				<visible>String.IsEqual(Container(9200).ListItem.Property(SubName),B2)</visible>
 				<control type="button" id="22">
 					<top>15</top>
 					<left>3</left>
@@ -2061,7 +2061,7 @@
 				<animation effect="zoom" start="100" end="125" time="200" center="166,100" condition="Control.HasFocus(23)">Conditional</animation>
 				<width>176</width>
 				<height>338</height>
-				<visible>StringCompare(Container(9200).ListItem.Property(SubName),B2)</visible>
+				<visible>String.IsEqual(Container(9200).ListItem.Property(SubName),B2)</visible>
 				<control type="button" id="23">
 					<top>15</top>
 					<left>3</left>
@@ -2127,7 +2127,7 @@
 				<animation effect="zoom" start="100" end="125" time="200" center="166,100" condition="Control.HasFocus(24)">Conditional</animation>
 				<width>176</width>
 				<height>338</height>
-				<visible>StringCompare(Container(9200).ListItem.Property(SubName),B2)</visible>
+				<visible>String.IsEqual(Container(9200).ListItem.Property(SubName),B2)</visible>
 				<control type="button" id="24">
 					<top>15</top>
 					<left>3</left>
@@ -2193,7 +2193,7 @@
 				<animation effect="zoom" start="100" end="125" time="200" center="166,100" condition="Control.HasFocus(25)">Conditional</animation>
 				<width>176</width>
 				<height>338</height>
-				<visible>StringCompare(Container(9200).ListItem.Property(SubName),B2)</visible>
+				<visible>String.IsEqual(Container(9200).ListItem.Property(SubName),B2)</visible>
 				<control type="button" id="25">
 					<top>15</top>
 					<left>3</left>
@@ -2271,13 +2271,13 @@
 			<orientation>horizontal</orientation>
 			<itemgap>0</itemgap>
 			<scrolltime>200</scrolltime>
-			<visible allowhiddenfocus="true">StringCompare(Container(9200).ListItem.Property(SubName),B3)</visible>
+			<visible allowhiddenfocus="true">String.IsEqual(Container(9200).ListItem.Property(SubName),B3)</visible>
 
 			<control type="group">
 				<animation effect="zoom" start="100" end="125" time="200" center="166,100" condition="Control.HasFocus(26)">Conditional</animation>
 				<width>176</width>
 				<height>338</height>
-				<visible>StringCompare(Container(9200).ListItem.Property(SubName),B3)</visible>
+				<visible>String.IsEqual(Container(9200).ListItem.Property(SubName),B3)</visible>
 				<control type="button" id="26">
 					<top>15</top>
 					<left>3</left>
@@ -2342,7 +2342,7 @@
 				<animation effect="zoom" start="100" end="125" time="200" center="166,100" condition="Control.HasFocus(53)">Conditional</animation>
 				<width>176</width>
 				<height>338</height>
-				<visible>StringCompare(Container(9200).ListItem.Property(SubName),B3)</visible>
+				<visible>String.IsEqual(Container(9200).ListItem.Property(SubName),B3)</visible>
 				<control type="button" id="53">
 					<top>15</top>
 					<left>3</left>
@@ -2407,7 +2407,7 @@
 				<animation effect="zoom" start="100" end="125" time="200" center="166,100" condition="Control.HasFocus(54)">Conditional</animation>
 				<width>176</width>
 				<height>338</height>
-				<visible>StringCompare(Container(9200).ListItem.Property(SubName),B3)</visible>
+				<visible>String.IsEqual(Container(9200).ListItem.Property(SubName),B3)</visible>
 				<control type="button" id="54">
 					<top>15</top>
 					<left>3</left>
@@ -2485,13 +2485,13 @@
 			<orientation>horizontal</orientation>
 			<itemgap>0</itemgap>
 			<scrolltime>200</scrolltime>
-			<visible allowhiddenfocus="true">StringCompare(Container(9200).ListItem.Property(SubName),B4)</visible>
+			<visible allowhiddenfocus="true">String.IsEqual(Container(9200).ListItem.Property(SubName),B4)</visible>
 
 			<control type="group">
 				<animation effect="zoom" start="100" end="125" time="200" center="166,100" condition="Control.HasFocus(27)">Conditional</animation>
 				<width>176</width>
 				<height>338</height>
-				<visible>StringCompare(Container(9200).ListItem.Property(SubName),B4)</visible>
+				<visible>String.IsEqual(Container(9200).ListItem.Property(SubName),B4)</visible>
 				<control type="button" id="27">
 					<top>15</top>
 					<left>3</left>
@@ -2556,7 +2556,7 @@
 				<animation effect="zoom" start="100" end="125" time="200" center="166,100" condition="Control.HasFocus(28)">Conditional</animation>
 				<width>176</width>
 				<height>338</height>
-				<visible>StringCompare(Container(9200).ListItem.Property(SubName),B4)</visible>
+				<visible>String.IsEqual(Container(9200).ListItem.Property(SubName),B4)</visible>
 				<control type="button" id="28">
 					<top>15</top>
 					<left>3</left>
@@ -2621,7 +2621,7 @@
 				<animation effect="zoom" start="100" end="125" time="200" center="166,100" condition="Control.HasFocus(29)">Conditional</animation>
 				<width>176</width>
 				<height>338</height>
-				<visible>StringCompare(Container(9200).ListItem.Property(SubName),B4)</visible>
+				<visible>String.IsEqual(Container(9200).ListItem.Property(SubName),B4)</visible>
 				<control type="button" id="29">
 					<top>15</top>
 					<left>3</left>
@@ -2686,7 +2686,7 @@
 				<animation effect="zoom" start="100" end="125" time="200" center="166,100" condition="Control.HasFocus(30)">Conditional</animation>
 				<width>176</width>
 				<height>338</height>
-				<visible>StringCompare(Container(9200).ListItem.Property(SubName),B4)</visible>
+				<visible>String.IsEqual(Container(9200).ListItem.Property(SubName),B4)</visible>
 				<control type="button" id="30">
 					<top>15</top>
 					<left>3</left>
@@ -2764,13 +2764,13 @@
 			<orientation>horizontal</orientation>
 			<itemgap>0</itemgap>
 			<scrolltime>200</scrolltime>
-			<visible allowhiddenfocus="true">StringCompare(Container(9200).ListItem.Property(SubName),DIA)</visible>
+			<visible allowhiddenfocus="true">String.IsEqual(Container(9200).ListItem.Property(SubName),DIA)</visible>
 
 			<control type="group">
 				<animation effect="zoom" start="100" end="125" time="200" center="166,100" condition="Control.HasFocus(45)">Conditional</animation>
 				<width>176</width>
 				<height>338</height>
-				<visible>StringCompare(Container(9200).ListItem.Property(SubName),DIA)</visible>
+				<visible>String.IsEqual(Container(9200).ListItem.Property(SubName),DIA)</visible>
 				<control type="button" id="45">
 					<top>15</top>
 					<left>3</left>
@@ -2836,7 +2836,7 @@
 				<animation effect="zoom" start="100" end="125" time="200" center="166,100" condition="Control.HasFocus(46)">Conditional</animation>
 				<width>176</width>
 				<height>338</height>
-				<visible>StringCompare(Container(9200).ListItem.Property(SubName),DIA)</visible>
+				<visible>String.IsEqual(Container(9200).ListItem.Property(SubName),DIA)</visible>
 				<control type="button" id="46">
 					<top>15</top>
 					<left>3</left>
@@ -2902,7 +2902,7 @@
 				<animation effect="zoom" start="100" end="125" time="200" center="166,100" condition="Control.HasFocus(47)">Conditional</animation>
 				<width>176</width>
 				<height>338</height>
-				<visible>StringCompare(Container(9200).ListItem.Property(SubName),DIA)</visible>
+				<visible>String.IsEqual(Container(9200).ListItem.Property(SubName),DIA)</visible>
 				<control type="button" id="47">
 					<top>15</top>
 					<left>3</left>
@@ -2968,7 +2968,7 @@
 				<animation effect="zoom" start="100" end="125" time="200" center="166,100" condition="Control.HasFocus(48)">Conditional</animation>
 				<width>176</width>
 				<height>338</height>
-				<visible>StringCompare(Container(9200).ListItem.Property(SubName),DIA)</visible>
+				<visible>String.IsEqual(Container(9200).ListItem.Property(SubName),DIA)</visible>
 				<control type="button" id="48">
 					<top>15</top>
 					<left>3</left>
@@ -3034,7 +3034,7 @@
 				<animation effect="zoom" start="100" end="125" time="200" center="166,100" condition="Control.HasFocus(49)">Conditional</animation>
 				<width>176</width>
 				<height>338</height>
-				<visible>StringCompare(Container(9200).ListItem.Property(SubName),DIA)</visible>
+				<visible>String.IsEqual(Container(9200).ListItem.Property(SubName),DIA)</visible>
 				<control type="button" id="49">
 					<top>15</top>
 					<left>3</left>
@@ -3100,7 +3100,7 @@
 				<animation effect="zoom" start="100" end="125" time="200" center="166,100" condition="Control.HasFocus(50)">Conditional</animation>
 				<width>176</width>
 				<height>338</height>
-				<visible>StringCompare(Container(9200).ListItem.Property(SubName),DIA)</visible>
+				<visible>String.IsEqual(Container(9200).ListItem.Property(SubName),DIA)</visible>
 				<control type="button" id="50">
 					<top>15</top>
 					<left>3</left>
@@ -3178,13 +3178,13 @@
 			<orientation>horizontal</orientation>
 			<itemgap>0</itemgap>
 			<scrolltime>200</scrolltime>
-			<visible allowhiddenfocus="true">StringCompare(Container(9200).ListItem.Property(SubName),SET)</visible>			
+			<visible allowhiddenfocus="true">String.IsEqual(Container(9200).ListItem.Property(SubName),SET)</visible>			
 
 			<control type="group">
 				<animation effect="zoom" start="100" end="125" time="200" center="166,100" condition="Control.HasFocus(31)">Conditional</animation>
 				<width>176</width>
 				<height>338</height>
-				<visible>StringCompare(Container(9200).ListItem.Property(SubName),SET)</visible>
+				<visible>String.IsEqual(Container(9200).ListItem.Property(SubName),SET)</visible>
 				<control type="button" id="31">
 					<top>15</top>
 					<left>3</left>
@@ -3250,7 +3250,7 @@
 				<animation effect="zoom" start="100" end="125" time="200" center="166,100" condition="Control.HasFocus(32)">Conditional</animation>
 				<width>176</width>
 				<height>338</height>
-				<visible>StringCompare(Container(9200).ListItem.Property(SubName),SET)</visible>
+				<visible>String.IsEqual(Container(9200).ListItem.Property(SubName),SET)</visible>
 				<control type="button" id="32">
 					<top>15</top>
 					<left>3</left>
@@ -3316,7 +3316,7 @@
 				<animation effect="zoom" start="100" end="125" time="200" center="166,100" condition="Control.HasFocus(33)">Conditional</animation>
 				<width>176</width>
 				<height>338</height>
-				<visible>StringCompare(Container(9200).ListItem.Property(SubName),SET)</visible>
+				<visible>String.IsEqual(Container(9200).ListItem.Property(SubName),SET)</visible>
 				<control type="button" id="33">
 					<top>15</top>
 					<left>3</left>
@@ -3382,7 +3382,7 @@
 				<animation effect="zoom" start="100" end="125" time="200" center="166,100" condition="Control.HasFocus(34)">Conditional</animation>
 				<width>176</width>
 				<height>338</height>
-				<visible>StringCompare(Container(9200).ListItem.Property(SubName),SET)</visible>
+				<visible>String.IsEqual(Container(9200).ListItem.Property(SubName),SET)</visible>
 				<control type="button" id="34">
 					<top>15</top>
 					<left>3</left>
@@ -3448,7 +3448,7 @@
 				<animation effect="zoom" start="100" end="125" time="200" center="166,100" condition="Control.HasFocus(41)">Conditional</animation>
 				<width>176</width>
 				<height>338</height>
-				<visible>StringCompare(Container(9200).ListItem.Property(SubName),SET)</visible>
+				<visible>String.IsEqual(Container(9200).ListItem.Property(SubName),SET)</visible>
 				<control type="button" id="41">
 					<top>15</top>
 					<left>3</left>
@@ -3514,7 +3514,7 @@
 				<animation effect="zoom" start="100" end="125" time="200" center="166,100" condition="Control.HasFocus(43)">Conditional</animation>
 				<width>176</width>
 				<height>338</height>
-				<visible>StringCompare(Container(9200).ListItem.Property(SubName),SET)</visible>
+				<visible>String.IsEqual(Container(9200).ListItem.Property(SubName),SET)</visible>
 				<control type="button" id="43">
 					<top>15</top>
 					<left>3</left>
@@ -3580,7 +3580,7 @@
 				<animation effect="zoom" start="100" end="125" time="200" center="166,100" condition="Control.HasFocus(44)">Conditional</animation>
 				<width>176</width>
 				<height>338</height>
-				<visible>StringCompare(Container(9200).ListItem.Property(SubName),SET)</visible>
+				<visible>String.IsEqual(Container(9200).ListItem.Property(SubName),SET)</visible>
 				<control type="button" id="44">
 					<top>15</top>
 					<left>3</left>
@@ -3645,7 +3645,7 @@
 
 		<!-- Elements Preview -->			
 		<control type="group">
-			<visible>!StringCompare(Container(9100).ListItem.Property(ViewName),HomeMenu) + Window.IsVisible(1100)</visible>
+			<visible>!String.IsEqual(Container(9100).ListItem.Property(ViewName),HomeMenu) + Window.IsVisible(1100)</visible>
 				
 			<control type="group">
 				<top>60</top>
@@ -3954,7 +3954,7 @@
 					<width>1920</width>
 					<height>380</height>
 					<texture colordiffuse="$INFO[Skin.String(Color.DIABg)]">common/white.png</texture>
-					<animation effect="zoom" start="100,100" end="100,0" time="100" center="960,960" condition="!StringCompare(Container(9200).ListItem.Property(SubName),DIA)">Conditional</animation>
+					<animation effect="zoom" start="100,100" end="100,0" time="100" center="960,960" condition="!String.IsEqual(Container(9200).ListItem.Property(SubName),DIA)">Conditional</animation>
 				</control>
 				<!-- Dialog Bloc1 -->
 				<control type="group">
@@ -3962,7 +3962,7 @@
 					<top>592</top>
 					<width>636</width>
 					<height>354</height>
-					<animation effect="fade" start="100" end="0" time="100" delay="200" condition="!StringCompare(Container(9200).ListItem.Property(SubName),DIA)">Conditional</animation>
+					<animation effect="fade" start="100" end="0" time="100" delay="200" condition="!String.IsEqual(Container(9200).ListItem.Property(SubName),DIA)">Conditional</animation>
 
 					<!-- Header -->
 					<control type="label">
@@ -4024,7 +4024,7 @@
 					<top>592</top>
 					<width>636</width>
 					<height>354</height>
-					<animation effect="fade" start="100" end="0" time="100" delay="200" condition="!StringCompare(Container(9200).ListItem.Property(SubName),DIA)">Conditional</animation>
+					<animation effect="fade" start="100" end="0" time="100" delay="200" condition="!String.IsEqual(Container(9200).ListItem.Property(SubName),DIA)">Conditional</animation>
 
 					<control type="list">
 						<left>24</left>

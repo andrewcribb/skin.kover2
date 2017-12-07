@@ -11,266 +11,266 @@
 
 	<controls>
 
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),HOM.View1)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),HOM.View1)">
 			<param name="Prefix" value="HOM.View1" />
 			<param name="BlocID" value="B5" />
 		</include>
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),HOM.View2)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),HOM.View2)">
 			<param name="Prefix" value="HOM.View2" />
 			<param name="BlocID" value="B5" />
 		</include>
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),HOM.View3)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),HOM.View3)">
 			<param name="Prefix" value="HOM.View3" />
 			<param name="BlocID" value="B5" />
 		</include>
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),HOM.View4)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),HOM.View4)">
 			<param name="Prefix" value="HOM.View4" />
 			<param name="BlocID" value="B5" />
 		</include>
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),HOM.View5)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),HOM.View5)">
 			<param name="Prefix" value="HOM.View5" />
 			<param name="BlocID" value="B5" />
 		</include>
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),HOM.View6)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),HOM.View6)">
 			<param name="Prefix" value="HOM.View6" />
 			<param name="BlocID" value="B5" />
 		</include>
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),HOM.View7)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),HOM.View7)">
 			<param name="Prefix" value="HOM.View7" />
 			<param name="BlocID" value="B5" />
 		</include>
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),HOM.View8)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),HOM.View8)">
 			<param name="Prefix" value="HOM.View8" />
 			<param name="BlocID" value="B5" />
 		</include>
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),HOM.View9)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),HOM.View9)">
 			<param name="Prefix" value="HOM.View9" />
 			<param name="BlocID" value="B5" />
 		</include>		
 	
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),VDO.View1)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),VDO.View1)">
 			<param name="Prefix" value="VDO.View1" />
 			<param name="BlocID" value="B5" />
 		</include>
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),VDO.View2)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),VDO.View2)">
 			<param name="Prefix" value="VDO.View2" />
 			<param name="BlocID" value="B5" />
 		</include>
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),VDO.View3)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),VDO.View3)">
 			<param name="Prefix" value="VDO.View3" />
 			<param name="BlocID" value="B5" />
 		</include>
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),VDO.View4)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),VDO.View4)">
 			<param name="Prefix" value="VDO.View4" />
 			<param name="BlocID" value="B5" />
 		</include>
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),VDO.View5)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),VDO.View5)">
 			<param name="Prefix" value="VDO.View5" />
 			<param name="BlocID" value="B5" />
 		</include>
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),VDO.View6)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),VDO.View6)">
 			<param name="Prefix" value="VDO.View6" />
 			<param name="BlocID" value="B5" />
 		</include>
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),VDO.View7)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),VDO.View7)">
 			<param name="Prefix" value="VDO.View7" />
 			<param name="BlocID" value="B5" />
 		</include>
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),VDO.View8)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),VDO.View8)">
 			<param name="Prefix" value="VDO.View8" />
 			<param name="BlocID" value="B5" />
 		</include>
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),VDO.View9)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),VDO.View9)">
 			<param name="Prefix" value="VDO.View9" />
 			<param name="BlocID" value="B5" />
 		</include>
 		
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),MUS.View1)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),MUS.View1)">
 			<param name="Prefix" value="MUS.View1" />
 			<param name="BlocID" value="B5" />
 		</include>
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),MUS.View2)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),MUS.View2)">
 			<param name="Prefix" value="MUS.View2" />
 			<param name="BlocID" value="B5" />
 		</include>
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),MUS.View3)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),MUS.View3)">
 			<param name="Prefix" value="MUS.View3" />
 			<param name="BlocID" value="B5" />
 		</include>
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),MUS.View4)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),MUS.View4)">
 			<param name="Prefix" value="MUS.View4" />
 			<param name="BlocID" value="B5" />
 		</include>
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),MUS.View5)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),MUS.View5)">
 			<param name="Prefix" value="MUS.View5" />
 			<param name="BlocID" value="B5" />
 		</include>
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),MUS.View6)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),MUS.View6)">
 			<param name="Prefix" value="MUS.View6" />
 			<param name="BlocID" value="B5" />
 		</include>
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),MUS.View7)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),MUS.View7)">
 			<param name="Prefix" value="MUS.View7" />
 			<param name="BlocID" value="B5" />
 		</include>
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),MUS.View8)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),MUS.View8)">
 			<param name="Prefix" value="MUS.View8" />
 			<param name="BlocID" value="B5" />
 		</include>
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),MUS.View9)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),MUS.View9)">
 			<param name="Prefix" value="MUS.View9" />
 			<param name="BlocID" value="B5" />
 		</include>
 
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),TV.View1)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),TV.View1)">
 			<param name="Prefix" value="TV.View1" />
 			<param name="BlocID" value="B5" />
 		</include>
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),TV.View2)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),TV.View2)">
 			<param name="Prefix" value="TV.View2" />
 			<param name="BlocID" value="B5" />
 		</include>
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),TV.View3)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),TV.View3)">
 			<param name="Prefix" value="TV.View3" />
 			<param name="BlocID" value="B5" />
 		</include>
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),TV.View4)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),TV.View4)">
 			<param name="Prefix" value="TV.View4" />
 			<param name="BlocID" value="B5" />
 		</include>
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),TV.View5)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),TV.View5)">
 			<param name="Prefix" value="TV.View5" />
 			<param name="BlocID" value="B5" />
 		</include>
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),TV.View6)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),TV.View6)">
 			<param name="Prefix" value="TV.View6" />
 			<param name="BlocID" value="B5" />
 		</include>
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),TV.View7)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),TV.View7)">
 			<param name="Prefix" value="TV.View7" />
 			<param name="BlocID" value="B5" />
 		</include>
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),TV.View8)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),TV.View8)">
 			<param name="Prefix" value="TV.View8" />
 			<param name="BlocID" value="B5" />
 		</include>
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),TV.View9)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),TV.View9)">
 			<param name="Prefix" value="TV.View9" />
 			<param name="BlocID" value="B5" />
 		</include>		
 		
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),PIC.View1)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),PIC.View1)">
 			<param name="Prefix" value="PIC.View1" />
 			<param name="BlocID" value="B5" />
 		</include>
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),PIC.View2)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),PIC.View2)">
 			<param name="Prefix" value="PIC.View2" />
 			<param name="BlocID" value="B5" />
 		</include>
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),PIC.View3)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),PIC.View3)">
 			<param name="Prefix" value="PIC.View3" />
 			<param name="BlocID" value="B5" />
 		</include>
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),PIC.View4)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),PIC.View4)">
 			<param name="Prefix" value="PIC.View4" />
 			<param name="BlocID" value="B5" />
 		</include>
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),PIC.View5)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),PIC.View5)">
 			<param name="Prefix" value="PIC.View5" />
 			<param name="BlocID" value="B5" />
 		</include>
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),PIC.View6)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),PIC.View6)">
 			<param name="Prefix" value="PIC.View6" />
 			<param name="BlocID" value="B5" />
 		</include>
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),PIC.View7)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),PIC.View7)">
 			<param name="Prefix" value="PIC.View7" />
 			<param name="BlocID" value="B5" />
 		</include>
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),PIC.View8)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),PIC.View8)">
 			<param name="Prefix" value="PIC.View8" />
 			<param name="BlocID" value="B5" />
 		</include>
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),PIC.View9)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),PIC.View9)">
 			<param name="Prefix" value="PIC.View9" />
 			<param name="BlocID" value="B5" />
 		</include>
 		
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),PRO.View1)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),PRO.View1)">
 			<param name="Prefix" value="PRO.View1" />
 			<param name="BlocID" value="B5" />
 		</include>
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),PRO.View2)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),PRO.View2)">
 			<param name="Prefix" value="PRO.View2" />
 			<param name="BlocID" value="B5" />
 		</include>
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),PRO.View3)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),PRO.View3)">
 			<param name="Prefix" value="PRO.View3" />
 			<param name="BlocID" value="B5" />
 		</include>
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),PRO.View4)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),PRO.View4)">
 			<param name="Prefix" value="PRO.View4" />
 			<param name="BlocID" value="B5" />
 		</include>
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),PRO.View5)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),PRO.View5)">
 			<param name="Prefix" value="PRO.View5" />
 			<param name="BlocID" value="B5" />
 		</include>
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),PRO.View6)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),PRO.View6)">
 			<param name="Prefix" value="PRO.View6" />
 			<param name="BlocID" value="B5" />
 		</include>
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),PRO.View7)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),PRO.View7)">
 			<param name="Prefix" value="PRO.View7" />
 			<param name="BlocID" value="B5" />
 		</include>
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),PRO.View8)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),PRO.View8)">
 			<param name="Prefix" value="PRO.View8" />
 			<param name="BlocID" value="B5" />
 		</include>
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),PRO.View9)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),PRO.View9)">
 			<param name="Prefix" value="PRO.View9" />
 			<param name="BlocID" value="B5" />
 		</include>
 		
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),WEA.View1)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),WEA.View1)">
 			<param name="Prefix" value="WEA.View1" />
 			<param name="BlocID" value="B5" />
 		</include>
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),WEA.View2)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),WEA.View2)">
 			<param name="Prefix" value="WEA.View2" />
 			<param name="BlocID" value="B5" />
 		</include>
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),WEA.View3)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),WEA.View3)">
 			<param name="Prefix" value="WEA.View3" />
 			<param name="BlocID" value="B5" />
 		</include>
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),WEA.View4)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),WEA.View4)">
 			<param name="Prefix" value="WEA.View4" />
 			<param name="BlocID" value="B5" />
 		</include>
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),WEA.View5)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),WEA.View5)">
 			<param name="Prefix" value="WEA.View5" />
 			<param name="BlocID" value="B5" />
 		</include>
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),WEA.View6)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),WEA.View6)">
 			<param name="Prefix" value="WEA.View6" />
 			<param name="BlocID" value="B5" />
 		</include>
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),WEA.View7)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),WEA.View7)">
 			<param name="Prefix" value="WEA.View7" />
 			<param name="BlocID" value="B5" />
 		</include>
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),WEA.View8)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),WEA.View8)">
 			<param name="Prefix" value="WEA.View8" />
 			<param name="BlocID" value="B5" />
 		</include>
-		<include content="ContextMenu" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(CompPrefix),WEA.View9)">
+		<include content="ContextMenu" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(CompPrefix),WEA.View9)">
 			<param name="Prefix" value="WEA.View9" />
 			<param name="BlocID" value="B5" />
 		</include>
 
-		<include content="DiaContext" condition="!IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(DialogPos),TOP) + StringCompare(Window(Home).Property(SidebarPos),TOP)">
+		<include content="DiaContext" condition="!String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(DialogPos),TOP) + String.IsEqual(Window(Home).Property(SidebarPos),TOP)">
 			<param name="DIAB1PosX" value="0" />
 			<param name="DIAB1PosY" value="132" />
 			<param name="DIAB2PosX" value="648" />
@@ -279,7 +279,7 @@
 			<param name="DIAB3PosY" value="132" />	
 		</include>
 
-		<include content="DiaContext" condition="!IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(DialogPos),TOP) + !StringCompare(Window(Home).Property(SidebarPos),TOP)">
+		<include content="DiaContext" condition="!String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(DialogPos),TOP) + !String.IsEqual(Window(Home).Property(SidebarPos),TOP)">
 			<param name="DIAB1PosX" value="0" />
 			<param name="DIAB1PosY" value="12" />
 			<param name="DIAB2PosX" value="648" />
@@ -288,7 +288,7 @@
 			<param name="DIAB3PosY" value="12" />	
 		</include>
 		
-		<include content="DiaContext" condition="!IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(DialogPos),BOTTOM) + !StringCompare(Window(Home).Property(SidebarPos),BOTTOM)">
+		<include content="DiaContext" condition="!String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(DialogPos),BOTTOM) + !String.IsEqual(Window(Home).Property(SidebarPos),BOTTOM)">
 			<param name="DIAB1PosX" value="0" />
 			<param name="DIAB1PosY" value="712" />
 			<param name="DIAB2PosX" value="648" />
@@ -297,7 +297,7 @@
 			<param name="DIAB3PosY" value="712" />	
 		</include>	
 
-		<include content="DiaContext" condition="!IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(DialogPos),BOTTOM) + StringCompare(Window(Home).Property(SidebarPos),BOTTOM)">
+		<include content="DiaContext" condition="!String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(DialogPos),BOTTOM) + String.IsEqual(Window(Home).Property(SidebarPos),BOTTOM)">
 			<param name="DIAB1PosX" value="0" />
 			<param name="DIAB1PosY" value="592" />
 			<param name="DIAB2PosX" value="648" />
@@ -306,7 +306,7 @@
 			<param name="DIAB3PosY" value="592" />	
 		</include>	
 
-		<include content="DiaContext" condition="!IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(DialogPos),LEFT) + StringCompare(Window(Home).Property(SidebarPos),LEFT)">
+		<include content="DiaContext" condition="!String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(DialogPos),LEFT) + String.IsEqual(Window(Home).Property(SidebarPos),LEFT)">
 			<param name="DIAB1PosX" value="132" />
 			<param name="DIAB1PosY" value="0" />
 			<param name="DIAB2PosX" value="132" />
@@ -315,7 +315,7 @@
 			<param name="DIAB3PosY" value="724" />	
 		</include>	
 
-		<include content="DiaContext" condition="!IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(DialogPos),LEFT) + !StringCompare(Window(Home).Property(SidebarPos),LEFT)">
+		<include content="DiaContext" condition="!String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(DialogPos),LEFT) + !String.IsEqual(Window(Home).Property(SidebarPos),LEFT)">
 			<param name="DIAB1PosX" value="12" />
 			<param name="DIAB1PosY" value="0" />
 			<param name="DIAB2PosX" value="12" />
@@ -324,7 +324,7 @@
 			<param name="DIAB3PosY" value="724" />	
 		</include>	
 		
-		<include content="DiaContext" condition="!IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(DialogPos),RIGHT) + !StringCompare(Window(Home).Property(SidebarPos),RIGHT)">
+		<include content="DiaContext" condition="!String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(DialogPos),RIGHT) + !String.IsEqual(Window(Home).Property(SidebarPos),RIGHT)">
 			<param name="DIAB1PosX" value="1272" />
 			<param name="DIAB1PosY" value="0" />
 			<param name="DIAB2PosX" value="1272" />
@@ -333,7 +333,7 @@
 			<param name="DIAB3PosY" value="724" />	
 		</include>			
 		
-		<include content="DiaContext" condition="!IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(DialogPos),RIGHT) + StringCompare(Window(Home).Property(SidebarPos),RIGHT)">
+		<include content="DiaContext" condition="!String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(DialogPos),RIGHT) + String.IsEqual(Window(Home).Property(SidebarPos),RIGHT)">
 			<param name="DIAB1PosX" value="1152" />
 			<param name="DIAB1PosY" value="0" />
 			<param name="DIAB2PosX" value="1152" />

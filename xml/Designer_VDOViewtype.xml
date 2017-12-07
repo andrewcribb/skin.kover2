@@ -25,7 +25,7 @@
 					<texture colordiffuse="$INFO[Skin.String(Color.BBBg)]">common/white.png</texture>
 					<include condition="!Window.IsActive(10138) + Skin.String($PARAM[CompPrefix].BBShow,IDLEFADE)">IdleFadeTimer</include>
 					<visible>!Skin.String($PARAM[CompPrefix].BBShow,HIDDEN)</visible>
-					<visible>IsEmpty(Skin.String($PARAM[CompPrefix].BBPic)) | !Skin.String($PARAM[CompPrefix].BBBgs,IMAGE)</visible>
+					<visible>String.IsEmpty(Skin.String($PARAM[CompPrefix].BBPic)) | !Skin.String($PARAM[CompPrefix].BBBgs,IMAGE)</visible>
 				</control>
 				<control type="image">
 					<include content="BgPosition">
@@ -35,7 +35,7 @@
 					<texture colordiffuse="FFFFFFFF">$INFO[Skin.String($PARAM[CompPrefix].BBPic)]</texture>
 					<include condition="!Window.IsActive(10138) + Skin.String($PARAM[CompPrefix].BBShow,IDLEFADE)">IdleFadeTimer</include>
 					<visible>!Skin.String($PARAM[CompPrefix].BBShow,HIDDEN)</visible>
-					<visible>!IsEmpty(Skin.String($PARAM[CompPrefix].BBPic)) + Skin.String($PARAM[CompPrefix].BBBgs,IMAGE)</visible>
+					<visible>!String.IsEmpty(Skin.String($PARAM[CompPrefix].BBPic)) + Skin.String($PARAM[CompPrefix].BBBgs,IMAGE)</visible>
 				</control>
 
 
@@ -51,14 +51,14 @@
 						<left>0</left>
 						<top>0</top>
 						<texture colordiffuse="$INFO[Skin.String(Color.B4Bg)]">common/white.png</texture>
-						<visible>IsEmpty(Skin.String($PARAM[CompPrefix].B4Pic)) | !Skin.String($PARAM[CompPrefix].B4Bgs,IMAGE)</visible>
+						<visible>String.IsEmpty(Skin.String($PARAM[CompPrefix].B4Pic)) | !Skin.String($PARAM[CompPrefix].B4Bgs,IMAGE)</visible>
 					</control>
 					<control type="image">
 						<left>0</left>
 						<top>0</top>
 						<aspectratio>scale</aspectratio>
 						<texture colordiffuse="FFFFFFFF">$INFO[Skin.String($PARAM[CompPrefix].B4Pic)]</texture>
-						<visible>!IsEmpty(Skin.String($PARAM[CompPrefix].B4Pic)) + Skin.String($PARAM[CompPrefix].B4Bgs,IMAGE)</visible>
+						<visible>!String.IsEmpty(Skin.String($PARAM[CompPrefix].B4Pic)) + Skin.String($PARAM[CompPrefix].B4Bgs,IMAGE)</visible>
 					</control>
 					<visible>!Skin.String($PARAM[CompPrefix].B4Show,HIDDEN)</visible>
 				</control>
@@ -76,14 +76,14 @@
 						<left>0</left>
 						<top>0</top>
 						<texture colordiffuse="$INFO[Skin.String(Color.B3Bg)]">common/white.png</texture>
-						<visible>IsEmpty(Skin.String($PARAM[CompPrefix].B3Pic)) | !Skin.String($PARAM[CompPrefix].B3Bgs,IMAGE)</visible>
+						<visible>String.IsEmpty(Skin.String($PARAM[CompPrefix].B3Pic)) | !Skin.String($PARAM[CompPrefix].B3Bgs,IMAGE)</visible>
 					</control>
 					<control type="image">
 						<left>0</left>
 						<top>0</top>
 						<aspectratio>scale</aspectratio>
 						<texture colordiffuse="FFFFFFFF">$INFO[Skin.String($PARAM[CompPrefix].B3Pic)]</texture>
-						<visible>!IsEmpty(Skin.String($PARAM[CompPrefix].B3Pic)) + Skin.String($PARAM[CompPrefix].B3Bgs,IMAGE)</visible>
+						<visible>!String.IsEmpty(Skin.String($PARAM[CompPrefix].B3Pic)) + Skin.String($PARAM[CompPrefix].B3Bgs,IMAGE)</visible>
 					</control>
 
 					<!-- Episode / Film preview -->
@@ -95,7 +95,7 @@
 							<aligny>top</aligny>
 							<aspectratio>scale</aspectratio>
 							<texture background="true" colordiffuse="FFFFFFFF">$INFO[ListItem.Art(fanart)]</texture>
-							<visible>Skin.String($PARAM[CompPrefix].B3Typ,FANART) + !IsEmpty(ListItem.Art(fanart))</visible>
+							<visible>Skin.String($PARAM[CompPrefix].B3Typ,FANART) + !String.IsEmpty(ListItem.Art(fanart))</visible>
 						</control>
 						<control type="image">
 							<left>0</left>
@@ -104,7 +104,7 @@
 							<aligny>top</aligny>
 							<aspectratio>scale</aspectratio>
 							<texture background="true" colordiffuse="FFFFFFFF">$INFO[ListItem.Art(thumb)]</texture>
-							<visible>Skin.String($PARAM[CompPrefix].B3Typ,THUMB) + !IsEmpty(ListItem.Art(thumb))</visible>
+							<visible>Skin.String($PARAM[CompPrefix].B3Typ,THUMB) + !String.IsEmpty(ListItem.Art(thumb))</visible>
 						</control>
 						<control type="image">
 							<left>0</left>
@@ -113,7 +113,7 @@
 							<aligny>top</aligny>
 							<aspectratio>scale</aspectratio>
 							<texture background="true" colordiffuse="FFFFFFFF">$VAR[B3Art]</texture>
-							<visible>[Skin.String($PARAM[CompPrefix].B3Typ,THUMB) + IsEmpty(ListItem.Art(thumb))] | [Skin.String($PARAM[CompPrefix].B3Typ,FANART) + IsEmpty(ListItem.Art(fanart))] | [Skin.String($PARAM[CompPrefix].B3Typ,POSTER) + IsEmpty(ListItem.Art(poster)) + IsEmpty(ListItem.Art(tvshow.poster))] | [Skin.String($PARAM[CompPrefix].B3Typ,BANNER) + IsEmpty(ListItem.Art(banner))] | [Skin.String($PARAM[CompPrefix].B3Typ,CLEARART) + IsEmpty(ListItem.Art(clearart))] | [Skin.String($PARAM[CompPrefix].B3Typ,CLEARLOGO) + IsEmpty(ListItem.Art(clearlogo))] | [Skin.String($PARAM[CompPrefix].B3Typ,LANDSCAPE) + IsEmpty(ListItem.Art(landscape))] | [Skin.String($PARAM[CompPrefix].B3Typ,DISCART) + IsEmpty(ListItem.Art(discart))] | IsEmpty(Skin.String($PARAM[CompPrefix].B3Typ))</visible>
+							<visible>[Skin.String($PARAM[CompPrefix].B3Typ,THUMB) + String.IsEmpty(ListItem.Art(thumb))] | [Skin.String($PARAM[CompPrefix].B3Typ,FANART) + String.IsEmpty(ListItem.Art(fanart))] | [Skin.String($PARAM[CompPrefix].B3Typ,POSTER) + String.IsEmpty(ListItem.Art(poster)) + String.IsEmpty(ListItem.Art(tvshow.poster))] | [Skin.String($PARAM[CompPrefix].B3Typ,BANNER) + String.IsEmpty(ListItem.Art(banner))] | [Skin.String($PARAM[CompPrefix].B3Typ,CLEARART) + String.IsEmpty(ListItem.Art(clearart))] | [Skin.String($PARAM[CompPrefix].B3Typ,CLEARLOGO) + String.IsEmpty(ListItem.Art(clearlogo))] | [Skin.String($PARAM[CompPrefix].B3Typ,LANDSCAPE) + String.IsEmpty(ListItem.Art(landscape))] | [Skin.String($PARAM[CompPrefix].B3Typ,DISCART) + String.IsEmpty(ListItem.Art(discart))] | String.IsEmpty(Skin.String($PARAM[CompPrefix].B3Typ))</visible>
 						</control>
 						<control type="image">
 							<left>0</left>
@@ -122,7 +122,7 @@
 							<aligny>top</aligny>
 							<aspectratio>keep</aspectratio>
 							<texture background="true" colordiffuse="FFFFFFFF">$INFO[ListItem.Art(poster)]</texture>
-							<visible>Skin.String($PARAM[CompPrefix].B3Typ,POSTER) + !IsEmpty(ListItem.Art(poster)) + !Container($PARAM[Id]).Content(episodes)</visible>
+							<visible>Skin.String($PARAM[CompPrefix].B3Typ,POSTER) + !String.IsEmpty(ListItem.Art(poster)) + !Container($PARAM[Id]).Content(episodes)</visible>
 						</control>
 						<control type="image">
 							<left>0</left>
@@ -131,7 +131,7 @@
 							<aligny>top</aligny>
 							<aspectratio>keep</aspectratio>
 							<texture background="true" colordiffuse="FFFFFFFF">$INFO[ListItem.Art(season.poster)]</texture>
-							<visible>Skin.String($PARAM[CompPrefix].B3Typ,POSTER) + [!IsEmpty(ListItem.Art(season.poster)) | Container($PARAM[Id]).Content(episodes)]</visible>
+							<visible>Skin.String($PARAM[CompPrefix].B3Typ,POSTER) + [!String.IsEmpty(ListItem.Art(season.poster)) | Container($PARAM[Id]).Content(episodes)]</visible>
 						</control>
 						<control type="image">
 							<left>0</left>
@@ -140,7 +140,7 @@
 							<aligny>top</aligny>
 							<aspectratio>keep</aspectratio>
 							<texture background="true" colordiffuse="FFFFFFFF">$INFO[ListItem.Art(banner)]</texture>
-							<visible>Skin.String($PARAM[CompPrefix].B3Typ,BANNER) + !IsEmpty(ListItem.Art(banner))</visible>
+							<visible>Skin.String($PARAM[CompPrefix].B3Typ,BANNER) + !String.IsEmpty(ListItem.Art(banner))</visible>
 						</control>
 						<control type="image">
 							<left>0</left>
@@ -149,7 +149,7 @@
 							<aligny>top</aligny>
 							<aspectratio>keep</aspectratio>
 							<texture background="true" colordiffuse="FFFFFFFF">$INFO[ListItem.Art(clearlogo)]</texture>
-							<visible>Skin.String($PARAM[CompPrefix].B3Typ,CLEARLOGO) + !IsEmpty(ListItem.Art(clearlogo))</visible>
+							<visible>Skin.String($PARAM[CompPrefix].B3Typ,CLEARLOGO) + !String.IsEmpty(ListItem.Art(clearlogo))</visible>
 							<animation effect="zoom" start="100" end="75" time="0" center="auto" condition="true">Conditional</animation>
 						</control>
 						<control type="image">
@@ -159,7 +159,7 @@
 							<aligny>top</aligny>
 							<aspectratio>keep</aspectratio>
 							<texture background="true" colordiffuse="FFFFFFFF">$INFO[ListItem.Art(clearart)]</texture>
-							<visible>Skin.String($PARAM[CompPrefix].B3Typ,CLEARART) + !IsEmpty(ListItem.Art(clearart))</visible>
+							<visible>Skin.String($PARAM[CompPrefix].B3Typ,CLEARART) + !String.IsEmpty(ListItem.Art(clearart))</visible>
 						</control>
 						<control type="image">
 							<left>0</left>
@@ -168,7 +168,7 @@
 							<aligny>top</aligny>
 							<aspectratio>scale</aspectratio>
 							<texture background="true" colordiffuse="FFFFFFFF">$INFO[ListItem.Art(landscape)]</texture>
-							<visible>Skin.String($PARAM[CompPrefix].B3Typ,LANDSCAPE) + !IsEmpty(ListItem.Art(landscape))</visible>
+							<visible>Skin.String($PARAM[CompPrefix].B3Typ,LANDSCAPE) + !String.IsEmpty(ListItem.Art(landscape))</visible>
 						</control>
 						<control type="image">
 							<left>0</left>
@@ -177,7 +177,7 @@
 							<aligny>top</aligny>
 							<aspectratio>keep</aspectratio>
 							<texture background="true" colordiffuse="FFFFFFFF">$INFO[ListItem.Art(discart)]</texture>
-							<visible>Skin.String($PARAM[CompPrefix].B3Typ,DISCART) + !IsEmpty(ListItem.Art(discart))</visible>
+							<visible>Skin.String($PARAM[CompPrefix].B3Typ,DISCART) + !String.IsEmpty(ListItem.Art(discart))</visible>
 							<animation effect="zoom" start="100" end="85" time="0" center="auto" condition="true">Conditional</animation>
 							<animation effect="rotate" start="0" end="-360" loop="true" time="10000" center="auto" condition="ListItem.IsPlaying">Conditional</animation>
 						</control>
@@ -301,7 +301,7 @@
 							<left>0</left>
 							<top>0</top>
 							<texture colordiffuse="FF000000">common/white.png</texture>
-							<visible>Player.HasVideo | [Player.HasAudio + IsEmpty(Window(10025).Property(PlayingBackgroundMedia))]</visible>
+							<visible>Player.HasVideo | [Player.HasAudio + String.IsEmpty(Window(10025).Property(PlayingBackgroundMedia))]</visible>
 						</control>
 						<control type="videowindow">
 							<left>0</left>
@@ -311,9 +311,9 @@
 						<control type="visualisation">
 							<left>0</left>
 							<top>0</top>
-							<visible>![[Window.IsVisible(contextmenu) | ControlGroup(99).HasFocus() | Control.HasFocus(97)] + Skin.String($PARAM[CompPrefix].B5B4ShowOF,HIDE)] + ![System.IdleTime(5) + Skin.String(IdleFade,5) + !Window.IsActive(10138) + Skin.String($PARAM[CompPrefix].B4Show,IDLEFADE)] + ![System.IdleTime(10) + Skin.String(IdleFade,10) + !Window.IsActive(10138) + Skin.String($PARAM[CompPrefix].B4Show,IDLEFADE)] + ![System.IdleTime(15) + Skin.String(IdleFade,15) + !Window.IsActive(10138) + Skin.String($PARAM[CompPrefix].B4Show,IDLEFADE)] + ![System.IdleTime(20) + Skin.String(IdleFade,20) + !Window.IsActive(10138) + Skin.String($PARAM[CompPrefix].B4Show,IDLEFADE)] + ![System.IdleTime(25) + Skin.String(IdleFade,25) + !Window.IsActive(10138) + Skin.String($PARAM[CompPrefix].B4Show,IDLEFADE)] + ![System.IdleTime(30) + Skin.String(IdleFade,30) + !Window.IsActive(10138) + Skin.String($PARAM[CompPrefix].B4Show,IDLEFADE)] + IsEmpty(Window(10025).Property(PlayingBackgroundMedia))</visible>
+							<visible>![[Window.IsVisible(contextmenu) | ControlGroup(99).HasFocus() | Control.HasFocus(97)] + Skin.String($PARAM[CompPrefix].B5B4ShowOF,HIDE)] + ![System.IdleTime(5) + Skin.String(IdleFade,5) + !Window.IsActive(10138) + Skin.String($PARAM[CompPrefix].B4Show,IDLEFADE)] + ![System.IdleTime(10) + Skin.String(IdleFade,10) + !Window.IsActive(10138) + Skin.String($PARAM[CompPrefix].B4Show,IDLEFADE)] + ![System.IdleTime(15) + Skin.String(IdleFade,15) + !Window.IsActive(10138) + Skin.String($PARAM[CompPrefix].B4Show,IDLEFADE)] + ![System.IdleTime(20) + Skin.String(IdleFade,20) + !Window.IsActive(10138) + Skin.String($PARAM[CompPrefix].B4Show,IDLEFADE)] + ![System.IdleTime(25) + Skin.String(IdleFade,25) + !Window.IsActive(10138) + Skin.String($PARAM[CompPrefix].B4Show,IDLEFADE)] + ![System.IdleTime(30) + Skin.String(IdleFade,30) + !Window.IsActive(10138) + Skin.String($PARAM[CompPrefix].B4Show,IDLEFADE)] + String.IsEmpty(Window(10025).Property(PlayingBackgroundMedia))</visible>
 						</control>
-						<visible>!Skin.String($PARAM[CompPrefix].B4Show,FALLBACK) + [Skin.String($PARAM[CompPrefix].B4Show,IDLEFADE) | [Skin.String($PARAM[CompPrefix].B4Show,ISPLAYING) + [Player.HasVideo | [Player.HasAudio + IsEmpty(Window(10025).Property(PlayingBackgroundMedia))]]] | [Skin.String($PARAM[CompPrefix].B4Show,TVTUNES) + !IsEmpty(Window(10025).Property(PlayingBackgroundMedia))]]</visible>
+						<visible>!Skin.String($PARAM[CompPrefix].B4Show,FALLBACK) + [Skin.String($PARAM[CompPrefix].B4Show,IDLEFADE) | [Skin.String($PARAM[CompPrefix].B4Show,ISPLAYING) + [Player.HasVideo | [Player.HasAudio + String.IsEmpty(Window(10025).Property(PlayingBackgroundMedia))]]] | [Skin.String($PARAM[CompPrefix].B4Show,TVTUNES) + !String.IsEmpty(Window(10025).Property(PlayingBackgroundMedia))]]</visible>
 					</control>
 					<control type="group">
 						<control type="image">
@@ -323,7 +323,7 @@
 							<aligny>top</aligny>
 							<aspectratio>scale</aspectratio>
 							<texture background="true" colordiffuse="FFFFFFFF">$INFO[ListItem.Art(fanart)]</texture>
-							<visible>Skin.String($PARAM[CompPrefix].B4Typ,FANART) + !IsEmpty(ListItem.Art(fanart))</visible>
+							<visible>Skin.String($PARAM[CompPrefix].B4Typ,FANART) + !String.IsEmpty(ListItem.Art(fanart))</visible>
 						</control>
 						<control type="image">
 							<left>0</left>
@@ -332,7 +332,7 @@
 							<aligny>top</aligny>
 							<aspectratio>scale</aspectratio>
 							<texture background="true" colordiffuse="FFFFFFFF">$INFO[ListItem.Art(thumb)]</texture>
-							<visible>Skin.String($PARAM[CompPrefix].B4Typ,THUMB) + !IsEmpty(ListItem.Art(thumb))</visible>
+							<visible>Skin.String($PARAM[CompPrefix].B4Typ,THUMB) + !String.IsEmpty(ListItem.Art(thumb))</visible>
 						</control>
 						<control type="image">
 							<left>0</left>
@@ -341,7 +341,7 @@
 							<aligny>top</aligny>
 							<aspectratio>keep</aspectratio>
 							<texture background="true" colordiffuse="FFFFFFFF">$INFO[ListItem.Art(poster)]</texture>
-							<visible>Skin.String($PARAM[CompPrefix].B4Typ,POSTER) + !IsEmpty(ListItem.Art(poster)) + !Container($PARAM[Id]).Content(episodes)</visible>
+							<visible>Skin.String($PARAM[CompPrefix].B4Typ,POSTER) + !String.IsEmpty(ListItem.Art(poster)) + !Container($PARAM[Id]).Content(episodes)</visible>
 						</control>
 						<control type="image">
 							<left>0</left>
@@ -350,7 +350,7 @@
 							<aligny>top</aligny>
 							<aspectratio>keep</aspectratio>
 							<texture background="true" colordiffuse="FFFFFFFF">$INFO[ListItem.Art(season.poster)]</texture>
-							<visible>Skin.String($PARAM[CompPrefix].B4Typ,POSTER) + [!IsEmpty(ListItem.Art(poster)) | Container($PARAM[Id]).Content(episodes)]</visible>
+							<visible>Skin.String($PARAM[CompPrefix].B4Typ,POSTER) + [!String.IsEmpty(ListItem.Art(poster)) | Container($PARAM[Id]).Content(episodes)]</visible>
 						</control>
 						<control type="image">
 							<left>0</left>
@@ -359,7 +359,7 @@
 							<aligny>top</aligny>
 							<aspectratio>keep</aspectratio>
 							<texture background="true" colordiffuse="FFFFFFFF">$INFO[ListItem.Art(banner)]</texture>
-							<visible>Skin.String($PARAM[CompPrefix].B4Typ,BANNER) + !IsEmpty(ListItem.Art(banner))</visible>
+							<visible>Skin.String($PARAM[CompPrefix].B4Typ,BANNER) + !String.IsEmpty(ListItem.Art(banner))</visible>
 						</control>
 						<control type="image">
 							<left>0</left>
@@ -368,7 +368,7 @@
 							<aligny>top</aligny>
 							<aspectratio>keep</aspectratio>
 							<texture background="true" colordiffuse="FFFFFFFF">$INFO[ListItem.Art(clearlogo)]</texture>
-							<visible>Skin.String($PARAM[CompPrefix].B4Typ,CLEARLOGO) + !IsEmpty(ListItem.Art(clearlogo))</visible>
+							<visible>Skin.String($PARAM[CompPrefix].B4Typ,CLEARLOGO) + !String.IsEmpty(ListItem.Art(clearlogo))</visible>
 							<animation effect="zoom" start="100" end="75" time="0" center="auto" condition="true">Conditional</animation>
 						</control>
 						<control type="image">
@@ -378,7 +378,7 @@
 							<aligny>top</aligny>
 							<aspectratio>keep</aspectratio>
 							<texture background="true" colordiffuse="FFFFFFFF">$INFO[ListItem.Art(clearart)]</texture>
-							<visible>Skin.String($PARAM[CompPrefix].B4Typ,CLEARART) + !IsEmpty(ListItem.Art(clearart))</visible>
+							<visible>Skin.String($PARAM[CompPrefix].B4Typ,CLEARART) + !String.IsEmpty(ListItem.Art(clearart))</visible>
 						</control>
 						<control type="image">
 							<left>0</left>
@@ -387,7 +387,7 @@
 							<aligny>top</aligny>
 							<aspectratio>scale</aspectratio>
 							<texture background="true" colordiffuse="FFFFFFFF">$INFO[ListItem.Art(landscape)]</texture>
-							<visible>Skin.String($PARAM[CompPrefix].B4Typ,LANDSCAPE) + !IsEmpty(ListItem.Art(landscape))</visible>
+							<visible>Skin.String($PARAM[CompPrefix].B4Typ,LANDSCAPE) + !String.IsEmpty(ListItem.Art(landscape))</visible>
 						</control>
 						<control type="image">
 							<left>0</left>
@@ -396,12 +396,12 @@
 							<aligny>top</aligny>
 							<aspectratio>keep</aspectratio>
 							<texture background="true" colordiffuse="FFFFFFFF">$INFO[ListItem.Art(discart)]</texture>
-							<visible>Skin.String($PARAM[CompPrefix].B4Typ,DISCART) + !IsEmpty(ListItem.Art(discart))</visible>
+							<visible>Skin.String($PARAM[CompPrefix].B4Typ,DISCART) + !String.IsEmpty(ListItem.Art(discart))</visible>
 							<animation effect="zoom" start="100" end="85" time="0" center="auto" condition="true">Conditional</animation>
 							<animation effect="rotate" start="0" end="-360" loop="true" time="10000" center="auto" condition="ListItem.IsPlaying">Conditional</animation>
 						</control>
-						<visible>!Skin.String($PARAM[CompPrefix].B4Show,HIDDEN) + ![[Skin.String($PARAM[CompPrefix].B4Show,ISPLAYING) | Skin.String($PARAM[CompPrefix].B4Show,IDLEFADE)] + !IsEmpty(Window(10025).Property(TvTunesBlocked))]</visible>
-						<animation effect="fade" start="100" end="0" time="400" reversible="false" condition="Player.HasVideo + IsEmpty(Window(10025).Property(TvTunesBlocked)) + !Skin.String($PARAM[CompPrefix].B4Show,IDLEFADE) + !Skin.String($PARAM[CompPrefix].B4Show,FALLBACK)">Conditional</animation>
+						<visible>!Skin.String($PARAM[CompPrefix].B4Show,HIDDEN) + ![[Skin.String($PARAM[CompPrefix].B4Show,ISPLAYING) | Skin.String($PARAM[CompPrefix].B4Show,IDLEFADE)] + !String.IsEmpty(Window(10025).Property(TvTunesBlocked))]</visible>
+						<animation effect="fade" start="100" end="0" time="400" reversible="false" condition="Player.HasVideo + String.IsEmpty(Window(10025).Property(TvTunesBlocked)) + !Skin.String($PARAM[CompPrefix].B4Show,IDLEFADE) + !Skin.String($PARAM[CompPrefix].B4Show,FALLBACK)">Conditional</animation>
 					</control>
 				</control>		
 
@@ -420,14 +420,14 @@
 						<left>0</left>
 						<top>0</top>
 						<texture colordiffuse="$INFO[Skin.String(Color.B1Bg)]">common/white.png</texture>
-						<visible>IsEmpty(Skin.String($PARAM[CompPrefix].B1Pic)) | !Skin.String($PARAM[CompPrefix].B1Bgs,IMAGE)</visible>
+						<visible>String.IsEmpty(Skin.String($PARAM[CompPrefix].B1Pic)) | !Skin.String($PARAM[CompPrefix].B1Bgs,IMAGE)</visible>
 					</control>
 					<control type="image">
 						<left>0</left>
 						<top>0</top>
 						<aspectratio>scale</aspectratio>
 						<texture colordiffuse="FFFFFFFF">$INFO[Skin.String($PARAM[CompPrefix].B1Pic)]</texture>
-						<visible>!IsEmpty(Skin.String($PARAM[CompPrefix].B1Pic)) + Skin.String($PARAM[CompPrefix].B1Bgs,IMAGE)</visible>
+						<visible>!String.IsEmpty(Skin.String($PARAM[CompPrefix].B1Pic)) + Skin.String($PARAM[CompPrefix].B1Bgs,IMAGE)</visible>
 					</control>
 
 					<!-- Main menu -->	
@@ -443,12 +443,12 @@
 						<ondown condition="Skin.String($PARAM[CompPrefix].B1Submenu,ONDOWN)">99</ondown>
 						<onup condition="Skin.String($PARAM[CompPrefix].B1Submenu,ONDOWN)">noop</onup> 
 
-						<onleft condition="Skin.String($PARAM[CompPrefix].B1Submenu,ONRIGHT) + Skin.String($PARAM[CompPrefix].B1Typ,WIDELIST) + ListItem.HasEpg + !IsEmpty(Window(Home).Property(TVShowNext))">ClearProperty(TVShowNext,home)</onleft>
+						<onleft condition="Skin.String($PARAM[CompPrefix].B1Submenu,ONRIGHT) + Skin.String($PARAM[CompPrefix].B1Typ,WIDELIST) + ListItem.HasEpg + !String.IsEmpty(Window(Home).Property(TVShowNext))">ClearProperty(TVShowNext,home)</onleft>
 						<onleft condition="Skin.String($PARAM[CompPrefix].B1Submenu,ONLEFT)">99</onleft>
 						<onright condition="Skin.String($PARAM[CompPrefix].B1Submenu,ONLEFT)">noop</onright>	
 
-						<onright condition="Skin.String($PARAM[CompPrefix].B1Submenu,ONRIGHT) + Skin.String($PARAM[CompPrefix].B1Typ,WIDELIST) + ListItem.HasEpg + !IsEmpty(Window(Home).Property(TVShowNext))">99</onright>
-						<onright condition="Skin.String($PARAM[CompPrefix].B1Submenu,ONRIGHT) + Skin.String($PARAM[CompPrefix].B1Typ,WIDELIST) + ListItem.HasEpg + IsEmpty(Window(Home).Property(TVShowNext))">SetProperty(TVShowNext,NEXT,home)</onright>
+						<onright condition="Skin.String($PARAM[CompPrefix].B1Submenu,ONRIGHT) + Skin.String($PARAM[CompPrefix].B1Typ,WIDELIST) + ListItem.HasEpg + !String.IsEmpty(Window(Home).Property(TVShowNext))">99</onright>
+						<onright condition="Skin.String($PARAM[CompPrefix].B1Submenu,ONRIGHT) + Skin.String($PARAM[CompPrefix].B1Typ,WIDELIST) + ListItem.HasEpg + String.IsEmpty(Window(Home).Property(TVShowNext))">SetProperty(TVShowNext,NEXT,home)</onright>
 						<onright condition="Skin.String($PARAM[CompPrefix].B1Submenu,ONRIGHT) + !ListItem.HasEpg">99</onright>
 						<onleft condition="Skin.String($PARAM[CompPrefix].B1Submenu,ONRIGHT)">noop</onleft>		
 						
@@ -517,7 +517,7 @@
 						</include>
 
 						<include condition="Window.IsVisible(12600)">WeatherContent</include>
-						<include condition="Window.IsVisible(Home) + IsEmpty(Container(9000).ListItem.Property(viewtype))">skinshortcuts-submenu</include>
+						<include condition="Window.IsVisible(Home) + String.IsEmpty(Container(9000).ListItem.Property(viewtype))">skinshortcuts-submenu</include>
 					</control>	
 
 					<!-- Scroll indicators -->
@@ -619,7 +619,7 @@
 						<aspectratio>stretch</aspectratio>
 						<texture colordiffuse="$INFO[Skin.String(Color.B2Bg)]">common/white.png</texture>
 						<visible>!Skin.String($PARAM[CompPrefix].B2Show,HIDDEN) | ControlGroup(99).HasFocus() | Control.HasFocus(97)</visible>
-						<visible>IsEmpty(Skin.String($PARAM[CompPrefix].B2Pic)) | !Skin.String($PARAM[CompPrefix].B2Bgs,IMAGE)</visible>
+						<visible>String.IsEmpty(Skin.String($PARAM[CompPrefix].B2Pic)) | !Skin.String($PARAM[CompPrefix].B2Bgs,IMAGE)</visible>
 					</control>
 					<control type="image">
 						<left>0</left>
@@ -627,7 +627,7 @@
 						<aspectratio>scale</aspectratio>
 						<texture colordiffuse="FFFFFFFF">$INFO[Skin.String($PARAM[CompPrefix].B2Pic)]</texture>
 						<visible>!Skin.String($PARAM[CompPrefix].B2Show,HIDDEN) | ControlGroup(99).HasFocus() | Control.HasFocus(97)</visible>
-						<visible>!IsEmpty(Skin.String($PARAM[CompPrefix].B2Pic)) + Skin.String($PARAM[CompPrefix].B2Bgs,IMAGE)</visible>
+						<visible>!String.IsEmpty(Skin.String($PARAM[CompPrefix].B2Pic)) + Skin.String($PARAM[CompPrefix].B2Bgs,IMAGE)</visible>
 					</control>
 
 					<control type="group">
@@ -642,7 +642,7 @@
 							<align>center</align>
 							<aligny>center</aligny>
 							<label>$INFO[Container($PARAM[Id]).CurrentItem]</label>
-							<visible>!IntegerGreaterThan(Container($PARAM[Id]).CurrentItem,999)</visible>
+							<visible>!Integer.IsGreater(Container($PARAM[Id]).CurrentItem,999)</visible>
 						</control>
 						<control type="label">
 							<left>12</left>
@@ -654,7 +654,7 @@
 							<align>center</align>
 							<aligny>center</aligny>
 							<label>$INFO[Container($PARAM[Id]).CurrentItem]</label>
-							<visible>IntegerGreaterThan(Container($PARAM[Id]).CurrentItem,999)</visible>
+							<visible>Integer.IsGreater(Container($PARAM[Id]).CurrentItem,999)</visible>
 						</control>
 						<control type="label">
 							<left>24</left>
@@ -754,7 +754,7 @@
 							<align>center</align>
 							<aligny>center</aligny>
 							<label>$INFO[Container($PARAM[Id]).CurrentItem]</label>
-							<visible>!IntegerGreaterThan(Container($PARAM[Id]).CurrentItem,999)</visible>
+							<visible>!Integer.IsGreater(Container($PARAM[Id]).CurrentItem,999)</visible>
 						</control>
 						<control type="label">
 							<left>12</left>
@@ -766,7 +766,7 @@
 							<align>center</align>
 							<aligny>center</aligny>
 							<label>$INFO[Container($PARAM[Id]).CurrentItem]</label>
-							<visible>IntegerGreaterThan(Container($PARAM[Id]).CurrentItem,999)</visible>
+							<visible>Integer.IsGreater(Container($PARAM[Id]).CurrentItem,999)</visible>
 						</control>
 						<control type="label">
 							<left>24</left>
@@ -849,14 +849,14 @@
 						<top>0</top>
 						<aspectratio>stretch</aspectratio>
 						<texture colordiffuse="$INFO[Skin.String(Color.B1ItemNF)]">common/white.png</texture>
-						<visible>IsEmpty(Skin.String($PARAM[CompPrefix].B5Pic)) | !Skin.String($PARAM[CompPrefix].B5Bgs,IMAGE)</visible>
+						<visible>String.IsEmpty(Skin.String($PARAM[CompPrefix].B5Pic)) | !Skin.String($PARAM[CompPrefix].B5Bgs,IMAGE)</visible>
 					</control>
 					<control type="image">
 						<left>0</left>
 						<top>0</top>
 						<aspectratio>scale</aspectratio>
 						<texture colordiffuse="FFFFFFFF">$INFO[Skin.String($PARAM[CompPrefix].B5Pic)]</texture>
-						<visible>!IsEmpty(Skin.String($PARAM[CompPrefix].B5Pic)) + Skin.String($PARAM[CompPrefix].B5Bgs,IMAGE)</visible>
+						<visible>!String.IsEmpty(Skin.String($PARAM[CompPrefix].B5Pic)) + Skin.String($PARAM[CompPrefix].B5Bgs,IMAGE)</visible>
 					</control>
 
 					<include content="ViewOptions" condition="Skin.String($PARAM[CompPrefix].B5SizeX,1COLUMN) + Skin.String($PARAM[CompPrefix].B5SizeY,1ROW)"> 
@@ -918,21 +918,21 @@
 			
 			<!-- Sidebar Position-->	
 			<control type="group">
-				<animation effect="slide" start="0,0" end="660,0" time="100" condition="Skin.String($PARAM[CompPrefix].DIAPanel,LEFT) + [Skin.String($PARAM[CompPrefix].BBSidebar,TOP) | Skin.String($PARAM[CompPrefix].BBSidebar,BOTTOM)] + !IsEmpty(Window(Home).Property(DialogVisibility)) + Skin.String($PARAM[CompPrefix].DIASlide,PUSH)">Conditional</animation>
-				<animation effect="slide" start="0,0" end="-660,0" time="100" condition="Skin.String($PARAM[CompPrefix].DIAPanel,RIGHT) + [Skin.String($PARAM[CompPrefix].BBSidebar,TOP) | Skin.String($PARAM[CompPrefix].BBSidebar,BOTTOM)] + !IsEmpty(Window(Home).Property(DialogVisibility)) + Skin.String($PARAM[CompPrefix].DIASlide,PUSH)">Conditional</animation>
-				<animation effect="slide" start="0,0" end="0,380" time="100" condition="Skin.String($PARAM[CompPrefix].DIAPanel,TOP) + [Skin.String($PARAM[CompPrefix].BBSidebar,RIGHT) | Skin.String($PARAM[CompPrefix].BBSidebar,LEFT)] + !IsEmpty(Window(Home).Property(DialogVisibility)) + Skin.String($PARAM[CompPrefix].DIASlide,PUSH)">Conditional</animation>			
-				<animation effect="slide" start="0,0" end="0,-380" time="100" condition="Skin.String($PARAM[CompPrefix].DIAPanel,BOTTOM) + [Skin.String($PARAM[CompPrefix].BBSidebar,RIGHT) | Skin.String($PARAM[CompPrefix].BBSidebar,LEFT)] + !IsEmpty(Window(Home).Property(DialogVisibility)) + Skin.String($PARAM[CompPrefix].DIASlide,PUSH)">Conditional</animation>		
-				<animation effect="slide" start="0,0" end="0,-120" time="100" condition="[Skin.String($PARAM[CompPrefix].DIAPanel,LEFT) | Skin.String($PARAM[CompPrefix].DIAPanel,RIGHT)] + Skin.String($PARAM[CompPrefix].BBSidebar,TOP) + !IsEmpty(Window(Home).Property(DialogVisibility)) + !Skin.String($PARAM[CompPrefix].DIASlide,PUSH)">Conditional</animation>
-				<animation effect="slide" start="0,0" end="0,120" time="100" condition="[Skin.String($PARAM[CompPrefix].DIAPanel,LEFT) | Skin.String($PARAM[CompPrefix].DIAPanel,RIGHT)] + Skin.String($PARAM[CompPrefix].BBSidebar,BOTTOM) + !IsEmpty(Window(Home).Property(DialogVisibility)) + !Skin.String($PARAM[CompPrefix].DIASlide,PUSH)">Conditional</animation>
-				<animation effect="slide" start="0,0" end="-120,0" time="100" condition="[Skin.String($PARAM[CompPrefix].DIAPanel,TOP) | Skin.String($PARAM[CompPrefix].DIAPanel,BOTTOM)] + Skin.String($PARAM[CompPrefix].BBSidebar,LEFT) + !IsEmpty(Window(Home).Property(DialogVisibility)) + !Skin.String($PARAM[CompPrefix].DIASlide,PUSH)">Conditional</animation>
-				<animation effect="slide" start="0,0" end="120,0" time="100" condition="[Skin.String($PARAM[CompPrefix].DIAPanel,TOP) | Skin.String($PARAM[CompPrefix].DIAPanel,BOTTOM)] + Skin.String($PARAM[CompPrefix].BBSidebar,RIGHT) + !IsEmpty(Window(Home).Property(DialogVisibility)) + !Skin.String($PARAM[CompPrefix].DIASlide,PUSH)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="660,0" time="100" condition="Skin.String($PARAM[CompPrefix].DIAPanel,LEFT) + [Skin.String($PARAM[CompPrefix].BBSidebar,TOP) | Skin.String($PARAM[CompPrefix].BBSidebar,BOTTOM)] + !String.IsEmpty(Window(Home).Property(DialogVisibility)) + Skin.String($PARAM[CompPrefix].DIASlide,PUSH)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="-660,0" time="100" condition="Skin.String($PARAM[CompPrefix].DIAPanel,RIGHT) + [Skin.String($PARAM[CompPrefix].BBSidebar,TOP) | Skin.String($PARAM[CompPrefix].BBSidebar,BOTTOM)] + !String.IsEmpty(Window(Home).Property(DialogVisibility)) + Skin.String($PARAM[CompPrefix].DIASlide,PUSH)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,380" time="100" condition="Skin.String($PARAM[CompPrefix].DIAPanel,TOP) + [Skin.String($PARAM[CompPrefix].BBSidebar,RIGHT) | Skin.String($PARAM[CompPrefix].BBSidebar,LEFT)] + !String.IsEmpty(Window(Home).Property(DialogVisibility)) + Skin.String($PARAM[CompPrefix].DIASlide,PUSH)">Conditional</animation>			
+				<animation effect="slide" start="0,0" end="0,-380" time="100" condition="Skin.String($PARAM[CompPrefix].DIAPanel,BOTTOM) + [Skin.String($PARAM[CompPrefix].BBSidebar,RIGHT) | Skin.String($PARAM[CompPrefix].BBSidebar,LEFT)] + !String.IsEmpty(Window(Home).Property(DialogVisibility)) + Skin.String($PARAM[CompPrefix].DIASlide,PUSH)">Conditional</animation>		
+				<animation effect="slide" start="0,0" end="0,-120" time="100" condition="[Skin.String($PARAM[CompPrefix].DIAPanel,LEFT) | Skin.String($PARAM[CompPrefix].DIAPanel,RIGHT)] + Skin.String($PARAM[CompPrefix].BBSidebar,TOP) + !String.IsEmpty(Window(Home).Property(DialogVisibility)) + !Skin.String($PARAM[CompPrefix].DIASlide,PUSH)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,120" time="100" condition="[Skin.String($PARAM[CompPrefix].DIAPanel,LEFT) | Skin.String($PARAM[CompPrefix].DIAPanel,RIGHT)] + Skin.String($PARAM[CompPrefix].BBSidebar,BOTTOM) + !String.IsEmpty(Window(Home).Property(DialogVisibility)) + !Skin.String($PARAM[CompPrefix].DIASlide,PUSH)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="-120,0" time="100" condition="[Skin.String($PARAM[CompPrefix].DIAPanel,TOP) | Skin.String($PARAM[CompPrefix].DIAPanel,BOTTOM)] + Skin.String($PARAM[CompPrefix].BBSidebar,LEFT) + !String.IsEmpty(Window(Home).Property(DialogVisibility)) + !Skin.String($PARAM[CompPrefix].DIASlide,PUSH)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="120,0" time="100" condition="[Skin.String($PARAM[CompPrefix].DIAPanel,TOP) | Skin.String($PARAM[CompPrefix].DIAPanel,BOTTOM)] + Skin.String($PARAM[CompPrefix].BBSidebar,RIGHT) + !String.IsEmpty(Window(Home).Property(DialogVisibility)) + !Skin.String($PARAM[CompPrefix].DIASlide,PUSH)">Conditional</animation>
 				<include condition="!Window.IsActive(10138) + Skin.String($PARAM[CompPrefix].BBSBHide,IDLEFADE)">IdleFadeTimer</include>
 
-				<animation effect="fade" start="100" end="75" time="0" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + !Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) + Skin.String($PARAM[CompPrefix].BBSizeX,3COLUMN) + Skin.String($PARAM[CompPrefix].BBSizeY,3ROW) + Skin.String($PARAM[CompPrefix].BBSBHide,ENABLED)">Conditional</animation>	
-				<animation effect="fade" start="100" end="0" time="200" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + !Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) + System.IdleTime(1) + Skin.String($PARAM[CompPrefix].BBSizeX,3COLUMN) + Skin.String($PARAM[CompPrefix].BBSizeY,3ROW) + Skin.String($PARAM[CompPrefix].BBSBHide,ENABLED)">Conditional</animation>	
-				<animation effect="fade" start="100" end="0" time="200" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + !Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) + [ControlGroup(99).HasFocus() | Control.HasFocus(97) | Window.IsVisible(contextmenu)] + Skin.String($PARAM[CompPrefix].BBSizeX,3COLUMN) + Skin.String($PARAM[CompPrefix].BBSizeY,3ROW) + Skin.String($PARAM[CompPrefix].BBSBHide,ENABLED)">Conditional</animation>		
+				<animation effect="fade" start="100" end="75" time="0" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + !Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) + Skin.String($PARAM[CompPrefix].BBSizeX,3COLUMN) + Skin.String($PARAM[CompPrefix].BBSizeY,3ROW) + Skin.String($PARAM[CompPrefix].BBSBHide,ENABLED)">Conditional</animation>	
+				<animation effect="fade" start="100" end="0" time="200" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + !Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) + System.IdleTime(1) + Skin.String($PARAM[CompPrefix].BBSizeX,3COLUMN) + Skin.String($PARAM[CompPrefix].BBSizeY,3ROW) + Skin.String($PARAM[CompPrefix].BBSBHide,ENABLED)">Conditional</animation>	
+				<animation effect="fade" start="100" end="0" time="200" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + !Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) + [ControlGroup(99).HasFocus() | Control.HasFocus(97) | Window.IsVisible(contextmenu)] + Skin.String($PARAM[CompPrefix].BBSizeX,3COLUMN) + Skin.String($PARAM[CompPrefix].BBSizeY,3ROW) + Skin.String($PARAM[CompPrefix].BBSBHide,ENABLED)">Conditional</animation>		
 
-				<visible>!Skin.String($PARAM[CompPrefix].BBSBHide,HIDDEN) | !IsEmpty(Window(Home).Property(DialogVisibility)) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)</visible>
+				<visible>!Skin.String($PARAM[CompPrefix].BBSBHide,HIDDEN) | !String.IsEmpty(Window(Home).Property(DialogVisibility)) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)</visible>
 
 				<control type="group">		
 					<visible>Skin.String($PARAM[CompPrefix].BBSidebar,LEFT) | Skin.String($PARAM[CompPrefix].BBSidebar,RIGHT)</visible>	

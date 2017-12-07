@@ -46,10 +46,10 @@
 					<top>80</top>
 					<onup>noop</onup>
 					<ondown>noop</ondown>
-					<onright condition="StringCompare(Container(300).ListItem.Label,$LOCALIZE[33061])">301</onright>
-					<onright condition="StringCompare(Container(300).ListItem.Label,$LOCALIZE[33029])">99</onright>
-					<onright condition="[StringCompare(Container(300).ListItem.Label,$LOCALIZE[206]) + !StringCompare(Container(300).ListItem.Property(MenuID),Cast)] | StringCompare(Container(300).ListItem.Label,$LOCALIZE[182])">50</onright>
-					<onright condition="StringCompare(Container(300).ListItem.Property(MenuID),Cast) | StringCompare(Container(300).ListItem.Property(MenuID),Director) | StringCompare(Container(300).ListItem.Property(MenuID),Similar)">70</onright>
+					<onright condition="String.IsEqual(Container(300).ListItem.Label,$LOCALIZE[33061])">301</onright>
+					<onright condition="String.IsEqual(Container(300).ListItem.Label,$LOCALIZE[33029])">99</onright>
+					<onright condition="[String.IsEqual(Container(300).ListItem.Label,$LOCALIZE[206]) + !String.IsEqual(Container(300).ListItem.Property(MenuID),Cast)] | String.IsEqual(Container(300).ListItem.Label,$LOCALIZE[182])">50</onright>
+					<onright condition="String.IsEqual(Container(300).ListItem.Property(MenuID),Cast) | String.IsEqual(Container(300).ListItem.Property(MenuID),Director) | String.IsEqual(Container(300).ListItem.Property(MenuID),Similar)">70</onright>
 					<height>36</height>
 					<scrolltime>200</scrolltime>
 					<orientation>vertical</orientation>
@@ -165,7 +165,7 @@
 							<onclick condition="Window.IsVisible(10146)">SendClick(10146,12)</onclick>
 							<onclick condition="Window.IsVisible(10602)">SendClick(10602,5)</onclick>
 							<onclick condition="Window.IsVisible(12003)">SendClick(12003,8)</onclick>
-							<visible>!IsEmpty(ListItem.Director)</visible>
+							<visible>!String.IsEmpty(ListItem.Director)</visible>
 							<visible>System.HasAddon(script.extendedinfo)</visible>
 							<property name="MenuID">Director</property>
 						</item>
@@ -174,7 +174,7 @@
 							<onclick condition="Window.IsVisible(10146)">SendClick(10146,12)</onclick>
 							<onclick condition="Window.IsVisible(10602)">SendClick(10602,5)</onclick>
 							<onclick condition="Window.IsVisible(12003)">SendClick(12003,8)</onclick>
-							<visible>!IsEmpty(ListItem.Director)</visible>
+							<visible>!String.IsEmpty(ListItem.Director)</visible>
 							<visible>System.HasAddon(script.extendedinfo)</visible>
 							<property name="MenuID">Similar</property>
 						</item>		
@@ -286,7 +286,7 @@
 					<width>588</width>
 					<scrolltime>200</scrolltime>
 					<orientation>vertical</orientation>
-					<visible>StringCompare(Container(300).ListItem.Label,$LOCALIZE[33061])</visible>
+					<visible>String.IsEqual(Container(300).ListItem.Label,$LOCALIZE[33061])</visible>
 					<animation effect="fade" start="0" end="100" time="100" reversible="true">VisibleChange</animation>				
 
 					<itemlayout width="588" height="61">
@@ -386,7 +386,7 @@
 					<onleft>300</onleft>
 					<scrolltime>200</scrolltime>
 					<orientation>horizontal</orientation>
-					<visible>StringCompare(Container(300).ListItem.Label,$LOCALIZE[33029]) + Window.IsVisible(10139)</visible>
+					<visible>String.IsEqual(Container(300).ListItem.Label,$LOCALIZE[33029]) + Window.IsVisible(10139)</visible>
 					<animation effect="fade" start="0" end="100" time="100" reversible="true">VisibleChange</animation>				
 
 					<itemlayout width="612" height="51">
@@ -400,7 +400,7 @@
 							<scroll>True</scroll>
 							<textcolor>$INFO[Skin.String(Color.DIATxtNF)]</textcolor>
 							<label>[B]$INFO[ListItem.Label2][/B] $INFO[ListItem.Label]</label>
-							<visible>!IsEmpty(ListItem.Label)</visible>
+							<visible>!String.IsEmpty(ListItem.Label)</visible>
 						</control>
 					</itemlayout>
 
@@ -415,7 +415,7 @@
 							<scroll>True</scroll>
 							<textcolor>$VAR[CategoryColor3]</textcolor>
 							<label>[B]$INFO[ListItem.Label2][/B] $INFO[ListItem.Label]</label>
-							<visible>!IsEmpty(ListItem.Label)</visible>
+							<visible>!String.IsEmpty(ListItem.Label)</visible>
 						</control>
 					</focusedlayout>
 
@@ -424,313 +424,313 @@
 							<label>$INFO[ListItem.PictureAperture]</label>
 							<label2>21826</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(ListItem.PictureAperture)</visible>
+							<visible>!String.IsEmpty(ListItem.PictureAperture)</visible>
 						</item>	
 						<item>
 							<label>$INFO[ListItem.PictureAuthor]</label>
 							<label2>21863</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(ListItem.PictureAuthor)</visible>
+							<visible>!String.IsEmpty(ListItem.PictureAuthor)</visible>
 						</item>		
 						<item>
 							<label>$INFO[ListItem.PictureBylineTitle]</label>
 							<label2>21868</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(ListItem.PictureBylineTitle)</visible>
+							<visible>!String.IsEmpty(ListItem.PictureBylineTitle)</visible>
 						</item>
 						<item>
 							<label>$INFO[ListItem.PictureCamMake]</label>
 							<label2>21822</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(ListItem.PictureCamMake)</visible>
+							<visible>!String.IsEmpty(ListItem.PictureCamMake)</visible>
 						</item>		
 						<item>
 							<label>$INFO[ListItem.PictureCamModel]</label>
 							<label2>21823</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(ListItem.PictureCamModel)</visible>
+							<visible>!String.IsEmpty(ListItem.PictureCamModel)</visible>
 						</item>		
 						<item>
 							<label>$INFO[ListItem.PictureCaption]</label>
 							<label2>21862</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(ListItem.PictureCaption)</visible>
+							<visible>!String.IsEmpty(ListItem.PictureCaption)</visible>
 						</item>		
 						<item>
 							<label>$INFO[ListItem.PictureCategory]</label>
 							<label2>21866</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(ListItem.PictureCategory)</visible>
+							<visible>!String.IsEmpty(ListItem.PictureCategory)</visible>
 						</item>		
 						<item>
 							<label>$INFO[ListItem.PictureCCDWidth]</label>
 							<label2>557</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(ListItem.PictureCCDWidth)</visible>
+							<visible>!String.IsEmpty(ListItem.PictureCCDWidth)</visible>
 						</item>		
 						<item>
 							<label>$INFO[ListItem.PictureCity]</label>
 							<label2>21873</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(ListItem.PictureCity)</visible>
+							<visible>!String.IsEmpty(ListItem.PictureCity)</visible>
 						</item>		
 						<item>
 							<label>$INFO[ListItem.PictureColour]</label>
 							<label2>737</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(ListItem.PictureColour)</visible>
+							<visible>!String.IsEmpty(ListItem.PictureColour)</visible>
 						</item>		
 						<!--item>
 							<label>$INFO[ListItem.PictureComment]</label>
 							<label2>557</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(ListItem.PictureComment)</visible>
+							<visible>!String.IsEmpty(ListItem.PictureComment)</visible>
 						</item-->		
 						<item>
 							<label>$INFO[ListItem.PictureCopyrightNotice]</label>
 							<label2>21871</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(ListItem.PictureCopyrightNotice)</visible>
+							<visible>!String.IsEmpty(ListItem.PictureCopyrightNotice)</visible>
 						</item>		
 						<item>
 							<label>$INFO[ListItem.PictureCountry]</label>
 							<label2>21875</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(ListItem.PictureCountry)</visible>
+							<visible>!String.IsEmpty(ListItem.PictureCountry)</visible>
 						</item>		
 						<item>
 							<label>$INFO[ListItem.PictureCredit]</label>
 							<label2>21869</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(ListItem.PictureCredit)</visible>
+							<visible>!String.IsEmpty(ListItem.PictureCredit)</visible>
 						</item>		
 						<!--item>
 							<label>$INFO[ListItem.PictureDate]</label>
 							<label2>557</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(ListItem.PictureDate)</visible>
+							<visible>!String.IsEmpty(ListItem.PictureDate)</visible>
 						</item-->		
 						<item>
 							<label>$INFO[ListItem.PictureDatetime]</label>
 							<label2>21820</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(ListItem.PictureDatetime)</visible>
+							<visible>!String.IsEmpty(ListItem.PictureDatetime)</visible>
 						</item>		
 						<!--item>
 							<label>$INFO[ListItem.PictureDesc]</label>
 							<label2>21821</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(ListItem.PictureDesc)</visible>
+							<visible>!String.IsEmpty(ListItem.PictureDesc)</visible>
 						</item-->		
 						<item>
 							<label>$INFO[ListItem.PictureDigitalZoom]</label>
 							<label2>21838</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(ListItem.PictureDigitalZoom)</visible>
+							<visible>!String.IsEmpty(ListItem.PictureDigitalZoom)</visible>
 						</item>		
 						<item>
 							<label>$INFO[ListItem.PictureExpMode]</label>
 							<label2>21832</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(ListItem.PictureExpMode)</visible>
+							<visible>!String.IsEmpty(ListItem.PictureExpMode)</visible>
 						</item>		
 						<item>
 							<label>$INFO[ListItem.PictureExposure]</label>
 							<label2>21829</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(ListItem.PictureExposure)</visible>
+							<visible>!String.IsEmpty(ListItem.PictureExposure)</visible>
 						</item>		
 						<item>
 							<label>$INFO[ListItem.PictureExposureBias]</label>
 							<label2>21831</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(ListItem.PictureExposureBias)</visible>
+							<visible>!String.IsEmpty(ListItem.PictureExposureBias)</visible>
 						</item>		
 						<item>
 							<label>$INFO[ListItem.PictureExpTime]</label>
 							<label2>21830</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(ListItem.PictureExpTime)</visible>
+							<visible>!String.IsEmpty(ListItem.PictureExpTime)</visible>
 						</item>		
 						<item>
 							<label>$INFO[ListItem.PictureFlashUsed]</label>
 							<label2>21833</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(ListItem.PictureFlashUsed)</visible>
+							<visible>!String.IsEmpty(ListItem.PictureFlashUsed)</visible>
 						</item>		
 						<item>
 							<label>$INFO[ListItem.PictureFocalLen]</label>
 							<label2>21827</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(ListItem.PictureFocalLen)</visible>
+							<visible>!String.IsEmpty(ListItem.PictureFocalLen)</visible>
 						</item>		
 						<item>
 							<label>$INFO[ListItem.PictureFocusDist]</label>
 							<label2>21828</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(ListItem.PictureFocusDist)</visible>
+							<visible>!String.IsEmpty(ListItem.PictureFocusDist)</visible>
 						</item>		
 						<item>
 							<label>$INFO[ListItem.PictureGPSLat]</label>
 							<label2>21840</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(ListItem.PictureGPSLat)</visible>
+							<visible>!String.IsEmpty(ListItem.PictureGPSLat)</visible>
 						</item>		
 						<item>
 							<label>$INFO[ListItem.PictureGPSLon]</label>
 							<label2>21841</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(ListItem.PictureGPSLon)</visible>
+							<visible>!String.IsEmpty(ListItem.PictureGPSLon)</visible>
 						</item>		
 						<item>
 							<label>$INFO[ListItem.PictureGPSAlt]</label>
 							<label2>21842</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(ListItem.PictureGPSAlt)</visible>
+							<visible>!String.IsEmpty(ListItem.PictureGPSAlt)</visible>
 						</item>		
 						<!--item>
 							<label>$INFO[ListItem.PictureHeadline]</label>
 							<label2>21864</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(ListItem.PictureHeadline)</visible>
+							<visible>!String.IsEmpty(ListItem.PictureHeadline)</visible>
 						</item-->		
 						<item>
 							<label>$INFO[ListItem.PictureImageType]</label>
 							<label2>21858</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(ListItem.PictureImageType)</visible>
+							<visible>!String.IsEmpty(ListItem.PictureImageType)</visible>
 						</item>		
 						<!--item>
 							<label>$INFO[ListItem.PictureIPTCDate]</label>
 							<label2>557</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(ListItem.PictureIPTCDate)</visible>
+							<visible>!String.IsEmpty(ListItem.PictureIPTCDate)</visible>
 						</item>		
 						<item>
 							<label>$INFO[ListItem.PictureIPTCTime]</label>
 							<label2>557</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(ListItem.PictureIPTCTime)</visible>
+							<visible>!String.IsEmpty(ListItem.PictureIPTCTime)</visible>
 						</item-->		
 						<item>
 							<label>$INFO[ListItem.PictureISO]</label>
 							<label2>21837</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(ListItem.PictureISO)</visible>
+							<visible>!String.IsEmpty(ListItem.PictureISO)</visible>
 						</item>		
 						<item>
 							<label>$INFO[ListItem.PictureKeywords]</label>
 							<label2>21861</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(ListItem.PictureKeywords)</visible>
+							<visible>!String.IsEmpty(ListItem.PictureKeywords)</visible>
 						</item>		
 						<item>
 							<label>$INFO[ListItem.PictureLightSource]</label>
 							<label2>21835</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(ListItem.PictureLightSource)</visible>
+							<visible>!String.IsEmpty(ListItem.PictureLightSource)</visible>
 						</item>		
 						<!--item>
 							<label>$INFO[ListItem.PictureLongDate]</label>
 							<label2>21820</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(ListItem.PictureLongDate)</visible>
+							<visible>!String.IsEmpty(ListItem.PictureLongDate)</visible>
 						</item>		
 						<item>
 							<label>$INFO[ListItem.PictureLongDatetime]</label>
 							<label2>21820</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(ListItem.PictureLongDatetime)</visible>
+							<visible>!String.IsEmpty(ListItem.PictureLongDatetime)</visible>
 						</item-->		
 						<item>
 							<label>$INFO[ListItem.PictureMeteringMode]</label>
 							<label2>21836</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(ListItem.PictureMeteringMode)</visible>
+							<visible>!String.IsEmpty(ListItem.PictureMeteringMode)</visible>
 						</item>		
 						<item>
 							<label>$INFO[ListItem.PictureObjectName]</label>
 							<label2>21872</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(ListItem.PictureObjectName)</visible>
+							<visible>!String.IsEmpty(ListItem.PictureObjectName)</visible>
 						</item>		
 						<item>
 							<label>$INFO[ListItem.PictureOrientation]</label>
 							<label2>21843</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(ListItem.PictureOrientation)</visible>
+							<visible>!String.IsEmpty(ListItem.PictureOrientation)</visible>
 						</item>		
 						<item>
 							<label>$INFO[ListItem.PicturePath]</label>
 							<!--label2>21801</label2-->
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(ListItem.PicturePath)</visible>
+							<visible>!String.IsEmpty(ListItem.PicturePath)</visible>
 						</item>		
 						<item>
 							<label>$INFO[ListItem.PictureProcess]</label>
 							<label2>21808</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(ListItem.PictureProcess)</visible>
+							<visible>!String.IsEmpty(ListItem.PictureProcess)</visible>
 						</item>		
 						<item>
 							<label>$INFO[ListItem.PictureReferenceService]</label>
 							<label2>21880</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(ListItem.PictureReferenceService)</visible>
+							<visible>!String.IsEmpty(ListItem.PictureReferenceService)</visible>
 						</item>		
 						<item>
 							<label>$INFO[ListItem.PictureResolution]</label>
 							<label2>21805</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(ListItem.PictureResolution)</visible>
+							<visible>!String.IsEmpty(ListItem.PictureResolution)</visible>
 						</item>		
 						<item>
 							<label>$INFO[ListItem.PictureSource]</label>
 							<label2>21870</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(ListItem.PictureSource)</visible>
+							<visible>!String.IsEmpty(ListItem.PictureSource)</visible>
 						</item>		
 						<item>
 							<label>$INFO[ListItem.PictureSpecialInstructions]</label>
 							<label2>21865</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(ListItem.PictureSpecialInstructions)</visible>
+							<visible>!String.IsEmpty(ListItem.PictureSpecialInstructions)</visible>
 						</item>		
 						<item>
 							<label>$INFO[ListItem.PictureState]</label>
 							<label2>21874</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(ListItem.PictureState)</visible>
+							<visible>!String.IsEmpty(ListItem.PictureState)</visible>
 						</item>		
 						<item>
 							<label>$INFO[ListItem.PictureSublocation]</label>
 							<label2>21857</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(ListItem.PictureSublocation)</visible>
+							<visible>!String.IsEmpty(ListItem.PictureSublocation)</visible>
 						</item>		
 						<item>
 							<label>$INFO[ListItem.PictureSupplementalCategories]</label>
 							<label2>21860</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(ListItem.PictureSupplementalCategories)</visible>
+							<visible>!String.IsEmpty(ListItem.PictureSupplementalCategories)</visible>
 						</item>		
 						<item>
 							<label>$INFO[ListItem.PictureTransmissionReference]</label>
 							<label2>21876</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(ListItem.PictureTransmissionReference)</visible>
+							<visible>!String.IsEmpty(ListItem.PictureTransmissionReference)</visible>
 						</item>		
 						<item>
 							<label>$INFO[ListItem.PictureUrgency]</label>
 							<label2>21878</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(ListItem.PictureUrgency)</visible>
+							<visible>!String.IsEmpty(ListItem.PictureUrgency)</visible>
 						</item>		
 						<item>
 							<label>$INFO[ListItem.PictureWhiteBalance]</label>
 							<label2>21807</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(ListItem.PictureWhiteBalance)</visible>
+							<visible>!String.IsEmpty(ListItem.PictureWhiteBalance)</visible>
 						</item>		
 					</content>	
 
@@ -745,7 +745,7 @@
 					<onleft>300</onleft>
 					<scrolltime>200</scrolltime>
 					<orientation>horizontal</orientation>
-					<visible>StringCompare(Container(300).ListItem.Label,$LOCALIZE[33029]) + !Window.IsVisible(10139)</visible>
+					<visible>String.IsEqual(Container(300).ListItem.Label,$LOCALIZE[33029]) + !Window.IsVisible(10139)</visible>
 					<animation effect="fade" start="0" end="100" time="100" reversible="true">VisibleChange</animation>				
 
 					<itemlayout width="612" height="51">
@@ -787,33 +787,33 @@
 				</control>
 
 				<!-- Cast -->
-				<include content="DiaVideoCast" condition="StringCompare(Window(Home).Property(DialogPos),LEFT) | StringCompare(Window(Home).Property(DialogPos),RIGHT)">
+				<include content="DiaVideoCast" condition="String.IsEqual(Window(Home).Property(DialogPos),LEFT) | String.IsEqual(Window(Home).Property(DialogPos),RIGHT)">
 					<param name="width" value="612" />
 					<param name="height" value="664" />
 				</include>	
 
-				<include content="DiaVideoCast" condition="StringCompare(Window(Home).Property(DialogPos),TOP) | StringCompare(Window(Home).Property(DialogPos),BOTTOM)">
+				<include content="DiaVideoCast" condition="String.IsEqual(Window(Home).Property(DialogPos),TOP) | String.IsEqual(Window(Home).Property(DialogPos),BOTTOM)">
 					<param name="width" value="1224" />
 					<param name="height" value="332" />
 				</include>		
 
-				<include content="DiaAlbumTracks" condition="StringCompare(Window(Home).Property(DialogPos),LEFT) | StringCompare(Window(Home).Property(DialogPos),RIGHT)">
+				<include content="DiaAlbumTracks" condition="String.IsEqual(Window(Home).Property(DialogPos),LEFT) | String.IsEqual(Window(Home).Property(DialogPos),RIGHT)">
 					<param name="width" value="612" />
 					<param name="height" value="664" />
 				</include>	
 
-				<include content="DiaAlbumTracks" condition="StringCompare(Window(Home).Property(DialogPos),TOP) | StringCompare(Window(Home).Property(DialogPos),BOTTOM)">
+				<include content="DiaAlbumTracks" condition="String.IsEqual(Window(Home).Property(DialogPos),TOP) | String.IsEqual(Window(Home).Property(DialogPos),BOTTOM)">
 					<param name="width" value="1224" />
 					<param name="height" value="332" />
 				</include>						
 
 				<!-- Director -->
-				<include content="DiaVideoExtended" condition="StringCompare(Window(Home).Property(DialogPos),LEFT) | StringCompare(Window(Home).Property(DialogPos),RIGHT)">
+				<include content="DiaVideoExtended" condition="String.IsEqual(Window(Home).Property(DialogPos),LEFT) | String.IsEqual(Window(Home).Property(DialogPos),RIGHT)">
 					<param name="width" value="612" />
 					<param name="height" value="664" />
 				</include>	
 
-				<include content="DiaVideoExtended" condition="StringCompare(Window(Home).Property(DialogPos),TOP) | StringCompare(Window(Home).Property(DialogPos),BOTTOM)">
+				<include content="DiaVideoExtended" condition="String.IsEqual(Window(Home).Property(DialogPos),TOP) | String.IsEqual(Window(Home).Property(DialogPos),BOTTOM)">
 					<param name="width" value="1224" />
 					<param name="height" value="332" />
 				</include>		
@@ -827,7 +827,7 @@
 					<scrolltime tween="sine" easing="out">200</scrolltime>
 					<orientation>vertical</orientation>
 					<usecontrolcoords>false</usecontrolcoords>			
-					<visible>StringCompare(Container(300).ListItem.Label,$LOCALIZE[207]) | StringCompare(Container(300).ListItem.Label,$LOCALIZE[21891]) | StringCompare(Container(300).ListItem.Label,$LOCALIZE[10523]) | StringCompare(Container(300).ListItem.Label,$LOCALIZE[209])</visible>
+					<visible>String.IsEqual(Container(300).ListItem.Label,$LOCALIZE[207]) | String.IsEqual(Container(300).ListItem.Label,$LOCALIZE[21891]) | String.IsEqual(Container(300).ListItem.Label,$LOCALIZE[10523]) | String.IsEqual(Container(300).ListItem.Label,$LOCALIZE[209])</visible>
 					<animation effect="fade" start="0" end="100" time="100" reversible="true">VisibleChange</animation>		
 					<control type="textbox">
 						<top>0</top>
@@ -865,7 +865,7 @@
 					<width>588</width>							
 					<texture colordiffuse="$INFO[Skin.String(Color.DIATxtNF)]">$INFO[ListItem.Icon]</texture>
 					<aspectratio aligny="center">keep</aspectratio>
-					<visible>StringCompare(Container(300).ListItem.Label,$LOCALIZE[33061]) + SubString(ListItem.Icon,Default)</visible>
+					<visible>String.IsEqual(Container(300).ListItem.Label,$LOCALIZE[33061]) + String.Contains(ListItem.Icon,Default)</visible>
 				</control>			
 				<control type="image">
 					<top>24</top>
@@ -874,7 +874,7 @@
 					<width>588</width>							
 					<texture colordiffuse="FFFFFFFF">$INFO[ListItem.Icon]</texture>
 					<aspectratio aligny="center">keep</aspectratio>
-					<visible>StringCompare(Container(300).ListItem.Label,$LOCALIZE[33061]) + !Window.IsVisible(10142) + !SubString(ListItem.Icon,Default)</visible>
+					<visible>String.IsEqual(Container(300).ListItem.Label,$LOCALIZE[33061]) + !Window.IsVisible(10142) + !String.Contains(ListItem.Icon,Default)</visible>
 				</control>				
 				<control type="image">
 					<top>24</top>
@@ -883,7 +883,7 @@
 					<width>588</width>							
 					<texture colordiffuse="FFFFFFFF">$INFO[VideoPlayer.Cover]</texture>
 					<aspectratio aligny="center">keep</aspectratio>
-					<visible>StringCompare(Container(300).ListItem.Label,$LOCALIZE[33061]) + Window.IsVisible(10142)</visible>
+					<visible>String.IsEqual(Container(300).ListItem.Label,$LOCALIZE[33061]) + Window.IsVisible(10142)</visible>
 				</control>
 				<control type="image">
 					<top>24</top>
@@ -892,7 +892,7 @@
 					<width>588</width>							
 					<texture colordiffuse="FFFFFFFF">$INFO[MusicPlayer.Cover]</texture>
 					<aspectratio aligny="center">keep</aspectratio>
-					<visible>StringCompare(Container(300).ListItem.Label,$LOCALIZE[33061]) + Window.IsVisible(10142)</visible>
+					<visible>String.IsEqual(Container(300).ListItem.Label,$LOCALIZE[33061]) + Window.IsVisible(10142)</visible>
 				</control>			
 			</control>
 		</control> 
@@ -917,7 +917,7 @@
 			<onleft>300</onleft>
 			<orientation>horizontal</orientation>
 			<scrolltime>100</scrolltime>
-			<visible allowhiddenfocus="true">Window.IsVisible(12003) + StringCompare(Container(300).ListItem.Label,$LOCALIZE[206]) + !System.HasAddon(script.extendedinfo)</visible>
+			<visible allowhiddenfocus="true">Window.IsVisible(12003) + String.IsEqual(Container(300).ListItem.Label,$LOCALIZE[206]) + !System.HasAddon(script.extendedinfo)</visible>
 			<animation effect="fade" start="0" end="100" time="100" reversible="true">VisibleChange</animation>				
 
 			<itemlayout width="204" height="332">
@@ -1100,7 +1100,7 @@
 			<aligny>center</aligny>
 			<font>Font36</font>
 			<label>31234</label>
-			<visible>Window.IsVisible(12003) + StringCompare(Container(300).ListItem.Property(MenuID),Cast) + Container(70).IsUpdating</visible>
+			<visible>Window.IsVisible(12003) + String.IsEqual(Container(300).ListItem.Property(MenuID),Cast) + Container(70).IsUpdating</visible>
 			<animation effect="fade" start="100" end="0" time="400" reversible="true" pulse="true" condition="true">Conditional</animation>	
 		</control>
 	</include>
@@ -1117,7 +1117,7 @@
 			<onleft>300</onleft>
 			<orientation>horizontal</orientation>
 			<scrolltime>100</scrolltime>
-			<visible>Window.IsVisible(12001) + StringCompare(Container(300).ListItem.Label,$LOCALIZE[182])</visible>
+			<visible>Window.IsVisible(12001) + String.IsEqual(Container(300).ListItem.Label,$LOCALIZE[182])</visible>
 			<animation effect="fade" start="0" end="100" time="100" reversible="true">VisibleChange</animation>				
 
 			<itemlayout width="612" height="102">
@@ -1462,97 +1462,97 @@
 				<label2>$INFO[ListItem.Year]</label2>
 				<label>345</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(ListItem.Year)</visible>
+				<visible>!String.IsEmpty(ListItem.Year)</visible>
 			</item>
 			<item>
 				<label2>$INFO[ListItem.Duration]</label2>
 				<label>180</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(ListItem.Duration)</visible>
+				<visible>!String.IsEmpty(ListItem.Duration)</visible>
 			</item>
 			<item>
 				<label2>$INFO[ListItem.Album]</label2>
 				<label>558</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(ListItem.Album)</visible>
+				<visible>!String.IsEmpty(ListItem.Album)</visible>
 			</item>				
 			<item>
 				<label2>$INFO[ListItem.Genre]</label2>
 				<label>515</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(ListItem.Genre)</visible>
+				<visible>!String.IsEmpty(ListItem.Genre)</visible>
 			</item>				
 			<item>
 				<label2>$INFO[ListItem.Director]</label2>
 				<label>20339</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(ListItem.Director)</visible>
+				<visible>!String.IsEmpty(ListItem.Director)</visible>
 			</item>				
 			<item>
 				<label2>$INFO[ListItem.Writer]</label2>
 				<label>20417</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(ListItem.Writer)</visible>
+				<visible>!String.IsEmpty(ListItem.Writer)</visible>
 			</item>			
 			<item>
 				<label2>$INFO[ListItem.Studio]</label2>
 				<label>572</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(ListItem.Studio)</visible>
+				<visible>!String.IsEmpty(ListItem.Studio)</visible>
 			</item>			
 			<item>
 				<label2>$INFO[ListItem.RatingAndVotes]</label2>
 				<label>563</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(ListItem.RatingAndVotes)</visible>
+				<visible>!String.IsEmpty(ListItem.RatingAndVotes)</visible>
 			</item>			
 			<item>
 				<label2>$INFO[ListItem.Mpaa]</label2>
 				<label>20074</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(ListItem.Mpaa)</visible>
+				<visible>!String.IsEmpty(ListItem.Mpaa)</visible>
 			</item>			
 			<item>
 				<label2>$INFO[ListItem.VideoResolution]</label2>
 				<label>169</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(ListItem.VideoResolution)</visible>
+				<visible>!String.IsEmpty(ListItem.VideoResolution)</visible>
 			</item>		
 			<item>
 				<label2>$INFO[ListItem.VideoAspect]</label2>
 				<label>21374</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(ListItem.VideoAspect)</visible>
+				<visible>!String.IsEmpty(ListItem.VideoAspect)</visible>
 			</item>		
 			<item>
 				<label2>$INFO[ListItem.VideoCodec]</label2>
 				<label>21445</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(ListItem.VideoCodec)</visible>
+				<visible>!String.IsEmpty(ListItem.VideoCodec)</visible>
 			</item>	
 			<item>
 				<label2>$INFO[ListItem.AudioChannels]</label2>
 				<label>21444</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(ListItem.AudioChannels)</visible>
+				<visible>!String.IsEmpty(ListItem.AudioChannels)</visible>
 			</item>	
 			<item>
 				<label2>$INFO[ListItem.AudioCodec]</label2>
 				<label>21446</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(ListItem.AudioCodec)</visible>
+				<visible>!String.IsEmpty(ListItem.AudioCodec)</visible>
 			</item>	
 			<item>
 				<label2>$INFO[ListItem.AudioLanguage]</label2>
 				<label>21447</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(ListItem.AudioLanguage)</visible>
+				<visible>!String.IsEmpty(ListItem.AudioLanguage)</visible>
 			</item>	
 			<item>
 				<label2>$INFO[ListItem.SubtitleLanguage]</label2>
 				<label>21448</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(ListItem.SubtitleLanguage)</visible>
+				<visible>!String.IsEmpty(ListItem.SubtitleLanguage)</visible>
 			</item>
 		</content>
 	</include>
@@ -1563,31 +1563,31 @@
 				<label2>$INFO[ListItem.Artist]</label2>
 				<label>557</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(ListItem.Artist)</visible>
+				<visible>!String.IsEmpty(ListItem.Artist)</visible>
 			</item>			
 			<item id="2">
 				<label2>$INFO[ListItem.Album]</label2>
 				<label>558</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(ListItem.Album)</visible>
+				<visible>!String.IsEmpty(ListItem.Album)</visible>
 			</item>	
 			<item id="3">
 				<label2>$INFO[ListItem.Year]</label2>
 				<label>562</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(ListItem.Year)</visible>
+				<visible>!String.IsEmpty(ListItem.Year)</visible>
 			</item>	
 			<item id="4">
 				<label2>$INFO[ListItem.Genre]</label2>
 				<label>515</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(ListItem.Genre)</visible>
+				<visible>!String.IsEmpty(ListItem.Genre)</visible>
 			</item>	
 			<item id="5">
 				<label2>$INFO[ListItem.TrackNumber]</label2>
 				<label>554</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(ListItem.TrackNumber)</visible>
+				<visible>!String.IsEmpty(ListItem.TrackNumber)</visible>
 			</item>	
 		</content>
 	</include>	
@@ -1598,91 +1598,91 @@
 				<label2>$INFO[ListItem.Artist]</label2>
 				<label>557</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(ListItem.Artist)</visible>
+				<visible>!String.IsEmpty(ListItem.Artist)</visible>
 			</item>			
 			<item id="2">
 				<label2>$INFO[ListItem.Year]</label2>
 				<label>562</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(ListItem.Year)</visible>
+				<visible>!String.IsEmpty(ListItem.Year)</visible>
 			</item>			
 			<item id="3">
 				<label2>$INFO[ListItem.Genre]</label2>
 				<label>515</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(ListItem.Genre)</visible>
+				<visible>!String.IsEmpty(ListItem.Genre)</visible>
 			</item>			
 			<item id="4">
 				<label2>$INFO[ListItem.Property(Album_Type)]</label2>
 				<label>146</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(ListItem.Property(Album_Type))</visible>
+				<visible>!String.IsEmpty(ListItem.Property(Album_Type))</visible>
 			</item>		
 			<item id="5">
 				<label2>$INFO[ListItem.Property(Album_Label)]</label2>
 				<label>21899</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(ListItem.Property(Album_Label))</visible>
+				<visible>!String.IsEmpty(ListItem.Property(Album_Label))</visible>
 			</item>		
 			<!--item id="6">
 				<label2>$INFO[ListItem.Property(Album_Mood)]</label2>
 				<label>175</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(ListItem.Property(Album_Mood))</visible>
+				<visible>!String.IsEmpty(ListItem.Property(Album_Mood))</visible>
 			</item>		
 			<item id="7">
 				<label2>$INFO[ListItem.Property(Album_Style)]</label2>
 				<label>176</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(ListItem.Property(Album_Style))</visible>
+				<visible>!String.IsEmpty(ListItem.Property(Album_Style))</visible>
 			</item>	
 			<item id="8">
 				<label2>$INFO[ListItem.Property(Album_Theme)]</label2>
 				<label>21895</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(ListItem.Property(Album_Theme))</visible>
+				<visible>!String.IsEmpty(ListItem.Property(Album_Theme))</visible>
 			</item-->	
 			<item id="9">
 				<label2>$INFO[ListItem.Property(Artist_Born)]</label2>
 				<label>21893</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(ListItem.Property(Artist_Born))</visible>
+				<visible>!String.IsEmpty(ListItem.Property(Artist_Born))</visible>
 			</item>	
 			<item id="10">
 				<label2>$INFO[ListItem.Property(Artist_Formed)]</label2>
 				<label>21894</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(ListItem.Property(Artist_Formed))</visible>
+				<visible>!String.IsEmpty(ListItem.Property(Artist_Formed))</visible>
 			</item>	
 			<item id="11">
 				<label2>$INFO[ListItem.Property(Artist_Mood)]</label2>
 				<label>175</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(ListItem.Property(Artist_Mood))</visible>
+				<visible>!String.IsEmpty(ListItem.Property(Artist_Mood))</visible>
 			</item>	
 			<item id="12">
 				<label2>$INFO[ListItem.Property(Artist_Style)]</label2>
 				<label>176</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(ListItem.Property(Artist_Style))</visible>
+				<visible>!String.IsEmpty(ListItem.Property(Artist_Style))</visible>
 			</item>	
 			<item id="13">
 				<label2>$INFO[ListItem.Property(Artist_Instrument)]</label2>
 				<label>21892</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(ListItem.Property(Artist_Instrument))</visible>
+				<visible>!String.IsEmpty(ListItem.Property(Artist_Instrument))</visible>
 			</item>	
 			<item id="14">
 				<label2>$INFO[ListItem.Property(Artist_Died)]</label2>
 				<label>21897</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(ListItem.Property(Artist_Died))</visible>
+				<visible>!String.IsEmpty(ListItem.Property(Artist_Died))</visible>
 			</item>	
 			<item id="15">
 				<label2>$INFO[ListItem.Property(Artist_YearsActive)]</label2>
 				<label>652</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(ListItem.Property(Artist_YearsActive))</visible>
+				<visible>!String.IsEmpty(ListItem.Property(Artist_YearsActive))</visible>
 			</item>						
 		</content>
 	</include>
@@ -1693,67 +1693,67 @@
 				<label2>$INFO[ListItem.StartDate]</label2>
 				<label>142</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(ListItem.StartTime)</visible>
+				<visible>!String.IsEmpty(ListItem.StartTime)</visible>
 			</item>			
 			<item id="2">
 				<label2>$INFO[ListItem.StartTime]</label2>
 				<label>142</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(ListItem.StartTime)</visible>
+				<visible>!String.IsEmpty(ListItem.StartTime)</visible>
 			</item>			
 			<item id="3">
 				<label2>$INFO[ListItem.EndTime]</label2>
 				<label>142</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(ListItem.EndTime)</visible>
+				<visible>!String.IsEmpty(ListItem.EndTime)</visible>
 			</item>									
 			<item id="4">
 				<label2>$INFO[ListItem.Duration]</label2>
 				<label>180</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(ListItem.Duration)</visible>
+				<visible>!String.IsEmpty(ListItem.Duration)</visible>
 			</item>			
 			<item id="5">
 				<label2>$INFO[ListItem.ChannelName]</label2>
 				<label>$INFO[ListItem.ChannelNumber,$LOCALIZE[19029]]</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(ListItem.ChannelName)</visible>
+				<visible>!String.IsEmpty(ListItem.ChannelName)</visible>
 			</item>			
 			<!--item id="6">
 				<label2>$INFO[ListItem.ChannelNumber,$LOCALIZE[549] ,]</label2>
 				<label>19148</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(ListItem.ChannelNumber)</visible>
+				<visible>!String.IsEmpty(ListItem.ChannelNumber)</visible>
 			</item-->		
 			<item id="7">
 				<label2>$INFO[ListItem.ChannelGroup]</label2>
 				<label>19141</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(ListItem.ChannelGroup)</visible>
+				<visible>!String.IsEmpty(ListItem.ChannelGroup)</visible>
 			</item>		
 			<!--item id="8">
 				<label2>$INFO[ListItem.SubChannelNumber]</label2>
 				<label>19148</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(ListItem.SubChannelNumber)</visible>
+				<visible>!String.IsEmpty(ListItem.SubChannelNumber)</visible>
 			</item>		
 			<item id="9">
 				<label2>$INFO[ListItem.ChannelNumberLabel]</label2>
 				<label>19141</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(ListItem.ChannelNumberLabel)</visible>
+				<visible>!String.IsEmpty(ListItem.ChannelNumberLabel)</visible>
 			</item-->		
 			<item id="10">
 				<label2>$INFO[ListItem.Genre]</label2>
 				<label>135</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(ListItem.Genre)</visible>
+				<visible>!String.IsEmpty(ListItem.Genre)</visible>
 			</item>		
 			<item id="11">
 				<label2>$INFO[ListItem.NextTitle]</label2>
 				<label>209</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(ListItem.NextTitle)</visible>
+				<visible>!String.IsEmpty(ListItem.NextTitle)</visible>
 			</item>						
 		</content>
 	</include>	
@@ -1764,193 +1764,193 @@
 				<label2>$INFO[VideoPlayer.ChannelName]</label2>
 				<label>19029</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(VideoPlayer.ChannelName)</visible>
+				<visible>!String.IsEmpty(VideoPlayer.ChannelName)</visible>
 			</item>					
 			<item>
 				<label2>$INFO[VideoPlayer.Time]</label2>
 				<label>575</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(VideoPlayer.Time)</visible>
+				<visible>!String.IsEmpty(VideoPlayer.Time)</visible>
 			</item>		
 			<item>
 				<label2>$INFO[VideoPlayer.EndTime] $INFO[VideoPlayer.TimeRemaining,(,)]</label2>
 				<label>19127</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(VideoPlayer.EndTime)</visible>
+				<visible>!String.IsEmpty(VideoPlayer.EndTime)</visible>
 			</item>						
 			<item>
 				<label2>$INFO[VideoPlayer.Duration]</label2>
 				<label>180</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(VideoPlayer.Duration)</visible>
+				<visible>!String.IsEmpty(VideoPlayer.Duration)</visible>
 			</item>			
 			<item>
 				<label2>$INFO[VideoPlayer.TVShowTitle]</label2>
 				<label>180</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(VideoPlayer.TVShowTitle)</visible>
+				<visible>!String.IsEmpty(VideoPlayer.TVShowTitle)</visible>
 			</item>			
 			<item>
 				<label2>$INFO[VideoPlayer.Season]</label2>
 				<label>20373</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(VideoPlayer.Season)</visible>
+				<visible>!String.IsEmpty(VideoPlayer.Season)</visible>
 			</item>			
 			<item>
 				<label2>$INFO[VideoPlayer.Episode]</label2>
 				<label>20359</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(VideoPlayer.Episode)</visible>
+				<visible>!String.IsEmpty(VideoPlayer.Episode)</visible>
 			</item>			
 			<item>
 				<label2>$INFO[VideoPlayer.Genre]</label2>
 				<label>515</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(VideoPlayer.Genre)</visible>
+				<visible>!String.IsEmpty(VideoPlayer.Genre)</visible>
 			</item>			
 			<item>
 				<label2>$INFO[VideoPlayer.Director]</label2>
 				<label>20339</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(VideoPlayer.Director)</visible>
+				<visible>!String.IsEmpty(VideoPlayer.Director)</visible>
 			</item>			
 			<item>
 				<label2>$INFO[VideoPlayer.Country]</label2>
 				<label>574</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(VideoPlayer.Country)</visible>
+				<visible>!String.IsEmpty(VideoPlayer.Country)</visible>
 			</item>			
 			<item>
 				<label2>$INFO[VideoPlayer.Year]</label2>
 				<label>562</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(VideoPlayer.Year)</visible>
+				<visible>!String.IsEmpty(VideoPlayer.Year)</visible>
 			</item>			
 			<item>
 				<label2>$INFO[VideoPlayer.RatingAndVotes]</label2>
 				<label>563</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(VideoPlayer.RatingAndVotes)</visible>
+				<visible>!String.IsEmpty(VideoPlayer.RatingAndVotes)</visible>
 			</item>			
 			<item>
 				<label2>$INFO[VideoPlayer.mpaa]</label2>
 				<label>20074</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(VideoPlayer.mpaa)</visible>
+				<visible>!String.IsEmpty(VideoPlayer.mpaa)</visible>
 			</item>			
 			<item>
 				<label2>$INFO[VideoPlayer.EpisodeName]</label2>
 				<label>20359</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(VideoPlayer.EpisodeName)</visible>
+				<visible>!String.IsEmpty(VideoPlayer.EpisodeName)</visible>
 			</item>			
 			<item>
 				<label2>$INFO[VideoPlayer.PlaylistPosition]</label2>
 				<label>$LOCALIZE[559] $LOCALIZE[560]</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(VideoPlayer.PlaylistPosition)</visible>
+				<visible>!String.IsEmpty(VideoPlayer.PlaylistPosition)</visible>
 			</item>			
 			<item>
 				<label2>$INFO[VideoPlayer.PlaylistLength]</label2>
 				<label>$LOCALIZE[559] / $LOCALIZE[553]</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(VideoPlayer.PlaylistLength)</visible>
+				<visible>!String.IsEmpty(VideoPlayer.PlaylistLength)</visible>
 			</item>			
 			<item>
 				<label2>$INFO[VideoPlayer.Album]</label2>
 				<label>558</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(VideoPlayer.Album)</visible>
+				<visible>!String.IsEmpty(VideoPlayer.Album)</visible>
 			</item>			
 			<item>
 				<label2>$INFO[VideoPlayer.Artist]</label2>
 				<label>557</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(VideoPlayer.Artist)</visible>
+				<visible>!String.IsEmpty(VideoPlayer.Artist)</visible>
 			</item>			
 			<item>
 				<label2>$INFO[VideoPlayer.Studio]</label2>
 				<label>572</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(VideoPlayer.Studio)</visible>
+				<visible>!String.IsEmpty(VideoPlayer.Studio)</visible>
 			</item>			
 			<item>
 				<label2>$INFO[VideoPlayer.Writer]</label2>
 				<label>20417</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(VideoPlayer.Writer)</visible>
+				<visible>!String.IsEmpty(VideoPlayer.Writer)</visible>
 			</item>			
 			<item>
 				<label2>$INFO[VideoPlayer.LastPlayed]</label2>
 				<label>568</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(VideoPlayer.LastPlayed)</visible>
+				<visible>!String.IsEmpty(VideoPlayer.LastPlayed)</visible>
 			</item>			
 			<item>
 				<label2>$INFO[VideoPlayer.PlayCount]</label2>
 				<label>567</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(VideoPlayer.PlayCount)</visible>
+				<visible>!String.IsEmpty(VideoPlayer.PlayCount)</visible>
 			</item>			
 			<item>
 				<label2>$INFO[VideoPlayer.VideoCodec]</label2>
 				<label>21445</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(VideoPlayer.VideoCodec)</visible>
+				<visible>!String.IsEmpty(VideoPlayer.VideoCodec)</visible>
 			</item>			
 			<item>
 				<label2>$INFO[VideoPlayer.VideoResolution]</label2>
 				<label>21443</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(VideoPlayer.VideoResolution)</visible>
+				<visible>!String.IsEmpty(VideoPlayer.VideoResolution)</visible>
 			</item>			
 			<item>
 				<label2>$INFO[VideoPlayer.VideoAspect]</label2>
 				<label>21374</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(VideoPlayer.VideoAspect)</visible>
+				<visible>!String.IsEmpty(VideoPlayer.VideoAspect)</visible>
 			</item>			
 			<item>
 				<label2>$INFO[VideoPlayer.AudioCodec]</label2>
 				<label>21446</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(VideoPlayer.AudioCodec)</visible>
+				<visible>!String.IsEmpty(VideoPlayer.AudioCodec)</visible>
 			</item>			
 			<item>
 				<label2>$INFO[VideoPlayer.AudioChannels]</label2>
 				<label>21444</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(VideoPlayer.AudioChannels)</visible>
+				<visible>!String.IsEmpty(VideoPlayer.AudioChannels)</visible>
 			</item>			
 			<item>
 				<label2>$INFO[VideoPlayer.AudioLanguage]</label2>
 				<label>21447</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(VideoPlayer.AudioLanguage)</visible>
+				<visible>!String.IsEmpty(VideoPlayer.AudioLanguage)</visible>
 			</item>			
 			<item>
 				<label2>$INFO[VideoPlayer.SubtitlesLanguage]</label2>
 				<label>21448</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(VideoPlayer.SubtitlesLanguage)</visible>
+				<visible>!String.IsEmpty(VideoPlayer.SubtitlesLanguage)</visible>
 			</item>			
 			<item>
 				<label2>$INFO[VideoPlayer.StereoscopicMode]</label2>
 				<label>36501</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(VideoPlayer.StereoscopicMode)</visible>
+				<visible>!String.IsEmpty(VideoPlayer.StereoscopicMode)</visible>
 			</item>			
 			<item>
 				<label2>$INFO[VideoPlayer.ChannelGroup]</label2>
 				<label>19141</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(VideoPlayer.ChannelGroup)</visible>
+				<visible>!String.IsEmpty(VideoPlayer.ChannelGroup)</visible>
 			</item>
 			<item>
 				<label2>$INFO[VideoPlayer.ParentalRating]</label2>
 				<label>19259</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(VideoPlayer.ParentalRating)</visible>
+				<visible>!String.IsEmpty(VideoPlayer.ParentalRating)</visible>
 			</item>																																														
 		</content>
 	</include>	
@@ -1958,34 +1958,34 @@
 	<include name="AddonInfoDetail">
 		<content>
 			<item>
-				<label2>$INFO[ListItem.Property(Addon.Version)]</label2>
+				<label2>$INFO[ListItem.AddonVersion]</label2>
 				<label>19114</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(ListItem.Property(Addon.Version))</visible>
+				<visible>!String.IsEmpty(ListItem.AddonVersion)</visible>
 			</item>			
 			<item>
-				<label2>$INFO[ListItem.Property(Addon.Type)]</label2>
+				<label2>$INFO[ListItem.AddonType]</label2>
 				<label>467</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(ListItem.Property(Addon.Type))</visible>
+				<visible>!String.IsEmpty(ListItem.AddonType)</visible>
 			</item>			
 			<item>
 				<label2>$INFO[ListItem.Property(Addon.ID)]</label2>
 				<label>560</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(ListItem.Property(Addon.ID))</visible>
+				<visible>!String.IsEmpty(ListItem.Property(Addon.ID))</visible>
 			</item>			
 			<item>
 				<label2>$INFO[ListItem.Property(Addon.Status)]</label2>
 				<label>126</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(ListItem.Property(Addon.Status))</visible>
+				<visible>!String.IsEmpty(ListItem.Property(Addon.Status))</visible>
 			</item>			
 			<item>
-				<label2>$INFO[ListItem.Property(Addon.Broken)]</label2>
+				<label2>$INFO[ListItem.AddonBroken]</label2>
 				<label>1384</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(ListItem.Property(Addon.Broken))</visible>
+				<visible>!String.IsEmpty(ListItem.AddonBroken)</visible>
 			</item>		
 		</content>
 	</include>		
@@ -1996,31 +1996,31 @@
 				<label2>$INFO[ListItem.StartDate]</label2>
 				<label>552</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(ListItem.StartDate)</visible>
+				<visible>!String.IsEmpty(ListItem.StartDate)</visible>
 			</item>			
 			<item>
 				<label2>$INFO[ListItem.StartTime]</label2>
 				<label>142</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(ListItem.StartTime)</visible>
+				<visible>!String.IsEmpty(ListItem.StartTime)</visible>
 			</item>			
 			<item>
 				<label2>$INFO[ListItem.ChannelName]</label2>
 				<label>19148</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(ListItem.ChannelName)</visible>
+				<visible>!String.IsEmpty(ListItem.ChannelName)</visible>
 			</item>			
 			<item>
 				<label2>$INFO[ListItem.Duration]</label2>
 				<label>180</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(ListItem.Duration)</visible>
+				<visible>!String.IsEmpty(ListItem.Duration)</visible>
 			</item>			
 			<item>
 				<label2>$INFO[ListItem.Genre]</label2>
 				<label>135</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(ListItem.Genre)</visible>
+				<visible>!String.IsEmpty(ListItem.Genre)</visible>
 			</item>			
 		</content>
 	</include>		

@@ -160,7 +160,7 @@
 					<width>800</width>
 					<align>right</align>
 					<label>$INFO[Skin.String(LyricPath)]</label>
-					<visible>!IsEmpty(Skin.String(LyricPath))</visible>
+					<visible>!String.IsEmpty(Skin.String(LyricPath))</visible>
 				</control>
 
 				<control type="label" id="402">
@@ -168,7 +168,7 @@
 					<width>800</width>
 					<align>right</align>
 					<label>CU Lyrics</label>
-					<visible>IsEmpty(Skin.String(LyricPath))</visible>
+					<visible>String.IsEmpty(Skin.String(LyricPath))</visible>
 				</control>
 
 				<control type="label" id="403">
@@ -176,7 +176,7 @@
 					<width>800</width>
 					<align>right</align>
 					<label>$INFO[Skin.String(SubtitlesPath)]</label>
-					<visible>!IsEmpty(Skin.String(SubtitlesPath))</visible>
+					<visible>!String.IsEmpty(Skin.String(SubtitlesPath))</visible>
 				</control>
 
 				<control type="label" id="404">
@@ -184,7 +184,7 @@
 					<width>800</width>
 					<align>right</align>
 					<label>31285</label>
-					<visible>IsEmpty(Skin.String(SubtitlesPath))</visible>
+					<visible>String.IsEmpty(Skin.String(SubtitlesPath))</visible>
 				</control>
 
 			</control>

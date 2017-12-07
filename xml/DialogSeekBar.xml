@@ -95,7 +95,7 @@
 			
 			<!-- Sidebar Position-->	
 			<control type="group">	
-				<!--visible>!StringCompare(Window(Home).Property(DialogVisibility),VISIBLE)</visible-->
+				<!--visible>!String.IsEqual(Window(Home).Property(DialogVisibility),VISIBLE)</visible-->
 
 				<control type="group">		
 					<visible>[Skin.String(HOM.View1.BBSidebar,LEFT) | Skin.String(HOM.View1.BBSidebar,RIGHT)] + !Skin.HasSetting(ForceOSDBottom)</visible>

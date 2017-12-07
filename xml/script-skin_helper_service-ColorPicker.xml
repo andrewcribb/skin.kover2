@@ -3,25 +3,25 @@
 	<!-- selectdialog -->
 	<zorder>2</zorder>
 	<defaultcontrol always="true">3010</defaultcontrol>
-	<onload condition="IsEmpty(Window(Home).Property(DialogVisibility)) + IsEmpty(Window(Home).Property(DialogVisibility2))">SetProperty(DialogVisibility,$INFO[Window.Property(xmlfile)],Home)</onload>
-	<onload condition="!IsEmpty(Window(Home).Property(DialogVisibility)) + IsEmpty(Window(Home).Property(DialogVisibility2))">SetProperty(DialogVisibility2,$INFO[Window.Property(xmlfile)],Home)</onload>
-	<onload condition="!IsEmpty(Window(Home).Property(DialogVisibility2)) + IsEmpty(Window(Home).Property(DialogVisibility3))">SetProperty(DialogVisibility3,$INFO[Window.Property(xmlfile)],Home)</onload>
-	<onload condition="!IsEmpty(Window(Home).Property(DialogVisibility3)) + IsEmpty(Window(Home).Property(DialogVisibility4))">SetProperty(DialogVisibility4,$INFO[Window.Property(xmlfile)],Home)</onload>
-	<onload condition="!IsEmpty(Window(Home).Property(DialogVisibility4)) + IsEmpty(Window(Home).Property(DialogVisibility5))">SetProperty(DialogVisibility5,$INFO[Window.Property(xmlfile)],Home)</onload>
-	<onunload condition="IsEmpty(Window(Home).Property(DialogVisibility2))">ClearProperty(DialogVisibility,Home)</onunload>
-	<onunload condition="IsEmpty(Window(Home).Property(DialogVisibility3))">ClearProperty(DialogVisibility2,Home)</onunload>
-	<onunload condition="IsEmpty(Window(Home).Property(DialogVisibility4))">ClearProperty(DialogVisibility3,Home)</onunload>
-	<onunload condition="IsEmpty(Window(Home).Property(DialogVisibility5))">ClearProperty(DialogVisibility4,Home)</onunload>
+	<onload condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEmpty(Window(Home).Property(DialogVisibility2))">SetProperty(DialogVisibility,$INFO[Window.Property(xmlfile)],Home)</onload>
+	<onload condition="!String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEmpty(Window(Home).Property(DialogVisibility2))">SetProperty(DialogVisibility2,$INFO[Window.Property(xmlfile)],Home)</onload>
+	<onload condition="!String.IsEmpty(Window(Home).Property(DialogVisibility2)) + String.IsEmpty(Window(Home).Property(DialogVisibility3))">SetProperty(DialogVisibility3,$INFO[Window.Property(xmlfile)],Home)</onload>
+	<onload condition="!String.IsEmpty(Window(Home).Property(DialogVisibility3)) + String.IsEmpty(Window(Home).Property(DialogVisibility4))">SetProperty(DialogVisibility4,$INFO[Window.Property(xmlfile)],Home)</onload>
+	<onload condition="!String.IsEmpty(Window(Home).Property(DialogVisibility4)) + String.IsEmpty(Window(Home).Property(DialogVisibility5))">SetProperty(DialogVisibility5,$INFO[Window.Property(xmlfile)],Home)</onload>
+	<onunload condition="String.IsEmpty(Window(Home).Property(DialogVisibility2))">ClearProperty(DialogVisibility,Home)</onunload>
+	<onunload condition="String.IsEmpty(Window(Home).Property(DialogVisibility3))">ClearProperty(DialogVisibility2,Home)</onunload>
+	<onunload condition="String.IsEmpty(Window(Home).Property(DialogVisibility4))">ClearProperty(DialogVisibility3,Home)</onunload>
+	<onunload condition="String.IsEmpty(Window(Home).Property(DialogVisibility5))">ClearProperty(DialogVisibility4,Home)</onunload>
 	<onunload>ClearProperty(DialogVisibility5,Home)</onunload>
 	
 	<controls>
 		
 		<control type="group">
-			<visible>[StringCompare(Window(Home).Property(DialogVisibility),Window.Property(xmlfile)) + IsEmpty(Window(Home).Property(DialogVisibility2))] | 
-					[StringCompare(Window(Home).Property(DialogVisibility2),Window.Property(xmlfile)) + IsEmpty(Window(Home).Property(DialogVisibility3))] |
-					[StringCompare(Window(Home).Property(DialogVisibility3),Window.Property(xmlfile)) + IsEmpty(Window(Home).Property(DialogVisibility4))] |
-					[StringCompare(Window(Home).Property(DialogVisibility4),Window.Property(xmlfile)) + IsEmpty(Window(Home).Property(DialogVisibility5))] |
-					StringCompare(Window(Home).Property(DialogVisibility5),Window.Property(xmlfile))</visible>
+			<visible>[String.IsEqual(Window(Home).Property(DialogVisibility),Window.Property(xmlfile)) + String.IsEmpty(Window(Home).Property(DialogVisibility2))] | 
+					[String.IsEqual(Window(Home).Property(DialogVisibility2),Window.Property(xmlfile)) + String.IsEmpty(Window(Home).Property(DialogVisibility3))] |
+					[String.IsEqual(Window(Home).Property(DialogVisibility3),Window.Property(xmlfile)) + String.IsEmpty(Window(Home).Property(DialogVisibility4))] |
+					[String.IsEqual(Window(Home).Property(DialogVisibility4),Window.Property(xmlfile)) + String.IsEmpty(Window(Home).Property(DialogVisibility5))] |
+					String.IsEqual(Window(Home).Property(DialogVisibility5),Window.Property(xmlfile))</visible>
 			
 			<include content="DialogPOS">
 				<param name="DialogName" value="DiaColorPicker" />

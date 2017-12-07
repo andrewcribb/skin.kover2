@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
 	<!-- KOver custom settings -->
-	<onload condition="IsEmpty(Skin.String(KOverInit))">Back</onload>	
+	<onload condition="String.IsEmpty(Skin.String(KOverInit))">Back</onload>	
 	<backgroundcolor>0x00000000</backgroundcolor>
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<onload>SetProperty(SidebarPos,RIGHT,Home)</onload>
@@ -42,7 +42,7 @@
 		</control>
 
 		<control type="group">
-			<animation effect="fade" start="100" end="0" time="100" delay="100" condition="Window.IsVisible(script-skinshortcuts.xml) | !IsEmpty(Window(Home).Property(DialogVisibility))">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="100" delay="100" condition="Window.IsVisible(script-skinshortcuts.xml) | !String.IsEmpty(Window(Home).Property(DialogVisibility))">Conditional</animation>
 
 			<!-- Bloc 1 -->
 			<control type="group">
@@ -261,7 +261,7 @@
 				<onup>9000</onup>
 				<ondown>noop</ondown>
 				<orientation>vertical</orientation>
-				<visible allowhiddenfocus="true">StringCompare(Container(9000).ListItem.Label,$LOCALIZE[31007])</visible>
+				<visible allowhiddenfocus="true">String.IsEqual(Container(9000).ListItem.Label,$LOCALIZE[31007])</visible>
 
 				<!-- Edit Home Menu -->
 				<control type="button" id="9101">
@@ -514,7 +514,7 @@
 				<onup>9000</onup>
 				<ondown>noop</ondown>
 				<orientation>vertical</orientation>
-				<visible allowhiddenfocus="true">StringCompare(Container(9000).ListItem.Label,$LOCALIZE[31150])</visible>
+				<visible allowhiddenfocus="true">String.IsEqual(Container(9000).ListItem.Label,$LOCALIZE[31150])</visible>
 
 				<!-- PVR Horizontal -->
 				<control type="button" id="9202">
@@ -723,7 +723,7 @@
 				<onup>9000</onup>
 				<ondown>noop</ondown>
 				<orientation>vertical</orientation>
-				<visible allowhiddenfocus="true">StringCompare(Container(9000).ListItem.Label,$LOCALIZE[31151])</visible>
+				<visible allowhiddenfocus="true">String.IsEqual(Container(9000).ListItem.Label,$LOCALIZE[31151])</visible>
 
 				<!-- Import -->
 				<control type="button" id="9301">
@@ -956,7 +956,7 @@
 				<onup>9000</onup>
 				<ondown>noop</ondown>
 				<orientation>vertical</orientation>
-				<visible allowhiddenfocus="true">StringCompare(Container(9000).ListItem.Label,$LOCALIZE[31200])</visible>	
+				<visible allowhiddenfocus="true">String.IsEqual(Container(9000).ListItem.Label,$LOCALIZE[31200])</visible>	
 
 				<!-- Activate Extended infos -->
 				<control type="radiobutton" id="9401">

@@ -2,15 +2,15 @@
 <window>
 	<!-- FileManager -->
 	<defaultcontrol always="true">20</defaultcontrol>
-	<onload condition="IsEmpty(Window(Home).Property(DialogVisibility)) + IsEmpty(Window(Home).Property(DialogVisibility2))">SetProperty(DialogVisibility,$INFO[Window.Property(xmlfile)]1,Home)</onload>
-	<onload condition="!IsEmpty(Window(Home).Property(DialogVisibility)) + IsEmpty(Window(Home).Property(DialogVisibility2))">SetProperty(DialogVisibility2,$INFO[Window.Property(xmlfile)]2,Home)</onload>
-	<onload condition="!IsEmpty(Window(Home).Property(DialogVisibility2)) + IsEmpty(Window(Home).Property(DialogVisibility3))">SetProperty(DialogVisibility3,$INFO[Window.Property(xmlfile)]3,Home)</onload>
-	<onload condition="!IsEmpty(Window(Home).Property(DialogVisibility3)) + IsEmpty(Window(Home).Property(DialogVisibility4))">SetProperty(DialogVisibility4,$INFO[Window.Property(xmlfile)]4,Home)</onload>
-	<onload condition="!IsEmpty(Window(Home).Property(DialogVisibility4)) + IsEmpty(Window(Home).Property(DialogVisibility5))">SetProperty(DialogVisibility5,$INFO[Window.Property(xmlfile)]5,Home)</onload>
-	<onunload condition="IsEmpty(Window(Home).Property(DialogVisibility2)) + SubString(Window(Home).Property(DialogVisibility),FileManager) + SubString(Window(Home).Property(DialogVisibility),$NUMBER[1])">ClearProperty(DialogVisibility,Home)</onunload>
-	<onunload condition="IsEmpty(Window(Home).Property(DialogVisibility3)) + SubString(Window(Home).Property(DialogVisibility2),FileManager) + SubString(Window(Home).Property(DialogVisibility2),$NUMBER[2])">ClearProperty(DialogVisibility2,Home)</onunload>
-	<onunload condition="IsEmpty(Window(Home).Property(DialogVisibility4)) + SubString(Window(Home).Property(DialogVisibility3),FileManager) + SubString(Window(Home).Property(DialogVisibility3),$NUMBER[3])">ClearProperty(DialogVisibility3,Home)</onunload>
-	<onunload condition="IsEmpty(Window(Home).Property(DialogVisibility5)) + SubString(Window(Home).Property(DialogVisibility4),FileManager) + SubString(Window(Home).Property(DialogVisibility4),$NUMBER[4])">ClearProperty(DialogVisibility4,Home)</onunload>
+	<onload condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEmpty(Window(Home).Property(DialogVisibility2))">SetProperty(DialogVisibility,$INFO[Window.Property(xmlfile)]1,Home)</onload>
+	<onload condition="!String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEmpty(Window(Home).Property(DialogVisibility2))">SetProperty(DialogVisibility2,$INFO[Window.Property(xmlfile)]2,Home)</onload>
+	<onload condition="!String.IsEmpty(Window(Home).Property(DialogVisibility2)) + String.IsEmpty(Window(Home).Property(DialogVisibility3))">SetProperty(DialogVisibility3,$INFO[Window.Property(xmlfile)]3,Home)</onload>
+	<onload condition="!String.IsEmpty(Window(Home).Property(DialogVisibility3)) + String.IsEmpty(Window(Home).Property(DialogVisibility4))">SetProperty(DialogVisibility4,$INFO[Window.Property(xmlfile)]4,Home)</onload>
+	<onload condition="!String.IsEmpty(Window(Home).Property(DialogVisibility4)) + String.IsEmpty(Window(Home).Property(DialogVisibility5))">SetProperty(DialogVisibility5,$INFO[Window.Property(xmlfile)]5,Home)</onload>
+	<onunload condition="String.IsEmpty(Window(Home).Property(DialogVisibility2)) + String.Contains(Window(Home).Property(DialogVisibility),FileManager) + String.Contains(Window(Home).Property(DialogVisibility),$NUMBER[1])">ClearProperty(DialogVisibility,Home)</onunload>
+	<onunload condition="String.IsEmpty(Window(Home).Property(DialogVisibility3)) + String.Contains(Window(Home).Property(DialogVisibility2),FileManager) + String.Contains(Window(Home).Property(DialogVisibility2),$NUMBER[2])">ClearProperty(DialogVisibility2,Home)</onunload>
+	<onunload condition="String.IsEmpty(Window(Home).Property(DialogVisibility4)) + String.Contains(Window(Home).Property(DialogVisibility3),FileManager) + String.Contains(Window(Home).Property(DialogVisibility3),$NUMBER[3])">ClearProperty(DialogVisibility3,Home)</onunload>
+	<onunload condition="String.IsEmpty(Window(Home).Property(DialogVisibility5)) + String.Contains(Window(Home).Property(DialogVisibility4),FileManager) + String.Contains(Window(Home).Property(DialogVisibility4),$NUMBER[4])">ClearProperty(DialogVisibility4,Home)</onunload>
 	<onunload>ClearProperty(DialogVisibility5,Home)</onunload>
 	
 	<controls>
@@ -48,62 +48,62 @@
 		<!-- Dialogs Background -->
 		<control type="group">
 			<visible>true</visible>
-			<animation effect="slide" start="0,0" end="660,0" time="100" reversible="true" condition="!IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(DialogPos),LEFT)">Conditional</animation>
-			<animation effect="slide" start="0,0" end="-660,0" time="100" reversible="true" condition="!IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(DialogPos),RIGHT)">Conditional</animation>
-			<animation effect="slide" start="0,0" end="0,380" time="100" reversible="true" condition="!IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(DialogPos),TOP)">Conditional</animation>
-			<animation effect="slide" start="0,0" end="0,-380" time="100" reversible="true" condition="!IsEmpty(Window(Home).Property(DialogVisibility)) + StringCompare(Window(Home).Property(DialogPos),BOTTOM)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="660,0" time="100" reversible="true" condition="!String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(DialogPos),LEFT)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="-660,0" time="100" reversible="true" condition="!String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(DialogPos),RIGHT)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,380" time="100" reversible="true" condition="!String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(DialogPos),TOP)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-380" time="100" reversible="true" condition="!String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEqual(Window(Home).Property(DialogPos),BOTTOM)">Conditional</animation>
 				
 			
-			<include content="DialogBg" condition="StringCompare(Window(Home).Property(DialogPos),LEFT) + StringCompare(Window(Home).Property(SidebarPos),LEFT)">
+			<include content="DialogBg" condition="String.IsEqual(Window(Home).Property(DialogPos),LEFT) + String.IsEqual(Window(Home).Property(SidebarPos),LEFT)">
 				<param name="PosX" value="-540" />
 				<param name="PosY" value="0" />
 				<param name="Height" value="1080" />
 				<param name="Width" value="660" />
 			</include>
 
-			<include content="DialogBg" condition="StringCompare(Window(Home).Property(DialogPos),RIGHT) + StringCompare(Window(Home).Property(SidebarPos),RIGHT)">
+			<include content="DialogBg" condition="String.IsEqual(Window(Home).Property(DialogPos),RIGHT) + String.IsEqual(Window(Home).Property(SidebarPos),RIGHT)">
 				<param name="PosX" value="1800" />
 				<param name="PosY" value="0" />
 				<param name="Height" value="1080" />
 				<param name="Width" value="660" />
 			</include>
 
-			<include content="DialogBg" condition="StringCompare(Window(Home).Property(DialogPos),TOP) + StringCompare(Window(Home).Property(SidebarPos),TOP)">
+			<include content="DialogBg" condition="String.IsEqual(Window(Home).Property(DialogPos),TOP) + String.IsEqual(Window(Home).Property(SidebarPos),TOP)">
 				<param name="PosX" value="0" />
 				<param name="PosY" value="-260" />
 				<param name="Height" value="380" />
 				<param name="Width" value="1920" />
 			</include>
 
-			<include content="DialogBg" condition="StringCompare(Window(Home).Property(DialogPos),BOTTOM) + StringCompare(Window(Home).Property(SidebarPos),BOTTOM)">
+			<include content="DialogBg" condition="String.IsEqual(Window(Home).Property(DialogPos),BOTTOM) + String.IsEqual(Window(Home).Property(SidebarPos),BOTTOM)">
 				<param name="PosX" value="0" />
 				<param name="PosY" value="960" />
 				<param name="Height" value="380" />
 				<param name="Width" value="1920" />
 			</include>
 
-			<include content="DialogBg" condition="StringCompare(Window(Home).Property(DialogPos),LEFT) + !StringCompare(Window(Home).Property(SidebarPos),LEFT)">
+			<include content="DialogBg" condition="String.IsEqual(Window(Home).Property(DialogPos),LEFT) + !String.IsEqual(Window(Home).Property(SidebarPos),LEFT)">
 				<param name="PosX" value="-660" />
 				<param name="PosY" value="0" />
 				<param name="Height" value="1080" />
 				<param name="Width" value="660" />
 			</include>
 
-			<include content="DialogBg" condition="StringCompare(Window(Home).Property(DialogPos),RIGHT) + !StringCompare(Window(Home).Property(SidebarPos),RIGHT)">
+			<include content="DialogBg" condition="String.IsEqual(Window(Home).Property(DialogPos),RIGHT) + !String.IsEqual(Window(Home).Property(SidebarPos),RIGHT)">
 				<param name="PosX" value="1920" />
 				<param name="PosY" value="0" />
 				<param name="Height" value="1080" />
 				<param name="Width" value="660" />
 			</include>
 
-			<include content="DialogBg" condition="StringCompare(Window(Home).Property(DialogPos),TOP) + !StringCompare(Window(Home).Property(SidebarPos),TOP)">
+			<include content="DialogBg" condition="String.IsEqual(Window(Home).Property(DialogPos),TOP) + !String.IsEqual(Window(Home).Property(SidebarPos),TOP)">
 				<param name="PosX" value="0" />
 				<param name="PosY" value="-380" />
 				<param name="Height" value="380" />
 				<param name="Width" value="1920" />
 			</include>
 
-			<include content="DialogBg" condition="StringCompare(Window(Home).Property(DialogPos),BOTTOM) + !StringCompare(Window(Home).Property(SidebarPos),BOTTOM)">
+			<include content="DialogBg" condition="String.IsEqual(Window(Home).Property(DialogPos),BOTTOM) + !String.IsEqual(Window(Home).Property(SidebarPos),BOTTOM)">
 				<param name="PosX" value="0" />
 				<param name="PosY" value="1080" />
 				<param name="Height" value="380" />
@@ -112,11 +112,11 @@
 		</control>	
 		
 		<control type="group">
-			<visible>[SubString(Window(Home).Property(DialogVisibility),FileManager) + SubString(Window(Home).Property(DialogVisibility),$NUMBER[1]) + IsEmpty(Window(Home).Property(DialogVisibility2)) + IsEmpty(Window(Home).Property(DialogVisibility3)) + IsEmpty(Window(Home).Property(DialogVisibility4)) + IsEmpty(Window(Home).Property(DialogVisibility5))] | 
-					[SubString(Window(Home).Property(DialogVisibility2),FileManager) + SubString(Window(Home).Property(DialogVisibility2),$NUMBER[2]) + IsEmpty(Window(Home).Property(DialogVisibility3)) + IsEmpty(Window(Home).Property(DialogVisibility4)) + IsEmpty(Window(Home).Property(DialogVisibility5))] |
-					[SubString(Window(Home).Property(DialogVisibility3),FileManager) + SubString(Window(Home).Property(DialogVisibility3),$NUMBER[3]) + IsEmpty(Window(Home).Property(DialogVisibility4)) + IsEmpty(Window(Home).Property(DialogVisibility5))] |
-					[SubString(Window(Home).Property(DialogVisibility4)FileManager) + SubString(Window(Home).Property(DialogVisibility4),$NUMBER[4]) + IsEmpty(Window(Home).Property(DialogVisibility5))] |
-					[SubString(Window(Home).Property(DialogVisibility5),FileManager)  + SubString(Window(Home).Property(DialogVisibility5),$NUMBER[5])]</visible>
+			<visible>[String.Contains(Window(Home).Property(DialogVisibility),FileManager) + String.Contains(Window(Home).Property(DialogVisibility),$NUMBER[1]) + String.IsEmpty(Window(Home).Property(DialogVisibility2)) + String.IsEmpty(Window(Home).Property(DialogVisibility3)) + String.IsEmpty(Window(Home).Property(DialogVisibility4)) + String.IsEmpty(Window(Home).Property(DialogVisibility5))] | 
+					[String.Contains(Window(Home).Property(DialogVisibility2),FileManager) + String.Contains(Window(Home).Property(DialogVisibility2),$NUMBER[2]) + String.IsEmpty(Window(Home).Property(DialogVisibility3)) + String.IsEmpty(Window(Home).Property(DialogVisibility4)) + String.IsEmpty(Window(Home).Property(DialogVisibility5))] |
+					[String.Contains(Window(Home).Property(DialogVisibility3),FileManager) + String.Contains(Window(Home).Property(DialogVisibility3),$NUMBER[3]) + String.IsEmpty(Window(Home).Property(DialogVisibility4)) + String.IsEmpty(Window(Home).Property(DialogVisibility5))] |
+					[String.Contains(Window(Home).Property(DialogVisibility4)FileManager) + String.Contains(Window(Home).Property(DialogVisibility4),$NUMBER[4]) + String.IsEmpty(Window(Home).Property(DialogVisibility5))] |
+					[String.Contains(Window(Home).Property(DialogVisibility5),FileManager)  + String.Contains(Window(Home).Property(DialogVisibility5),$NUMBER[5])]</visible>
 			
 			<include content="DialogPOS">
 				<param name="DialogName" value="DiaFileManager" />
@@ -126,13 +126,13 @@
 			
 		<!-- Sidebar Position-->	
 		<control type="group">	
-			<visible>!StringCompare(Window(Home).Property(DialogVisibility),VISIBLE)</visible>
+			<visible>!String.IsEqual(Window(Home).Property(DialogVisibility),VISIBLE)</visible>
 			<control type="group">		
-				<visible>StringCompare(Window(Home).Property(SidebarPos),LEFT) | StringCompare(Window(Home).Property(SidebarPos),RIGHT)</visible>	
-				<include condition="StringCompare(Window(Home).Property(SidebarPos),LEFT) | StringCompare(Window(Home).Property(SidebarPos),RIGHT)">BarVPreview</include>
-				<animation effect="slide" start="0,0" end="1800,0" time="0" condition="StringCompare(Window(Home).Property(SidebarPos),RIGHT)">Conditional</animation>
-				<animation effect="fade" start="75" end="0" time="200" delay="1000" condition="!Container(50).OnNext + !Container(50).OnPrevious + StringCompare(Window(Home).Property(SidebarPos),RIGHT) + Skin.String(HOM.View1.BBSizeX,3COLUMN) + Skin.String(HOM.View1.BBSizeY,3ROW)">Conditional</animation>	
-				<animation effect="fade" start="75" end="0" time="200" delay="1000" condition="!Container(50).OnNext + !Container(50).OnPrevious + StringCompare(Window(Home).Property(SidebarPos),LEFT) + Skin.String(HOM.View1.BBSizeX,3COLUMN) + Skin.String(HOM.View1.BBSizeY,3ROW)">Conditional</animation>
+				<visible>String.IsEqual(Window(Home).Property(SidebarPos),LEFT) | String.IsEqual(Window(Home).Property(SidebarPos),RIGHT)</visible>	
+				<include condition="String.IsEqual(Window(Home).Property(SidebarPos),LEFT) | String.IsEqual(Window(Home).Property(SidebarPos),RIGHT)">BarVPreview</include>
+				<animation effect="slide" start="0,0" end="1800,0" time="0" condition="String.IsEqual(Window(Home).Property(SidebarPos),RIGHT)">Conditional</animation>
+				<animation effect="fade" start="75" end="0" time="200" delay="1000" condition="!Container(50).OnNext + !Container(50).OnPrevious + String.IsEqual(Window(Home).Property(SidebarPos),RIGHT) + Skin.String(HOM.View1.BBSizeX,3COLUMN) + Skin.String(HOM.View1.BBSizeY,3ROW)">Conditional</animation>	
+				<animation effect="fade" start="75" end="0" time="200" delay="1000" condition="!Container(50).OnNext + !Container(50).OnPrevious + String.IsEqual(Window(Home).Property(SidebarPos),LEFT) + Skin.String(HOM.View1.BBSizeX,3COLUMN) + Skin.String(HOM.View1.BBSizeY,3ROW)">Conditional</animation>
 				<control type="label">
 					<top>0</top>
 					<left>-400</left>
@@ -190,11 +190,11 @@
 			</control>
 			
 			<control type="group">		
-				<visible>StringCompare(Window(Home).Property(SidebarPos),TOP) | StringCompare(Window(Home).Property(SidebarPos),BOTTOM)</visible>
-				<include condition="StringCompare(Window(Home).Property(SidebarPos),TOP) | StringCompare(Window(Home).Property(SidebarPos),BOTTOM)">BarHPreview</include>
-				<animation effect="slide" start="0,0" end="0,960" time="0" condition="StringCompare(Window(Home).Property(SidebarPos),BOTTOM)">Conditional</animation>
-				<animation effect="fade" start="75" end="0" time="200" delay="1000" condition="!Container(50).OnNext + !Container(50).OnPrevious + StringCompare(Window(Home).Property(SidebarPos),TOP) + Skin.String(HOM.View1.BBSizeX,3COLUMN) + Skin.String(HOM.View1.BBSizeY,3ROW)">Conditional</animation>	
-				<animation effect="fade" start="75" end="0" time="200" delay="1000" condition="!Container(50).OnNext + !Container(50).OnPrevious + StringCompare(Window(Home).Property(SidebarPos),BOTTOM) + Skin.String(HOM.View1.BBSizeX,3COLUMN) + Skin.String(HOM.View1.BBSizeY,3ROW)">Conditional</animation>		
+				<visible>String.IsEqual(Window(Home).Property(SidebarPos),TOP) | String.IsEqual(Window(Home).Property(SidebarPos),BOTTOM)</visible>
+				<include condition="String.IsEqual(Window(Home).Property(SidebarPos),TOP) | String.IsEqual(Window(Home).Property(SidebarPos),BOTTOM)">BarHPreview</include>
+				<animation effect="slide" start="0,0" end="0,960" time="0" condition="String.IsEqual(Window(Home).Property(SidebarPos),BOTTOM)">Conditional</animation>
+				<animation effect="fade" start="75" end="0" time="200" delay="1000" condition="!Container(50).OnNext + !Container(50).OnPrevious + String.IsEqual(Window(Home).Property(SidebarPos),TOP) + Skin.String(HOM.View1.BBSizeX,3COLUMN) + Skin.String(HOM.View1.BBSizeY,3ROW)">Conditional</animation>	
+				<animation effect="fade" start="75" end="0" time="200" delay="1000" condition="!Container(50).OnNext + !Container(50).OnPrevious + String.IsEqual(Window(Home).Property(SidebarPos),BOTTOM) + Skin.String(HOM.View1.BBSizeX,3COLUMN) + Skin.String(HOM.View1.BBSizeY,3ROW)">Conditional</animation>		
 				<control type="label">
 					<top>0</top>
 					<left>144</left>

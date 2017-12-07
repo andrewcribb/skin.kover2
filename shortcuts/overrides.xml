@@ -42,15 +42,15 @@
 
     <!-- Custom property : viewtypes -->
 
-    <property property="viewtype" condition="!IsEmpty(Skin.String(HOM.View1.Name))" label="$INFO[Skin.String(HOM.View1.Name)]">HOM.View1</property> 
-    <property property="viewtype" condition="!IsEmpty(Skin.String(HOM.View2.Name))" label="$INFO[Skin.String(HOM.View2.Name)]">HOM.View2</property> 
-    <property property="viewtype" condition="!IsEmpty(Skin.String(HOM.View3.Name))" label="$INFO[Skin.String(HOM.View3.Name)]">HOM.View3</property> 
-    <property property="viewtype" condition="!IsEmpty(Skin.String(HOM.View4.Name))" label="$INFO[Skin.String(HOM.View4.Name)]">HOM.View4</property> 
-    <property property="viewtype" condition="!IsEmpty(Skin.String(HOM.View5.Name))" label="$INFO[Skin.String(HOM.View5.Name)]">HOM.View5</property> 
-    <property property="viewtype" condition="!IsEmpty(Skin.String(HOM.View6.Name))" label="$INFO[Skin.String(HOM.View6.Name)]">HOM.View6</property> 
-    <property property="viewtype" condition="!IsEmpty(Skin.String(HOM.View7.Name))" label="$INFO[Skin.String(HOM.View7.Name)]">HOM.View7</property> 
-    <property property="viewtype" condition="!IsEmpty(Skin.String(HOM.View8.Name))" label="$INFO[Skin.String(HOM.View8.Name)]">HOM.View8</property> 
-    <property property="viewtype" condition="!IsEmpty(Skin.String(HOM.View9.Name))" label="$INFO[Skin.String(HOM.View9.Name)]">HOM.View9</property> 
+    <property property="viewtype" condition="!String.IsEmpty(Skin.String(HOM.View1.Name))" label="$INFO[Skin.String(HOM.View1.Name)]">HOM.View1</property> 
+    <property property="viewtype" condition="!String.IsEmpty(Skin.String(HOM.View2.Name))" label="$INFO[Skin.String(HOM.View2.Name)]">HOM.View2</property> 
+    <property property="viewtype" condition="!String.IsEmpty(Skin.String(HOM.View3.Name))" label="$INFO[Skin.String(HOM.View3.Name)]">HOM.View3</property> 
+    <property property="viewtype" condition="!String.IsEmpty(Skin.String(HOM.View4.Name))" label="$INFO[Skin.String(HOM.View4.Name)]">HOM.View4</property> 
+    <property property="viewtype" condition="!String.IsEmpty(Skin.String(HOM.View5.Name))" label="$INFO[Skin.String(HOM.View5.Name)]">HOM.View5</property> 
+    <property property="viewtype" condition="!String.IsEmpty(Skin.String(HOM.View6.Name))" label="$INFO[Skin.String(HOM.View6.Name)]">HOM.View6</property> 
+    <property property="viewtype" condition="!String.IsEmpty(Skin.String(HOM.View7.Name))" label="$INFO[Skin.String(HOM.View7.Name)]">HOM.View7</property> 
+    <property property="viewtype" condition="!String.IsEmpty(Skin.String(HOM.View8.Name))" label="$INFO[Skin.String(HOM.View8.Name)]">HOM.View8</property> 
+    <property property="viewtype" condition="!String.IsEmpty(Skin.String(HOM.View9.Name))" label="$INFO[Skin.String(HOM.View9.Name)]">HOM.View9</property> 
 
     <!-- Property fallback for viewtypes -->
 

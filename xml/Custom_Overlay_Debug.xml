@@ -474,8 +474,8 @@
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
 				<align>left</align>
-				<label>DialogMuteBug.xml</label>
-				<visible>Window.IsVisible(DialogMuteBug.xml)</visible>
+				<label>DialogVolumeBar.xml</label>
+				<visible>Player.Muted</visible>
 			</control>
 
 			<control type="label">

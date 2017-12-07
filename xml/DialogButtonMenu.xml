@@ -213,7 +213,7 @@
 									<icon>material/logoff.png</icon>
 									<onclick>dialog.close(all,true)</onclick>
 									<onclick>System.LogOff</onclick>
-									<visible>System.HasLoginScreen | IntegerGreaterThan(System.ProfileCount,1)</visible>
+									<visible>System.HasLoginScreen | Integer.IsGreater(System.ProfileCount,1)</visible>
 									<visible>System.Loggedon</visible>
 								</item>
 								<item>

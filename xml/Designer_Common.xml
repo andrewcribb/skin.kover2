@@ -6,7 +6,7 @@
 		<control type="group">
 			<control type="image">
 				<texture background="true" colordiffuse="$INFO[Skin.String(Color.WP)]">common/white.png</texture>
-				<visible>[!Player.HasVideo | !Skin.String($PARAM[CompPrefix].WPVDOTop,VISIBLE) | [!IsEmpty(Window(10025).Property(PlayingBackgroundMedia)) + Skin.HasSetting(TvTunesNoBackground)]]</visible>
+				<visible>[!Player.HasVideo | !Skin.String($PARAM[CompPrefix].WPVDOTop,VISIBLE) | [!String.IsEmpty(Window(10025).Property(PlayingBackgroundMedia)) + Skin.HasSetting(TvTunesNoBackground)]]</visible>
 			</control>
 			<control type="multiimage">
 				<imagepath>$INFO[Skin.String($PARAM[CompPrefix].WPPic)]</imagepath>
@@ -15,7 +15,7 @@
 				<fadetime>2000</fadetime>
 				<pauseatend>10000</pauseatend>
 				<randomize>true</randomize>
-				<visible>[!Player.HasVideo | !Skin.String($PARAM[CompPrefix].WPVDOTop,VISIBLE) | [!IsEmpty(Window(10025).Property(PlayingBackgroundMedia)) + Skin.HasSetting(TvTunesNoBackground)]] + Skin.String($PARAM[CompPrefix].WPBgs,IMAGE) + !IsEmpty(Skin.String($PARAM[CompPrefix].WPPic))</visible>
+				<visible>[!Player.HasVideo | !Skin.String($PARAM[CompPrefix].WPVDOTop,VISIBLE) | [!String.IsEmpty(Window(10025).Property(PlayingBackgroundMedia)) + Skin.HasSetting(TvTunesNoBackground)]] + Skin.String($PARAM[CompPrefix].WPBgs,IMAGE) + !String.IsEmpty(Skin.String($PARAM[CompPrefix].WPPic))</visible>
 			</control>	
 			<control type="multiimage">
 				<imagepath>$INFO[Container(9000).ListItem.Property(background)]</imagepath>
@@ -24,11 +24,11 @@
 				<fadetime>2000</fadetime>
 				<pauseatend>10000</pauseatend>
 				<randomize>true</randomize>
-				<visible>[!Player.HasVideo | !Skin.String($PARAM[CompPrefix].WPVDOTop,VISIBLE) | [!IsEmpty(Window(10025).Property(PlayingBackgroundMedia)) + Skin.HasSetting(TvTunesNoBackground)]] + !IsEmpty(Container(9000).ListItem.Property(background)) + Skin.String($PARAM[CompPrefix].WPBgs,IMAGE)</visible>	
+				<visible>[!Player.HasVideo | !Skin.String($PARAM[CompPrefix].WPVDOTop,VISIBLE) | [!String.IsEmpty(Window(10025).Property(PlayingBackgroundMedia)) + Skin.HasSetting(TvTunesNoBackground)]] + !String.IsEmpty(Container(9000).ListItem.Property(background)) + Skin.String($PARAM[CompPrefix].WPBgs,IMAGE)</visible>	
 			</control>				
 			<control type="multiimage">
 				<imagepath>$INFO[Window(Home).Property(BackgroundMEM)]</imagepath>
-				<visible>SubString(Window.Property(xmlfile),settings)</visible>
+				<visible>String.Contains(Window.Property(xmlfile),settings)</visible>
 				<aspectratio>scale</aspectratio>
 				<timeperimage>5000</timeperimage>
 				<fadetime>2000</fadetime>
@@ -38,23 +38,23 @@
 			<control type="image">
 				<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
 				<aspectratio>scale</aspectratio>
-				<visible>[!Player.HasVideo | !Skin.String($PARAM[CompPrefix].WPVDOTop,VISIBLE) | [!IsEmpty(Window(10025).Property(PlayingBackgroundMedia)) + Skin.HasSetting(TvTunesNoBackground)]] + Skin.String($PARAM[CompPrefix].WPBgs,FANART) + !IsEmpty(ListItem.Art(fanart))</visible>
+				<visible>[!Player.HasVideo | !Skin.String($PARAM[CompPrefix].WPVDOTop,VISIBLE) | [!String.IsEmpty(Window(10025).Property(PlayingBackgroundMedia)) + Skin.HasSetting(TvTunesNoBackground)]] + Skin.String($PARAM[CompPrefix].WPBgs,FANART) + !String.IsEmpty(ListItem.Art(fanart))</visible>
 			</control>
 			<control type="image">
 				<texture background="true">$VAR[WPFanart]</texture>
 				<aspectratio>scale</aspectratio>
-				<visible>[!Player.HasVideo | !Skin.String($PARAM[CompPrefix].WPVDOTop,VISIBLE) | [!IsEmpty(Window(10025).Property(PlayingBackgroundMedia)) + Skin.HasSetting(TvTunesNoBackground)]] + Skin.String($PARAM[CompPrefix].WPBgs,FANART)</visible>
+				<visible>[!Player.HasVideo | !Skin.String($PARAM[CompPrefix].WPVDOTop,VISIBLE) | [!String.IsEmpty(Window(10025).Property(PlayingBackgroundMedia)) + Skin.HasSetting(TvTunesNoBackground)]] + Skin.String($PARAM[CompPrefix].WPBgs,FANART)</visible>
 			</control>
 			<control type="image">
 				<texture>common/white.png</texture>
 				<colordiffuse>FF000000</colordiffuse>
-				<visible>[[Player.HasVideo + [IsEmpty(Window(10025).Property(PlayingBackgroundMedia)) | !Skin.HasSetting(TvTunesNoBackground)]] | [Player.HasAudio + IsEmpty(Window(10025).Property(PlayingBackgroundMedia))]] + Skin.String($PARAM[CompPrefix].WPVDOTop,VISIBLE)</visible>
+				<visible>[[Player.HasVideo + [String.IsEmpty(Window(10025).Property(PlayingBackgroundMedia)) | !Skin.HasSetting(TvTunesNoBackground)]] | [Player.HasAudio + String.IsEmpty(Window(10025).Property(PlayingBackgroundMedia))]] + Skin.String($PARAM[CompPrefix].WPVDOTop,VISIBLE)</visible>
 			</control>
 			<control type="videowindow">
-				<visible>Player.HasVideo + Skin.String($PARAM[CompPrefix].WPVDOTop,VISIBLE) + [IsEmpty(Window(10025).Property(PlayingBackgroundMedia)) | !Skin.HasSetting(TvTunesNoBackground)]</visible>
+				<visible>Player.HasVideo + Skin.String($PARAM[CompPrefix].WPVDOTop,VISIBLE) + [String.IsEmpty(Window(10025).Property(PlayingBackgroundMedia)) | !Skin.HasSetting(TvTunesNoBackground)]</visible>
 			</control>
 			<control type="visualisation">
-				<visible>Player.HasAudio + Skin.String($PARAM[CompPrefix].WPVDOTop,VISIBLE) + [!Skin.HasSetting(ArtistslideShow) | [System.HasAddon(script.artistslideshow) + Skin.HasSetting(VisualisationShow)]] + IsEmpty(Window(10025).Property(PlayingBackgroundMedia))</visible>
+				<visible>Player.HasAudio + Skin.String($PARAM[CompPrefix].WPVDOTop,VISIBLE) + [!Skin.HasSetting(ArtistslideShow) | [System.HasAddon(script.artistslideshow) + Skin.HasSetting(VisualisationShow)]] + String.IsEmpty(Window(10025).Property(PlayingBackgroundMedia))</visible>
 			</control>
 			<control type="multiimage">
 				<imagepath background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</imagepath>
@@ -63,7 +63,7 @@
 				<fadetime>2000</fadetime>
 				<randomize>true</randomize>
 				<visible>Player.HasAudio + Skin.String($PARAM[CompPrefix].WPVDOTop,VISIBLE) + System.HasAddon(script.artistslideshow) + Skin.HasSetting(ArtistslideShow)</visible>
-				<animation effect="fade" start="100" end="50" time="0" condition="Skin.HasSetting(VisualisationShow) + IsEmpty(Window(10025).Property(PlayingBackgroundMedia))">Conditional</animation>
+				<animation effect="fade" start="100" end="50" time="0" condition="Skin.HasSetting(VisualisationShow) + String.IsEmpty(Window(10025).Property(PlayingBackgroundMedia))">Conditional</animation>
 			</control>
 		</control>		
 	</include>
@@ -113,8 +113,8 @@
 
 	<include name="BarVPreviewMedium">
 		<control type="group">
-			<animation effect="slide" start="0,0" end="210,0" time="100" condition="Skin.String(HOM.View1.BBSidebar,RIGHT) + [!Control.HasFocus(9000) | !IsEmpty(Window(Home).Property(DialogVisibility)) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)]">Conditional</animation>
-			<animation effect="slide" start="0,0" end="-210,0" time="100" condition="Skin.String(HOM.View1.BBSidebar,LEFT) + [!Control.HasFocus(9000) | !IsEmpty(Window(Home).Property(DialogVisibility)) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)]">Conditional</animation>
+			<animation effect="slide" start="0,0" end="210,0" time="100" condition="Skin.String(HOM.View1.BBSidebar,RIGHT) + [!Control.HasFocus(9000) | !String.IsEmpty(Window(Home).Property(DialogVisibility)) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)]">Conditional</animation>
+			<animation effect="slide" start="0,0" end="-210,0" time="100" condition="Skin.String(HOM.View1.BBSidebar,LEFT) + [!Control.HasFocus(9000) | !String.IsEmpty(Window(Home).Property(DialogVisibility)) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)]">Conditional</animation>
 			<control type="image">
 				<left>-15</left>
 				<top>-15</top>
@@ -132,7 +132,7 @@
 			</control>
 		</control>
 		<control type="group">
-			<visible>Control.HasFocus(9000) + IsEmpty(Window(Home).Property(DialogVisibility)) + !Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)</visible>
+			<visible>Control.HasFocus(9000) + String.IsEmpty(Window(Home).Property(DialogVisibility)) + !Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)</visible>
 			<animation effect="fade" start="0" end="100" time="400">Visible</animation>
 			<control type="label">
 				<top>920</top>
@@ -169,7 +169,7 @@
 			</control>			
 		</control>
 		<control type="group">
-			<visible>!Control.HasFocus(9000) | !IsEmpty(Window(Home).Property(DialogVisibility)) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)</visible>
+			<visible>!Control.HasFocus(9000) | !String.IsEmpty(Window(Home).Property(DialogVisibility)) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)</visible>
 			<animation effect="fade" start="0" end="100" time="400">Visible</animation>
 			<animation effect="slide" start="0,0" end="210,0" time="0" condition="Skin.String(HOM.View1.BBSidebar,RIGHT)">Conditional</animation>
 			<control type="label">
@@ -199,8 +199,8 @@
 
 	<include name="BarVPreviewLarge">
 		<control type="group">	
-			<animation effect="slide" start="0,0" end="528,0" time="100" condition="Skin.String(HOM.View1.BBSidebar,RIGHT) + [!Control.HasFocus(9000) | !IsEmpty(Window(Home).Property(DialogVisibility)) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)]">Conditional</animation>
-			<animation effect="slide" start="0,0" end="-528,0" time="100" condition="Skin.String(HOM.View1.BBSidebar,LEFT) + [!Control.HasFocus(9000) | !IsEmpty(Window(Home).Property(DialogVisibility)) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)]">Conditional</animation>
+			<animation effect="slide" start="0,0" end="528,0" time="100" condition="Skin.String(HOM.View1.BBSidebar,RIGHT) + [!Control.HasFocus(9000) | !String.IsEmpty(Window(Home).Property(DialogVisibility)) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)]">Conditional</animation>
+			<animation effect="slide" start="0,0" end="-528,0" time="100" condition="Skin.String(HOM.View1.BBSidebar,LEFT) + [!Control.HasFocus(9000) | !String.IsEmpty(Window(Home).Property(DialogVisibility)) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)]">Conditional</animation>
 			<control type="image">
 				<left>-15</left>
 				<top>-15</top>
@@ -218,7 +218,7 @@
 			</control>
 		</control>
 		<control type="group">
-			<visible>Control.HasFocus(9000) + IsEmpty(Window(Home).Property(DialogVisibility)) + !Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)</visible>
+			<visible>Control.HasFocus(9000) + String.IsEmpty(Window(Home).Property(DialogVisibility)) + !Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)</visible>
 			<animation effect="fade" start="0" end="100" time="400">Visible</animation>
 			<control type="label">
 				<top>920</top>
@@ -255,7 +255,7 @@
 			</control>			
 		</control>
 		<control type="group">
-			<visible>!Control.HasFocus(9000) | !IsEmpty(Window(Home).Property(DialogVisibility)) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)</visible>
+			<visible>!Control.HasFocus(9000) | !String.IsEmpty(Window(Home).Property(DialogVisibility)) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)</visible>
 			<animation effect="fade" start="0" end="100" time="400">Visible</animation>
 			<animation effect="slide" start="0,0" end="528,0" time="0" condition="Skin.String(HOM.View1.BBSidebar,RIGHT)">Conditional</animation>
 			<control type="label">
@@ -329,8 +329,8 @@
 	<include name="BarHPreviewMedium">
 		<width>1920</width>
 		<control type="group">	
-			<animation effect="slide" start="0,0" end="0,70" time="100" condition="Skin.String(HOM.View1.BBSidebar,BOTTOM) + [!Control.HasFocus(9000) | !IsEmpty(Window(Home).Property(DialogVisibility)) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)]">Conditional</animation>
-			<animation effect="slide" start="0,0" end="0,-70" time="100" condition="Skin.String(HOM.View1.BBSidebar,TOP) + [!Control.HasFocus(9000) | !IsEmpty(Window(Home).Property(DialogVisibility)) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)]">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,70" time="100" condition="Skin.String(HOM.View1.BBSidebar,BOTTOM) + [!Control.HasFocus(9000) | !String.IsEmpty(Window(Home).Property(DialogVisibility)) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)]">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-70" time="100" condition="Skin.String(HOM.View1.BBSidebar,TOP) + [!Control.HasFocus(9000) | !String.IsEmpty(Window(Home).Property(DialogVisibility)) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)]">Conditional</animation>
 			<control type="image">
 				<left>-15</left>
 				<top>-15</top>
@@ -348,8 +348,8 @@
 			</control>
 		</control>
 		<control type="group">	
-			<animation effect="slide" start="0,0" end="0,37" time="100" condition="Skin.String(HOM.View1.BBSidebar,BOTTOM) + [!Control.HasFocus(9000) | !IsEmpty(Window(Home).Property(DialogVisibility)) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)]">Conditional</animation>
-			<animation effect="slide" start="0,0" end="0,-37" time="100" condition="Skin.String(HOM.View1.BBSidebar,TOP) + [!Control.HasFocus(9000) | !IsEmpty(Window(Home).Property(DialogVisibility)) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)]">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,37" time="100" condition="Skin.String(HOM.View1.BBSidebar,BOTTOM) + [!Control.HasFocus(9000) | !String.IsEmpty(Window(Home).Property(DialogVisibility)) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)]">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-37" time="100" condition="Skin.String(HOM.View1.BBSidebar,TOP) + [!Control.HasFocus(9000) | !String.IsEmpty(Window(Home).Property(DialogVisibility)) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)]">Conditional</animation>
 			<control type="label">
 				<top>0</top>
 				<right>104</right>
@@ -374,7 +374,7 @@
 			</control>
 		</control>
 		<control type="group">
-			<visible>Control.HasFocus(9000) + IsEmpty(Window(Home).Property(DialogVisibility)) + !Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)</visible>
+			<visible>Control.HasFocus(9000) + String.IsEmpty(Window(Home).Property(DialogVisibility)) + !Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)</visible>
 			<animation effect="fade" start="0" end="100" time="400">Visible</animation>
 			<animation effect="slide" start="0,0" end="0,120" time="0" condition="Skin.String(HOM.View1.BBSidebar,BOTTOM)">Conditional</animation>
 			<control type="label">
@@ -394,8 +394,8 @@
 	<include name="BarHPreviewLarge">
 		<width>1920</width>
 		<control type="group">	
-			<animation effect="slide" start="0,0" end="0,248" time="100" condition="Skin.String(HOM.View1.BBSidebar,BOTTOM) + [!Control.HasFocus(9000) | !IsEmpty(Window(Home).Property(DialogVisibility)) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)]">Conditional</animation>
-			<animation effect="slide" start="0,0" end="0,-248" time="100" condition="Skin.String(HOM.View1.BBSidebar,TOP) + [!Control.HasFocus(9000) | !IsEmpty(Window(Home).Property(DialogVisibility)) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)]">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,248" time="100" condition="Skin.String(HOM.View1.BBSidebar,BOTTOM) + [!Control.HasFocus(9000) | !String.IsEmpty(Window(Home).Property(DialogVisibility)) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)]">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-248" time="100" condition="Skin.String(HOM.View1.BBSidebar,TOP) + [!Control.HasFocus(9000) | !String.IsEmpty(Window(Home).Property(DialogVisibility)) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)]">Conditional</animation>
 			<control type="image">
 				<left>-15</left>
 				<top>-15</top>
@@ -414,8 +414,8 @@
 		</control>
 		<control type="group">	
 			<animation effect="slide" start="0,0" end="0,-40" time="0" condition="Skin.String(HOM.View1.BBSidebar,BOTTOM)">Conditional</animation>
-			<animation effect="slide" start="0,0" end="0,160" time="100" condition="Skin.String(HOM.View1.BBSidebar,BOTTOM) + [!Control.HasFocus(9000) | !IsEmpty(Window(Home).Property(DialogVisibility)) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)]">Conditional</animation>
-			<animation effect="slide" start="0,0" end="0,-130" time="100" condition="Skin.String(HOM.View1.BBSidebar,TOP) + [!Control.HasFocus(9000) | !IsEmpty(Window(Home).Property(DialogVisibility)) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)]">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,160" time="100" condition="Skin.String(HOM.View1.BBSidebar,BOTTOM) + [!Control.HasFocus(9000) | !String.IsEmpty(Window(Home).Property(DialogVisibility)) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)]">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-130" time="100" condition="Skin.String(HOM.View1.BBSidebar,TOP) + [!Control.HasFocus(9000) | !String.IsEmpty(Window(Home).Property(DialogVisibility)) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)]">Conditional</animation>
 			<control type="label">
 				<top>0</top>
 				<right>104</right>
@@ -440,7 +440,7 @@
 			</control>
 		</control>
 		<control type="group">
-			<visible>Control.HasFocus(9000) + IsEmpty(Window(Home).Property(DialogVisibility)) + !Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)</visible>
+			<visible>Control.HasFocus(9000) + String.IsEmpty(Window(Home).Property(DialogVisibility)) + !Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)</visible>
 			<animation effect="fade" start="0" end="100" time="400">Visible</animation>
 			<animation effect="slide" start="0,0" end="0,300" time="0" condition="Skin.String(HOM.View1.BBSidebar,BOTTOM)">Conditional</animation>
 			<control type="label">
@@ -976,7 +976,7 @@
 				<control type="group">
 					<height>60</height>
 					<width>$PARAM[width]</width>
-					<visible>!StringCompare(Playlist.Length(video),0) + Control.IsEnabled(91) + !Window.IsVisible(12600)</visible>
+					<visible>!String.IsEqual(Playlist.Length(video),0) + Control.IsEnabled(91) + !Window.IsVisible(12600)</visible>
 					<visible>!Window.IsVisible(script-ExtendedInfo Script-VideoList.xml) + !Window.IsVisible(script-ExtendedInfo Script-YoutubeList.xml)</visible>
 					<control type="button" id="91">
 						<label>13350</label>
@@ -991,7 +991,7 @@
 						<focusedcolor>$INFO[Skin.String(Color.B1Txt1F)]</focusedcolor>
 						<disabledcolor>$INFO[Skin.String(Color.B1Txt1NF)]</disabledcolor>
 						<invalidcolor>$INFO[Skin.String(Color.B1Txt1NF)]</invalidcolor>
-						<onclick condition="!StringCompare(Playlist.Length(video),0)">ActivateWindow(videoplaylist)</onclick>
+						<onclick condition="!String.IsEqual(Playlist.Length(video),0)">ActivateWindow(videoplaylist)</onclick>
 						<onup>93</onup>
 						<ondown>92</ondown>
 						<onleft condition="Skin.String($PARAM[CompPrefix].B1Submenu,ONRIGHT)">$PARAM[Id]</onleft>
@@ -1022,7 +1022,7 @@
 				<control type="group">
 					<height>60</height>
 					<width>$PARAM[width]</width>
-					<visible>!StringCompare(Playlist.Length(music),0) + Control.IsEnabled(92) + !Window.IsVisible(12600)</visible>
+					<visible>!String.IsEqual(Playlist.Length(music),0) + Control.IsEnabled(92) + !Window.IsVisible(12600)</visible>
 					<visible>!Window.IsVisible(script-ExtendedInfo Script-VideoList.xml) + !Window.IsVisible(script-ExtendedInfo Script-YoutubeList.xml)</visible>
 					<control type="button" id="92">
 						<label>13350</label>
@@ -1037,7 +1037,7 @@
 						<focusedcolor>$INFO[Skin.String(Color.B1Txt1F)]</focusedcolor>
 						<disabledcolor>$INFO[Skin.String(Color.B1Txt1NF)]</disabledcolor>
 						<invalidcolor>$INFO[Skin.String(Color.B1Txt1NF)]</invalidcolor>
-						<onclick condition="!StringCompare(Playlist.Length(music),0)">ActivateWindow(musicplaylist)</onclick>
+						<onclick condition="!String.IsEqual(Playlist.Length(music),0)">ActivateWindow(musicplaylist)</onclick>
 						<onup>91</onup>
 						<ondown>20</ondown>
 						<onleft condition="Skin.String($PARAM[CompPrefix].B1Submenu,ONRIGHT)">$PARAM[Id]</onleft>
@@ -2020,71 +2020,71 @@
 					<label>$INFO[Skin.String($PARAM[Section].View1.Name)]</label>
 					<icon>material/view1.png</icon>
 					<onclick>Container.SetViewMode(50)</onclick>
-					<onclick condition="!IsEmpty(Skin.String($PARAM[Section].View1.Name))">Control.SetFocus(50)</onclick>
+					<onclick condition="!String.IsEmpty(Skin.String($PARAM[Section].View1.Name))">Control.SetFocus(50)</onclick>
 				</item>
 				<item>
 					<label>$INFO[Skin.String($PARAM[Section].View2.Name)]</label>
 					<label2>$PARAM[Section]</label2>
 					<icon>material/view2.png</icon>
 					<onclick>Container.SetViewMode(51)</onclick>
-					<onclick condition="!IsEmpty(Skin.String($PARAM[Section].View2.Name))">Control.SetFocus(51)</onclick>
-					<visible>!IsEmpty(Skin.String($PARAM[Section].View2.Name))</visible>
+					<onclick condition="!String.IsEmpty(Skin.String($PARAM[Section].View2.Name))">Control.SetFocus(51)</onclick>
+					<visible>!String.IsEmpty(Skin.String($PARAM[Section].View2.Name))</visible>
 				</item>
 				<item>
 					<label fallback="24020">$INFO[Skin.String($PARAM[Section].View3.Name)]</label>
 					<label2>$PARAM[Section]</label2>
 					<icon>material/view3.png</icon>
 					<onclick>Container.SetViewMode(52)</onclick>
-					<onclick condition="!IsEmpty(Skin.String($PARAM[Section].View3.Name))">Control.SetFocus(52)</onclick>
-					<visible>!IsEmpty(Skin.String($PARAM[Section].View3.Name))</visible>
+					<onclick condition="!String.IsEmpty(Skin.String($PARAM[Section].View3.Name))">Control.SetFocus(52)</onclick>
+					<visible>!String.IsEmpty(Skin.String($PARAM[Section].View3.Name))</visible>
 				</item>
 				<item>
 					<label fallback="24020">$INFO[Skin.String($PARAM[Section].View4.Name)]</label>
 					<label2>$PARAM[Section]</label2>
 					<icon>material/view4.png</icon>
 					<onclick>Container.SetViewMode(53)</onclick>
-					<onclick condition="!IsEmpty(Skin.String($PARAM[Section].View4.Name))">Control.SetFocus(53)</onclick>
-					<visible>!IsEmpty(Skin.String($PARAM[Section].View4.Name))</visible>
+					<onclick condition="!String.IsEmpty(Skin.String($PARAM[Section].View4.Name))">Control.SetFocus(53)</onclick>
+					<visible>!String.IsEmpty(Skin.String($PARAM[Section].View4.Name))</visible>
 				</item>
 				<item>
 					<label fallback="24020">$INFO[Skin.String($PARAM[Section].View5.Name)]</label>
 					<label2>$PARAM[Section]</label2>
 					<icon>material/view5.png</icon>
 					<onclick>Container.SetViewMode(54)</onclick>
-					<onclick condition="!IsEmpty(Skin.String($PARAM[Section].View5.Name))">Control.SetFocus(54)</onclick>
-					<visible>!IsEmpty(Skin.String($PARAM[Section].View5.Name))</visible>
+					<onclick condition="!String.IsEmpty(Skin.String($PARAM[Section].View5.Name))">Control.SetFocus(54)</onclick>
+					<visible>!String.IsEmpty(Skin.String($PARAM[Section].View5.Name))</visible>
 				</item>
 				<item>
 					<label fallback="24020">$INFO[Skin.String($PARAM[Section].View6.Name)]</label>
 					<label2>$PARAM[Section]</label2>
 					<icon>material/view6.png</icon>
 					<onclick>Container.SetViewMode(55)</onclick>
-					<onclick condition="!IsEmpty(Skin.String($PARAM[Section].View6.Name))">Control.SetFocus(55)</onclick>
-					<visible>!IsEmpty(Skin.String($PARAM[Section].View6.Name))</visible>
+					<onclick condition="!String.IsEmpty(Skin.String($PARAM[Section].View6.Name))">Control.SetFocus(55)</onclick>
+					<visible>!String.IsEmpty(Skin.String($PARAM[Section].View6.Name))</visible>
 				</item>
 				<item>
 					<label fallback="24020">$INFO[Skin.String($PARAM[Section].View7.Name)]</label>
 					<label2>$PARAM[Section]</label2>
 					<icon>material/view7.png</icon>
 					<onclick>Container.SetViewMode(56)</onclick>
-					<onclick condition="!IsEmpty(Skin.String($PARAM[Section].View7.Name))">Control.SetFocus(56)</onclick>
-					<visible>!IsEmpty(Skin.String($PARAM[Section].View7.Name))</visible>
+					<onclick condition="!String.IsEmpty(Skin.String($PARAM[Section].View7.Name))">Control.SetFocus(56)</onclick>
+					<visible>!String.IsEmpty(Skin.String($PARAM[Section].View7.Name))</visible>
 				</item>
 				<item>
 					<label fallback="24020">$INFO[Skin.String($PARAM[Section].View8.Name)]</label>
 					<label2>$PARAM[Section]</label2>
 					<icon>material/view8.png</icon>
 					<onclick>Container.SetViewMode(57)</onclick>
-					<onclick condition="!IsEmpty(Skin.String($PARAM[Section].View8.Name))">Control.SetFocus(57)</onclick>
-					<visible>!IsEmpty(Skin.String($PARAM[Section].View8.Name))</visible>
+					<onclick condition="!String.IsEmpty(Skin.String($PARAM[Section].View8.Name))">Control.SetFocus(57)</onclick>
+					<visible>!String.IsEmpty(Skin.String($PARAM[Section].View8.Name))</visible>
 				</item>
 				<item>
 					<label fallback="24020">$INFO[Skin.String($PARAM[Section].View9.Name)]</label>
 					<label2>$PARAM[Section]</label2>
 					<icon>material/view9.png</icon>
 					<onclick>Container.SetViewMode(58)</onclick>
-					<onclick condition="!IsEmpty(Skin.String($PARAM[Section].View9.Name))">Control.SetFocus(58)</onclick>
-					<visible>!IsEmpty(Skin.String($PARAM[Section].View9.Name))</visible>
+					<onclick condition="!String.IsEmpty(Skin.String($PARAM[Section].View9.Name))">Control.SetFocus(58)</onclick>
+					<visible>!String.IsEmpty(Skin.String($PARAM[Section].View9.Name))</visible>
 				</item>
 			</content>
 		</control>
@@ -2095,11 +2095,11 @@
 
 		<control type="group">
 			<visible>true</visible>
-			<animation effect="slide" start="0,0" end="660,0" time="100" reversible="true" condition="[Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | !IsEmpty(Window(Home).Property(DialogVisibility)) | !IsEmpty(Window(Home).Property(DialogVisibility2)) | !IsEmpty(Window(Home).Property(DialogVisibility3)) | !IsEmpty(Window(Home).Property(DialogVisibility4)) | !IsEmpty(Window(Home).Property(DialogVisibility5)) | Window.IsVisible(script-skinshortcuts.xml)] + [Skin.String($PARAM[CompPrefix].DIAPanel,LEFT) | [IsEmpty(Window(Home).Property(SidebarPos)) + Skin.String(HOM.View1.BBSidebar,LEFT)]]">Conditional</animation>
-			<animation effect="slide" start="0,0" end="-660,0" time="100" reversible="true" condition="[Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | !IsEmpty(Window(Home).Property(DialogVisibility)) | !IsEmpty(Window(Home).Property(DialogVisibility2)) | !IsEmpty(Window(Home).Property(DialogVisibility3)) | !IsEmpty(Window(Home).Property(DialogVisibility4)) | !IsEmpty(Window(Home).Property(DialogVisibility5)) | Window.IsVisible(script-skinshortcuts.xml)] + [Skin.String($PARAM[CompPrefix].DIAPanel,RIGHT) | [IsEmpty(Window(Home).Property(SidebarPos)) + Skin.String(HOM.View1.BBSidebar,RIGHT)]]">Conditional</animation>
-			<animation effect="slide" start="0,0" end="0,380" time="100" reversible="true" condition="[Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | !IsEmpty(Window(Home).Property(DialogVisibility)) | !IsEmpty(Window(Home).Property(DialogVisibility2)) | !IsEmpty(Window(Home).Property(DialogVisibility3)) | !IsEmpty(Window(Home).Property(DialogVisibility4)) | !IsEmpty(Window(Home).Property(DialogVisibility5)) | Window.IsVisible(script-skinshortcuts.xml)] + [Skin.String($PARAM[CompPrefix].DIAPanel,TOP) | [IsEmpty(Window(Home).Property(SidebarPos)) + Skin.String(HOM.View1.BBSidebar,TOP)]]">Conditional</animation>
-			<animation effect="slide" start="0,0" end="0,-380" time="100" reversible="true" condition="[Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | !IsEmpty(Window(Home).Property(DialogVisibility)) | !IsEmpty(Window(Home).Property(DialogVisibility2)) | !IsEmpty(Window(Home).Property(DialogVisibility3)) | !IsEmpty(Window(Home).Property(DialogVisibility4)) | !IsEmpty(Window(Home).Property(DialogVisibility5)) | Window.IsVisible(script-skinshortcuts.xml)] + [Skin.String($PARAM[CompPrefix].DIAPanel,BOTTOM) | [IsEmpty(Window(Home).Property(SidebarPos)) + Skin.String(HOM.View1.BBSidebar,BOTTOM)]]">Conditional</animation>
-			<animation effect="fade" start="100" end="0" time="100" delay="100" condition="IsEmpty(Window(Home).Property(DialogVisibility)) + IsEmpty(Window(Home).Property(DialogVisibility2)) + IsEmpty(Window(Home).Property(DialogVisibility3)) + IsEmpty(Window(Home).Property(DialogVisibility4)) + IsEmpty(Window(Home).Property(DialogVisibility5)) + !Window.IsVisible(script-skinshortcuts.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)">Conditional</animation>	
+			<animation effect="slide" start="0,0" end="660,0" time="100" reversible="true" condition="[Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | !String.IsEmpty(Window(Home).Property(DialogVisibility)) | !String.IsEmpty(Window(Home).Property(DialogVisibility2)) | !String.IsEmpty(Window(Home).Property(DialogVisibility3)) | !String.IsEmpty(Window(Home).Property(DialogVisibility4)) | !String.IsEmpty(Window(Home).Property(DialogVisibility5)) | Window.IsVisible(script-skinshortcuts.xml)] + [Skin.String($PARAM[CompPrefix].DIAPanel,LEFT) | [String.IsEmpty(Window(Home).Property(SidebarPos)) + Skin.String(HOM.View1.BBSidebar,LEFT)]]">Conditional</animation>
+			<animation effect="slide" start="0,0" end="-660,0" time="100" reversible="true" condition="[Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | !String.IsEmpty(Window(Home).Property(DialogVisibility)) | !String.IsEmpty(Window(Home).Property(DialogVisibility2)) | !String.IsEmpty(Window(Home).Property(DialogVisibility3)) | !String.IsEmpty(Window(Home).Property(DialogVisibility4)) | !String.IsEmpty(Window(Home).Property(DialogVisibility5)) | Window.IsVisible(script-skinshortcuts.xml)] + [Skin.String($PARAM[CompPrefix].DIAPanel,RIGHT) | [String.IsEmpty(Window(Home).Property(SidebarPos)) + Skin.String(HOM.View1.BBSidebar,RIGHT)]]">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,380" time="100" reversible="true" condition="[Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | !String.IsEmpty(Window(Home).Property(DialogVisibility)) | !String.IsEmpty(Window(Home).Property(DialogVisibility2)) | !String.IsEmpty(Window(Home).Property(DialogVisibility3)) | !String.IsEmpty(Window(Home).Property(DialogVisibility4)) | !String.IsEmpty(Window(Home).Property(DialogVisibility5)) | Window.IsVisible(script-skinshortcuts.xml)] + [Skin.String($PARAM[CompPrefix].DIAPanel,TOP) | [String.IsEmpty(Window(Home).Property(SidebarPos)) + Skin.String(HOM.View1.BBSidebar,TOP)]]">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-380" time="100" reversible="true" condition="[Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | !String.IsEmpty(Window(Home).Property(DialogVisibility)) | !String.IsEmpty(Window(Home).Property(DialogVisibility2)) | !String.IsEmpty(Window(Home).Property(DialogVisibility3)) | !String.IsEmpty(Window(Home).Property(DialogVisibility4)) | !String.IsEmpty(Window(Home).Property(DialogVisibility5)) | Window.IsVisible(script-skinshortcuts.xml)] + [Skin.String($PARAM[CompPrefix].DIAPanel,BOTTOM) | [String.IsEmpty(Window(Home).Property(SidebarPos)) + Skin.String(HOM.View1.BBSidebar,BOTTOM)]]">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="100" delay="100" condition="String.IsEmpty(Window(Home).Property(DialogVisibility)) + String.IsEmpty(Window(Home).Property(DialogVisibility2)) + String.IsEmpty(Window(Home).Property(DialogVisibility3)) + String.IsEmpty(Window(Home).Property(DialogVisibility4)) + String.IsEmpty(Window(Home).Property(DialogVisibility5)) + !Window.IsVisible(script-skinshortcuts.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)">Conditional</animation>	
 				
 			
 			<include content="DialogBg" condition="Skin.String($PARAM[CompPrefix].DIAPanel,LEFT) + Skin.String($PARAM[CompPrefix].BBSidebar,LEFT)">
@@ -2239,7 +2239,7 @@
 				<align>center</align>
 				<aspectratio>keep</aspectratio>
 				<texture background="true" colordiffuse="FFFFFFFF" fallback="material/tv.png">$VAR[ThumbTV]</texture>
-				<visible>!IsEmpty(ListItem.Property(ChannelName)) | !IsEmpty(ListItem.ChannelName)</visible>
+				<visible>!String.IsEmpty(ListItem.Property(ChannelName)) | !String.IsEmpty(ListItem.ChannelName)</visible>
 			</control>
 			<control type="image">
 				<left>20</left>
@@ -2249,7 +2249,7 @@
 				<align>center</align>
 				<aspectratio>keep</aspectratio>
 				<texture background="true" colordiffuse="$INFO[Skin.String(Color.B1Txt1NF)]">$VAR[ThumbIcon]</texture>
-				<visible>[IsEmpty(ListItem.Property(ChannelName)) + IsEmpty(ListItem.ChannelName)] + [ListItem.IsFolder | IsEmpty(ListItem.Art(thumb)) | !IsEmpty(ListItem.Property(labelID))]</visible>
+				<visible>[String.IsEmpty(ListItem.Property(ChannelName)) + String.IsEmpty(ListItem.ChannelName)] + [ListItem.IsFolder | String.IsEmpty(ListItem.Art(thumb)) | !String.IsEmpty(ListItem.Property(labelID))]</visible>
 			</control>
 			<control type="image">
 				<left>0</left>
@@ -2259,7 +2259,7 @@
 				<align>center</align>
 				<aspectratio>keep</aspectratio>
 				<texture background="true" colordiffuse="FFFFFFFF">$VAR[ThumbPortrait]</texture>
-				<visible>IsEmpty(ListItem.Property(ChannelName)) + IsEmpty(ListItem.ChannelName) + IsEmpty(ListItem.Property(labelID))</visible>
+				<visible>String.IsEmpty(ListItem.Property(ChannelName)) + String.IsEmpty(ListItem.ChannelName) + String.IsEmpty(ListItem.Property(labelID))</visible>
 			</control>
 			<control type="group">
 				<right>1</right>
@@ -2311,7 +2311,7 @@
 					<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
 				</control>			
 
-			<visible>[Skin.HasSetting(WatchedFlag) + [Container.Content(movies) + stringcompare(ListItem.Overlay,OverlayWatched.png)] | [Container.Content(episodes) + stringcompare(ListItem.Overlay,OverlayWatched.png)] | [Container.Content(seasons) + stringcompare(ListItem.Overlay,OverlayWatched.png)] | [Container.Content(tvshows) + stringcompare(ListItem.Overlay,OverlayWatched.png)] | ListItem.IsResumable] | ListItem.IsRecording | ListItem.HasTimer</visible>
+			<visible>[Skin.HasSetting(WatchedFlag) + [Container.Content(movies) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)] | [Container.Content(episodes) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)] | [Container.Content(seasons) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)] | [Container.Content(tvshows) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)] | ListItem.IsResumable] | ListItem.IsRecording | ListItem.HasTimer</visible>
 			</control>
 			<control type="label">
 				<left>142</left>
@@ -2340,7 +2340,7 @@
 			<control type="group">
 				<left>0</left>
 				<width>$PARAM[width]</width>
-				<visible>IsEmpty(Window(Home).Property(TVShowNext))</visible>
+				<visible>String.IsEmpty(Window(Home).Property(TVShowNext))</visible>
 				<animation effect="zoom" start="0,100" end="100,100" center="0,59" time="200">VisibleChange</animation>
 				<control type="image">
 					<left>0</left>
@@ -2375,7 +2375,7 @@
 					<align>center</align>
 					<aspectratio>keep</aspectratio>
 					<texture background="true" colordiffuse="FFFFFFFF" fallback="material/tv.png">$VAR[ThumbTV]</texture>
-					<visible>!IsEmpty(ListItem.Property(ChannelName)) | !IsEmpty(ListItem.ChannelName)</visible>
+					<visible>!String.IsEmpty(ListItem.Property(ChannelName)) | !String.IsEmpty(ListItem.ChannelName)</visible>
 				</control>
 				<control type="image">
 					<left>20</left>
@@ -2385,7 +2385,7 @@
 					<align>center</align>
 					<aspectratio>keep</aspectratio>
 					<texture background="true" colordiffuse="$INFO[Skin.String(Color.B1Txt1F)]">$VAR[ThumbIcon]</texture>
-					<visible>[IsEmpty(ListItem.Property(ChannelName)) + IsEmpty(ListItem.ChannelName)] + [ListItem.IsFolder | IsEmpty(ListItem.Art(thumb)) | !IsEmpty(ListItem.Property(labelID))]</visible>
+					<visible>[String.IsEmpty(ListItem.Property(ChannelName)) + String.IsEmpty(ListItem.ChannelName)] + [ListItem.IsFolder | String.IsEmpty(ListItem.Art(thumb)) | !String.IsEmpty(ListItem.Property(labelID))]</visible>
 				</control>
 				<control type="image">
 					<left>0</left>
@@ -2395,7 +2395,7 @@
 					<align>center</align>
 					<aspectratio>keep</aspectratio>
 					<texture background="true" colordiffuse="FFFFFFFF">$VAR[ThumbPortrait]</texture>
-					<visible>IsEmpty(ListItem.Property(ChannelName)) + IsEmpty(ListItem.ChannelName) + IsEmpty(ListItem.Property(labelID))</visible>
+					<visible>String.IsEmpty(ListItem.Property(ChannelName)) + String.IsEmpty(ListItem.ChannelName) + String.IsEmpty(ListItem.Property(labelID))</visible>
 				</control>
 			<control type="group">
 				<right>1</right>
@@ -2447,7 +2447,7 @@
 					<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
 				</control>			
 
-			<visible>[Skin.HasSetting(WatchedFlag) + [Container.Content(movies) + stringcompare(ListItem.Overlay,OverlayWatched.png)] | [Container.Content(episodes) + stringcompare(ListItem.Overlay,OverlayWatched.png)] | [Container.Content(seasons) + stringcompare(ListItem.Overlay,OverlayWatched.png)] | [Container.Content(tvshows) + stringcompare(ListItem.Overlay,OverlayWatched.png)] | ListItem.IsResumable] | ListItem.IsRecording | ListItem.HasTimer</visible>
+			<visible>[Skin.HasSetting(WatchedFlag) + [Container.Content(movies) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)] | [Container.Content(episodes) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)] | [Container.Content(seasons) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)] | [Container.Content(tvshows) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)] | ListItem.IsResumable] | ListItem.IsRecording | ListItem.HasTimer</visible>
 			</control>
 				<control type="label">
 					<left>142</left>
@@ -2473,8 +2473,8 @@
 			<control type="group">
 				<left>0</left>
 				<width>$PARAM[width]</width>
-				<visible>!IsEmpty(Window(Home).Property(TVShowNext))</visible>
-				<animation effect="zoom" start="0" end="100" center="400,45" time="200" condition="!IsEmpty(Window(Home).Property(TVShowNext))">VisibleChange</animation>
+				<visible>!String.IsEmpty(Window(Home).Property(TVShowNext))</visible>
+				<animation effect="zoom" start="0" end="100" center="400,45" time="200" condition="!String.IsEmpty(Window(Home).Property(TVShowNext))">VisibleChange</animation>
 				<control type="image">
 					<left>0</left>
 					<top>0</top>
@@ -2507,7 +2507,7 @@
 					<align>center</align>
 					<aspectratio>keep</aspectratio>
 					<texture background="true" colordiffuse="FFFFFFFF" fallback="material/tv.png">$VAR[ThumbTV]</texture>
-					<visible>!IsEmpty(ListItem.Property(ChannelName)) | !IsEmpty(ListItem.ChannelName)</visible>
+					<visible>!String.IsEmpty(ListItem.Property(ChannelName)) | !String.IsEmpty(ListItem.ChannelName)</visible>
 				</control>
 				<control type="image">
 					<left>20</left>
@@ -2517,7 +2517,7 @@
 					<align>center</align>
 					<aspectratio>keep</aspectratio>
 					<texture background="true" colordiffuse="$INFO[Skin.String(Color.B1Txt1F)]">$VAR[ThumbIcon]</texture>
-					<visible>[IsEmpty(ListItem.Property(ChannelName)) + IsEmpty(ListItem.ChannelName)] + [ListItem.IsFolder | IsEmpty(ListItem.Art(thumb)) | !IsEmpty(ListItem.Property(labelID))]</visible>
+					<visible>[String.IsEmpty(ListItem.Property(ChannelName)) + String.IsEmpty(ListItem.ChannelName)] + [ListItem.IsFolder | String.IsEmpty(ListItem.Art(thumb)) | !String.IsEmpty(ListItem.Property(labelID))]</visible>
 				</control>
 				<control type="label">
 					<left>142</left>
@@ -2576,7 +2576,7 @@
 				<align>center</align>
 				<aspectratio>keep</aspectratio>
 				<texture background="true" colordiffuse="FFFFFFFF" fallback="material/tv.png">$VAR[ThumbTV]</texture>
-				<visible>!IsEmpty(ListItem.Property(ChannelName)) | !IsEmpty(ListItem.ChannelName)</visible>
+				<visible>!String.IsEmpty(ListItem.Property(ChannelName)) | !String.IsEmpty(ListItem.ChannelName)</visible>
 			</control>
 			<control type="image">
 				<left>100</left>
@@ -2586,7 +2586,7 @@
 				<align>center</align>
 				<aspectratio>keep</aspectratio>
 				<texture background="true" colordiffuse="$INFO[Skin.String(Color.B1Txt1NF)]">$VAR[ThumbIcon]</texture>
-				<visible>[IsEmpty(ListItem.Property(ChannelName)) + IsEmpty(ListItem.ChannelName)] + [ListItem.IsFolder | IsEmpty(ListItem.Art(thumb)) | !IsEmpty(ListItem.Property(labelID))]</visible>
+				<visible>[String.IsEmpty(ListItem.Property(ChannelName)) + String.IsEmpty(ListItem.ChannelName)] + [ListItem.IsFolder | String.IsEmpty(ListItem.Art(thumb)) | !String.IsEmpty(ListItem.Property(labelID))]</visible>
 			</control>
 			<control type="image">
 				<left>0</left>
@@ -2596,7 +2596,7 @@
 				<align>center</align>
 				<aspectratio>scale</aspectratio>
 				<texture background="true" colordiffuse="FFFFFFFF">$VAR[ThumbLandscape]</texture>
-				<visible>IsEmpty(ListItem.Property(ChannelName)) + IsEmpty(ListItem.ChannelName) + IsEmpty(ListItem.Property(labelID))</visible>
+				<visible>String.IsEmpty(ListItem.Property(ChannelName)) + String.IsEmpty(ListItem.ChannelName) + String.IsEmpty(ListItem.Property(labelID))</visible>
 			</control>
 			<control type="image">
 				<left>0</left>
@@ -2657,7 +2657,7 @@
 					<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
 				</control>			
 
-			<visible>[Skin.HasSetting(WatchedFlag) + [Container.Content(movies) + stringcompare(ListItem.Overlay,OverlayWatched.png)] | [Container.Content(episodes) + stringcompare(ListItem.Overlay,OverlayWatched.png)] | [Container.Content(seasons) + stringcompare(ListItem.Overlay,OverlayWatched.png)] | [Container.Content(tvshows) + stringcompare(ListItem.Overlay,OverlayWatched.png)] | ListItem.IsResumable] | ListItem.IsRecording | ListItem.HasTimer</visible>
+			<visible>[Skin.HasSetting(WatchedFlag) + [Container.Content(movies) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)] | [Container.Content(episodes) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)] | [Container.Content(seasons) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)] | [Container.Content(tvshows) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)] | ListItem.IsResumable] | ListItem.IsRecording | ListItem.HasTimer</visible>
 			</control>
 			<control type="label">
 				<left>9</left>
@@ -2689,7 +2689,7 @@
 				<align>center</align>
 				<aspectratio>keep</aspectratio>
 				<texture background="true" colordiffuse="FFFFFFFF" fallback="material/tv.png">$VAR[ThumbTV]</texture>
-				<visible>!IsEmpty(ListItem.Property(ChannelName)) | !IsEmpty(ListItem.ChannelName)</visible>
+				<visible>!String.IsEmpty(ListItem.Property(ChannelName)) | !String.IsEmpty(ListItem.ChannelName)</visible>
 			</control>
 			<control type="image">
 				<left>100</left>
@@ -2699,7 +2699,7 @@
 				<align>center</align>
 				<aspectratio>keep</aspectratio>
 				<texture background="true" colordiffuse="$INFO[Skin.String(Color.B1Txt1NF)]">$VAR[ThumbIcon]</texture>
-				<visible>[IsEmpty(ListItem.Property(ChannelName)) + IsEmpty(ListItem.ChannelName)] + [ListItem.IsFolder | IsEmpty(ListItem.Art(thumb)) | !IsEmpty(ListItem.Property(labelID))]</visible>
+				<visible>[String.IsEmpty(ListItem.Property(ChannelName)) + String.IsEmpty(ListItem.ChannelName)] + [ListItem.IsFolder | String.IsEmpty(ListItem.Art(thumb)) | !String.IsEmpty(ListItem.Property(labelID))]</visible>
 			</control>
 			<control type="image">
 				<left>0</left>
@@ -2709,7 +2709,7 @@
 				<align>center</align>
 				<aspectratio>scale</aspectratio>
 				<texture background="true" colordiffuse="FFFFFFFF">$VAR[ThumbLandscape]</texture>
-				<visible>IsEmpty(ListItem.Property(ChannelName)) + IsEmpty(ListItem.ChannelName) + IsEmpty(ListItem.Property(labelID))</visible>
+				<visible>String.IsEmpty(ListItem.Property(ChannelName)) + String.IsEmpty(ListItem.ChannelName) + String.IsEmpty(ListItem.Property(labelID))</visible>
 			</control>
 			<control type="group">
 				<right>0</right>
@@ -2761,7 +2761,7 @@
 					<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
 				</control>			
 
-			<visible>[Skin.HasSetting(WatchedFlag) + [Container.Content(movies) + stringcompare(ListItem.Overlay,OverlayWatched.png)] | [Container.Content(episodes) + stringcompare(ListItem.Overlay,OverlayWatched.png)] | [Container.Content(seasons) + stringcompare(ListItem.Overlay,OverlayWatched.png)] | [Container.Content(tvshows) + stringcompare(ListItem.Overlay,OverlayWatched.png)] | ListItem.IsResumable] | ListItem.IsRecording | ListItem.HasTimer</visible>
+			<visible>[Skin.HasSetting(WatchedFlag) + [Container.Content(movies) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)] | [Container.Content(episodes) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)] | [Container.Content(seasons) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)] | [Container.Content(tvshows) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)] | ListItem.IsResumable] | ListItem.IsRecording | ListItem.HasTimer</visible>
 			</control>
 			<control type="image">
 				<left>0</left>
@@ -2797,7 +2797,7 @@
 	<include name="ListPoster">
 		<itemlayout width="212" height="356">
 			<control type="group">
-				<visible>!Container.Content(episodes) + !Container.Content(albums) + !Container.Content(artists) + !Container.Content(songs) + !Container.Content(addons) + ![Container.Content(movies) + StringCompare(Window(Home).Property(MenuSection),programs)] + IsEmpty(ListItem.Property(ChannelName)) + IsEmpty(ListItem.ChannelName) + IsEmpty(ListItem.Artist) + [IsEmpty(ListItem.Episode) | [!IsEmpty(ListItem.Episode) + ListItem.IsFolder]] | Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)</visible>
+				<visible>!Container.Content(episodes) + !Container.Content(albums) + !Container.Content(artists) + !Container.Content(songs) + !Container.Content(addons) + ![Container.Content(movies) + String.IsEqual(Window(Home).Property(MenuSection),programs)] + String.IsEmpty(ListItem.Property(ChannelName)) + String.IsEmpty(ListItem.ChannelName) + String.IsEmpty(ListItem.Artist) + [String.IsEmpty(ListItem.Episode) | [!String.IsEmpty(ListItem.Episode) + ListItem.IsFolder]] | Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)</visible>
 				<control type="image">
 					<left>0</left>
 					<top>0</top>
@@ -2814,7 +2814,7 @@
 					<align>center</align>
 					<aspectratio>keep</aspectratio>
 					<texture background="true" colordiffuse="$INFO[Skin.String(Color.B1Txt1NF)]">$VAR[ThumbIcon]</texture>
-					<visible>ListItem.IsFolder | IsEmpty(ListItem.Art(thumb)) | !IsEmpty(ListItem.Property(labelID))</visible>
+					<visible>ListItem.IsFolder | String.IsEmpty(ListItem.Art(thumb)) | !String.IsEmpty(ListItem.Property(labelID))</visible>
 				</control>
 				<control type="image">
 					<left>0</left>
@@ -2839,7 +2839,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<visible>[Container.Content(episodes) | [Container.Content(movies) + StringCompare(Window(Home).Property(MenuSection),programs)] | !IsEmpty(ListItem.Property(ChannelName)) | !IsEmpty(ListItem.ChannelName) | [!IsEmpty(ListItem.Episode) + !ListItem.IsFolder]] + !Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)</visible>
+				<visible>[Container.Content(episodes) | [Container.Content(movies) + String.IsEqual(Window(Home).Property(MenuSection),programs)] | !String.IsEmpty(ListItem.Property(ChannelName)) | !String.IsEmpty(ListItem.ChannelName) | [!String.IsEmpty(ListItem.Episode) + !ListItem.IsFolder]] + !Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)</visible>
 				<control type="image">
 					<left>0</left>
 					<top>0</top>
@@ -2856,7 +2856,7 @@
 					<align>center</align>
 					<aspectratio>keep</aspectratio>
 					<texture background="true" colordiffuse="$INFO[Skin.String(Color.B1Txt1NF)]">$VAR[ThumbIcon]</texture>
-					<visible>[IsEmpty(ListItem.Property(ChannelName)) + IsEmpty(ListItem.ChannelName)] + [ListItem.IsFolder | IsEmpty(ListItem.Art(thumb)) | !IsEmpty(ListItem.Property(labelID))]</visible>
+					<visible>[String.IsEmpty(ListItem.Property(ChannelName)) + String.IsEmpty(ListItem.ChannelName)] + [ListItem.IsFolder | String.IsEmpty(ListItem.Art(thumb)) | !String.IsEmpty(ListItem.Property(labelID))]</visible>
 				</control>
 				<control type="image">
 					<left>0</left>
@@ -2866,7 +2866,7 @@
 					<align>center</align>
 					<aspectratio>scale</aspectratio>
 					<texture background="true" colordiffuse="FFFFFFFF">$VAR[ThumbLandscape]</texture>
-					<visible>IsEmpty(ListItem.Property(labelID))</visible>
+					<visible>String.IsEmpty(ListItem.Property(labelID))</visible>
 				</control>
 				<control type="image">
 					<left>0</left>
@@ -2876,7 +2876,7 @@
 					<align>center</align>
 					<aspectratio>scale</aspectratio>
 					<texture colordiffuse="AA000000">common/white.png</texture>
-					<visible>!IsEmpty(ListItem.Property(ChannelName)) | !IsEmpty(ListItem.ChannelName)</visible>
+					<visible>!String.IsEmpty(ListItem.Property(ChannelName)) | !String.IsEmpty(ListItem.ChannelName)</visible>
 				</control>
 				<control type="image">
 					<left>59</left>
@@ -2886,7 +2886,7 @@
 					<align>center</align>
 					<aspectratio>keep</aspectratio>
 					<texture background="true" colordiffuse="FFFFFFFF" fallback="material/tv.png">$VAR[ThumbTV]</texture>
-					<visible>!IsEmpty(ListItem.Property(ChannelName)) | !IsEmpty(ListItem.ChannelName)</visible>
+					<visible>!String.IsEmpty(ListItem.Property(ChannelName)) | !String.IsEmpty(ListItem.ChannelName)</visible>
 				</control>
 				<include>ItemOverlay</include>
 				<control type="label">
@@ -2898,7 +2898,7 @@
 					<font>Font27R</font>
 					<textcolor>$INFO[Skin.String(Color.B1Txt1NF)]</textcolor>
 					<label>$INFO[ListItem.Episode,$LOCALIZE[20359] ,]</label>
-					<visible>IsEmpty(ListItem.Property(ChannelName)) + IsEmpty(ListItem.ChannelName)</visible>
+					<visible>String.IsEmpty(ListItem.Property(ChannelName)) + String.IsEmpty(ListItem.ChannelName)</visible>
 				</control>
 				<control type="label">
 					<left>12</left>
@@ -2909,7 +2909,7 @@
 					<font>Font27R</font>
 					<textcolor>$INFO[Skin.String(Color.B1Txt1NF)]</textcolor>
 					<label>$INFO[ListItem.Label]</label>
-					<visible>!IsEmpty(ListItem.Property(ChannelName)) | !IsEmpty(ListItem.ChannelName)</visible>
+					<visible>!String.IsEmpty(ListItem.Property(ChannelName)) | !String.IsEmpty(ListItem.ChannelName)</visible>
 				</control>
 				<control type="textbox">
 					<left>12</left>
@@ -2929,7 +2929,7 @@
 					<height>50</height>
 					<aspectratio align="left">keep</aspectratio>
 					<texture colordiffuse="$VAR[CategoryColor]" fallback="rating0.png">$INFO[ListItem.StarRating,]</texture>
-					<visible>IsEmpty(ListItem.Property(ChannelName)) + IsEmpty(ListItem.ChannelName)</visible>
+					<visible>String.IsEmpty(ListItem.Property(ChannelName)) + String.IsEmpty(ListItem.ChannelName)</visible>
 				</control>					
 				<control type="label">
 					<right>12</right>
@@ -2940,11 +2940,11 @@
 					<font>FontSmallR</font>
 					<textcolor>$INFO[Skin.String(Color.B1Txt1NF)]</textcolor>
 					<label>$INFO[ListItem.EndTime]$INFO[ListItem.EndTime, - ,]</label>
-					<visible>!IsEmpty(ListItem.Property(ChannelName)) | !IsEmpty(ListItem.ChannelName)</visible>
+					<visible>!String.IsEmpty(ListItem.Property(ChannelName)) | !String.IsEmpty(ListItem.ChannelName)</visible>
 				</control>
 			</control>
 			<control type="group">
-				<visible>[Container.Content(albums) | Container.Content(artists) | Container.Content(songs) | Container.Content(addons) | !IsEmpty(ListItem.Artist)] + !Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)</visible>
+				<visible>[Container.Content(albums) | Container.Content(artists) | Container.Content(songs) | Container.Content(addons) | !String.IsEmpty(ListItem.Artist)] + !Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)</visible>
 				<control type="image">
 					<left>0</left>
 					<top>0</top>
@@ -2961,7 +2961,7 @@
 					<align>center</align>
 					<aspectratio>keep</aspectratio>
 					<texture background="true" colordiffuse="$INFO[Skin.String(Color.B1Txt1NF)]">$VAR[ThumbIcon]</texture>
-					<visible>ListItem.IsFolder | IsEmpty(ListItem.Art(thumb)) | !IsEmpty(ListItem.Property(labelID))</visible>
+					<visible>ListItem.IsFolder | String.IsEmpty(ListItem.Art(thumb)) | !String.IsEmpty(ListItem.Property(labelID))</visible>
 				</control>
 				<control type="image">
 					<left>0</left>
@@ -2996,7 +2996,7 @@
 
 		<focusedlayout width="212" height="356">
 			<control type="group">
-				<visible>!Container.Content(episodes) + !Container.Content(albums) + !Container.Content(artists) + !Container.Content(songs) + !Container.Content(addons) + ![Container.Content(movies) + StringCompare(Window(Home).Property(MenuSection),programs)] + IsEmpty(ListItem.Property(ChannelName)) + IsEmpty(ListItem.ChannelName) + IsEmpty(ListItem.Artist) + [IsEmpty(ListItem.Episode) | [!IsEmpty(ListItem.Episode) + ListItem.IsFolder]] | Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)</visible>
+				<visible>!Container.Content(episodes) + !Container.Content(albums) + !Container.Content(artists) + !Container.Content(songs) + !Container.Content(addons) + ![Container.Content(movies) + String.IsEqual(Window(Home).Property(MenuSection),programs)] + String.IsEmpty(ListItem.Property(ChannelName)) + String.IsEmpty(ListItem.ChannelName) + String.IsEmpty(ListItem.Artist) + [String.IsEmpty(ListItem.Episode) | [!String.IsEmpty(ListItem.Episode) + ListItem.IsFolder]] | Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)</visible>
 				<control type="image">
 					<left>0</left>
 					<top>0</top>
@@ -3021,7 +3021,7 @@
 					<align>center</align>
 					<aspectratio>keep</aspectratio>
 					<texture background="true" colordiffuse="FFFFFFFF">$VAR[ThumbIcon]</texture>
-					<visible>!IsEmpty(ListItem.Property(ChannelName)) | !IsEmpty(ListItem.ChannelName)</visible>
+					<visible>!String.IsEmpty(ListItem.Property(ChannelName)) | !String.IsEmpty(ListItem.ChannelName)</visible>
 				</control>
 				<control type="image">
 					<left>25.5</left>
@@ -3031,7 +3031,7 @@
 					<align>center</align>
 					<aspectratio>keep</aspectratio>
 					<texture background="true" colordiffuse="$INFO[Skin.String(Color.B1Txt1NF)]">$VAR[ThumbIcon]</texture>
-					<visible>[IsEmpty(ListItem.Property(ChannelName)) + IsEmpty(ListItem.ChannelName)] + [ListItem.IsFolder | IsEmpty(ListItem.Art(thumb)) | !IsEmpty(ListItem.Property(labelID))]</visible>
+					<visible>[String.IsEmpty(ListItem.Property(ChannelName)) + String.IsEmpty(ListItem.ChannelName)] + [ListItem.IsFolder | String.IsEmpty(ListItem.Art(thumb)) | !String.IsEmpty(ListItem.Property(labelID))]</visible>
 				</control>
 				<control type="image">
 					<left>0</left>
@@ -3041,7 +3041,7 @@
 					<align>center</align>
 					<aspectratio>scale</aspectratio>
 					<texture background="true" colordiffuse="FFFFFFFF">$VAR[ThumbPortrait]</texture>
-					<visible>IsEmpty(ListItem.Property(ChannelName)) + IsEmpty(ListItem.ChannelName) + IsEmpty(ListItem.Property(labelID))</visible>
+					<visible>String.IsEmpty(ListItem.Property(ChannelName)) + String.IsEmpty(ListItem.ChannelName) + String.IsEmpty(ListItem.Property(labelID))</visible>
 				</control>
 				<include>ItemOverlay</include>
 				<control type="label">
@@ -3057,7 +3057,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<visible>[Container.Content(episodes) | [Container.Content(movies) + StringCompare(Window(Home).Property(MenuSection),programs)] | !IsEmpty(ListItem.Property(ChannelName)) | !IsEmpty(ListItem.ChannelName) | [!IsEmpty(ListItem.Episode) + !ListItem.IsFolder]] + !Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)</visible>
+				<visible>[Container.Content(episodes) | [Container.Content(movies) + String.IsEqual(Window(Home).Property(MenuSection),programs)] | !String.IsEmpty(ListItem.Property(ChannelName)) | !String.IsEmpty(ListItem.ChannelName) | [!String.IsEmpty(ListItem.Episode) + !ListItem.IsFolder]] + !Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)</visible>
 				<control type="image">
 					<left>0</left>
 					<top>0</top>
@@ -3082,7 +3082,7 @@
 					<align>center</align>
 					<aspectratio>keep</aspectratio>
 					<texture background="true" colordiffuse="$INFO[Skin.String(Color.B1Txt1NF)]">$VAR[ThumbIcon]</texture>
-					<visible>[IsEmpty(ListItem.Property(ChannelName)) + IsEmpty(ListItem.ChannelName)] + [ListItem.IsFolder | IsEmpty(ListItem.Art(thumb)) | !IsEmpty(ListItem.Property(labelID))]</visible>
+					<visible>[String.IsEmpty(ListItem.Property(ChannelName)) + String.IsEmpty(ListItem.ChannelName)] + [ListItem.IsFolder | String.IsEmpty(ListItem.Art(thumb)) | !String.IsEmpty(ListItem.Property(labelID))]</visible>
 				</control>
 				<control type="image">
 					<left>0</left>
@@ -3092,7 +3092,7 @@
 					<align>center</align>
 					<aspectratio>scale</aspectratio>
 					<texture background="true" colordiffuse="FFFFFFFF">$VAR[ThumbLandscape]</texture>
-					<visible>IsEmpty(ListItem.Property(labelID))</visible>
+					<visible>String.IsEmpty(ListItem.Property(labelID))</visible>
 				</control>
 				<control type="image">
 					<left>0</left>
@@ -3102,7 +3102,7 @@
 					<align>center</align>
 					<aspectratio>scale</aspectratio>
 					<texture colordiffuse="AA000000">common/white.png</texture>
-					<visible>!IsEmpty(ListItem.Property(ChannelName)) | !IsEmpty(ListItem.ChannelName)</visible>
+					<visible>!String.IsEmpty(ListItem.Property(ChannelName)) | !String.IsEmpty(ListItem.ChannelName)</visible>
 				</control>
 				<control type="image">
 					<left>59</left>
@@ -3112,7 +3112,7 @@
 					<align>center</align>
 					<aspectratio>keep</aspectratio>
 					<texture background="true" colordiffuse="FFFFFFFF" fallback="material/tv.png">$VAR[ThumbTV]</texture>
-					<visible>!IsEmpty(ListItem.Property(ChannelName)) | !IsEmpty(ListItem.ChannelName)</visible>
+					<visible>!String.IsEmpty(ListItem.Property(ChannelName)) | !String.IsEmpty(ListItem.ChannelName)</visible>
 				</control>
 				<include>ItemOverlay</include>
 				<control type="label">
@@ -3124,7 +3124,7 @@
 					<font>Font27R</font>
 					<textcolor>$INFO[Skin.String(Color.B1Txt1F)]</textcolor>
 					<label>$INFO[ListItem.Episode,$LOCALIZE[20359] ,]</label>
-					<visible>IsEmpty(ListItem.Property(ChannelName)) + IsEmpty(ListItem.ChannelName)</visible>
+					<visible>String.IsEmpty(ListItem.Property(ChannelName)) + String.IsEmpty(ListItem.ChannelName)</visible>
 				</control>
 				<control type="label">
 					<left>12</left>
@@ -3135,7 +3135,7 @@
 					<font>Font27R</font>
 					<textcolor>$INFO[Skin.String(Color.B1Txt1F)]</textcolor>
 					<label>$INFO[ListItem.Label]</label>
-					<visible>!IsEmpty(ListItem.Property(ChannelName)) | !IsEmpty(ListItem.ChannelName)</visible>
+					<visible>!String.IsEmpty(ListItem.Property(ChannelName)) | !String.IsEmpty(ListItem.ChannelName)</visible>
 				</control>
 				<control type="textbox">
 					<left>12</left>
@@ -3155,7 +3155,7 @@
 					<height>50</height>
 					<aspectratio align="left">keep</aspectratio>
 					<texture colordiffuse="$VAR[CategoryColor]" fallback="rating0.png">$INFO[ListItem.StarRating,]</texture>
-					<visible>IsEmpty(ListItem.Property(ChannelName)) + IsEmpty(ListItem.ChannelName)</visible>
+					<visible>String.IsEmpty(ListItem.Property(ChannelName)) + String.IsEmpty(ListItem.ChannelName)</visible>
 				</control>					
 				<control type="label">
 					<right>12</right>
@@ -3166,11 +3166,11 @@
 					<font>FontSmallR</font>
 					<textcolor>$INFO[Skin.String(Color.B1Txt1F)]</textcolor>
 					<label>$INFO[ListItem.EndTime]$INFO[ListItem.EndTime, - ,]</label>
-					<visible>!IsEmpty(ListItem.Property(ChannelName)) | !IsEmpty(ListItem.ChannelName)</visible>
+					<visible>!String.IsEmpty(ListItem.Property(ChannelName)) | !String.IsEmpty(ListItem.ChannelName)</visible>
 				</control>
 			</control>
 			<control type="group">
-				<visible>[Container.Content(albums) | Container.Content(artists) | Container.Content(songs) | Container.Content(addons) | !IsEmpty(ListItem.Artist)] + !Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)</visible>
+				<visible>[Container.Content(albums) | Container.Content(artists) | Container.Content(songs) | Container.Content(addons) | !String.IsEmpty(ListItem.Artist)] + !Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)</visible>
 				<control type="image">
 					<left>0</left>
 					<top>0</top>
@@ -3195,7 +3195,7 @@
 					<align>center</align>
 					<aspectratio>keep</aspectratio>
 					<texture background="true" colordiffuse="$INFO[Skin.String(Color.B1Txt1NF)]">$VAR[ThumbIcon]</texture>
-					<visible>ListItem.IsFolder | IsEmpty(ListItem.Art(thumb))</visible>
+					<visible>ListItem.IsFolder | String.IsEmpty(ListItem.Art(thumb))</visible>
 				</control>
 				<control type="image">
 					<left>0</left>
@@ -3248,7 +3248,7 @@
 				<align>center</align>
 				<aspectratio>keep</aspectratio>
 				<texture background="true" colordiffuse="$INFO[Skin.String(Color.B1Txt1NF)]">$VAR[ThumbIcon]</texture>
-				<visible>[IsEmpty(ListItem.Property(ChannelName)) + IsEmpty(ListItem.ChannelName)] + [ListItem.IsFolder | IsEmpty(ListItem.Art(thumb)) | !IsEmpty(ListItem.Property(labelID))]</visible>
+				<visible>[String.IsEmpty(ListItem.Property(ChannelName)) + String.IsEmpty(ListItem.ChannelName)] + [ListItem.IsFolder | String.IsEmpty(ListItem.Art(thumb)) | !String.IsEmpty(ListItem.Property(labelID))]</visible>
 			</control>
 			<control type="image">
 				<left>0</left>
@@ -3277,7 +3277,7 @@
 				<height>100</height>
 				<aspectratio>scale</aspectratio>
 				<texture background="true" colordiffuse="FFFFFFFF">$INFO[ListItem.Art(thumb)]</texture>
-				<visible>Container.Content(songs) | !IsEmpty(ListItem.Artist)</visible>
+				<visible>Container.Content(songs) | !String.IsEmpty(ListItem.Artist)</visible>
 			</control>
 			<control type="image">
 				<left>10</left>
@@ -3286,10 +3286,10 @@
 				<height>80</height>
 				<aspectratio>scale</aspectratio>
 				<texture background="true" colordiffuse="FFFFFFFF" fallback="material/tv.png">$VAR[ThumbTV]</texture>
-				<visible>!IsEmpty(ListItem.Property(ChannelName)) | !IsEmpty(ListItem.ChannelName)</visible>
+				<visible>!String.IsEmpty(ListItem.Property(ChannelName)) | !String.IsEmpty(ListItem.ChannelName)</visible>
 			</control>
 			<control type="group">
-				<animation effect="slide" start="0,0" end="100,0" time="0" condition="Container.Content(songs) | !IsEmpty(ListItem.Property(ChannelName)) | !IsEmpty(ListItem.ChannelName) | !IsEmpty(ListItem.Artist)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="100,0" time="0" condition="Container.Content(songs) | !String.IsEmpty(ListItem.Property(ChannelName)) | !String.IsEmpty(ListItem.ChannelName) | !String.IsEmpty(ListItem.Artist)">Conditional</animation>
 				<control type="label">
 					<left>12</left>
 					<top>266</top>
@@ -3332,7 +3332,7 @@
 				<align>center</align>
 				<aspectratio>keep</aspectratio>
 				<texture background="true" colordiffuse="$INFO[Skin.String(Color.B1Txt1NF)]">$VAR[ThumbIcon]</texture>
-				<visible>[IsEmpty(ListItem.Property(ChannelName)) + IsEmpty(ListItem.ChannelName)] + [ListItem.IsFolder | IsEmpty(ListItem.Art(thumb)) | !IsEmpty(ListItem.Property(labelID))]</visible>
+				<visible>[String.IsEmpty(ListItem.Property(ChannelName)) + String.IsEmpty(ListItem.ChannelName)] + [ListItem.IsFolder | String.IsEmpty(ListItem.Art(thumb)) | !String.IsEmpty(ListItem.Property(labelID))]</visible>
 			</control>
 			<control type="image">
 				<left>0</left>
@@ -3368,7 +3368,7 @@
 				<height>100</height>
 				<aspectratio>scale</aspectratio>
 				<texture background="true" colordiffuse="FFFFFFFF">$INFO[ListItem.Art(thumb)]</texture>
-				<visible>Container.Content(songs) | !IsEmpty(ListItem.Artist)</visible>
+				<visible>Container.Content(songs) | !String.IsEmpty(ListItem.Artist)</visible>
 			</control>
 			<control type="image">
 				<left>10</left>
@@ -3377,10 +3377,10 @@
 				<height>80</height>
 				<aspectratio>scale</aspectratio>
 				<texture background="true" colordiffuse="FFFFFFFF" fallback="material/tv.png">$VAR[ThumbTV]</texture>
-				<visible>!IsEmpty(ListItem.Property(ChannelName)) | !IsEmpty(ListItem.ChannelName)</visible>
+				<visible>!String.IsEmpty(ListItem.Property(ChannelName)) | !String.IsEmpty(ListItem.ChannelName)</visible>
 			</control>
 			<control type="group">
-				<animation effect="slide" start="0,0" end="100,0" time="0" condition="Container.Content(songs) | !IsEmpty(ListItem.Property(ChannelName)) | !IsEmpty(ListItem.ChannelName) | !IsEmpty(ListItem.Artist)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="100,0" time="0" condition="Container.Content(songs) | !String.IsEmpty(ListItem.Property(ChannelName)) | !String.IsEmpty(ListItem.ChannelName) | !String.IsEmpty(ListItem.Artist)">Conditional</animation>
 				<control type="label">
 					<left>12</left>
 					<top>266</top>
@@ -3435,7 +3435,7 @@
 				<align>center</align>
 				<aspectratio>scale</aspectratio>
 				<texture colordiffuse="AA000000">common/white.png</texture>
-				<visible>!IsEmpty(ListItem.ChannelName)</visible>
+				<visible>!String.IsEmpty(ListItem.ChannelName)</visible>
 			</control>
 			<control type="image">
 				<left>3</left>
@@ -3445,7 +3445,7 @@
 				<align>center</align>
 				<aspectratio>keep</aspectratio>
 				<texture background="true" colordiffuse="FFFFFFFF" fallback="tv.png">$INFO[ListItem.ActualIcon]</texture>
-				<visible>!IsEmpty(ListItem.ChannelName)</visible>
+				<visible>!String.IsEmpty(ListItem.ChannelName)</visible>
 			</control>
 			<control type="group">
 				<right>3</right>
@@ -3457,7 +3457,7 @@
 					<top>0</top>
 					<aspectratio>scale</aspectratio>
 					<texture colordiffuse="$VAR[CategoryColor]">common/corner.png</texture>
-					<visible>StringCompare(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable | ListItem.IsRecording | ListItem.HasTimer</visible>
+					<visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable | ListItem.IsRecording | ListItem.HasTimer</visible>
 				</control>
 				<control type="image">
 					<right>6</right>
@@ -3466,7 +3466,7 @@
 					<height>25</height>
 					<aspectratio>scale</aspectratio>
 					<texture colordiffuse="$INFO[Skin.String(Color.B1Txt1F)]">material/check.png</texture>
-					<visible>StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
+					<visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
 				</control>
 				<control type="image">
 					<right>6</right>
@@ -3540,7 +3540,7 @@
 				<height>20</height>
 				<aspectratio align="left">keep</aspectratio>
 				<texture colordiffuse="$VAR[CategoryColor]" fallback="rating0.png">$INFO[ListItem.StarRating,]</texture>
-				<visible>IsEmpty(ListItem.ChannelName)</visible>
+				<visible>String.IsEmpty(ListItem.ChannelName)</visible>
 			</control>
 			<control type="label">
 				<left>275</left>
@@ -3550,7 +3550,7 @@
 				<font>FontSmallR</font>
 				<label>$VAR[B1SubTitle]</label>
 				<textcolor>$INFO[Skin.String(Color.B1Txt1NF)]</textcolor>
-				<visible>!IsEmpty(ListItem.ChannelName)</visible>
+				<visible>!String.IsEmpty(ListItem.ChannelName)</visible>
 			</control>
 		</itemlayout>
 
@@ -3589,7 +3589,7 @@
 					<align>center</align>
 					<aspectratio>scale</aspectratio>
 					<texture colordiffuse="AA000000">common/white.png</texture>
-					<visible>!IsEmpty(ListItem.ChannelName)</visible>
+					<visible>!String.IsEmpty(ListItem.ChannelName)</visible>
 				</control>
 				<control type="image">
 					<left>3</left>
@@ -3599,7 +3599,7 @@
 					<align>center</align>
 					<aspectratio>keep</aspectratio>
 					<texture background="true" colordiffuse="FFFFFFFF" fallback="tv.png">$INFO[ListItem.ActualIcon]</texture>
-					<visible>!IsEmpty(ListItem.ChannelName)</visible>
+					<visible>!String.IsEmpty(ListItem.ChannelName)</visible>
 				</control>
 				<control type="group">
 					<right>3</right>
@@ -3611,7 +3611,7 @@
 						<top>0</top>
 						<aspectratio>scale</aspectratio>
 						<texture colordiffuse="$VAR[CategoryColor]">common/corner.png</texture>
-						<visible>StringCompare(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable | ListItem.IsRecording | ListItem.HasTimer</visible>
+						<visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable | ListItem.IsRecording | ListItem.HasTimer</visible>
 					</control>
 					<control type="image">
 						<right>6</right>
@@ -3620,7 +3620,7 @@
 						<height>25</height>
 						<aspectratio>scale</aspectratio>
 						<texture colordiffuse="$INFO[Skin.String(Color.B1Txt1F)]">material/check.png</texture>
-						<visible>StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
+						<visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
 					</control>
 					<control type="image">
 						<right>6</right>
@@ -3693,7 +3693,7 @@
 					<height>20</height>
 					<aspectratio align="left">keep</aspectratio>
 					<texture colordiffuse="$VAR[CategoryColor]" fallback="rating0.png">$INFO[ListItem.StarRating,]</texture>
-					<visible>IsEmpty(ListItem.ChannelName)</visible>
+					<visible>String.IsEmpty(ListItem.ChannelName)</visible>
 				</control>
 				<control type="label">
 					<left>275</left>
@@ -3703,7 +3703,7 @@
 					<font>FontSmallR</font>
 					<label>$VAR[B1SubTitle]</label>
 					<textcolor>$INFO[Skin.String(Color.B1Txt1F)]</textcolor>
-					<visible>!IsEmpty(ListItem.ChannelName)</visible>
+					<visible>!String.IsEmpty(ListItem.ChannelName)</visible>
 				</control>
 			</control>
 		</focusedlayout>
@@ -3730,7 +3730,7 @@
 					<align>center</align>
 					<aspectratio>keep</aspectratio>
 					<texture background="true" colordiffuse="FFFFFFFF" fallback="material/tv.png">$VAR[ThumbTV]</texture>
-					<visible>!IsEmpty(ListItem.Property(ChannelName)) | !IsEmpty(ListItem.ChannelName)</visible>
+					<visible>!String.IsEmpty(ListItem.Property(ChannelName)) | !String.IsEmpty(ListItem.ChannelName)</visible>
 				</control>
 				<control type="image">
 					<left>20</left>
@@ -3740,7 +3740,7 @@
 					<align>center</align>
 					<aspectratio>keep</aspectratio>
 					<texture background="true" colordiffuse="$INFO[Skin.String(Color.B1Txt1NF)]">$VAR[ThumbIcon]</texture>
-					<visible>[IsEmpty(ListItem.Property(ChannelName)) + IsEmpty(ListItem.ChannelName)] + [ListItem.IsFolder | IsEmpty(ListItem.Art(thumb)) | !IsEmpty(ListItem.Property(labelID))]</visible>
+					<visible>[String.IsEmpty(ListItem.Property(ChannelName)) + String.IsEmpty(ListItem.ChannelName)] + [ListItem.IsFolder | String.IsEmpty(ListItem.Art(thumb)) | !String.IsEmpty(ListItem.Property(labelID))]</visible>
 				</control>
 				<control type="image">
 					<left>0</left>
@@ -3750,7 +3750,7 @@
 					<align>center</align>
 					<aspectratio>keep</aspectratio>
 					<texture background="true" colordiffuse="FFFFFFFF">$VAR[ThumbPortrait]</texture>
-					<visible>IsEmpty(ListItem.Property(ChannelName)) + IsEmpty(ListItem.ChannelName) + IsEmpty(ListItem.Property(labelID))</visible>
+					<visible>String.IsEmpty(ListItem.Property(ChannelName)) + String.IsEmpty(ListItem.ChannelName) + String.IsEmpty(ListItem.Property(labelID))</visible>
 				</control>
 				<control type="label">
 					<left>142</left>
@@ -3796,7 +3796,7 @@
 				<textcolor>FFFFFFFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<label>[UPPERCASE]$VAR[B1Title][/UPPERCASE]</label>
-				<visible>Skin.String($PARAM[CompPrefix].B1Typ,BANNER) + IsEmpty(ListItem.Art(banner)) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
+				<visible>Skin.String($PARAM[CompPrefix].B1Typ,BANNER) + String.IsEmpty(ListItem.Art(banner)) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
 			</control>
 			<include>ItemOverlay</include>
 		</itemlayout>
@@ -3837,7 +3837,7 @@
 					<align>center</align>
 					<aspectratio>keep</aspectratio>
 					<texture background="true" colordiffuse="FFFFFFFF" fallback="material/tv.png">$VAR[ThumbTV]</texture>
-					<visible>!IsEmpty(ListItem.Property(ChannelName)) | !IsEmpty(ListItem.ChannelName)</visible>
+					<visible>!String.IsEmpty(ListItem.Property(ChannelName)) | !String.IsEmpty(ListItem.ChannelName)</visible>
 				</control>
 				<control type="image">
 					<left>20</left>
@@ -3847,7 +3847,7 @@
 					<align>center</align>
 					<aspectratio>keep</aspectratio>
 					<texture background="true" colordiffuse="$INFO[Skin.String(Color.B1Txt1F)]">$VAR[ThumbIcon]</texture>
-					<visible>[IsEmpty(ListItem.Property(ChannelName)) + IsEmpty(ListItem.ChannelName)] + [ListItem.IsFolder | IsEmpty(ListItem.Art(thumb)) | !IsEmpty(ListItem.Property(labelID))]</visible>
+					<visible>[String.IsEmpty(ListItem.Property(ChannelName)) + String.IsEmpty(ListItem.ChannelName)] + [ListItem.IsFolder | String.IsEmpty(ListItem.Art(thumb)) | !String.IsEmpty(ListItem.Property(labelID))]</visible>
 				</control>
 				<control type="image">
 					<left>0</left>
@@ -3857,7 +3857,7 @@
 					<align>center</align>
 					<aspectratio>keep</aspectratio>
 					<texture background="true" colordiffuse="FFFFFFFF">$VAR[ThumbPortrait]</texture>
-					<visible>IsEmpty(ListItem.Property(ChannelName)) + IsEmpty(ListItem.ChannelName) + IsEmpty(ListItem.Property(labelID))</visible>
+					<visible>String.IsEmpty(ListItem.Property(ChannelName)) + String.IsEmpty(ListItem.ChannelName) + String.IsEmpty(ListItem.Property(labelID))</visible>
 				</control>
 				<control type="label">
 					<left>142</left>
@@ -3903,7 +3903,7 @@
 				<textcolor>FFFFFFFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<label>[UPPERCASE]$VAR[B1Title][/UPPERCASE]</label>
-				<visible>Skin.String($PARAM[CompPrefix].B1Typ,BANNER) + IsEmpty(ListItem.Art(banner)) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
+				<visible>Skin.String($PARAM[CompPrefix].B1Typ,BANNER) + String.IsEmpty(ListItem.Art(banner)) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
 			</control>
 			<include>ItemOverlay</include>
 		</focusedlayout>
@@ -3913,7 +3913,7 @@
 	<include name="ListSquare">
 		<itemlayout width="318" height="356">
 			<control type="group">
-				<visible>!Container.Content(episodes) + !Container.Content(albums) + !Container.Content(artists) + !Container.Content(songs) + !Container.Content(addons) + ![Container.Content(movies) + StringCompare(Window(Home).Property(MenuSection),programs)] + IsEmpty(ListItem.Property(ChannelName)) + IsEmpty(ListItem.ChannelName) + IsEmpty(ListItem.Artist) + [IsEmpty(ListItem.Episode) | [!IsEmpty(ListItem.Episode) + ListItem.IsFolder]] | Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)</visible>
+				<visible>!Container.Content(episodes) + !Container.Content(albums) + !Container.Content(artists) + !Container.Content(songs) + !Container.Content(addons) + ![Container.Content(movies) + String.IsEqual(Window(Home).Property(MenuSection),programs)] + String.IsEmpty(ListItem.Property(ChannelName)) + String.IsEmpty(ListItem.ChannelName) + String.IsEmpty(ListItem.Artist) + [String.IsEmpty(ListItem.Episode) | [!String.IsEmpty(ListItem.Episode) + ListItem.IsFolder]] | Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)</visible>
 				<control type="image">
 					<left>0</left>
 					<top>0</top>
@@ -3930,7 +3930,7 @@
 					<align>center</align>
 					<aspectratio>keep</aspectratio>
 					<texture background="true" colordiffuse="$INFO[Skin.String(Color.B1Txt1NF)]">$VAR[ThumbIcon]</texture>
-					<visible>ListItem.IsFolder | IsEmpty(ListItem.Art(thumb)) | !IsEmpty(ListItem.Property(labelID))</visible>
+					<visible>ListItem.IsFolder | String.IsEmpty(ListItem.Art(thumb)) | !String.IsEmpty(ListItem.Property(labelID))</visible>
 				</control>
 				<control type="label">
 					<left>24</left>
@@ -3973,7 +3973,7 @@
 						<textcolor>$INFO[Skin.String(Color.B1Txt1F)]</textcolor>
 						<label>$VAR[B1Title]</label>
 					</control>
-					<visible>Container.Content(seasons) + !StringCompare(ListItem.Label,..)</visible>
+					<visible>Container.Content(seasons) + !String.IsEqual(ListItem.Label,..)</visible>
 				</control>
 				<control type="image">
 					<left>24</left>
@@ -3990,7 +3990,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<visible>[Container.Content(episodes) | [Container.Content(movies) + StringCompare(Window(Home).Property(MenuSection),programs)] | !IsEmpty(ListItem.Property(ChannelName)) | !IsEmpty(ListItem.ChannelName) | [!IsEmpty(ListItem.Episode) + !ListItem.IsFolder]] + !Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)</visible>
+				<visible>[Container.Content(episodes) | [Container.Content(movies) + String.IsEqual(Window(Home).Property(MenuSection),programs)] | !String.IsEmpty(ListItem.Property(ChannelName)) | !String.IsEmpty(ListItem.ChannelName) | [!String.IsEmpty(ListItem.Episode) + !ListItem.IsFolder]] + !Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)</visible>
 				<control type="image">
 					<left>0</left>
 					<top>0</top>
@@ -4007,7 +4007,7 @@
 					<align>center</align>
 					<aspectratio>keep</aspectratio>
 					<texture background="true" colordiffuse="$INFO[Skin.String(Color.B1Txt1NF)]">$VAR[ThumbIcon]</texture>
-					<visible>[IsEmpty(ListItem.Property(ChannelName)) + IsEmpty(ListItem.ChannelName)] + [ListItem.IsFolder | IsEmpty(ListItem.Art(thumb)) | !IsEmpty(ListItem.Property(labelID))]</visible>
+					<visible>[String.IsEmpty(ListItem.Property(ChannelName)) + String.IsEmpty(ListItem.ChannelName)] + [ListItem.IsFolder | String.IsEmpty(ListItem.Art(thumb)) | !String.IsEmpty(ListItem.Property(labelID))]</visible>
 				</control>
 				<control type="label">
 					<left>24</left>
@@ -4019,7 +4019,7 @@
 					<font>Font27</font>
 					<textcolor>$INFO[Skin.String(Color.B1Txt1NF)]</textcolor>
 					<label>$VAR[B1Title]</label>
-					<visible>IsEmpty(ListItem.Property(ChannelName)) + IsEmpty(ListItem.ChannelName)</visible>
+					<visible>String.IsEmpty(ListItem.Property(ChannelName)) + String.IsEmpty(ListItem.ChannelName)</visible>
 				</control>
 				<control type="image">
 					<left>0</left>
@@ -4029,7 +4029,7 @@
 					<align>center</align>
 					<aspectratio>scale</aspectratio>
 					<texture background="true" colordiffuse="FFFFFFFF">$VAR[ThumbLandscape]</texture>
-					<visible>IsEmpty(ListItem.Property(labelID)) + IsEmpty(ListItem.Property(ChannelName)) + IsEmpty(ListItem.ChannelName)</visible>
+					<visible>String.IsEmpty(ListItem.Property(labelID)) + String.IsEmpty(ListItem.Property(ChannelName)) + String.IsEmpty(ListItem.ChannelName)</visible>
 				</control>
 				<control type="image">
 					<left>99</left>
@@ -4039,7 +4039,7 @@
 					<align>center</align>
 					<aspectratio>keep</aspectratio>
 					<texture background="true" colordiffuse="FFFFFFFF" fallback="material/tv.png">$VAR[ThumbTV]</texture>
-					<visible>!IsEmpty(ListItem.Property(ChannelName)) | !IsEmpty(ListItem.ChannelName)</visible>
+					<visible>!String.IsEmpty(ListItem.Property(ChannelName)) | !String.IsEmpty(ListItem.ChannelName)</visible>
 				</control>
 				<control type="group">
 					<left>0</left>
@@ -4073,7 +4073,7 @@
 						<textcolor>$INFO[Skin.String(Color.B1Txt2NF)]</textcolor>
 						<label>$VAR[B1SubTitle]</label>
 					</control>
-					<visible>!StringCompare(ListItem.Label,..)</visible>
+					<visible>!String.IsEqual(ListItem.Label,..)</visible>
 				</control>
 				<control type="group">
 					<top>12</top>
@@ -4081,7 +4081,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<visible>[Container.Content(albums) | Container.Content(artists) | Container.Content(songs) | Container.Content(addons) | !IsEmpty(ListItem.Artist)] + !Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)</visible>
+				<visible>[Container.Content(albums) | Container.Content(artists) | Container.Content(songs) | Container.Content(addons) | !String.IsEmpty(ListItem.Artist)] + !Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)</visible>
 				<control type="image">
 					<left>0</left>
 					<top>0</top>
@@ -4098,7 +4098,7 @@
 					<align>center</align>
 					<aspectratio>keep</aspectratio>
 					<texture background="true" colordiffuse="$INFO[Skin.String(Color.B1Txt1NF)]">$VAR[ThumbIcon]</texture>
-					<visible>ListItem.IsFolder | IsEmpty(ListItem.Art(thumb)) | !IsEmpty(ListItem.Property(labelID))</visible>
+					<visible>ListItem.IsFolder | String.IsEmpty(ListItem.Art(thumb)) | !String.IsEmpty(ListItem.Property(labelID))</visible>
 				</control>
 				<control type="label">
 					<left>24</left>
@@ -4141,14 +4141,14 @@
 						<textcolor>$INFO[Skin.String(Color.B1Txt1F)]</textcolor>
 						<label>$VAR[B1Title]</label>
 					</control>
-					<visible>!StringCompare(ListItem.Label,..) + Container.Content(songs)</visible>
+					<visible>!String.IsEqual(ListItem.Label,..) + Container.Content(songs)</visible>
 				</control>
 			</control>
 		</itemlayout>
 
 		<focusedlayout width="318" height="356">
 			<control type="group">
-				<visible>!Container.Content(episodes) + !Container.Content(albums) + !Container.Content(artists) + !Container.Content(songs) + !Container.Content(addons) + ![Container.Content(movies) + StringCompare(Window(Home).Property(MenuSection),programs)] + IsEmpty(ListItem.Property(ChannelName)) + IsEmpty(ListItem.ChannelName) + IsEmpty(ListItem.Artist) + [IsEmpty(ListItem.Episode) | [!IsEmpty(ListItem.Episode) + ListItem.IsFolder]] | Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)</visible>
+				<visible>!Container.Content(episodes) + !Container.Content(albums) + !Container.Content(artists) + !Container.Content(songs) + !Container.Content(addons) + ![Container.Content(movies) + String.IsEqual(Window(Home).Property(MenuSection),programs)] + String.IsEmpty(ListItem.Property(ChannelName)) + String.IsEmpty(ListItem.ChannelName) + String.IsEmpty(ListItem.Artist) + [String.IsEmpty(ListItem.Episode) | [!String.IsEmpty(ListItem.Episode) + ListItem.IsFolder]] | Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)</visible>
 				<control type="image">
 					<left>0</left>
 					<top>0</top>
@@ -4173,7 +4173,7 @@
 					<align>center</align>
 					<aspectratio>keep</aspectratio>
 					<texture background="true" colordiffuse="FFFFFFFF">$VAR[ThumbIcon]</texture>
-					<visible>!IsEmpty(ListItem.Property(ChannelName)) | !IsEmpty(ListItem.ChannelName)</visible>
+					<visible>!String.IsEmpty(ListItem.Property(ChannelName)) | !String.IsEmpty(ListItem.ChannelName)</visible>
 				</control>
 				<control type="image">
 					<left>99</left>
@@ -4183,7 +4183,7 @@
 					<align>center</align>
 					<aspectratio>keep</aspectratio>
 					<texture background="true" colordiffuse="$INFO[Skin.String(Color.B1Txt1F)]">$VAR[ThumbIcon]</texture>
-					<visible>[IsEmpty(ListItem.Property(ChannelName)) + IsEmpty(ListItem.ChannelName)] + [ListItem.IsFolder | IsEmpty(ListItem.Art(thumb)) | !IsEmpty(ListItem.Property(labelID))]</visible>
+					<visible>[String.IsEmpty(ListItem.Property(ChannelName)) + String.IsEmpty(ListItem.ChannelName)] + [ListItem.IsFolder | String.IsEmpty(ListItem.Art(thumb)) | !String.IsEmpty(ListItem.Property(labelID))]</visible>
 				</control>
 				<control type="label">
 					<left>24</left>
@@ -4226,7 +4226,7 @@
 						<textcolor>$INFO[Skin.String(Color.B1Txt1F)]</textcolor>
 						<label>$VAR[B1Title]</label>
 					</control>
-					<visible>Container.Content(seasons) + !StringCompare(ListItem.Label,..)</visible>
+					<visible>Container.Content(seasons) + !String.IsEqual(ListItem.Label,..)</visible>
 				</control>
 				<control type="image">
 					<left>24</left>
@@ -4243,7 +4243,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<visible>[Container.Content(episodes) | [Container.Content(movies) + StringCompare(Window(Home).Property(MenuSection),programs)] | !IsEmpty(ListItem.Property(ChannelName)) | !IsEmpty(ListItem.ChannelName) | [!IsEmpty(ListItem.Episode) + !ListItem.IsFolder]] + !Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)</visible>
+				<visible>[Container.Content(episodes) | [Container.Content(movies) + String.IsEqual(Window(Home).Property(MenuSection),programs)] | !String.IsEmpty(ListItem.Property(ChannelName)) | !String.IsEmpty(ListItem.ChannelName) | [!String.IsEmpty(ListItem.Episode) + !ListItem.IsFolder]] + !Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)</visible>
 				<control type="image">
 					<left>0</left>
 					<top>0</top>
@@ -4268,7 +4268,7 @@
 					<align>center</align>
 					<aspectratio>keep</aspectratio>
 					<texture background="true" colordiffuse="$INFO[Skin.String(Color.B1Txt1F)]">$VAR[ThumbIcon]</texture>
-					<visible>[IsEmpty(ListItem.Property(ChannelName)) + IsEmpty(ListItem.ChannelName)] + [ListItem.IsFolder | IsEmpty(ListItem.Art(thumb)) | !IsEmpty(ListItem.Property(labelID))]</visible>
+					<visible>[String.IsEmpty(ListItem.Property(ChannelName)) + String.IsEmpty(ListItem.ChannelName)] + [ListItem.IsFolder | String.IsEmpty(ListItem.Art(thumb)) | !String.IsEmpty(ListItem.Property(labelID))]</visible>
 				</control>
 				<control type="label">
 					<left>24</left>
@@ -4280,7 +4280,7 @@
 					<font>Font27</font>
 					<textcolor>$INFO[Skin.String(Color.B1Txt1F)]</textcolor>
 					<label>$VAR[B1Title]</label>
-					<visible>IsEmpty(ListItem.Property(ChannelName)) + IsEmpty(ListItem.ChannelName)</visible>
+					<visible>String.IsEmpty(ListItem.Property(ChannelName)) + String.IsEmpty(ListItem.ChannelName)</visible>
 				</control>
 				<control type="image">
 					<left>0</left>
@@ -4290,7 +4290,7 @@
 					<align>center</align>
 					<aspectratio>scale</aspectratio>
 					<texture background="true" colordiffuse="FFFFFFFF">$VAR[ThumbLandscape]</texture>
-					<visible>IsEmpty(ListItem.Property(labelID)) + IsEmpty(ListItem.Property(ChannelName)) + IsEmpty(ListItem.ChannelName)</visible>
+					<visible>String.IsEmpty(ListItem.Property(labelID)) + String.IsEmpty(ListItem.Property(ChannelName)) + String.IsEmpty(ListItem.ChannelName)</visible>
 				</control>
 				<control type="image">
 					<left>99</left>
@@ -4300,7 +4300,7 @@
 					<align>center</align>
 					<aspectratio>keep</aspectratio>
 					<texture background="true" colordiffuse="FFFFFFFF" fallback="material/tv.png">$VAR[ThumbTV]</texture>
-					<visible>!IsEmpty(ListItem.Property(ChannelName)) | !IsEmpty(ListItem.ChannelName)</visible>
+					<visible>!String.IsEmpty(ListItem.Property(ChannelName)) | !String.IsEmpty(ListItem.ChannelName)</visible>
 				</control>
 				<control type="group">
 					<left>0</left>
@@ -4334,7 +4334,7 @@
 						<textcolor>$INFO[Skin.String(Color.B1Txt2NF)]</textcolor>
 						<label>$VAR[B1SubTitle]</label>
 					</control>
-					<visible>!StringCompare(ListItem.Label,..)</visible>
+					<visible>!String.IsEqual(ListItem.Label,..)</visible>
 				</control>
 				<control type="group">
 					<top>12</top>
@@ -4342,7 +4342,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<visible>[Container.Content(albums) | Container.Content(artists) | Container.Content(songs) | Container.Content(addons) | !IsEmpty(ListItem.Artist)] + !Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)</visible>
+				<visible>[Container.Content(albums) | Container.Content(artists) | Container.Content(songs) | Container.Content(addons) | !String.IsEmpty(ListItem.Artist)] + !Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)</visible>
 				<control type="image">
 					<left>0</left>
 					<top>0</top>
@@ -4367,7 +4367,7 @@
 					<align>center</align>
 					<aspectratio>keep</aspectratio>
 					<texture background="true" colordiffuse="$INFO[Skin.String(Color.B1Txt1F)]">$VAR[ThumbIcon]</texture>
-					<visible>ListItem.IsFolder | IsEmpty(ListItem.Art(thumb))</visible>
+					<visible>ListItem.IsFolder | String.IsEmpty(ListItem.Art(thumb))</visible>
 				</control>
 				<control type="label">
 					<left>24</left>
@@ -4410,7 +4410,7 @@
 						<textcolor>$INFO[Skin.String(Color.B1Txt1F)]</textcolor>
 						<label>$VAR[B1Title]</label>
 					</control>
-					<visible>!StringCompare(ListItem.Label,..) + Container.Content(songs)</visible>
+					<visible>!String.IsEqual(ListItem.Label,..) + Container.Content(songs)</visible>
 				</control>
 			</control>
 		</focusedlayout>
@@ -4824,7 +4824,7 @@
 				<top>0</top>
 				<aspectratio>scale</aspectratio>
 				<texture colordiffuse="$VAR[CategoryColor]">common/corner.png</texture>
-				<visible>StringCompare(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable | ListItem.IsRecording | ListItem.HasTimer</visible>
+				<visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable | ListItem.IsRecording | ListItem.HasTimer</visible>
 			</control>
 			<control type="image">
 				<right>5</right>
@@ -4833,7 +4833,7 @@
 				<height>25</height>
 				<aspectratio>scale</aspectratio>
 				<texture colordiffuse="$INFO[Skin.String(Color.B1Txt1F)]">material/check.png</texture>
-				<visible>StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
+				<visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
 			</control>
 			<control type="image">
 				<right>6</right>

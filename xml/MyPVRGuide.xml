@@ -5,15 +5,15 @@
 	<defaultcontrol>10</defaultcontrol>
 	<menucontrol>99</menucontrol>
 	<views>10</views>
-	<onload condition="!IsEmpty(Window(Home).Property(ListPos)) + StringCompare(Skin.String(TV.View1.Name),Container.ViewMode)">Control.SetFocus(50,$INFO[Window(Home).Property(ListPos)])</onload>
-	<onload condition="!IsEmpty(Window(Home).Property(ListPos)) + StringCompare(Skin.String(TV.View2.Name),Container.ViewMode)">Control.SetFocus(51,$INFO[Window(Home).Property(ListPos)])</onload>
-	<onload condition="!IsEmpty(Window(Home).Property(ListPos)) + StringCompare(Skin.String(TV.View3.Name),Container.ViewMode)">Control.SetFocus(52,$INFO[Window(Home).Property(ListPos)])</onload>
-	<onload condition="!IsEmpty(Window(Home).Property(ListPos)) + StringCompare(Skin.String(TV.View4.Name),Container.ViewMode)">Control.SetFocus(53,$INFO[Window(Home).Property(ListPos)])</onload>
-	<onload condition="!IsEmpty(Window(Home).Property(ListPos)) + StringCompare(Skin.String(TV.View5.Name),Container.ViewMode)">Control.SetFocus(54,$INFO[Window(Home).Property(ListPos)])</onload>
-	<onload condition="!IsEmpty(Window(Home).Property(ListPos)) + StringCompare(Skin.String(TV.View6.Name),Container.ViewMode)">Control.SetFocus(55,$INFO[Window(Home).Property(ListPos)])</onload>
-	<onload condition="!IsEmpty(Window(Home).Property(ListPos)) + StringCompare(Skin.String(TV.View7.Name),Container.ViewMode)">Control.SetFocus(56,$INFO[Window(Home).Property(ListPos)])</onload>
-	<onload condition="!IsEmpty(Window(Home).Property(ListPos)) + StringCompare(Skin.String(TV.View8.Name),Container.ViewMode)">Control.SetFocus(57,$INFO[Window(Home).Property(ListPos)])</onload>
-	<onload condition="!IsEmpty(Window(Home).Property(ListPos)) + StringCompare(Skin.String(TV.View9.Name),Container.ViewMode)">Control.SetFocus(58,$INFO[Window(Home).Property(ListPos)])</onload>
+	<onload condition="!String.IsEmpty(Window(Home).Property(ListPos)) + String.IsEqual(Skin.String(TV.View1.Name),Container.ViewMode)">Control.SetFocus(50,$INFO[Window(Home).Property(ListPos)])</onload>
+	<onload condition="!String.IsEmpty(Window(Home).Property(ListPos)) + String.IsEqual(Skin.String(TV.View2.Name),Container.ViewMode)">Control.SetFocus(51,$INFO[Window(Home).Property(ListPos)])</onload>
+	<onload condition="!String.IsEmpty(Window(Home).Property(ListPos)) + String.IsEqual(Skin.String(TV.View3.Name),Container.ViewMode)">Control.SetFocus(52,$INFO[Window(Home).Property(ListPos)])</onload>
+	<onload condition="!String.IsEmpty(Window(Home).Property(ListPos)) + String.IsEqual(Skin.String(TV.View4.Name),Container.ViewMode)">Control.SetFocus(53,$INFO[Window(Home).Property(ListPos)])</onload>
+	<onload condition="!String.IsEmpty(Window(Home).Property(ListPos)) + String.IsEqual(Skin.String(TV.View5.Name),Container.ViewMode)">Control.SetFocus(54,$INFO[Window(Home).Property(ListPos)])</onload>
+	<onload condition="!String.IsEmpty(Window(Home).Property(ListPos)) + String.IsEqual(Skin.String(TV.View6.Name),Container.ViewMode)">Control.SetFocus(55,$INFO[Window(Home).Property(ListPos)])</onload>
+	<onload condition="!String.IsEmpty(Window(Home).Property(ListPos)) + String.IsEqual(Skin.String(TV.View7.Name),Container.ViewMode)">Control.SetFocus(56,$INFO[Window(Home).Property(ListPos)])</onload>
+	<onload condition="!String.IsEmpty(Window(Home).Property(ListPos)) + String.IsEqual(Skin.String(TV.View8.Name),Container.ViewMode)">Control.SetFocus(57,$INFO[Window(Home).Property(ListPos)])</onload>
+	<onload condition="!String.IsEmpty(Window(Home).Property(ListPos)) + String.IsEqual(Skin.String(TV.View9.Name),Container.ViewMode)">Control.SetFocus(58,$INFO[Window(Home).Property(ListPos)])</onload>
 	<onunload>SetProperty(ListPos,$INFO[Container.Position],Home)</onunload>
 
 	<controls>
@@ -391,21 +391,21 @@
 		
 		<!-- Sidebar Position-->	
 		<control type="group">	
-			<animation effect="slide" start="0,0" end="660,0" time="100" condition="Skin.String(TV.View1.DIAPanel,LEFT) + [Skin.String(TV.View1.BBSidebar,TOP) | Skin.String(TV.View1.BBSidebar,BOTTOM)] + !IsEmpty(Window(Home).Property(DialogVisibility)) + Skin.String(TV.View1.DIASlide,PUSH)">Conditional</animation>
-			<animation effect="slide" start="0,0" end="-660,0" time="100" condition="Skin.String(TV.View1.DIAPanel,RIGHT) + [Skin.String(TV.View1.BBSidebar,TOP) | Skin.String(TV.View1.BBSidebar,BOTTOM)] + !IsEmpty(Window(Home).Property(DialogVisibility)) + Skin.String(TV.View1.DIASlide,PUSH)">Conditional</animation>
-			<animation effect="slide" start="0,0" end="0,380" time="100" condition="Skin.String(TV.View1.DIAPanel,TOP) + [Skin.String(TV.View1.BBSidebar,RIGHT) | Skin.String(TV.View1.BBSidebar,LEFT)] + !IsEmpty(Window(Home).Property(DialogVisibility)) + Skin.String(TV.View1.DIASlide,PUSH)">Conditional</animation>			
-			<animation effect="slide" start="0,0" end="0,-380" time="100" condition="Skin.String(TV.View1.DIAPanel,BOTTOM) + [Skin.String(TV.View1.BBSidebar,RIGHT) | Skin.String(TV.View1.BBSidebar,LEFT)] + !IsEmpty(Window(Home).Property(DialogVisibility)) + Skin.String(TV.View1.DIASlide,PUSH)">Conditional</animation>		
-			<animation effect="slide" start="0,0" end="0,-120" time="100" condition="[Skin.String(TV.View1.DIAPanel,LEFT) | Skin.String(TV.View1.DIAPanel,RIGHT)] + Skin.String(TV.View1.BBSidebar,TOP) + !IsEmpty(Window(Home).Property(DialogVisibility)) + !Skin.String(TV.View1.DIASlide,PUSH)">Conditional</animation>
-			<animation effect="slide" start="0,0" end="0,120" time="100" condition="[Skin.String(TV.View1.DIAPanel,LEFT) | Skin.String(TV.View1.DIAPanel,RIGHT)] + Skin.String(TV.View1.BBSidebar,BOTTOM) + !IsEmpty(Window(Home).Property(DialogVisibility)) + !Skin.String(TV.View1.DIASlide,PUSH)">Conditional</animation>
-			<animation effect="slide" start="0,0" end="-120,0" time="100" condition="[Skin.String(TV.View1.DIAPanel,TOP) | Skin.String(TV.View1.DIAPanel,BOTTOM)] + Skin.String(TV.View1.BBSidebar,LEFT) + !IsEmpty(Window(Home).Property(DialogVisibility)) + !Skin.String(TV.View1.DIASlide,PUSH)">Conditional</animation>
-			<animation effect="slide" start="0,0" end="120,0" time="100" condition="[Skin.String(TV.View1.DIAPanel,TOP) | Skin.String(TV.View1.DIAPanel,BOTTOM)] + Skin.String(TV.View1.BBSidebar,RIGHT) + !IsEmpty(Window(Home).Property(DialogVisibility)) + !Skin.String(TV.View1.DIASlide,PUSH)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="660,0" time="100" condition="Skin.String(TV.View1.DIAPanel,LEFT) + [Skin.String(TV.View1.BBSidebar,TOP) | Skin.String(TV.View1.BBSidebar,BOTTOM)] + !String.IsEmpty(Window(Home).Property(DialogVisibility)) + Skin.String(TV.View1.DIASlide,PUSH)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="-660,0" time="100" condition="Skin.String(TV.View1.DIAPanel,RIGHT) + [Skin.String(TV.View1.BBSidebar,TOP) | Skin.String(TV.View1.BBSidebar,BOTTOM)] + !String.IsEmpty(Window(Home).Property(DialogVisibility)) + Skin.String(TV.View1.DIASlide,PUSH)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,380" time="100" condition="Skin.String(TV.View1.DIAPanel,TOP) + [Skin.String(TV.View1.BBSidebar,RIGHT) | Skin.String(TV.View1.BBSidebar,LEFT)] + !String.IsEmpty(Window(Home).Property(DialogVisibility)) + Skin.String(TV.View1.DIASlide,PUSH)">Conditional</animation>			
+			<animation effect="slide" start="0,0" end="0,-380" time="100" condition="Skin.String(TV.View1.DIAPanel,BOTTOM) + [Skin.String(TV.View1.BBSidebar,RIGHT) | Skin.String(TV.View1.BBSidebar,LEFT)] + !String.IsEmpty(Window(Home).Property(DialogVisibility)) + Skin.String(TV.View1.DIASlide,PUSH)">Conditional</animation>		
+			<animation effect="slide" start="0,0" end="0,-120" time="100" condition="[Skin.String(TV.View1.DIAPanel,LEFT) | Skin.String(TV.View1.DIAPanel,RIGHT)] + Skin.String(TV.View1.BBSidebar,TOP) + !String.IsEmpty(Window(Home).Property(DialogVisibility)) + !Skin.String(TV.View1.DIASlide,PUSH)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,120" time="100" condition="[Skin.String(TV.View1.DIAPanel,LEFT) | Skin.String(TV.View1.DIAPanel,RIGHT)] + Skin.String(TV.View1.BBSidebar,BOTTOM) + !String.IsEmpty(Window(Home).Property(DialogVisibility)) + !Skin.String(TV.View1.DIASlide,PUSH)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="-120,0" time="100" condition="[Skin.String(TV.View1.DIAPanel,TOP) | Skin.String(TV.View1.DIAPanel,BOTTOM)] + Skin.String(TV.View1.BBSidebar,LEFT) + !String.IsEmpty(Window(Home).Property(DialogVisibility)) + !Skin.String(TV.View1.DIASlide,PUSH)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="120,0" time="100" condition="[Skin.String(TV.View1.DIAPanel,TOP) | Skin.String(TV.View1.DIAPanel,BOTTOM)] + Skin.String(TV.View1.BBSidebar,RIGHT) + !String.IsEmpty(Window(Home).Property(DialogVisibility)) + !Skin.String(TV.View1.DIASlide,PUSH)">Conditional</animation>
 			<animation effect="fade" start="100" end="0" time="400" reversible="false" condition="System.IdleTime(5) + Skin.String(IdleFade,5) + Skin.String(TV.View1.BBSBHide,IDLEFADE)">Conditonal</animation>
 			<animation effect="fade" start="100" end="0" time="400" reversible="false" condition="System.IdleTime(10) + Skin.String(IdleFade,10) + Skin.String(TV.View1.BBSBHide,IDLEFADE)">Conditonal</animation>
 			<animation effect="fade" start="100" end="0" time="400" reversible="false" condition="System.IdleTime(15) + Skin.String(IdleFade,15) + Skin.String(TV.View1.BBSBHide,IDLEFADE)">Conditonal</animation>
 			<animation effect="fade" start="100" end="0" time="400" reversible="false" condition="System.IdleTime(20) + Skin.String(IdleFade,20) + Skin.String(TV.View1.BBSBHide,IDLEFADE)">Conditonal</animation>
 			<animation effect="fade" start="100" end="0" time="400" reversible="false" condition="System.IdleTime(25) + Skin.String(IdleFade,25) + Skin.String(TV.View1.BBSBHide,IDLEFADE)">Conditonal</animation>
 			<animation effect="fade" start="100" end="0" time="400" reversible="false" condition="System.IdleTime(30) + Skin.String(IdleFade,30) + Skin.String(TV.View1.BBSBHide,IDLEFADE)">Conditonal</animation>												
-			<visible>!Skin.String(TV.View1.BBSBHide,HIDDEN) | !IsEmpty(Window(Home).Property(DialogVisibility)) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)</visible>	
+			<visible>!Skin.String(TV.View1.BBSBHide,HIDDEN) | !String.IsEmpty(Window(Home).Property(DialogVisibility)) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)</visible>	
 
 			<control type="group">		
 				<visible>Skin.String(TV.View1.BBSidebar,LEFT) | Skin.String(TV.View1.BBSidebar,RIGHT)</visible>	

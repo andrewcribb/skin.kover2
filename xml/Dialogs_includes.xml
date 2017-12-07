@@ -63,7 +63,7 @@
 				
 				<!-- Backspace -->
 				<control type="button" id="8">
-					<onright condition="StringCompare(Window(Home).Property(SidebarPos),TOP) | StringCompare(Window(Home).Property(SidebarPos),BOTTOM)">160</onright>
+					<onright condition="String.IsEqual(Window(Home).Property(SidebarPos),TOP) | String.IsEqual(Window(Home).Property(SidebarPos),BOTTOM)">160</onright>
 					<onleft>312</onleft>
 					<ondown>306</ondown>
 					<top>187</top>
@@ -81,8 +81,8 @@
 					<width>588</width>
 					<height>60</height>
 					<itemgap>1</itemgap>
-					<onright condition="StringCompare(Window(Home).Property(SidebarPos),TOP) | StringCompare(Window(Home).Property(SidebarPos),BOTTOM)">302</onright>
-					<ondown condition="StringCompare(Window(Home).Property(SidebarPos),LEFT) | StringCompare(Window(Home).Property(SidebarPos),RIGHT)">1000</ondown>
+					<onright condition="String.IsEqual(Window(Home).Property(SidebarPos),TOP) | String.IsEqual(Window(Home).Property(SidebarPos),BOTTOM)">302</onright>
+					<ondown condition="String.IsEqual(Window(Home).Property(SidebarPos),LEFT) | String.IsEqual(Window(Home).Property(SidebarPos),RIGHT)">1000</ondown>
 					<onup>312</onup>
 					<align>center</align>
 					<usecontrolcoords>true</usecontrolcoords>
@@ -145,9 +145,9 @@
 					<width>588</width>
 					<height>60</height>
 					<itemgap>1</itemgap>
-					<onright condition="StringCompare(Window(Home).Property(SidebarPos),TOP) | StringCompare(Window(Home).Property(SidebarPos),BOTTOM)">9000</onright>
-					<onleft condition="StringCompare(Window(Home).Property(SidebarPos),TOP) | StringCompare(Window(Home).Property(SidebarPos),BOTTOM)">8</onleft>
-					<onup condition="StringCompare(Window(Home).Property(SidebarPos),LEFT) | StringCompare(Window(Home).Property(SidebarPos),RIGHT)">6000</onup>
+					<onright condition="String.IsEqual(Window(Home).Property(SidebarPos),TOP) | String.IsEqual(Window(Home).Property(SidebarPos),BOTTOM)">9000</onright>
+					<onleft condition="String.IsEqual(Window(Home).Property(SidebarPos),TOP) | String.IsEqual(Window(Home).Property(SidebarPos),BOTTOM)">8</onleft>
+					<onup condition="String.IsEqual(Window(Home).Property(SidebarPos),LEFT) | String.IsEqual(Window(Home).Property(SidebarPos),RIGHT)">6000</onup>
 					<align>center</align>
 					<usecontrolcoords>true</usecontrolcoords>
 					<orientation>horizontal</orientation>
@@ -210,8 +210,8 @@
 					<width>588</width>
 					<height>60</height>
 					<itemgap>1</itemgap>
-					<onright condition="StringCompare(Window(Home).Property(SidebarPos),TOP) | StringCompare(Window(Home).Property(SidebarPos),BOTTOM)">9000</onright>
-					<onleft condition="StringCompare(Window(Home).Property(SidebarPos),TOP) | StringCompare(Window(Home).Property(SidebarPos),BOTTOM)">8</onleft>
+					<onright condition="String.IsEqual(Window(Home).Property(SidebarPos),TOP) | String.IsEqual(Window(Home).Property(SidebarPos),BOTTOM)">9000</onright>
+					<onleft condition="String.IsEqual(Window(Home).Property(SidebarPos),TOP) | String.IsEqual(Window(Home).Property(SidebarPos),BOTTOM)">8</onleft>
 					<align>center</align>
 					<orientation>horizontal</orientation>
 
@@ -285,8 +285,8 @@
 					<width>588</width>
 					<height>60</height>
 					<itemgap>1</itemgap>
-					<onright condition="StringCompare(Window(Home).Property(SidebarPos),TOP) | StringCompare(Window(Home).Property(SidebarPos),BOTTOM)">9000</onright>
-					<onleft condition="StringCompare(Window(Home).Property(SidebarPos),TOP) | StringCompare(Window(Home).Property(SidebarPos),BOTTOM)">8</onleft>
+					<onright condition="String.IsEqual(Window(Home).Property(SidebarPos),TOP) | String.IsEqual(Window(Home).Property(SidebarPos),BOTTOM)">9000</onright>
+					<onleft condition="String.IsEqual(Window(Home).Property(SidebarPos),TOP) | String.IsEqual(Window(Home).Property(SidebarPos),BOTTOM)">8</onleft>
 					<align>center</align>
 					<orientation>horizontal</orientation>
 
@@ -360,8 +360,8 @@
 					<width>588</width>
 					<height>60</height>
 					<itemgap>1</itemgap>
-					<onright condition="StringCompare(Window(Home).Property(SidebarPos),TOP) | StringCompare(Window(Home).Property(SidebarPos),BOTTOM)">9000</onright>
-					<onleft condition="StringCompare(Window(Home).Property(SidebarPos),TOP) | StringCompare(Window(Home).Property(SidebarPos),BOTTOM)">8</onleft>
+					<onright condition="String.IsEqual(Window(Home).Property(SidebarPos),TOP) | String.IsEqual(Window(Home).Property(SidebarPos),BOTTOM)">9000</onright>
+					<onleft condition="String.IsEqual(Window(Home).Property(SidebarPos),TOP) | String.IsEqual(Window(Home).Property(SidebarPos),BOTTOM)">8</onleft>
 					<align>center</align>
 					<orientation>horizontal</orientation>
 
@@ -434,9 +434,9 @@
 					<width>531</width>
 					<height>60</height>
 					<itemgap>1</itemgap>
-					<onleft condition="StringCompare(Window(Home).Property(SidebarPos),TOP) | StringCompare(Window(Home).Property(SidebarPos),BOTTOM)">306</onleft>
-					<onright condition="StringCompare(Window(Home).Property(SidebarPos),TOP) | StringCompare(Window(Home).Property(SidebarPos),BOTTOM)">9000</onright>
-					<ondown condition="StringCompare(Window(Home).Property(SidebarPos),LEFT) | StringCompare(Window(Home).Property(SidebarPos),RIGHT)">300</ondown>
+					<onleft condition="String.IsEqual(Window(Home).Property(SidebarPos),TOP) | String.IsEqual(Window(Home).Property(SidebarPos),BOTTOM)">306</onleft>
+					<onright condition="String.IsEqual(Window(Home).Property(SidebarPos),TOP) | String.IsEqual(Window(Home).Property(SidebarPos),BOTTOM)">9000</onright>
+					<ondown condition="String.IsEqual(Window(Home).Property(SidebarPos),LEFT) | String.IsEqual(Window(Home).Property(SidebarPos),RIGHT)">300</ondown>
 					<onup>4000</onup>
 					<align>center</align>
 					<orientation>horizontal</orientation>
@@ -522,8 +522,8 @@
 						<textureradiooffnofocus colordiffuse="$INFO[Skin.String(Color.DIATxtNF)]">material/symbol.png</textureradiooffnofocus>
 						<textoffsetx>24</textoffsetx>
 						<pulseonselect>false</pulseonselect>
-						<onright condition="StringCompare(Window(Home).Property(SidebarPos),TOP) | StringCompare(Window(Home).Property(SidebarPos),BOTTOM)">300</onright>
-						<onleft condition="StringCompare(Window(Home).Property(SidebarPos),TOP) | StringCompare(Window(Home).Property(SidebarPos),BOTTOM)">306</onleft>
+						<onright condition="String.IsEqual(Window(Home).Property(SidebarPos),TOP) | String.IsEqual(Window(Home).Property(SidebarPos),BOTTOM)">300</onright>
+						<onleft condition="String.IsEqual(Window(Home).Property(SidebarPos),TOP) | String.IsEqual(Window(Home).Property(SidebarPos),BOTTOM)">306</onleft>
 					</control>
 				</control>
 			</control>
@@ -558,7 +558,7 @@
 					<align>right</align>
 					<onleft>304</onleft>
 					<onright>noop</onright>
-					<onup condition="StringCompare(Window(Home).Property(SidebarPos),LEFT) | StringCompare(Window(Home).Property(SidebarPos),RIGHT)">5000</onup>
+					<onup condition="String.IsEqual(Window(Home).Property(SidebarPos),LEFT) | String.IsEqual(Window(Home).Property(SidebarPos),RIGHT)">5000</onup>
 					<ondown>noop</ondown>
 					<orientation>horizontal</orientation>	
 					
@@ -631,8 +631,8 @@
 				
 				<!-- Backspace -->
 				<control type="button" id="23">
-					<onright condition="StringCompare(Window(Home).Property(SidebarPos),TOP) | StringCompare(Window(Home).Property(SidebarPos),BOTTOM)">1000</onright>
-					<ondown condition="StringCompare(Window(Home).Property(SidebarPos),LEFT) | StringCompare(Window(Home).Property(SidebarPos),RIGHT)">1000</ondown>
+					<onright condition="String.IsEqual(Window(Home).Property(SidebarPos),TOP) | String.IsEqual(Window(Home).Property(SidebarPos),BOTTOM)">1000</onright>
+					<ondown condition="String.IsEqual(Window(Home).Property(SidebarPos),LEFT) | String.IsEqual(Window(Home).Property(SidebarPos),RIGHT)">1000</ondown>
 					<onleft>noop</onleft>
 					<ondown>306</ondown>
 					<top>187</top>
@@ -661,9 +661,9 @@
 					<width>588</width>
 					<height>60</height>
 					<itemgap>1</itemgap>
-					<onright condition="StringCompare(Window(Home).Property(SidebarPos),TOP) | StringCompare(Window(Home).Property(SidebarPos),BOTTOM)">9000</onright>
-					<onleft condition="StringCompare(Window(Home).Property(SidebarPos),TOP) | StringCompare(Window(Home).Property(SidebarPos),BOTTOM)">23</onleft>
-					<onup condition="StringCompare(Window(Home).Property(SidebarPos),LEFT) | StringCompare(Window(Home).Property(SidebarPos),RIGHT)">23</onup>
+					<onright condition="String.IsEqual(Window(Home).Property(SidebarPos),TOP) | String.IsEqual(Window(Home).Property(SidebarPos),BOTTOM)">9000</onright>
+					<onleft condition="String.IsEqual(Window(Home).Property(SidebarPos),TOP) | String.IsEqual(Window(Home).Property(SidebarPos),BOTTOM)">23</onleft>
+					<onup condition="String.IsEqual(Window(Home).Property(SidebarPos),LEFT) | String.IsEqual(Window(Home).Property(SidebarPos),RIGHT)">23</onup>
 					<align>center</align>
 					<usecontrolcoords>true</usecontrolcoords>
 					<orientation>horizontal</orientation>
@@ -693,8 +693,8 @@
 					<width>588</width>
 					<height>60</height>
 					<itemgap>1</itemgap>
-					<onright condition="StringCompare(Window(Home).Property(SidebarPos),TOP) | StringCompare(Window(Home).Property(SidebarPos),BOTTOM)">9000</onright>
-					<onleft condition="StringCompare(Window(Home).Property(SidebarPos),TOP) | StringCompare(Window(Home).Property(SidebarPos),BOTTOM)">23</onleft>
+					<onright condition="String.IsEqual(Window(Home).Property(SidebarPos),TOP) | String.IsEqual(Window(Home).Property(SidebarPos),BOTTOM)">9000</onright>
+					<onleft condition="String.IsEqual(Window(Home).Property(SidebarPos),TOP) | String.IsEqual(Window(Home).Property(SidebarPos),BOTTOM)">23</onleft>
 					<align>center</align>
 					<orientation>horizontal</orientation>
 
@@ -726,8 +726,8 @@
 					<width>588</width>
 					<height>60</height>
 					<itemgap>1</itemgap>
-					<onright condition="StringCompare(Window(Home).Property(SidebarPos),TOP) | StringCompare(Window(Home).Property(SidebarPos),BOTTOM)">9000</onright>
-					<onleft condition="StringCompare(Window(Home).Property(SidebarPos),TOP) | StringCompare(Window(Home).Property(SidebarPos),BOTTOM)">23</onleft>
+					<onright condition="String.IsEqual(Window(Home).Property(SidebarPos),TOP) | String.IsEqual(Window(Home).Property(SidebarPos),BOTTOM)">9000</onright>
+					<onleft condition="String.IsEqual(Window(Home).Property(SidebarPos),TOP) | String.IsEqual(Window(Home).Property(SidebarPos),BOTTOM)">23</onleft>
 					<align>center</align>
 					<orientation>horizontal</orientation>
 
@@ -759,9 +759,9 @@
 					<width>588</width>
 					<height>60</height>
 					<itemgap>1</itemgap>
-					<onright condition="StringCompare(Window(Home).Property(SidebarPos),TOP) | StringCompare(Window(Home).Property(SidebarPos),BOTTOM)">9000</onright>
-					<onleft condition="StringCompare(Window(Home).Property(SidebarPos),TOP) | StringCompare(Window(Home).Property(SidebarPos),BOTTOM)">23</onleft>
-					<ondown condition="StringCompare(Window(Home).Property(SidebarPos),LEFT) | StringCompare(Window(Home).Property(SidebarPos),RIGHT)">9000</ondown>
+					<onright condition="String.IsEqual(Window(Home).Property(SidebarPos),TOP) | String.IsEqual(Window(Home).Property(SidebarPos),BOTTOM)">9000</onright>
+					<onleft condition="String.IsEqual(Window(Home).Property(SidebarPos),TOP) | String.IsEqual(Window(Home).Property(SidebarPos),BOTTOM)">23</onleft>
+					<ondown condition="String.IsEqual(Window(Home).Property(SidebarPos),LEFT) | String.IsEqual(Window(Home).Property(SidebarPos),RIGHT)">9000</ondown>
 					<align>center</align>
 					<orientation>horizontal</orientation>
 
@@ -814,7 +814,7 @@
 					<align>right</align>
 					<onleft>22</onleft>
 					<onright>noop</onright>
-					<onup condition="StringCompare(Window(Home).Property(SidebarPos),LEFT) | StringCompare(Window(Home).Property(SidebarPos),RIGHT)">4000</onup>
+					<onup condition="String.IsEqual(Window(Home).Property(SidebarPos),LEFT) | String.IsEqual(Window(Home).Property(SidebarPos),RIGHT)">4000</onup>
 					<ondown>noop</ondown>
 					<orientation>horizontal</orientation>	
 					
@@ -875,7 +875,7 @@
 					<width>588</width>										
 					<texture  colordiffuse="FFFFFFFF">$INFO[Container(6).ListItem.Icon]</texture>
 					<aspectratio aligny="center">keep</aspectratio>
-					<visible>!SubString(Container(6).ListItem.Icon,designer) + !SubString(Container(6).ListItem.Icon,Default) + Control.IsVisible(6)</visible>
+					<visible>!String.Contains(Container(6).ListItem.Icon,designer) + !String.Contains(Container(6).ListItem.Icon,Default) + Control.IsVisible(6)</visible>
 				</control>
 				<control type="image">
 					<top>24</top>
@@ -884,7 +884,7 @@
 					<width>588</width>		
 					<texture colordiffuse="$INFO[Skin.String(Color.DIATxtNF)]">$INFO[Container(6).ListItem.Icon]</texture>
 					<aspectratio aligny="center">keep</aspectratio>
-					<visible>[SubString(Container(6).ListItem.Icon,designer) | SubString(Container(6).ListItem.Icon,Default)] + Control.IsVisible(6)</visible>
+					<visible>[String.Contains(Container(6).ListItem.Icon,designer) | String.Contains(Container(6).ListItem.Icon,Default)] + Control.IsVisible(6)</visible>
 				</control>
 				<control type="image">
 					<top>24</top>
@@ -893,7 +893,7 @@
 					<width>588</width>			
 					<texture  colordiffuse="FFFFFFFF">$INFO[Container(3).ListItem.Icon]</texture>
 					<aspectratio aligny="center">keep</aspectratio>
-					<visible>!SubString(Container(6).ListItem.Icon,designer) + !SubString(Container(3).ListItem.Icon,Default) + Control.IsVisible(3)</visible>
+					<visible>!String.Contains(Container(6).ListItem.Icon,designer) + !String.Contains(Container(3).ListItem.Icon,Default) + Control.IsVisible(3)</visible>
 				</control>
 				<control type="image">
 					<top>24</top>
@@ -902,7 +902,7 @@
 					<width>588</width>			
 					<texture colordiffuse="$INFO[Skin.String(Color.DIATxtNF)]">$INFO[Container(3).ListItem.Icon]</texture>
 					<aspectratio aligny="center">keep</aspectratio>
-					<visible>[SubString(Container(6).ListItem.Icon,designer) | SubString(Container(6).ListItem.Icon,Default)] + Control.IsVisible(3)</visible>
+					<visible>[String.Contains(Container(6).ListItem.Icon,designer) | String.Contains(Container(6).ListItem.Icon,Default)] + Control.IsVisible(3)</visible>
 				</control>							
 
 			</control>
@@ -966,7 +966,7 @@
 							<align>center</align>
 							<aspectratio>scale</aspectratio>
 							<texture colordiffuse="$INFO[Skin.String(Color.DIATxtF)]">$INFO[ListItem.Icon]</texture>
-							<visible>SubString(ListItem.Icon,Default)</visible>
+							<visible>String.Contains(ListItem.Icon,Default)</visible>
 						</control>
 						<control type="image">
 							<left>10</left>
@@ -976,7 +976,7 @@
 							<align>center</align>
 							<aspectratio>scale</aspectratio>
 							<texture colordiffuse="FFFFFFFF">$INFO[ListItem.Icon]</texture>
-							<visible>!SubString(ListItem.Icon,Default)</visible>
+							<visible>!String.Contains(ListItem.Icon,Default)</visible>
 						</control>
 						<control type="label">
 							<top>0</top>
@@ -1045,7 +1045,7 @@
 							<align>center</align>
 							<aspectratio>scale</aspectratio>
 							<texture colordiffuse="$INFO[Skin.String(Color.DIATxtF)]">$INFO[ListItem.Icon]</texture>
-							<visible>SubString(ListItem.Icon,Default)</visible>
+							<visible>String.Contains(ListItem.Icon,Default)</visible>
 						</control>
 						<control type="image">
 							<left>10</left>
@@ -1055,7 +1055,7 @@
 							<align>center</align>
 							<aspectratio>scale</aspectratio>
 							<texture colordiffuse="FFFFFFFF">$INFO[ListItem.Icon]</texture>
-							<visible>!SubString(ListItem.Icon,Default)</visible>
+							<visible>!String.Contains(ListItem.Icon,Default)</visible>
 						</control>
 						<control type="label">
 							<top>0</top>
@@ -1114,7 +1114,7 @@
 					<font>Font27</font>
 					<textcolor>$INFO[Skin.String(Color.DIATxtNF)]</textcolor>
 					<label>$INFO[Container(6).ListItem.Label2]</label>
-					<visible>!IsEmpty(Window(Home).Property(DesignerActive))</visible>
+					<visible>!String.IsEmpty(Window(Home).Property(DesignerActive))</visible>
 					<wrapmultiline>true</wrapmultiline>
 				</control>
 
@@ -1128,7 +1128,7 @@
 					<align>right</align>
 					<onleft>6</onleft>
 					<onright>noop</onright>
-					<onup condition="StringCompare(Window(Home).Property(SidebarPos),LEFT) | StringCompare(Window(Home).Property(SidebarPos),RIGHT)">6</onup>
+					<onup condition="String.IsEqual(Window(Home).Property(SidebarPos),LEFT) | String.IsEqual(Window(Home).Property(SidebarPos),RIGHT)">6</onup>
 					<ondown>noop</ondown>
 					<orientation>horizontal</orientation>	
 
@@ -1172,7 +1172,7 @@
 					<width>588</width>							
 					<texture colordiffuse="FFFFFFFF">$INFO[ListItem.Icon]</texture>
 					<aspectratio aligny="center">keep</aspectratio>
-					<visible>!SubString(ListItem.Icon,Default)</visible>
+					<visible>!String.Contains(ListItem.Icon,Default)</visible>
 				</control>
 				<control type="image">
 					<top>24</top>
@@ -1181,7 +1181,7 @@
 					<width>588</width>	
 					<texture colordiffuse="$INFO[Skin.String(Color.DIATxtNF)]">$INFO[ListItem.Icon]</texture>
 					<aspectratio aligny="center">keep</aspectratio>
-					<visible>SubString(ListItem.Icon,Default)</visible>
+					<visible>String.Contains(ListItem.Icon,Default)</visible>
 				</control>
 			</control>
 			
@@ -1245,7 +1245,7 @@
 							<align>center</align>
 							<aspectratio>scale</aspectratio>
 							<texture colordiffuse="$INFO[Skin.String(Color.DIATxtF)]">$INFO[ListItem.Icon]</texture>
-							<visible>SubString(ListItem.Icon,Default)</visible>
+							<visible>String.Contains(ListItem.Icon,Default)</visible>
 						</control>
 						<control type="image">
 							<left>10</left>
@@ -1255,7 +1255,7 @@
 							<align>center</align>
 							<aspectratio>scale</aspectratio>
 							<texture colordiffuse="FFFFFFFF">$INFO[ListItem.Icon]</texture>
-							<visible>!SubString(ListItem.Icon,Default)</visible>
+							<visible>!String.Contains(ListItem.Icon,Default)</visible>
 						</control>
 						<control type="label">
 							<top>0</top>
@@ -1325,7 +1325,7 @@
 							<align>center</align>
 							<aspectratio>scale</aspectratio>
 							<texture colordiffuse="$INFO[Skin.String(Color.DIATxtF)]">$INFO[ListItem.Icon]</texture>
-							<visible>SubString(ListItem.Icon,Default)</visible>
+							<visible>String.Contains(ListItem.Icon,Default)</visible>
 						</control>
 						<control type="image">
 							<left>10</left>
@@ -1335,7 +1335,7 @@
 							<align>center</align>
 							<aspectratio>scale</aspectratio>
 							<texture colordiffuse="FFFFFFFF">$INFO[ListItem.Icon]</texture>
-							<visible>!SubString(ListItem.Icon,Default)</visible>
+							<visible>!String.Contains(ListItem.Icon,Default)</visible>
 						</control>
 						<control type="label">
 							<top>0</top>
@@ -1504,7 +1504,7 @@
 					<onleft>noop</onleft>
 					<onright>9000</onright>
 					<onup>noop</onup>
-					<ondown condition="StringCompare(Window(Home).Property(SidebarPos),LEFT) | StringCompare(Window(Home).Property(SidebarPos),RIGHT)">28</ondown>
+					<ondown condition="String.IsEqual(Window(Home).Property(SidebarPos),LEFT) | String.IsEqual(Window(Home).Property(SidebarPos),RIGHT)">28</ondown>
 					<orientation>vertical</orientation>
 					<visible allowhiddenfocus="true">true</visible>
 				</control>
@@ -1540,7 +1540,7 @@
 					<itemgap>1</itemgap>
 					<align>right</align>
 					<onright>noop</onright>
-					<onup condition="StringCompare(Window(Home).Property(SidebarPos),LEFT) | StringCompare(Window(Home).Property(SidebarPos),RIGHT)">5</onup>
+					<onup condition="String.IsEqual(Window(Home).Property(SidebarPos),LEFT) | String.IsEqual(Window(Home).Property(SidebarPos),RIGHT)">5</onup>
 					<onleft>5</onleft>
 					<ondown>noop</ondown>
 					<orientation>horizontal</orientation>
@@ -1815,7 +1815,7 @@
 					<align>left</align>
 					<font>Font27</font>
 					<ondown>18</ondown>
-					<onup condition="StringCompare(Window(Home).Property(SidebarPos),LEFT) | StringCompare(Window(Home).Property(SidebarPos),RIGHT)">300</onup>
+					<onup condition="String.IsEqual(Window(Home).Property(SidebarPos),LEFT) | String.IsEqual(Window(Home).Property(SidebarPos),RIGHT)">300</onup>
 					<onleft>300</onleft>
 				</control>		
 
@@ -1829,7 +1829,7 @@
 					<align>right</align>
 					<onleft>300</onleft>
 					<onright>noop</onright>
-					<onup condition="StringCompare(Window(Home).Property(SidebarPos),LEFT) | StringCompare(Window(Home).Property(SidebarPos),RIGHT)">300</onup>
+					<onup condition="String.IsEqual(Window(Home).Property(SidebarPos),LEFT) | String.IsEqual(Window(Home).Property(SidebarPos),RIGHT)">300</onup>
 					<ondown>noop</ondown>
 					<orientation>horizontal</orientation>			
 				
@@ -1905,7 +1905,7 @@
 				
 				<!-- Backspace -->
 				<control type="button" id="303">
-					<onright condition="StringCompare(Window(Home).Property(SidebarPos),TOP) | StringCompare(Window(Home).Property(SidebarPos),BOTTOM)">160</onright>
+					<onright condition="String.IsEqual(Window(Home).Property(SidebarPos),TOP) | String.IsEqual(Window(Home).Property(SidebarPos),BOTTOM)">160</onright>
 					<onleft>312</onleft>
 					<ondown>306</ondown>
 					<top>34</top>
@@ -2114,7 +2114,7 @@
 					<align>right</align>
 					<onleft>300</onleft>
 					<onright>noop</onright>
-					<onup condition="StringCompare(Window(Home).Property(SidebarPos),LEFT) | StringCompare(Window(Home).Property(SidebarPos),RIGHT)">300</onup>
+					<onup condition="String.IsEqual(Window(Home).Property(SidebarPos),LEFT) | String.IsEqual(Window(Home).Property(SidebarPos),RIGHT)">300</onup>
 					<orientation>horizontal</orientation>
 
 					<!-- Search Button -->
@@ -2132,7 +2132,7 @@
 						<invalidcolor>$INFO[Skin.String(Color.DIAInvalid)]</invalidcolor>
 						<onright>25</onright>
 						<onleft>300</onleft>
-						<onup condition="StringCompare(Window(Home).Property(SidebarPos),LEFT) | StringCompare(Window(Home).Property(SidebarPos),RIGHT)">300</onup>
+						<onup condition="String.IsEqual(Window(Home).Property(SidebarPos),LEFT) | String.IsEqual(Window(Home).Property(SidebarPos),RIGHT)">300</onup>
 					</control>
 
 					<!-- Cancel Button -->
@@ -2150,7 +2150,7 @@
 						<invalidcolor>$INFO[Skin.String(Color.DIAInvalid)]</invalidcolor>
 						<onright>28</onright>
 						<onleft>300</onleft>
-						<onup condition="StringCompare(Window(Home).Property(SidebarPos),LEFT) | StringCompare(Window(Home).Property(SidebarPos),RIGHT)">300</onup>
+						<onup condition="String.IsEqual(Window(Home).Property(SidebarPos),LEFT) | String.IsEqual(Window(Home).Property(SidebarPos),RIGHT)">300</onup>
 					</control>
 
 					<!-- Defaults Button -->
@@ -2168,7 +2168,7 @@
 						<invalidcolor>$INFO[Skin.String(Color.DIAInvalid)]</invalidcolor>
 						<onleft>25</onleft>
 						<onleft>300</onleft>
-						<onup condition="StringCompare(Window(Home).Property(SidebarPos),LEFT) | StringCompare(Window(Home).Property(SidebarPos),RIGHT)">300</onup>
+						<onup condition="String.IsEqual(Window(Home).Property(SidebarPos),LEFT) | String.IsEqual(Window(Home).Property(SidebarPos),RIGHT)">300</onup>
 					</control>
 				</control>
 			</control>
@@ -2257,7 +2257,7 @@
 					<align>right</align>
 					<onleft>2</onleft>
 					<onright>noop</onright>
-					<onup condition="StringCompare(Window(Home).Property(SidebarPos),LEFT) | StringCompare(Window(Home).Property(SidebarPos),RIGHT)">2</onup>
+					<onup condition="String.IsEqual(Window(Home).Property(SidebarPos),LEFT) | String.IsEqual(Window(Home).Property(SidebarPos),RIGHT)">2</onup>
 					<ondown>noop</ondown>
 					<orientation>horizontal</orientation>
 
@@ -2518,7 +2518,7 @@
 					<align>right</align>
 					<onleft>300</onleft>
 					<onright>noop</onright>
-					<onup condition="StringCompare(Window(Home).Property(SidebarPos),LEFT) | StringCompare(Window(Home).Property(SidebarPos),RIGHT)">300</onup>
+					<onup condition="String.IsEqual(Window(Home).Property(SidebarPos),LEFT) | String.IsEqual(Window(Home).Property(SidebarPos),RIGHT)">300</onup>
 					<ondown>noop</ondown>
 					<orientation>horizontal</orientation>
 
@@ -2718,12 +2718,12 @@
 				<height>$PARAM[DIAB2SizeY]</height>
 
 				<!-- Cast -->
-				<include content="BookmarksView" condition="StringCompare(Window(Home).Property(DialogPos),LEFT) | StringCompare(Window(Home).Property(DialogPos),RIGHT)">
+				<include content="BookmarksView" condition="String.IsEqual(Window(Home).Property(DialogPos),LEFT) | String.IsEqual(Window(Home).Property(DialogPos),RIGHT)">
 					<param name="width" value="612" />
 					<param name="height" value="664" />
 				</include>	
 
-				<include content="BookmarksView" condition="StringCompare(Window(Home).Property(DialogPos),TOP) | StringCompare(Window(Home).Property(DialogPos),BOTTOM)">
+				<include content="BookmarksView" condition="String.IsEqual(Window(Home).Property(DialogPos),TOP) | String.IsEqual(Window(Home).Property(DialogPos),BOTTOM)">
 					<param name="width" value="1224" />
 					<param name="height" value="332" />
 				</include>						
@@ -2955,7 +2955,7 @@
 					<align>right</align>
 					<onleft>5</onleft>
 					<onright>noop</onright>
-					<onup condition="StringCompare(Window(Home).Property(SidebarPos),LEFT) | StringCompare(Window(Home).Property(SidebarPos),RIGHT)">5</onup>
+					<onup condition="String.IsEqual(Window(Home).Property(SidebarPos),LEFT) | String.IsEqual(Window(Home).Property(SidebarPos),RIGHT)">5</onup>
 					<ondown>noop</ondown>
 					<orientation>horizontal</orientation>
 
@@ -3571,7 +3571,7 @@
 					<align>right</align>
 					<onleft>300</onleft>
 					<onright>noop</onright>
-					<onup condition="StringCompare(Window(Home).Property(SidebarPos),LEFT) | StringCompare(Window(Home).Property(SidebarPos),RIGHT)">300</onup>
+					<onup condition="String.IsEqual(Window(Home).Property(SidebarPos),LEFT) | String.IsEqual(Window(Home).Property(SidebarPos),RIGHT)">300</onup>
 					<ondown>noop</ondown>
 					<orientation>horizontal</orientation>
 
@@ -3738,7 +3738,7 @@
 					<align>right</align>
 					<onleft>5</onleft>
 					<onright>noop</onright>
-					<onup condition="StringCompare(Window(Home).Property(SidebarPos),LEFT) | StringCompare(Window(Home).Property(SidebarPos),RIGHT)">5</onup>
+					<onup condition="String.IsEqual(Window(Home).Property(SidebarPos),LEFT) | String.IsEqual(Window(Home).Property(SidebarPos),RIGHT)">5</onup>
 					<ondown>noop</ondown>
 					<orientation>horizontal</orientation>
 
@@ -3961,7 +3961,7 @@
 					<align>right</align>
 					<onleft>5</onleft>
 					<onright>noop</onright>
-					<onup condition="StringCompare(Window(Home).Property(SidebarPos),LEFT) | StringCompare(Window(Home).Property(SidebarPos),RIGHT)">5</onup>
+					<onup condition="String.IsEqual(Window(Home).Property(SidebarPos),LEFT) | String.IsEqual(Window(Home).Property(SidebarPos),RIGHT)">5</onup>
 					<ondown>noop</ondown>
 					<orientation>horizontal</orientation>
 
@@ -4137,7 +4137,7 @@
 					<align>right</align>
 					<onleft>5</onleft>
 					<onright>noop</onright>
-					<onup condition="StringCompare(Window(Home).Property(SidebarPos),LEFT) | StringCompare(Window(Home).Property(SidebarPos),RIGHT)">5</onup>
+					<onup condition="String.IsEqual(Window(Home).Property(SidebarPos),LEFT) | String.IsEqual(Window(Home).Property(SidebarPos),RIGHT)">5</onup>
 					<ondown>noop</ondown>
 					<orientation>horizontal</orientation>
 
@@ -4198,7 +4198,7 @@
 					<width>588</width>							
 					<texture colordiffuse="FFFFFFFF">$INFO[Container(450).ListItem.Art(thumb)]</texture>
 					<aspectratio aligny="center">keep</aspectratio>
-					<visible>!SubString(Container(450).ListItem.Icon,Default)</visible>
+					<visible>!String.Contains(Container(450).ListItem.Icon,Default)</visible>
 				</control>
 				<control type="image">
 					<top>24</top>
@@ -4207,7 +4207,7 @@
 					<width>588</width>	
 					<texture colordiffuse="$INFO[Skin.String(Color.DIATxtNF)]">$INFO[Container(450).ListItem.Icon]</texture>
 					<aspectratio aligny="center">keep</aspectratio>
-					<visible>SubString(Container(450).ListItem.Icon,Default)</visible>
+					<visible>String.Contains(Container(450).ListItem.Icon,Default)</visible>
 				</control>
 				
 			</control>
@@ -4300,7 +4300,7 @@
 					<align>right</align>
 					<onleft>450</onleft>
 					<onright>noop</onright>
-					<onup condition="StringCompare(Window(Home).Property(SidebarPos),LEFT) | StringCompare(Window(Home).Property(SidebarPos),RIGHT)">450</onup>
+					<onup condition="String.IsEqual(Window(Home).Property(SidebarPos),LEFT) | String.IsEqual(Window(Home).Property(SidebarPos),RIGHT)">450</onup>
 					<ondown>noop</ondown>
 					<orientation>horizontal</orientation>
 
@@ -4352,7 +4352,7 @@
 					<ondown>noop</ondown>
 					<orientation>vertical</orientation>
 					<usecontrolcoords>true</usecontrolcoords>
-					<visible>StringCompare(Container(450).ListItem.Label,$LOCALIZE[21423])</visible>
+					<visible>String.IsEqual(Container(450).ListItem.Label,$LOCALIZE[21423])</visible>
 					
 					<!-- Set Playlist type -->
 					<include content="DiaSpin">
@@ -4409,7 +4409,7 @@
 					<ondown>noop</ondown>
 					<orientation>vertical</orientation>
 					<usecontrolcoords>true</usecontrolcoords>
-					<visible>StringCompare(Container(450).ListItem.Label,$LOCALIZE[33063])</visible>
+					<visible>String.IsEqual(Container(450).ListItem.Label,$LOCALIZE[33063])</visible>
 					
 					<!-- Item Match -->
 					<include content="DiaSpin">
@@ -4493,8 +4493,8 @@
 					<onup>noop</onup>
 					<ondown>noop</ondown>
 					<onright>450</onright>
-					<onleft condition="StringCompare(Container(450).ListItem.Label,$LOCALIZE[21423])">300</onleft>
-					<onleft condition="StringCompare(Container(450).ListItem.Label,$LOCALIZE[33063])">301</onleft>
+					<onleft condition="String.IsEqual(Container(450).ListItem.Label,$LOCALIZE[21423])">300</onleft>
+					<onleft condition="String.IsEqual(Container(450).ListItem.Label,$LOCALIZE[33063])">301</onleft>
 					<height>305</height>
 					<scrolltime>200</scrolltime>
 					<orientation>vertical</orientation>
@@ -4799,7 +4799,7 @@
 					<align>right</align>
 					<onleft>450</onleft>
 					<onright>noop</onright>
-					<onup condition="StringCompare(Window(Home).Property(SidebarPos),LEFT) | StringCompare(Window(Home).Property(SidebarPos),RIGHT)">450</onup>
+					<onup condition="String.IsEqual(Window(Home).Property(SidebarPos),LEFT) | String.IsEqual(Window(Home).Property(SidebarPos),RIGHT)">450</onup>
 					<ondown>noop</ondown>
 					<orientation>horizontal</orientation>
 
@@ -5046,7 +5046,7 @@
 					<align>right</align>
 					<onleft>120</onleft>
 					<onright>noop</onright>
-					<onup condition="StringCompare(Window(Home).Property(SidebarPos),LEFT) | StringCompare(Window(Home).Property(SidebarPos),RIGHT)">120</onup>
+					<onup condition="String.IsEqual(Window(Home).Property(SidebarPos),LEFT) | String.IsEqual(Window(Home).Property(SidebarPos),RIGHT)">120</onup>
 					<ondown>noop</ondown>
 					<orientation>horizontal</orientation>
 
@@ -5168,7 +5168,7 @@
 					<top>214</top>
 					<height>308</height>
 					<width>588</width>
-					<visible>StringCompare(Container(300).ListItem.Label,$LOCALIZE[19030])</visible>
+					<visible>String.IsEqual(Container(300).ListItem.Label,$LOCALIZE[19030])</visible>
 					
 					<control type="image">
 						<left>20</left>
@@ -5229,7 +5229,7 @@
 
 					<itemlayout width="588" height="61">
 						<control type="group">
-							<visible>StringCompare(Container(300).ListItem.Label,$LOCALIZE[19030])</visible>
+							<visible>String.IsEqual(Container(300).ListItem.Label,$LOCALIZE[19030])</visible>
 							<animation effect="fade" start="0" end="100" time="100" reversible="true">VisibleChange</animation>	
 							<control type="image">
 								<left>10</left>
@@ -5249,7 +5249,7 @@
 								<font>Font27</font>
 								<textcolor>$INFO[Skin.String(Color.DIATxtNF)]</textcolor>
 								<label>$INFO[ListItem.Title]</label>
-								<visible>!IsEmpty(ListItem.Title)</visible>
+								<visible>!String.IsEmpty(ListItem.Title)</visible>
 							</control>
 							<control type="label">
 								<top>0</top>
@@ -5260,11 +5260,11 @@
 								<font>Font27</font>
 								<textcolor>$INFO[Skin.String(Color.DIATxtNF)]</textcolor>
 								<label>$INFO[ListItem.ChannelName]</label>
-								<visible>IsEmpty(ListItem.Title)</visible>
+								<visible>String.IsEmpty(ListItem.Title)</visible>
 							</control>
 						</control>
 						<control type="group">
-							<visible>StringCompare(Container(300).ListItem.Label,$LOCALIZE[19031])</visible>
+							<visible>String.IsEqual(Container(300).ListItem.Label,$LOCALIZE[19031])</visible>
 							<animation effect="fade" start="0" end="100" time="100" reversible="true">VisibleChange</animation>	
 							<control type="image">
 								<left>10</left>
@@ -5284,7 +5284,7 @@
 								<font>Font27</font>
 								<textcolor>$INFO[Skin.String(Color.DIATxtNF)]</textcolor>
 								<label>$INFO[ListItem.NextTitle]</label>
-								<visible>!IsEmpty(ListItem.NextTitle)</visible>
+								<visible>!String.IsEmpty(ListItem.NextTitle)</visible>
 							</control>
 							<control type="label">
 								<top>0</top>
@@ -5295,14 +5295,14 @@
 								<font>Font27</font>
 								<textcolor>$INFO[Skin.String(Color.DIATxtNF)]</textcolor>
 								<label>$INFO[ListItem.ChannelName]</label>
-								<visible>IsEmpty(ListItem.NextTitle)</visible>
+								<visible>String.IsEmpty(ListItem.NextTitle)</visible>
 							</control>
 						</control>
 					</itemlayout>
 					
 					<focusedlayout width="588" height="61">
 						<control type="group">
-							<visible>StringCompare(Container(300).ListItem.Label,$LOCALIZE[19030])</visible>
+							<visible>String.IsEqual(Container(300).ListItem.Label,$LOCALIZE[19030])</visible>
 							<animation effect="fade" start="0" end="100" time="100" reversible="true">VisibleChange</animation>	
 							<control type="group">
 								<visible>Control.HasFocus(11)</visible>
@@ -5325,7 +5325,7 @@
 									<textcolor>$INFO[Skin.String(Color.DIATxtF)]</textcolor>
 									<selectedcolor>$INFO[Skin.String(Color.DIATxtF)]</selectedcolor>
 									<label>$INFO[ListItem.Title]</label>
-									<visible>!IsEmpty(ListItem.Title)</visible>
+									<visible>!String.IsEmpty(ListItem.Title)</visible>
 								</control>
 								<control type="label">
 									<top>0</top>
@@ -5338,7 +5338,7 @@
 									<textcolor>$INFO[Skin.String(Color.DIATxtF)]</textcolor>
 									<selectedcolor>$INFO[Skin.String(Color.DIATxtF)]</selectedcolor>
 									<label>$INFO[ListItem.ChannelName]</label>
-									<visible>IsEmpty(ListItem.Title)</visible>
+									<visible>String.IsEmpty(ListItem.Title)</visible>
 								</control>
 							</control>
 							<control type="image">
@@ -5359,7 +5359,7 @@
 								<font>Font27</font>
 								<textcolor>$INFO[Skin.String(Color.DIATxtNF)]</textcolor>
 								<label>$INFO[ListItem.Title]</label>
-								<visible>!Control.HasFocus(11) + !IsEmpty(ListItem.Title)</visible>
+								<visible>!Control.HasFocus(11) + !String.IsEmpty(ListItem.Title)</visible>
 							</control>
 							<control type="label">
 								<top>0</top>
@@ -5370,11 +5370,11 @@
 								<font>Font27</font>
 								<textcolor>$INFO[Skin.String(Color.DIATxtNF)]</textcolor>
 								<label>$INFO[ListItem.ChannelName]</label>
-								<visible>!Control.HasFocus(11) + IsEmpty(ListItem.Title)</visible>
+								<visible>!Control.HasFocus(11) + String.IsEmpty(ListItem.Title)</visible>
 							</control>
 						</control>
 						<control type="group">
-							<visible>StringCompare(Container(300).ListItem.Label,$LOCALIZE[19031])</visible>
+							<visible>String.IsEqual(Container(300).ListItem.Label,$LOCALIZE[19031])</visible>
 							<animation effect="fade" start="0" end="100" time="100" reversible="true">VisibleChange</animation>	
 							<control type="group">
 								<visible>Control.HasFocus(11)</visible>
@@ -5397,7 +5397,7 @@
 									<textcolor>$INFO[Skin.String(Color.DIATxtF)]</textcolor>
 									<selectedcolor>$INFO[Skin.String(Color.DIATxtF)]</selectedcolor>
 									<label>$INFO[ListItem.NextTitle]</label>
-									<visible>!IsEmpty(ListItem.NextTitle)</visible>
+									<visible>!String.IsEmpty(ListItem.NextTitle)</visible>
 								</control>
 								<control type="label">
 									<top>0</top>
@@ -5410,7 +5410,7 @@
 									<textcolor>$INFO[Skin.String(Color.DIATxtF)]</textcolor>
 									<selectedcolor>$INFO[Skin.String(Color.DIATxtF)]</selectedcolor>
 									<label>$INFO[ListItem.ChannelName]</label>
-									<visible>IsEmpty(ListItem.NextTitle)</visible>
+									<visible>String.IsEmpty(ListItem.NextTitle)</visible>
 								</control>
 							</control>
 							<control type="image">
@@ -5431,7 +5431,7 @@
 								<font>Font27</font>
 								<textcolor>$INFO[Skin.String(Color.DIATxtNF)]</textcolor>
 								<label>$INFO[ListItem.NextTitle]</label>
-								<visible>!Control.HasFocus(11) + !IsEmpty(ListItem.NextTitle)</visible>
+								<visible>!Control.HasFocus(11) + !String.IsEmpty(ListItem.NextTitle)</visible>
 							</control>
 							<control type="label">
 								<top>0</top>
@@ -5442,7 +5442,7 @@
 								<font>Font27</font>
 								<textcolor>$INFO[Skin.String(Color.DIATxtNF)]</textcolor>
 								<label>$INFO[ListItem.ChannelName]</label>
-								<visible>!Control.HasFocus(11) + IsEmpty(ListItem.NextTitle)</visible>
+								<visible>!Control.HasFocus(11) + String.IsEmpty(ListItem.NextTitle)</visible>
 							</control>
 						</control>
 					</focusedlayout>		
@@ -5475,7 +5475,7 @@
 						<font>Font36</font>
 						<align>center</align>
 						<label>1000</label>
-						<visible>StringCompare(Container(300).ListItem.Label,$LOCALIZE[19030])</visible>
+						<visible>String.IsEqual(Container(300).ListItem.Label,$LOCALIZE[19030])</visible>
 					</control>
 					<control type="textbox">
 						<top>0</top>
@@ -5485,7 +5485,7 @@
 						<font>Font36</font>
 						<align>center</align>
 						<label>$INFO[Container(11).ListItem.NextStartTime,, - ]$INFO[Container(11).ListItem.NextEndTime]</label>
-						<visible>StringCompare(Container(300).ListItem.Label,$LOCALIZE[19031])</visible>
+						<visible>String.IsEqual(Container(300).ListItem.Label,$LOCALIZE[19031])</visible>
 					</control>
 					<control type="textbox">
 						<top>24</top>
@@ -5496,7 +5496,7 @@
 						<font>Font27</font>
 						<align>center</align>
 						<label fallback="19055">$INFO[Container(11).ListItem.Plot]</label>
-						<visible>StringCompare(Container(300).ListItem.Label,$LOCALIZE[19030])</visible>
+						<visible>String.IsEqual(Container(300).ListItem.Label,$LOCALIZE[19030])</visible>
 					</control>	
 					<control type="textbox">
 						<top>24</top>
@@ -5507,7 +5507,7 @@
 						<font>Font27</font>
 						<align>center</align>
 						<label fallback="19055">$INFO[Container(11).ListItem.NextPlot]</label>
-						<visible>StringCompare(Container(300).ListItem.Label,$LOCALIZE[19031])</visible>
+						<visible>String.IsEqual(Container(300).ListItem.Label,$LOCALIZE[19031])</visible>
 					</control>	
 
 				</control>
@@ -5722,7 +5722,7 @@
 							<align>center</align>
 							<aspectratio>scale</aspectratio>
 							<texture colordiffuse="FFFFFFFF">$INFO[ListItem.Icon]</texture>
-							<visible>!SubString(ListItem.Icon,Default)</visible>
+							<visible>!String.Contains(ListItem.Icon,Default)</visible>
 						</control>
 						<control type="image">
 							<left>10</left>
@@ -5732,7 +5732,7 @@
 							<align>center</align>
 							<aspectratio>scale</aspectratio>
 							<texture colordiffuse="$INFO[Skin.String(Color.DIATxtNF)]">$INFO[ListItem.Icon]</texture>
-							<visible>SubString(ListItem.Icon,Default)</visible>
+							<visible>String.Contains(ListItem.Icon,Default)</visible>
 						</control>
 						<control type="label">
 							<top>0</top>
@@ -5768,7 +5768,7 @@
 								<align>center</align>
 								<aspectratio>scale</aspectratio>
 								<texture colordiffuse="FFFFFFFF">$INFO[ListItem.Icon]</texture>
-								<visible>!SubString(ListItem.Icon,Default)</visible>
+								<visible>!String.Contains(ListItem.Icon,Default)</visible>
 							</control>
 							<control type="image">
 								<left>10</left>
@@ -5778,7 +5778,7 @@
 								<align>center</align>
 								<aspectratio>scale</aspectratio>
 								<texture colordiffuse="$INFO[Skin.String(Color.DIATxtF)]">$INFO[ListItem.Icon]</texture>
-								<visible>SubString(ListItem.Icon,Default)</visible>
+								<visible>String.Contains(ListItem.Icon,Default)</visible>
 							</control>
 							<control type="label">
 								<top>0</top>
@@ -5803,7 +5803,7 @@
 								<align>center</align>
 								<aspectratio>scale</aspectratio>
 								<texture colordiffuse="FFFFFFFF">$INFO[ListItem.Icon]</texture>
-								<visible>!SubString(ListItem.Icon,Default)</visible>
+								<visible>!String.Contains(ListItem.Icon,Default)</visible>
 							</control>
 							<control type="image">
 								<left>10</left>
@@ -5813,7 +5813,7 @@
 								<align>center</align>
 								<aspectratio>scale</aspectratio>
 								<texture colordiffuse="$INFO[Skin.String(Color.DIATxtNF)]">$INFO[ListItem.Icon]</texture>
-								<visible>SubString(ListItem.Icon,Default)</visible>
+								<visible>String.Contains(ListItem.Icon,Default)</visible>
 							</control>
 							<control type="label">
 								<top>0</top>
@@ -5876,7 +5876,7 @@
 							<align>center</align>
 							<aspectratio>scale</aspectratio>
 							<texture colordiffuse="FFFFFFFF">$INFO[ListItem.Icon]</texture>
-							<visible>!SubString(ListItem.Icon,Default)</visible>
+							<visible>!String.Contains(ListItem.Icon,Default)</visible>
 						</control>
 						<control type="image">
 							<left>10</left>
@@ -5886,7 +5886,7 @@
 							<align>center</align>
 							<aspectratio>scale</aspectratio>
 							<texture colordiffuse="$INFO[Skin.String(Color.DIATxtNF)]" fallback="DefaultMusicSongs.png">$INFO[ListItem.Icon]</texture>
-							<visible>SubString(ListItem.Icon,Default)</visible>
+							<visible>String.Contains(ListItem.Icon,Default)</visible>
 						</control>
 						<control type="label">
 							<top>0</top>
@@ -5923,7 +5923,7 @@
 								<align>center</align>
 								<aspectratio>scale</aspectratio>
 								<texture colordiffuse="FFFFFFFF">$INFO[ListItem.Icon]</texture>
-								<visible>!SubString(ListItem.Icon,Default)</visible>
+								<visible>!String.Contains(ListItem.Icon,Default)</visible>
 							</control>
 							<control type="image">
 								<left>10</left>
@@ -5933,7 +5933,7 @@
 								<align>center</align>
 								<aspectratio>scale</aspectratio>
 								<texture colordiffuse="$INFO[Skin.String(Color.DIATxtF)]" fallback="DefaultMusicSongs.png">$INFO[ListItem.Icon]</texture>
-								<visible>SubString(ListItem.Icon,Default)</visible>
+								<visible>String.Contains(ListItem.Icon,Default)</visible>
 							</control>
 							<control type="label">
 								<top>0</top>
@@ -5958,7 +5958,7 @@
 								<align>center</align>
 								<aspectratio>scale</aspectratio>
 								<texture colordiffuse="FFFFFFFF">$INFO[ListItem.Icon]</texture>
-								<visible>!SubString(ListItem.Icon,Default)</visible>
+								<visible>!String.Contains(ListItem.Icon,Default)</visible>
 							</control>
 							<control type="image">
 								<left>10</left>
@@ -5968,7 +5968,7 @@
 								<align>center</align>
 								<aspectratio>scale</aspectratio>
 								<texture colordiffuse="$INFO[Skin.String(Color.DIATxtNF)]" fallback="DefaultMusicSongs.png">$INFO[ListItem.Icon]</texture>
-								<visible>SubString(ListItem.Icon,Default)</visible>
+								<visible>String.Contains(ListItem.Icon,Default)</visible>
 							</control>
 							<control type="label">
 								<top>0</top>
@@ -6037,7 +6037,7 @@
 					<align>right</align>
 					<onleft>100</onleft>
 					<onright>noop</onright>
-					<onup condition="StringCompare(Window(Home).Property(SidebarPos),LEFT) | StringCompare(Window(Home).Property(SidebarPos),RIGHT)">100</onup>
+					<onup condition="String.IsEqual(Window(Home).Property(SidebarPos),LEFT) | String.IsEqual(Window(Home).Property(SidebarPos),RIGHT)">100</onup>
 					<ondown>noop</ondown>
 					<orientation>horizontal</orientation>
 
@@ -6139,7 +6139,7 @@
 							<align>center</align>
 							<aspectratio>scale</aspectratio>
 							<texture colordiffuse="FFFFFFFF">$INFO[ListItem.Icon]</texture>
-							<visible>!SubString(ListItem.Icon,Default)</visible>
+							<visible>!String.Contains(ListItem.Icon,Default)</visible>
 						</control>
 						<control type="image">
 							<left>10</left>
@@ -6149,7 +6149,7 @@
 							<align>center</align>
 							<aspectratio>scale</aspectratio>
 							<texture colordiffuse="$INFO[Skin.String(Color.DIATxtNF)]">$INFO[ListItem.Icon]</texture>
-							<visible>SubString(ListItem.Icon,Default)</visible>
+							<visible>String.Contains(ListItem.Icon,Default)</visible>
 						</control>
 						<control type="label">
 							<top>0</top>
@@ -6185,7 +6185,7 @@
 								<align>center</align>
 								<aspectratio>scale</aspectratio>
 								<texture colordiffuse="FFFFFFFF">$INFO[ListItem.Icon]</texture>
-								<visible>!SubString(ListItem.Icon,Default)</visible>
+								<visible>!String.Contains(ListItem.Icon,Default)</visible>
 							</control>
 							<control type="image">
 								<left>10</left>
@@ -6195,7 +6195,7 @@
 								<align>center</align>
 								<aspectratio>scale</aspectratio>
 								<texture colordiffuse="$INFO[Skin.String(Color.DIATxtF)]">$INFO[ListItem.Icon]</texture>
-								<visible>SubString(ListItem.Icon,Default)</visible>
+								<visible>String.Contains(ListItem.Icon,Default)</visible>
 							</control>
 							<control type="label">
 								<top>0</top>
@@ -6220,7 +6220,7 @@
 								<align>center</align>
 								<aspectratio>scale</aspectratio>
 								<texture colordiffuse="FFFFFFFF">$INFO[ListItem.Icon]</texture>
-								<visible>!SubString(ListItem.Icon,Default)</visible>
+								<visible>!String.Contains(ListItem.Icon,Default)</visible>
 							</control>
 							<control type="image">
 								<left>10</left>
@@ -6230,7 +6230,7 @@
 								<align>center</align>
 								<aspectratio>scale</aspectratio>
 								<texture colordiffuse="$INFO[Skin.String(Color.DIATxtNF)]">$INFO[ListItem.Icon]</texture>
-								<visible>SubString(ListItem.Icon,Default)</visible>
+								<visible>String.Contains(ListItem.Icon,Default)</visible>
 							</control>
 							<control type="label">
 								<top>0</top>
@@ -6292,7 +6292,7 @@
 							<align>center</align>
 							<aspectratio>scale</aspectratio>
 							<texture colordiffuse="FFFFFFFF">$INFO[ListItem.Icon]</texture>
-							<visible>!SubString(ListItem.Icon,Default)</visible>
+							<visible>!String.Contains(ListItem.Icon,Default)</visible>
 						</control>
 						<control type="image">
 							<left>10</left>
@@ -6302,7 +6302,7 @@
 							<align>center</align>
 							<aspectratio>scale</aspectratio>
 							<texture colordiffuse="$INFO[Skin.String(Color.DIATxtNF)]">$INFO[ListItem.Icon]</texture>
-							<visible>SubString(ListItem.Icon,Default)</visible>
+							<visible>String.Contains(ListItem.Icon,Default)</visible>
 						</control>
 						<control type="label">
 							<top>0</top>
@@ -6338,7 +6338,7 @@
 								<align>center</align>
 								<aspectratio>scale</aspectratio>
 								<texture colordiffuse="FFFFFFFF">$INFO[ListItem.Icon]</texture>
-								<visible>!SubString(ListItem.Icon,Default)</visible>
+								<visible>!String.Contains(ListItem.Icon,Default)</visible>
 							</control>
 							<control type="image">
 								<left>10</left>
@@ -6348,7 +6348,7 @@
 								<align>center</align>
 								<aspectratio>scale</aspectratio>
 								<texture colordiffuse="$INFO[Skin.String(Color.DIATxtF)]">$INFO[ListItem.Icon]</texture>
-								<visible>SubString(ListItem.Icon,Default)</visible>
+								<visible>String.Contains(ListItem.Icon,Default)</visible>
 							</control>
 							<control type="label">
 								<top>0</top>
@@ -6373,7 +6373,7 @@
 								<align>center</align>
 								<aspectratio>scale</aspectratio>
 								<texture colordiffuse="FFFFFFFF">$INFO[ListItem.Icon]</texture>
-								<visible>!SubString(ListItem.Icon,Default)</visible>
+								<visible>!String.Contains(ListItem.Icon,Default)</visible>
 							</control>
 							<control type="image">
 								<left>10</left>
@@ -6383,7 +6383,7 @@
 								<align>center</align>
 								<aspectratio>scale</aspectratio>
 								<texture colordiffuse="$INFO[Skin.String(Color.DIATxtNF)]">$INFO[ListItem.Icon]</texture>
-								<visible>SubString(ListItem.Icon,Default)</visible>
+								<visible>String.Contains(ListItem.Icon,Default)</visible>
 							</control>
 							<control type="label">
 								<top>0</top>
@@ -6470,7 +6470,7 @@
 					<invalidcolor>$INFO[Skin.String(Color.DIAInvalid)]</invalidcolor>
 					<onleft>21</onleft>
 					<onright>noop</onright>
-					<onup condition="StringCompare(Window(Home).Property(SidebarPos),LEFT) | StringCompare(Window(Home).Property(SidebarPos),RIGHT)">21</onup>
+					<onup condition="String.IsEqual(Window(Home).Property(SidebarPos),LEFT) | String.IsEqual(Window(Home).Property(SidebarPos),RIGHT)">21</onup>
 					<ondown>noop</ondown>
 					<onclick>Close</onclick>
 				</control>
@@ -6500,7 +6500,7 @@
 					<width>588</width>							
 					<texture  colordiffuse="FFFFFFFF">$INFO[Container(2).ListItem.Icon]</texture>
 					<aspectratio aligny="center">keep</aspectratio>
-					<visible>!IsEmpty(Container(2).ListItem.Icon)</visible>
+					<visible>!String.IsEmpty(Container(2).ListItem.Icon)</visible>
 				</control>
 				<control type="image">
 					<top>24</top>
@@ -6509,7 +6509,7 @@
 					<width>588</width>	
 					<texture colordiffuse="$INFO[Skin.String(Color.DIATxtNF)]" fallback="DefaultUser.png">$INFO[Container(2).ListItem.Icon]</texture>
 					<aspectratio aligny="center">keep</aspectratio>
-					<visible>IsEmpty(Container(2).ListItem.Icon)</visible>
+					<visible>String.IsEmpty(Container(2).ListItem.Icon)</visible>
 				</control>
 				
 			</control>
@@ -6544,7 +6544,7 @@
 							<align>center</align>
 							<aspectratio>scale</aspectratio>
 							<texture colordiffuse="FFFFFFFF" fallback="DefaultUser.png">$INFO[ListItem.Icon]</texture>
-							<visible>!SubString(ListItem.Icon,Default)</visible>
+							<visible>!String.Contains(ListItem.Icon,Default)</visible>
 						</control>
 						<control type="image">
 							<left>10</left>
@@ -6554,7 +6554,7 @@
 							<align>center</align>
 							<aspectratio>scale</aspectratio>
 							<texture colordiffuse="$INFO[Skin.String(Color.DIATxtNF)]" fallback="DefaultUser.png">$INFO[ListItem.Icon]</texture>
-							<visible>SubString(ListItem.Icon,Default)</visible>
+							<visible>String.Contains(ListItem.Icon,Default)</visible>
 						</control>
 						<control type="label">
 							<top>0</top>
@@ -6590,7 +6590,7 @@
 								<align>center</align>
 								<aspectratio>scale</aspectratio>
 								<texture colordiffuse="FFFFFFFF" fallback="DefaultUser.png">$INFO[ListItem.Icon]</texture>
-								<visible>!SubString(ListItem.Icon,Default)</visible>
+								<visible>!String.Contains(ListItem.Icon,Default)</visible>
 							</control>
 							<control type="image">
 								<left>10</left>
@@ -6600,7 +6600,7 @@
 								<align>center</align>
 								<aspectratio>scale</aspectratio>
 								<texture colordiffuse="$INFO[Skin.String(Color.DIATxtF)]" fallback="DefaultUser.png">$INFO[ListItem.Icon]</texture>
-								<visible>SubString(ListItem.Icon,Default)</visible>
+								<visible>String.Contains(ListItem.Icon,Default)</visible>
 							</control>
 							<control type="label">
 								<top>0</top>
@@ -6625,7 +6625,7 @@
 								<align>center</align>
 								<aspectratio>scale</aspectratio>
 								<texture colordiffuse="FFFFFFFF" fallback="DefaultUser.png">$INFO[ListItem.Icon]</texture>
-								<visible>!SubString(ListItem.Icon,Default)</visible>
+								<visible>!String.Contains(ListItem.Icon,Default)</visible>
 							</control>
 							<control type="image">
 								<left>10</left>
@@ -6635,7 +6635,7 @@
 								<align>center</align>
 								<aspectratio>scale</aspectratio>
 								<texture colordiffuse="$INFO[Skin.String(Color.DIATxtNF)]" fallback="DefaultUser.png">$INFO[ListItem.Icon]</texture>
-								<visible>SubString(ListItem.Icon,Default)</visible>
+								<visible>String.Contains(ListItem.Icon,Default)</visible>
 							</control>
 							<control type="label">
 								<top>0</top>
@@ -6685,7 +6685,7 @@
 					<align>right</align>
 					<onleft>2</onleft>
 					<onright>noop</onright>
-					<onup condition="StringCompare(Window(Home).Property(SidebarPos),LEFT) | StringCompare(Window(Home).Property(SidebarPos),RIGHT)">2</onup>
+					<onup condition="String.IsEqual(Window(Home).Property(SidebarPos),LEFT) | String.IsEqual(Window(Home).Property(SidebarPos),RIGHT)">2</onup>
 					<ondown>noop</ondown>
 					<orientation>horizontal</orientation>
 
@@ -6759,7 +6759,7 @@
 					<width>588</width>							
 					<texture colordiffuse="FFFFFFFF">$INFO[Control.GetLabel(101)]</texture>
 					<aspectratio aligny="center">keep</aspectratio>
-					<visible>!IsEmpty(Control.GetLabel(101))</visible>
+					<visible>!String.IsEmpty(Control.GetLabel(101))</visible>
 				</control>
 				<control type="image">
 					<top>24</top>
@@ -6768,7 +6768,7 @@
 					<width>588</width>							
 					<texture colordiffuse="$INFO[Skin.String(Color.DIATxtNF)]">DefaultUser.png</texture>
 					<aspectratio aligny="center">keep</aspectratio>
-					<visible>IsEmpty(Control.GetLabel(101))</visible>
+					<visible>String.IsEmpty(Control.GetLabel(101))</visible>
 				</control>
 				
 			</control>
@@ -6842,7 +6842,7 @@
 					<align>right</align>
 					<onleft>5</onleft>
 					<onright>noop</onright>
-					<onup condition="StringCompare(Window(Home).Property(SidebarPos),LEFT) | StringCompare(Window(Home).Property(SidebarPos),RIGHT)">5</onup>
+					<onup condition="String.IsEqual(Window(Home).Property(SidebarPos),LEFT) | String.IsEqual(Window(Home).Property(SidebarPos),RIGHT)">5</onup>
 					<ondown>noop</ondown>
 					<orientation>horizontal</orientation>
 
@@ -6903,7 +6903,7 @@
 					<width>588</width>							
 					<texture colordiffuse="$INFO[Skin.String(Color.DIATxtNF)]">material/lock.png</texture>
 					<aspectratio aligny="center">keep</aspectratio>
-					<visible>IsEmpty(Control.GetLabel(101))</visible>
+					<visible>String.IsEmpty(Control.GetLabel(101))</visible>
 				</control>
 				
 			</control>
@@ -6976,7 +6976,7 @@
 					<align>right</align>
 					<onleft>5</onleft>
 					<onright>noop</onright>
-					<onup condition="StringCompare(Window(Home).Property(SidebarPos),LEFT) | StringCompare(Window(Home).Property(SidebarPos),RIGHT)">5</onup>
+					<onup condition="String.IsEqual(Window(Home).Property(SidebarPos),LEFT) | String.IsEqual(Window(Home).Property(SidebarPos),RIGHT)">5</onup>
 					<ondown>noop</ondown>
 					<orientation>horizontal</orientation>
 
@@ -8641,7 +8641,7 @@
 					<align>right</align>
 					<onleft>300</onleft>
 					<onright>noop</onright>
-					<onup condition="StringCompare(Window(Home).Property(SidebarPos),LEFT) | StringCompare(Window(Home).Property(SidebarPos),RIGHT)">300</onup>
+					<onup condition="String.IsEqual(Window(Home).Property(SidebarPos),LEFT) | String.IsEqual(Window(Home).Property(SidebarPos),RIGHT)">300</onup>
 					<ondown>noop</ondown>
 					<orientation>horizontal</orientation>			
 
@@ -8659,7 +8659,7 @@
 						<disabledcolor>$INFO[Skin.String(Color.DIAInvalid)]</disabledcolor>
 						<invalidcolor>$INFO[Skin.String(Color.DIAInvalid)]</invalidcolor>
 						<onleft>300</onleft>
-						<onup condition="StringCompare(Window(Home).Property(SidebarPos),LEFT) | StringCompare(Window(Home).Property(SidebarPos),RIGHT)">300</onup>
+						<onup condition="String.IsEqual(Window(Home).Property(SidebarPos),LEFT) | String.IsEqual(Window(Home).Property(SidebarPos),RIGHT)">300</onup>
 						<onclick>RunScript(script.skin.helper.service, action=backup, filter=Color|Test)</onclick>
 						<onclick>ActivateWindow(1100,return)</onclick>
 					</control>
@@ -8794,7 +8794,7 @@
 					<align>right</align>
 					<onleft>3015</onleft>
 					<onright>noop</onright>
-					<onup condition="StringCompare(Window(Home).Property(SidebarPos),LEFT) | StringCompare(Window(Home).Property(SidebarPos),RIGHT)">3015</onup>
+					<onup condition="String.IsEqual(Window(Home).Property(SidebarPos),LEFT) | String.IsEqual(Window(Home).Property(SidebarPos),RIGHT)">3015</onup>
 					<ondown>noop</ondown>
 					<orientation>horizontal</orientation>
 
@@ -8956,7 +8956,7 @@
 					<height>308</height>
 					<aspectratio>scale</aspectratio>
 					<texture colordiffuse="FFFFFFFF">$INFO[Container(211).ListItem.Property(homeart)]</texture>
-					<animation effect="fade" start="100" end="40" time="200" condition="!StringCompare(Container(300).ListItem.Property(ID),HomeArt)">Conditional</animation>
+					<animation effect="fade" start="100" end="40" time="200" condition="!String.IsEqual(Container(300).ListItem.Property(ID),HomeArt)">Conditional</animation>
 				</control>				
 
 				<!-- Main list -->
@@ -9055,7 +9055,7 @@
 							<height>40</height>
 							<width>40</width>
 							<texture colordiffuse="$INFO[Skin.String(Color.DIATxtNF)]">$INFO[ListItem.ActualIcon]</texture>
-							<visible>!IsEmpty(ListItem.Label2)</visible>
+							<visible>!String.IsEmpty(ListItem.Label2)</visible>
 						</control>
 						<control type="image">
 							<left>24</left>
@@ -9063,7 +9063,7 @@
 							<height>40</height>
 							<width>40</width>
 							<texture colordiffuse="$INFO[Skin.String(Color.DIATxtNF)]">$INFO[ListItem.Thumb]</texture>
-							<visible>IsEmpty(ListItem.Label2)</visible>
+							<visible>String.IsEmpty(ListItem.Label2)</visible>
 						</control>
 						<control type="label">
 							<label>$INFO[ListItem.Label]</label>
@@ -9089,7 +9089,7 @@
 								<height>40</height>
 								<width>40</width>
 								<texture colordiffuse="$INFO[Skin.String(Color.DIATxtF)]">$INFO[ListItem.ActualIcon]</texture>
-								<visible>!IsEmpty(ListItem.Label2)</visible>
+								<visible>!String.IsEmpty(ListItem.Label2)</visible>
 							</control>
 							<control type="image">
 								<left>24</left>
@@ -9097,7 +9097,7 @@
 								<height>40</height>
 								<width>40</width>
 								<texture colordiffuse="$INFO[Skin.String(Color.DIATxtF)]">$INFO[ListItem.Thumb]</texture>
-								<visible>IsEmpty(ListItem.Label2)</visible>
+								<visible>String.IsEmpty(ListItem.Label2)</visible>
 							</control>
 							<control type="label">
 								<label>$INFO[ListItem.Label]</label>
@@ -9118,7 +9118,7 @@
 								<height>40</height>
 								<width>40</width>
 								<texture colordiffuse="$INFO[Skin.String(Color.DIATxtNF)]">$INFO[ListItem.ActualIcon]</texture>
-								<visible>!IsEmpty(ListItem.Label2)</visible>
+								<visible>!String.IsEmpty(ListItem.Label2)</visible>
 							</control>
 							<control type="image">
 								<left>24</left>
@@ -9126,7 +9126,7 @@
 								<height>40</height>
 								<width>40</width>
 								<texture colordiffuse="$INFO[Skin.String(Color.DIATxtNF)]">$INFO[ListItem.Thumb]</texture>
-								<visible>IsEmpty(ListItem.Label2)</visible>
+								<visible>String.IsEmpty(ListItem.Label2)</visible>
 							</control>
 							<control type="label">
 								<label>$INFO[ListItem.Label]</label>
@@ -9149,7 +9149,7 @@
 							<label>$ADDON[script.skinshortcuts 32044]</label>
 							<label2>$INFO[Container(211).ListItem.Property(WidgetName)]</label2>
 							<onclick>SendClick(312)</onclick>
-							<visible>StringCompare(Window.Property(groupname),mainmenu)</visible> 
+							<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible> 
 						</item>	
 						<!-- Change background -->		
 						<item>
@@ -9158,7 +9158,7 @@
 							<label>$ADDON[script.skinshortcuts 32045]</label>
 							<label2>$INFO[Container(211).ListItem.Property(backgroundName)]</label2>
 							<onclick>SendClick(310)</onclick>
-							<visible>StringCompare(Window.Property(groupname),mainmenu)</visible> 
+							<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible> 
 						</item>	
 						<!-- Set ViewType -->
 						<item>
@@ -9168,7 +9168,7 @@
 							<label2>$INFO[Container(211).ListItem.Property(viewtype)]</label2>
 							<onclick>SetProperty(chooseProperty,viewtype)</onclick>
 							<onclick>SendClick(404)</onclick>
-							<visible>StringCompare(Window.Property(groupname),mainmenu)</visible> 
+							<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible> 
 						</item>						
 						<!-- Set HomeArt -->
 						<item>
@@ -9178,7 +9178,7 @@
 							<label2>$INFO[Container(211).ListItem.Property(homeart)]</label2>
 							<onclick>SetProperty(chooseProperty,homeart)</onclick>
 							<onclick>SendClick(404)</onclick>
-							<visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
+							<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
 							<property name="ID">HomeArt</property>
 						</item>		
 						<!-- Change shortcut -->
@@ -9215,7 +9215,7 @@
 							<label>$ADDON[script.skinshortcuts 32072]</label>
 							<label2>$ADDON[script.skinshortcuts 32072]</label2>
 							<onclick>SendClick(405)</onclick>
-							<visible>StringCompare(Window.Property(groupname),mainmenu)</visible> 
+							<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible> 
 						</item>	
 						<!-- Move Left -->
 						<item>
@@ -9293,7 +9293,7 @@
 					<align>right</align>
 					<onleft>300</onleft>
 					<onright>noop</onright>
-					<onup condition="StringCompare(Window(Home).Property(SidebarPos),LEFT) | StringCompare(Window(Home).Property(SidebarPos),RIGHT)">300</onup>
+					<onup condition="String.IsEqual(Window(Home).Property(SidebarPos),LEFT) | String.IsEqual(Window(Home).Property(SidebarPos),RIGHT)">300</onup>
 					<ondown>noop</ondown>
 					<orientation>horizontal</orientation>
 
@@ -9310,8 +9310,8 @@
 						<focusedcolor>$INFO[Skin.String(Color.DIATxtF)]</focusedcolor>
 						<disabledcolor>$INFO[Skin.String(Color.DIAInvalid)]</disabledcolor>
 						<invalidcolor>$INFO[Skin.String(Color.DIAInvalid)]</invalidcolor>
-						<onback condition="StringCompare(Window.Property(groupname),mainmenu)">RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;levels=0)</onback>
-						<onclick condition="StringCompare(Window.Property(groupname),mainmenu)">RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;levels=0)</onclick>
+						<onback condition="String.IsEqual(Window.Property(groupname),mainmenu)">RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;levels=0)</onback>
+						<onclick condition="String.IsEqual(Window.Property(groupname),mainmenu)">RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;levels=0)</onclick>
 						<onclick>Close</onclick>
 					</control>
 
@@ -9826,18 +9826,18 @@
 	</include>
 
 	<variable name="InfoDIATitle">
-		<value condition="!StringCompare(Container(300).ListItem.Label,$LOCALIZE[209]) + !Window.IsVisible(10142)">$INFO[ListItem.TagLine]</value>
-		<value condition="!StringCompare(Container(300).ListItem.Label,$LOCALIZE[209]) + Window.IsVisible(10142)">$INFO[ListItem.TagLine]</value>
-		<value condition="StringCompare(Container(300).ListItem.Label,$LOCALIZE[209])">$INFO[ListItem.NextTitle]</value>
+		<value condition="!String.IsEqual(Container(300).ListItem.Label,$LOCALIZE[209]) + !Window.IsVisible(10142)">$INFO[ListItem.TagLine]</value>
+		<value condition="!String.IsEqual(Container(300).ListItem.Label,$LOCALIZE[209]) + Window.IsVisible(10142)">$INFO[ListItem.TagLine]</value>
+		<value condition="String.IsEqual(Container(300).ListItem.Label,$LOCALIZE[209])">$INFO[ListItem.NextTitle]</value>
 	</variable>
 
 	<variable name="InfoDIAPlot">
-		<value condition="Window.IsActive(fullscreeninfo) + !IsEmpty(VideoPlayer.Plot)">$INFO[VideoPlayer.Plot]</value>
-		<value condition="Window.IsActive(visualisation) + StringCompare(Container(300).ListItem.Label,$LOCALIZE[21891])">$INFO[MusicPlayer.Property(Artist_Description)]</value>
-		<value condition="Window.IsActive(visualisation) + StringCompare(Container(300).ListItem.Label,$LOCALIZE[10523])">$INFO[MusicPlayer.Property(Album_Description)]</value>
-		<value condition="Window.IsActive(addoninformation) + !Window.IsActive(visualisation)">$INFO[ListItem.Property(Addon.Description)]</value>
-		<value condition="StringCompare(Container(300).ListItem.Label,$LOCALIZE[21891]) + !IsEmpty(ListItem.Property(Artist_Description))">$INFO[ListItem.Property(Artist_Description)]</value>
-		<value condition="StringCompare(Container(300).ListItem.Label,$LOCALIZE[10523]) + !IsEmpty(ListItem.Property(Album_Description))">$INFO[ListItem.Property(Album_Description)]</value>
+		<value condition="Window.IsActive(fullscreeninfo) + !String.IsEmpty(VideoPlayer.Plot)">$INFO[VideoPlayer.Plot]</value>
+		<value condition="Window.IsActive(visualisation) + String.IsEqual(Container(300).ListItem.Label,$LOCALIZE[21891])">$INFO[MusicPlayer.Property(Artist_Description)]</value>
+		<value condition="Window.IsActive(visualisation) + String.IsEqual(Container(300).ListItem.Label,$LOCALIZE[10523])">$INFO[MusicPlayer.Property(Album_Description)]</value>
+		<value condition="Window.IsActive(addoninformation) + !Window.IsActive(visualisation)">$INFO[ListItem.AddonDescription]</value>
+		<value condition="String.IsEqual(Container(300).ListItem.Label,$LOCALIZE[21891]) + !String.IsEmpty(ListItem.Property(Artist_Description))">$INFO[ListItem.Property(Artist_Description)]</value>
+		<value condition="String.IsEqual(Container(300).ListItem.Label,$LOCALIZE[10523]) + !String.IsEmpty(ListItem.Property(Album_Description))">$INFO[ListItem.Property(Album_Description)]</value>
 		<value>$INFO[ListItem.Plot]</value>
 	</variable>
 
