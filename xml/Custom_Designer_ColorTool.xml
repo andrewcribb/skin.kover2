@@ -135,7 +135,7 @@
 						<height>60</height>
 						<font>Font27</font>
 						<align>center</align>
-						<texturefocus colordiffuse="$VAR[CategoryColor3]">common/white.png</texturefocus>
+						<texturefocus colordiffuse="$INFO[Skin.String(Color.SETItemF)]">common/white.png</texturefocus>
 						<texturenofocus colordiffuse="00FFFFFF">common/white.png</texturenofocus>
 						<textcolor>$INFO[Skin.String(Color.DIATxtNF)]</textcolor>
 						<focusedcolor>$INFO[Skin.String(Color.DIATxtF)]</focusedcolor>

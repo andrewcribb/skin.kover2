@@ -185,9 +185,9 @@
 		<value condition="String.IsEqual(Window(Home).Property(MenuCategory),music)">$INFO[Skin.String(Color.B1ItemFMUS)]</value>
 		<value condition="String.IsEqual(Window(Home).Property(MenuCategory),$LOCALIZE[133])">$INFO[Skin.String(Color.B1ItemFMUS)]</value>
 		<value condition="String.IsEqual(Window(Home).Property(MenuCategory),movies)">$INFO[Skin.String(Color.B1ItemFMOV)]</value>
-		<value condition="String.IsEqual(Window(Home).Property(MenuCategory),programs)"></value>
-		<value condition="String.IsEqual(Window(Home).Property(MenuCategory),settings)"></value>
-		<value condition="String.IsEqual(Window(Home).Property(MenuCategory),13005)"></value> <!-- Power -->
+		<value condition="String.IsEqual(Window(Home).Property(MenuCategory),programs)">$INFO[Skin.String(Color.SETItemF)]</value>
+		<value condition="String.IsEqual(Window(Home).Property(MenuCategory),settings)">$INFO[Skin.String(Color.SETItemF)]</value>
+		<value condition="String.IsEqual(Window(Home).Property(MenuCategory),13005)">$INFO[Skin.String(Color.SETItemF)]</value>
 		<value>$INFO[Skin.String(Color.B1ItemF)]</value>		
 	</variable>		
 

@@ -261,13 +261,13 @@
 					<item id="1">
 						<label>14201</label>
 						<label2>14201</label2>
-						<icon>DefaultVideoPlaylists.png</icon>
+						<icon>icons/settings/player.png</icon>
 						<onclick>ActivateWindow(PlayerSettings)</onclick>
 					</item>
 					<item id="2">
 						<label>14212</label>
 						<label2>14212</label2>
-						<icon>DefaultAddonMovieInfo.png</icon>
+						<icon>icons/settings/media.png</icon>
 						<onclick>ActivateWindow(MediaSettings)</onclick>
 					</item>
 					<item id="3">
@@ -573,13 +573,13 @@
 					<item id="1">
 						<label>13000</label>
 						<label2>31406</label2>
-						<icon>DefaultAddonService.png</icon>
+						<icon>icons/settings/system.png</icon>
 						<onclick>activatewindow(SystemSettings)</onclick>
 					</item>
 					<item id="2">
 						<label>14208</label>
 						<label2>14208</label2>
-						<icon>DefaultNetwork.png</icon>
+						<icon>icons/settings/network.png</icon>
 						<onclick>ActivateWindow(ServiceSettings)</onclick>
 					</item>
 					<item id="3">
@@ -587,6 +587,13 @@
 						<label2>31414</label2>
 						<icon>DefaultUser.png</icon>
 						<onclick>activatewindow(Profiles)</onclick>
+					</item>
+					<item id="4">
+                        <label>LibreELEC</label>
+                        <label2>LibreELEC</label2>
+                        <onclick>RunAddon(service.libreelec.settings)</onclick>
+                        <icon>icons/settings/libreelec.png</icon>
+                        <visible>System.HasAddon(service.libreelec.settings)</visible>
 					</item>
 					<item id="4">
 						<label>24001</label>
@@ -603,7 +610,7 @@
 					<item id="6">
 						<label>Event Log</label>
 						<label2>Event Log</label2>
-						<icon>DefaultFile.png</icon>
+						<icon>icons/settings/eventlog.png</icon>
 						<onclick>ActivateWindow(eventlog)</onclick>
 					</item>
 				</content>

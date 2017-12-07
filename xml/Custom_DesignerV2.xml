@@ -250,7 +250,7 @@
 									<height>80</height>
 									<align>center</align>
 									<aspectratio>keep</aspectratio>
-									<texture colordiffuse="$VAR[CategoryColor3]">$INFO[ListItem.Icon]</texture>
+									<texture colordiffuse="$INFO[Skin.String(Color.SETItemF)]">$INFO[ListItem.Icon]</texture>
 									<animation effect="zoom" start="100" end="150" time="200" center="72,80">Focus</animation>
 								</control>
 								<control type="label">
@@ -586,7 +586,7 @@
 							<height>60</height>
 							<font>Font27</font>
 							<align>center</align>
-							<texturefocus colordiffuse="$VAR[CategoryColor3]">common/white.png</texturefocus>
+							<texturefocus colordiffuse="$INFO[Skin.String(Color.SETItemF)]">common/white.png</texturefocus>
 							<texturenofocus colordiffuse="00FFFFFF">common/white.png</texturenofocus>
 							<textcolor>$INFO[Skin.String(Color.DIATxtNF)]</textcolor>
 							<focusedcolor>$INFO[Skin.String(Color.DIATxtF)]</focusedcolor>
