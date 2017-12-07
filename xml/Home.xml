@@ -102,22 +102,22 @@
 				
 			<control type="wraplist" id="9000">
 				<scrolltime>200</scrolltime>
-				<include condition="Skin.String(HOM.View1.BBLay,VERTICAL) + [Skin.String(HOM.MenuSize,DEFAULT) | String.IsEmpty(Skin.String(HOM.MenuSize))]" name="HomeV">
+				<include content="HomeV" condition="Skin.String(HOM.View1.BBLay,VERTICAL) + [Skin.String(HOM.MenuSize,DEFAULT) | String.IsEmpty(Skin.String(HOM.MenuSize))]">
 					<param name="Id" value="$INFO[Window(Home).Property(SubMenuID)]" />
 				</include>
-				<include condition="Skin.String(HOM.View1.BBLay,VERTICAL) + Skin.String(HOM.MenuSize,MEDIUM)" name="HomeVMedium">
+				<include content="HomeVMedium" condition="Skin.String(HOM.View1.BBLay,VERTICAL) + Skin.String(HOM.MenuSize,MEDIUM)">
 					<param name="Id" value="$INFO[Window(Home).Property(SubMenuID)]" />
 				</include>
-				<include condition="Skin.String(HOM.View1.BBLay,VERTICAL) + Skin.String(HOM.MenuSize,LARGE)" name="HomeVLarge">
+				<include content="HomeVLarge" condition="Skin.String(HOM.View1.BBLay,VERTICAL) + Skin.String(HOM.MenuSize,LARGE)">
 					<param name="Id" value="$INFO[Window(Home).Property(SubMenuID)]" />
 				</include>
-				<include condition="Skin.String(HOM.View1.BBLay,HORIZONTAL) + [Skin.String(HOM.MenuSize,DEFAULT) | String.IsEmpty(Skin.String(HOM.MenuSize))]" name="HomeH">
+				<include content="HomeH" condition="Skin.String(HOM.View1.BBLay,HORIZONTAL) + [Skin.String(HOM.MenuSize,DEFAULT) | String.IsEmpty(Skin.String(HOM.MenuSize))]">
 					<param name="Id" value="$INFO[Window(Home).Property(SubMenuID)]" />
 				</include>
-				<include condition="Skin.String(HOM.View1.BBLay,HORIZONTAL) + Skin.String(HOM.MenuSize,MEDIUM)" name="HomeHMedium">
+				<include content="HomeHMedium" condition="Skin.String(HOM.View1.BBLay,HORIZONTAL) + Skin.String(HOM.MenuSize,MEDIUM)">
 					<param name="Id" value="$INFO[Window(Home).Property(SubMenuID)]" />
 				</include>
-				<include condition="Skin.String(HOM.View1.BBLay,HORIZONTAL) + Skin.String(HOM.MenuSize,LARGE)" name="HomeHLarge">
+				<include content="HomeHLarge" condition="Skin.String(HOM.View1.BBLay,HORIZONTAL) + Skin.String(HOM.MenuSize,LARGE)">
 					<param name="Id" value="$INFO[Window(Home).Property(SubMenuID)]" />
 				</include>
 				<animation effect="slide" start="0,0" end="1800,0" time="0" condition="Skin.String(HOM.View1.BBSidebar,RIGHT) + Skin.String(HOM.MenuSize,DEFAULT)">Conditional</animation>
